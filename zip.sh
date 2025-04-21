@@ -12,7 +12,7 @@
 
 echo "[" > picsum_urls.json
 for i in {1..100}; do
-  url=$(curl -s -o /dev/null -w "%{redirect_url}" https://picsum.photos/300/500)
+  url=$(curl -s -o /dev/null -w "%{redirect_url}" https://picsum.photos/500/500)
   echo "  \"$url\"" >> picsum_urls.json
   if [ "$i" -lt 100 ]; then
     echo "," >> picsum_urls.json

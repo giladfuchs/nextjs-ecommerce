@@ -2,18 +2,17 @@ import { headers } from 'next/headers';
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { mockProducts } from 'lib/shopify';
+// import {useStore} from "../../lib/store";
 
-export const metadata = {
-  title: 'Search',
-  description: 'Search for products in the store.'
-};
 
-export default async function SearchPage(props: {
+export default async function CollectionPage(props: {
   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const searchParams = await props.searchParams;
   const { sort, q: searchValue } = (searchParams ?? {}) as { [key: string]: string };
 
+  // const { products } = useStore();
+  // console.log(products)
 
   const headersList = await headers();
   const pathname = headersList.get('x-next-url') || '/';
