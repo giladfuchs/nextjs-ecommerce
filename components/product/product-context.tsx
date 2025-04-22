@@ -1,6 +1,6 @@
 'use client';
 
-import {useRouter, useSearchParams} from 'next/navigation';
+import {useRouter} from 'next/navigation';
 import React, {
     createContext,
     useContext,
@@ -31,13 +31,10 @@ export function ProductProvider({
     children: React.ReactNode;
     product: Product;
 }) {
-    const searchParams = useSearchParams();
 
     const getInitialState = () => {
         const params: ProductState = {};
-        for (const [key, value] of searchParams.entries()) {
-            params[key] = value;
-        }
+
 
         // fallback: default to first value of each option
         if (product) {

@@ -1,8 +1,6 @@
-
-import SearchPage from "./collection/page";
-import SearchLayout from "./collection/layout";
-import CollectionPage from "./collection/page";
-// import {useStore} from "../lib/store";
+import { Suspense } from 'react';
+import SearchLayout from './collection/layout';
+import CollectionPage from './collection/page';
 
 export const metadata = {
     description:
@@ -13,14 +11,11 @@ export const metadata = {
 };
 
 export default async function HomePage() {
-    // const {fetchData} = useStore();
-    //
-    // fetchData();
-
     return (
-
         <SearchLayout>
-            <CollectionPage/>
+            <Suspense fallback={null}>
+                <CollectionPage />
+            </Suspense>
         </SearchLayout>
     );
 }
