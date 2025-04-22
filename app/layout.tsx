@@ -10,7 +10,6 @@ import {baseUrl} from 'lib/utils';
 import {Cart} from "../lib/shopify/types";
 import Providers from "./providers";
 import '../styles/theme.scss';
-import {useStore} from "../lib/store";
 
 
 const {SITE_NAME} = process.env;

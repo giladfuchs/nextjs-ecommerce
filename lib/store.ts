@@ -14,15 +14,14 @@ export const useStore = create<Store>()(
             products: [],
             collections: [],
             fetchData: async () => {
-                const res = await fetch('http://localhost:8000/data');
-                const data = await res.json();
-                set({ products: data.products, collections: data.collections });
+                // your fetch logic
+            },
+            setData: ({ products, collections }) => {
+                set({ products, collections });
             }
         }),
-        {
-            name: 'planet-store', // localStorage key
-            skipHydration: true
-        }
+        { name: 'store-data' }
     )
 );
+
 

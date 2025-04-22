@@ -63,7 +63,6 @@ export type Page = {
   handle: string;
   body: string;
   bodySummary: string;
-  seo?: SEO;
   createdAt: string;
   updatedAt: string;
 };
@@ -90,10 +89,7 @@ export type ProductVariant = {
   price: Money;
 };
 
-export type SEO = {
-  title: string;
-  description: string;
-};
+
 
 export type ShopifyCart = {
   id: string | undefined;
@@ -111,7 +107,6 @@ export type ShopifyCollection = {
   handle: string;
   title: string;
   description: string;
-  seo: SEO;
   updatedAt: string;
 };
 
@@ -130,7 +125,6 @@ export type ShopifyProduct = {
   variants: Connection<ProductVariant>;
   featuredImage: Image;
   images: Connection<Image>;
-  seo: SEO;
   tags: string[];
   updatedAt: string;
 };

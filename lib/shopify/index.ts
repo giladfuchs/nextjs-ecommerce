@@ -73,7 +73,7 @@ export async function shopifyFetch<T>({
     query: string;
     variables?: ExtractVariables<T>;
 }): Promise<{ status: number; body: T } | never> {
-    return Promise.resolve({status: 33, body: {}})
+    return Promise.resolve({status: 200, body: {} as T})
 }
 
 const removeEdgesAndNodes = <T>(array: Connection<T>): T[] => {
@@ -223,6 +223,8 @@ export async function updateCart(
 
 export const mockCart = {
     id: 'mock-cart-id',
+    checkoutUrl: 'https://example.com/checkout',
+    totalQuantity: 2,
     lines: [
         {
             id: 'line-1',
@@ -230,8 +232,20 @@ export const mockCart = {
             merchandise: {
                 id: 'prod-1',
                 title: 'Mock Shirt',
+                selectedOptions: [
+                    { name: 'Size', value: 'M' },
+                    { name: 'Color', value: 'Blue' }
+                ],
                 product: {
-                    handle: 'mock-shirt'
+                    id: 'product-1',
+                    title: 'Mock Shirt',
+                    handle: 'mock-shirt',
+                    featuredImage: {
+                        url: '/placeholder.jpg',
+                        altText: 'Mock Shirt',
+                        width: 800,
+                        height: 800
+                    }
                 },
                 image: {
                     url: '/placeholder.jpg',
@@ -241,27 +255,103 @@ export const mockCart = {
                     amount: '29.99',
                     currencyCode: 'USD'
                 }
+            },
+            cost: {
+                totalAmount: {
+                    amount: '59.98',
+                    currencyCode: 'USD'
+                }
             }
         }
     ],
-    estimatedCost: {
+    cost: {
+        subtotalAmount: {
+            amount: '59.98',
+            currencyCode: 'USD'
+        },
         totalAmount: {
             amount: '59.98',
+            currencyCode: 'USD'
+        },
+        totalTaxAmount: {
+            amount: '0.00',
             currencyCode: 'USD'
         }
     }
 };
+
+
+
+
+
 export const mockCollections = [
-    { handle: 'all', title: 'All', description: '', seo: {}, updatedAt: '', path: '/' },
-    { handle: 'apparel', title: 'Apparel', description: 'Browse our latest apparel.', seo: {}, updatedAt: '', path: '/collection/apparel' },
-    { handle: 'shoes', title: 'Shoes', description: 'Find stylish shoes for every occasion.', seo: {}, updatedAt: '', path: '/collection/shoes' },
-    { handle: 'accessories', title: 'Accessories', description: 'Complete your outfit with our accessories.', seo: {}, updatedAt: '', path: '/collection/accessories' },
-    { handle: 'electronics', title: 'Electronics', description: 'Explore gadgets and devices.', seo: {}, updatedAt: '', path: '/collection/electronics' },
-    { handle: 'home', title: 'Home', description: 'Essentials and decor for your home.', seo: {}, updatedAt: '', path: '/collection/home' },
-    { handle: 'outdoors', title: 'Outdoors', description: 'Gear up for your next adventure.', seo: {}, updatedAt: '', path: '/collection/outdoors' },
-    { handle: 'beauty', title: 'Beauty', description: 'Enhance your routine with our beauty picks.', seo: {}, updatedAt: '', path: '/collection/beauty' },
-    { handle: 'books', title: 'Books', description: 'Discover your next favorite read.', seo: {}, updatedAt: '', path: '/collection/books' }
+    {handle: 'all', title: 'All', description: '', seo: {}, updatedAt: '', path: '/'},
+    {
+        handle: 'apparel',
+        title: 'Apparel',
+        description: 'Browse our latest apparel.',
+        seo: {},
+        updatedAt: '',
+        path: '/collection/apparel'
+    },
+    {
+        handle: 'shoes',
+        title: 'Shoes',
+        description: 'Find stylish shoes for every occasion.',
+        seo: {},
+        updatedAt: '',
+        path: '/collection/shoes'
+    },
+    {
+        handle: 'accessories',
+        title: 'Accessories',
+        description: 'Complete your outfit with our accessories.',
+        seo: {},
+        updatedAt: '',
+        path: '/collection/accessories'
+    },
+    {
+        handle: 'electronics',
+        title: 'Electronics',
+        description: 'Explore gadgets and devices.',
+        seo: {},
+        updatedAt: '',
+        path: '/collection/electronics'
+    },
+    {
+        handle: 'home',
+        title: 'Home',
+        description: 'Essentials and decor for your home.',
+        seo: {},
+        updatedAt: '',
+        path: '/collection/home'
+    },
+    {
+        handle: 'outdoors',
+        title: 'Outdoors',
+        description: 'Gear up for your next adventure.',
+        seo: {},
+        updatedAt: '',
+        path: '/collection/outdoors'
+    },
+    {
+        handle: 'beauty',
+        title: 'Beauty',
+        description: 'Enhance your routine with our beauty picks.',
+        seo: {},
+        updatedAt: '',
+        path: '/collection/beauty'
+    },
+    {
+        handle: 'books',
+        title: 'Books',
+        description: 'Discover your next favorite read.',
+        seo: {},
+        updatedAt: '',
+        path: '/collection/books'
+    }
 ];
+
 export async function getCollections(): Promise<Collection[]> {
     return Promise.resolve(mockCollections);
 }
@@ -269,22 +359,6 @@ export async function getCollections(): Promise<Collection[]> {
 export async function getCart(): Promise<Cart | undefined> {
     return Promise.resolve(mockCart) as Promise<Cart>;
 
-    const cartId = "dsadfl"
-    if (!cartId) {
-        return undefined;
-    }
-
-    const res = await shopifyFetch<ShopifyCartOperation>({
-        query: getCartQuery,
-        variables: {cartId}
-    });
-
-    // Old carts becomes `null` when you checkout.
-    if (!res.body.data.cart) {
-        return undefined;
-    }
-
-    return reshapeCart(res.body.data.cart);
 }
 
 export async function getCollection(handle: string) {
@@ -349,10 +423,10 @@ import mockProductsJson from './mock_products.json'
 export const mockProducts = mockProductsJson
 
 
-
 export async function getMockProduct(handle: string) {
     return mockProducts.find((p) => p.handle === handle);
 }
+
 // export async function getMockProduct({ handle }: { handle: string }) {
 //     return mockProducts.find((p) => p.handle === handle);
 // }

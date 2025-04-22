@@ -58,9 +58,12 @@
         "price": {
           "amount": "52.55",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-1"
   },
   {
     "handle": "mock-product-2",
@@ -115,9 +118,12 @@
         "price": {
           "amount": "67.65",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-2"
   },
   {
     "handle": "mock-product-3",
@@ -172,9 +178,12 @@
         "price": {
           "amount": "31.31",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-3"
   },
   {
     "handle": "mock-product-4",
@@ -229,9 +238,12 @@
         "price": {
           "amount": "35.42",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-4"
   },
   {
     "handle": "mock-product-5",
@@ -280,9 +292,12 @@
         "price": {
           "amount": "131.63",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-5"
   },
   {
     "handle": "mock-product-6",
@@ -349,9 +364,12 @@
         "price": {
           "amount": "50.08",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-6"
   },
   {
     "handle": "mock-product-7",
@@ -418,9 +436,12 @@
         "price": {
           "amount": "71.13",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-7"
   },
   {
     "handle": "mock-product-8",
@@ -475,9 +496,12 @@
         "price": {
           "amount": "43.69",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-8"
   },
   {
     "handle": "mock-product-9",
@@ -526,9 +550,12 @@
         "price": {
           "amount": "21.01",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-9"
   },
   {
     "handle": "mock-product-10",
@@ -595,9 +622,12 @@
         "price": {
           "amount": "30.03",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-10"
   },
   {
     "handle": "mock-product-11",
@@ -664,9 +694,12 @@
         "price": {
           "amount": "20.61",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-11"
   },
   {
     "handle": "mock-product-12",
@@ -709,9 +742,12 @@
         "price": {
           "amount": "95.37",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-12"
   },
   {
     "handle": "mock-product-13",
@@ -772,9 +808,12 @@
         "price": {
           "amount": "107.58",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-13"
   },
   {
     "handle": "mock-product-14",
@@ -817,9 +856,12 @@
         "price": {
           "amount": "120.75",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-14"
   },
   {
     "handle": "mock-product-15",
@@ -868,9 +910,12 @@
         "price": {
           "amount": "121.66",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-15"
   },
   {
     "handle": "mock-product-16",
@@ -919,9 +964,12 @@
         "price": {
           "amount": "87.53",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-16"
   },
   {
     "handle": "mock-product-17",
@@ -976,9 +1024,12 @@
         "price": {
           "amount": "143.5",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-17"
   },
   {
     "handle": "mock-product-18",
@@ -1027,9 +1078,12 @@
         "price": {
           "amount": "81.25",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-18"
   },
   {
     "handle": "mock-product-19",
@@ -1096,9 +1150,12 @@
         "price": {
           "amount": "147.99",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-19"
   },
   {
     "handle": "mock-product-20",
@@ -1165,9 +1222,12 @@
         "price": {
           "amount": "60.38",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-20"
   },
   {
     "handle": "mock-product-21",
@@ -1228,9 +1288,12 @@
         "price": {
           "amount": "52.75",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-21"
   },
   {
     "handle": "mock-product-22",
@@ -1279,9 +1342,12 @@
         "price": {
           "amount": "77.32",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-22"
   },
   {
     "handle": "mock-product-23",
@@ -1342,9 +1408,12 @@
         "price": {
           "amount": "141.13",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-23"
   },
   {
     "handle": "mock-product-24",
@@ -1393,9 +1462,12 @@
         "price": {
           "amount": "126.34",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-24"
   },
   {
     "handle": "mock-product-25",
@@ -1438,9 +1510,12 @@
         "price": {
           "amount": "138.98",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-25"
   },
   {
     "handle": "mock-product-26",
@@ -1495,9 +1570,12 @@
         "price": {
           "amount": "88.47",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-26"
   },
   {
     "handle": "mock-product-27",
@@ -1552,9 +1630,12 @@
         "price": {
           "amount": "134.52",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-27"
   },
   {
     "handle": "mock-product-28",
@@ -1609,9 +1690,12 @@
         "price": {
           "amount": "106.39",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-28"
   },
   {
     "handle": "mock-product-29",
@@ -1666,9 +1750,12 @@
         "price": {
           "amount": "139.9",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-29"
   },
   {
     "handle": "mock-product-30",
@@ -1717,9 +1804,12 @@
         "price": {
           "amount": "64.49",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-30"
   },
   {
     "handle": "mock-product-31",
@@ -1762,9 +1852,12 @@
         "price": {
           "amount": "99.45",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-31"
   },
   {
     "handle": "mock-product-32",
@@ -1813,9 +1906,12 @@
         "price": {
           "amount": "63.32",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-32"
   },
   {
     "handle": "mock-product-33",
@@ -1864,9 +1960,12 @@
         "price": {
           "amount": "140.49",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-33"
   },
   {
     "handle": "mock-product-34",
@@ -1909,9 +2008,12 @@
         "price": {
           "amount": "62.63",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-34"
   },
   {
     "handle": "mock-product-35",
@@ -1972,9 +2074,12 @@
         "price": {
           "amount": "68.81",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-35"
   },
   {
     "handle": "mock-product-36",
@@ -2029,9 +2134,12 @@
         "price": {
           "amount": "24.31",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-36"
   },
   {
     "handle": "mock-product-37",
@@ -2086,9 +2194,12 @@
         "price": {
           "amount": "47.66",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-37"
   },
   {
     "handle": "mock-product-38",
@@ -2143,9 +2254,12 @@
         "price": {
           "amount": "64.12",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-38"
   },
   {
     "handle": "mock-product-39",
@@ -2194,9 +2308,12 @@
         "price": {
           "amount": "99.73",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-39"
   },
   {
     "handle": "mock-product-40",
@@ -2245,9 +2362,12 @@
         "price": {
           "amount": "58.58",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-40"
   },
   {
     "handle": "mock-product-41",
@@ -2302,9 +2422,12 @@
         "price": {
           "amount": "119.22",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-41"
   },
   {
     "handle": "mock-product-42",
@@ -2353,9 +2476,12 @@
         "price": {
           "amount": "105.31",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-42"
   },
   {
     "handle": "mock-product-43",
@@ -2416,9 +2542,12 @@
         "price": {
           "amount": "61.5",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-43"
   },
   {
     "handle": "mock-product-44",
@@ -2473,9 +2602,12 @@
         "price": {
           "amount": "21.5",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-44"
   },
   {
     "handle": "mock-product-45",
@@ -2536,9 +2668,12 @@
         "price": {
           "amount": "76.39",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-45"
   },
   {
     "handle": "mock-product-46",
@@ -2587,9 +2722,12 @@
         "price": {
           "amount": "40.44",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-46"
   },
   {
     "handle": "mock-product-47",
@@ -2650,9 +2788,12 @@
         "price": {
           "amount": "81.71",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-47"
   },
   {
     "handle": "mock-product-48",
@@ -2719,9 +2860,12 @@
         "price": {
           "amount": "42.62",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-48"
   },
   {
     "handle": "mock-product-49",
@@ -2776,9 +2920,12 @@
         "price": {
           "amount": "75.69",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-49"
   },
   {
     "handle": "mock-product-50",
@@ -2821,9 +2968,12 @@
         "price": {
           "amount": "16.24",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-50"
   },
   {
     "handle": "mock-product-51",
@@ -2872,9 +3022,12 @@
         "price": {
           "amount": "33.33",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-51"
   },
   {
     "handle": "mock-product-52",
@@ -2917,9 +3070,12 @@
         "price": {
           "amount": "36.88",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-52"
   },
   {
     "handle": "mock-product-53",
@@ -2968,9 +3124,12 @@
         "price": {
           "amount": "66.36",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-53"
   },
   {
     "handle": "mock-product-54",
@@ -3031,9 +3190,12 @@
         "price": {
           "amount": "98.7",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-54"
   },
   {
     "handle": "mock-product-55",
@@ -3076,9 +3238,12 @@
         "price": {
           "amount": "83.34",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-55"
   },
   {
     "handle": "mock-product-56",
@@ -3145,9 +3310,12 @@
         "price": {
           "amount": "119.54",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-56"
   },
   {
     "handle": "mock-product-57",
@@ -3214,9 +3382,12 @@
         "price": {
           "amount": "27.08",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-57"
   },
   {
     "handle": "mock-product-58",
@@ -3265,9 +3436,12 @@
         "price": {
           "amount": "60.17",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-58"
   },
   {
     "handle": "mock-product-59",
@@ -3310,9 +3484,12 @@
         "price": {
           "amount": "39.06",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-59"
   },
   {
     "handle": "mock-product-60",
@@ -3361,9 +3538,12 @@
         "price": {
           "amount": "118.59",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-60"
   },
   {
     "handle": "mock-product-61",
@@ -3412,9 +3592,12 @@
         "price": {
           "amount": "71.73",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-61"
   },
   {
     "handle": "mock-product-62",
@@ -3481,9 +3664,12 @@
         "price": {
           "amount": "15.27",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-62"
   },
   {
     "handle": "mock-product-63",
@@ -3550,9 +3736,12 @@
         "price": {
           "amount": "84.35",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-63"
   },
   {
     "handle": "mock-product-64",
@@ -3595,9 +3784,12 @@
         "price": {
           "amount": "76.7",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-64"
   },
   {
     "handle": "mock-product-65",
@@ -3646,9 +3838,12 @@
         "price": {
           "amount": "142.4",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-65"
   },
   {
     "handle": "mock-product-66",
@@ -3697,9 +3892,12 @@
         "price": {
           "amount": "93.19",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-66"
   },
   {
     "handle": "mock-product-67",
@@ -3742,9 +3940,12 @@
         "price": {
           "amount": "147.15",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-67"
   },
   {
     "handle": "mock-product-68",
@@ -3799,9 +4000,12 @@
         "price": {
           "amount": "78.49",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-68"
   },
   {
     "handle": "mock-product-69",
@@ -3850,9 +4054,12 @@
         "price": {
           "amount": "103.12",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-69"
   },
   {
     "handle": "mock-product-70",
@@ -3913,9 +4120,12 @@
         "price": {
           "amount": "30.89",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-70"
   },
   {
     "handle": "mock-product-71",
@@ -3976,9 +4186,12 @@
         "price": {
           "amount": "67.69",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-71"
   },
   {
     "handle": "mock-product-72",
@@ -4033,9 +4246,12 @@
         "price": {
           "amount": "102.37",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-72"
   },
   {
     "handle": "mock-product-73",
@@ -4096,9 +4312,12 @@
         "price": {
           "amount": "66.15",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-73"
   },
   {
     "handle": "mock-product-74",
@@ -4153,9 +4372,12 @@
         "price": {
           "amount": "42.15",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-74"
   },
   {
     "handle": "mock-product-75",
@@ -4210,9 +4432,12 @@
         "price": {
           "amount": "13.98",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-75"
   },
   {
     "handle": "mock-product-76",
@@ -4267,9 +4492,12 @@
         "price": {
           "amount": "50.27",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-76"
   },
   {
     "handle": "mock-product-77",
@@ -4312,9 +4540,12 @@
         "price": {
           "amount": "145.71",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-77"
   },
   {
     "handle": "mock-product-78",
@@ -4363,9 +4594,12 @@
         "price": {
           "amount": "133.69",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-78"
   },
   {
     "handle": "mock-product-79",
@@ -4408,9 +4642,12 @@
         "price": {
           "amount": "75.31",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-79"
   },
   {
     "handle": "mock-product-80",
@@ -4459,9 +4696,12 @@
         "price": {
           "amount": "48.75",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-80"
   },
   {
     "handle": "mock-product-81",
@@ -4516,9 +4756,12 @@
         "price": {
           "amount": "39.15",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-81"
   },
   {
     "handle": "mock-product-82",
@@ -4567,9 +4810,12 @@
         "price": {
           "amount": "131.66",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-82"
   },
   {
     "handle": "mock-product-83",
@@ -4630,9 +4876,12 @@
         "price": {
           "amount": "120.68",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-83"
   },
   {
     "handle": "mock-product-84",
@@ -4699,9 +4948,12 @@
         "price": {
           "amount": "85.87",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-84"
   },
   {
     "handle": "mock-product-85",
@@ -4756,9 +5008,12 @@
         "price": {
           "amount": "70.24",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-85"
   },
   {
     "handle": "mock-product-86",
@@ -4813,9 +5068,12 @@
         "price": {
           "amount": "24.96",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-86"
   },
   {
     "handle": "mock-product-87",
@@ -4870,9 +5128,12 @@
         "price": {
           "amount": "85.56",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-87"
   },
   {
     "handle": "mock-product-88",
@@ -4933,9 +5194,12 @@
         "price": {
           "amount": "43.45",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-88"
   },
   {
     "handle": "mock-product-89",
@@ -4996,9 +5260,12 @@
         "price": {
           "amount": "132.5",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-89"
   },
   {
     "handle": "mock-product-90",
@@ -5053,9 +5320,12 @@
         "price": {
           "amount": "45.53",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-90"
   },
   {
     "handle": "mock-product-91",
@@ -5122,9 +5392,12 @@
         "price": {
           "amount": "90.42",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-91"
   },
   {
     "handle": "mock-product-92",
@@ -5179,9 +5452,12 @@
         "price": {
           "amount": "80.96",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-92"
   },
   {
     "handle": "mock-product-93",
@@ -5248,9 +5524,12 @@
         "price": {
           "amount": "148.28",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-93"
   },
   {
     "handle": "mock-product-94",
@@ -5299,9 +5578,12 @@
         "price": {
           "amount": "46.22",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-94"
   },
   {
     "handle": "mock-product-95",
@@ -5350,9 +5632,12 @@
         "price": {
           "amount": "75.15",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-95"
   },
   {
     "handle": "mock-product-96",
@@ -5401,9 +5686,12 @@
         "price": {
           "amount": "13.25",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-96"
   },
   {
     "handle": "mock-product-97",
@@ -5452,9 +5740,12 @@
         "price": {
           "amount": "54.16",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-97"
   },
   {
     "handle": "mock-product-98",
@@ -5509,9 +5800,12 @@
         "price": {
           "amount": "47.4",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-98"
   },
   {
     "handle": "mock-product-99",
@@ -5560,9 +5854,12 @@
         "price": {
           "amount": "107.36",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-99"
   },
   {
     "handle": "mock-product-100",
@@ -5605,8 +5902,11 @@
         "price": {
           "amount": "48.42",
           "currencyCode": "USD"
-        }
+        },
+        "title": "Variant 1"
       }
-    ]
+    ],
+    "updatedAt": "2025-04-22T10:18:27Z",
+    "id": "mock-product-100"
   }
 ]
