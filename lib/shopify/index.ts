@@ -285,72 +285,80 @@ export const mockCart = {
 
 
 export const mockCollections = [
-    {handle: 'all', title: 'All', description: '', seo: {}, updatedAt: '', path: '/'},
     {
-        handle: 'apparel',
-        title: 'Apparel',
-        description: 'Browse our latest apparel.',
+        handle: 'הכל',
+        title: 'הכל',
+        description: '',
         seo: {},
         updatedAt: '',
-        path: '/collection/apparel'
+        path: '/'
     },
     {
-        handle: 'shoes',
-        title: 'Shoes',
-        description: 'Find stylish shoes for every occasion.',
+        handle: 'צמחי-בית',
+        title: 'צמחי בית',
+        description: 'מגוון צמחי נוי לבית ולמשרד.',
         seo: {},
         updatedAt: '',
-        path: '/collection/shoes'
+        path: '/collection/צמחי-בית'
     },
     {
-        handle: 'accessories',
-        title: 'Accessories',
-        description: 'Complete your outfit with our accessories.',
+        handle: 'עשבי-תיבול',
+        title: 'עשבי תיבול',
+        description: 'גידול עצמי של בזיליקום, נענע, פטרוזיליה ועוד.',
         seo: {},
         updatedAt: '',
-        path: '/collection/accessories'
+        path: '/collection/עשבי-תיבול'
     },
     {
-        handle: 'electronics',
-        title: 'Electronics',
-        description: 'Explore gadgets and devices.',
+        handle: 'עציצים-ואדניות',
+        title: 'עציצים ואדניות',
+        description: 'שלל עציצים, אדניות ועציצי תלייה מעוצבים.',
         seo: {},
         updatedAt: '',
-        path: '/collection/electronics'
+        path: '/collection/עציצים-ואדניות'
     },
     {
-        handle: 'home',
-        title: 'Home',
-        description: 'Essentials and decor for your home.',
+        handle: 'כלי-גינון',
+        title: 'כלי גינון',
+        description: 'הכלים שצריך לגידול וטיפוח הגינה שלך.',
         seo: {},
         updatedAt: '',
-        path: '/collection/home'
+        path: '/collection/כלי-גינון'
     },
     {
-        handle: 'outdoors',
-        title: 'Outdoors',
-        description: 'Gear up for your next adventure.',
+        handle: 'דשנים-ואדמה',
+        title: 'דשנים ואדמה',
+        description: 'אדמה איכותית, דשן אורגני ותערובות שתילה.',
         seo: {},
         updatedAt: '',
-        path: '/collection/outdoors'
+        path: '/collection/דשנים-ואדמה'
     },
     {
-        handle: 'beauty',
-        title: 'Beauty',
-        description: 'Enhance your routine with our beauty picks.',
+        handle: 'עיצוב-הגינה',
+        title: 'עיצוב הגינה',
+        description: 'קישוטים, אורות ופריטים ייחודיים לגינה שלך.',
         seo: {},
         updatedAt: '',
-        path: '/collection/beauty'
+        path: '/collection/עיצוב-הגינה'
     },
     {
-        handle: 'books',
-        title: 'Books',
-        description: 'Discover your next favorite read.',
+        handle: 'צמחי-חוץ',
+        title: 'צמחי חוץ',
+        description: 'צמחים עמידים המתאימים לאקלים הישראלי.',
         seo: {},
         updatedAt: '',
-        path: '/collection/books'
+        path: '/collection/צמחי-חוץ'
+    },
+    {
+        handle: 'מתנות',
+        title: 'מתנות',
+        description: 'מתנות ירוקות לכל מי שאוהב צמחים.',
+        seo: {},
+        updatedAt: '',
+        path: '/collection/מתנות'
     }
 ];
+
 
 export async function getCollections(): Promise<Collection[]> {
     return Promise.resolve(mockCollections);
@@ -375,7 +383,7 @@ export async function getCollectionProducts({
     reverse?: boolean;
     sortKey?: string;
 }): Promise<Product[]> {
-
+    console.log(collection)
     return Promise.resolve(mockProducts.filter(
         (product) => product.collection === collection
     ))

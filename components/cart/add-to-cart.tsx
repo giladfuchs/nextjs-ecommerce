@@ -22,7 +22,7 @@ function SubmitButton({
   if (!availableForSale) {
     return (
         <button disabled className={clsx(buttonClasses, disabledClasses)}>
-          Out Of Stock
+          לא זמין במלאי
         </button>
     );
   }
@@ -37,7 +37,7 @@ function SubmitButton({
           <div className="absolute left-0 ml-4">
             <PlusIcon className="h-5" />
           </div>
-          Add To Cart
+            הוסף לעגלה
         </button>
     );
   }
@@ -45,7 +45,7 @@ function SubmitButton({
   return (
       <button
           onClick={onClick}
-          aria-label="Add to cart"
+          aria-label="הוסף לעגלה"
           className={clsx(buttonClasses, {
             'hover:opacity-90': true
           })}
@@ -53,7 +53,7 @@ function SubmitButton({
         <div className="absolute left-0 ml-4">
           <PlusIcon className="h-5" />
         </div>
-        Add To Cart
+          הוסף לעגלה
       </button>
   );
 }

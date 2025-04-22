@@ -4,13 +4,19 @@ import {notFound} from 'next/navigation';
 
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
-
+function safeDecodeURIComponent(value: string): string {
+    try {
+        return decodeURIComponent(value);
+    } catch {
+        return value;
+    }
+}
 export async function generateMetadata(props: {
     params: Promise<{ collection: string }>;
 }): Promise<Metadata> {
     const params = await props.params;
 
-    const collection = await getCollection(params.collection);
+    const collection = await getCollection(safeDecodeURIComponent(params.collection));
     if (!collection) return notFound();
 
     return {
@@ -26,7 +32,8 @@ export default async function CategoryPage(props: {
     const params = await props.params;
 
     const {collection} = params;
-    const products = await getCollectionProducts({collection});
+    const a = safeDecodeURIComponent(collection)
+    const products = await getCollectionProducts({collection:a});
 
     return (
         <section>

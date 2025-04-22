@@ -1,10 +1,10 @@
 [
   {
-    "handle": "mock-product-1",
-    "collection": "outdoors",
-    "title": "Mock Product 1",
-    "description": "This is Mock Product 1.",
-    "descriptionHtml": "<p>This is Mock Product 1.</p>",
+    "handle": "פוטוס-מטפס",
+    "collection": "צמחי-חוץ",
+    "title": "פוטוס מטפס",
+    "description": "המוצר 'פוטוס מטפס' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'פוטוס מטפס' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/702/500/500.jpg?hmac=Vx3nDdH_TS0YZcPJWC9zupKhgGs16tnotvBoKarezIY",
@@ -42,11 +42,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "52.55",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "52.55",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -57,7 +57,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "52.55",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -66,11 +66,11 @@
     "id": "mock-product-1"
   },
   {
-    "handle": "mock-product-2",
-    "collection": "outdoors",
-    "title": "Mock Product 2",
-    "description": "This is Mock Product 2.",
-    "descriptionHtml": "<p>This is Mock Product 2.</p>",
+    "handle": "סוקולנט-ירוק",
+    "collection": "צמחי-חוץ",
+    "title": "סוקולנט ירוק",
+    "description": "המוצר 'סוקולנט ירוק' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סוקולנט ירוק' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/793/500/500.jpg?hmac=yWqdylJuP1XPGkbnmKzLlxSGnEzPNvIb550BLgT_8ug",
@@ -102,11 +102,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "67.65",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "67.65",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -117,7 +117,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "67.65",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -126,11 +126,11 @@
     "id": "mock-product-2"
   },
   {
-    "handle": "mock-product-3",
-    "collection": "shoes",
-    "title": "Mock Product 3",
-    "description": "This is Mock Product 3.",
-    "descriptionHtml": "<p>This is Mock Product 3.</p>",
+    "handle": "קקטוס-קטן",
+    "collection": "עציצים-ואדניות",
+    "title": "קקטוס קטן",
+    "description": "המוצר 'קקטוס קטן' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קקטוס קטן' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/978/500/500.jpg?hmac=PKHDaLr6KxqX3dsaA4hn27gNffdB0XRk2pAqaPc1HJM",
@@ -162,11 +162,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "31.31",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "31.31",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -177,7 +177,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "31.31",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -186,11 +186,11 @@
     "id": "mock-product-3"
   },
   {
-    "handle": "mock-product-4",
-    "collection": "electronics",
-    "title": "Mock Product 4",
-    "description": "This is Mock Product 4.",
-    "descriptionHtml": "<p>This is Mock Product 4.</p>",
+    "handle": "אדנית-קרמית",
+    "collection": "כלי-גינון",
+    "title": "אדנית קרמית",
+    "description": "המוצר 'אדנית קרמית' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדנית קרמית' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/979/500/500.jpg?hmac=APiz6C4YsDCixjtANGUI8prcgf-UolUFdkcoFkNSPfI",
@@ -222,11 +222,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "35.42",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "35.42",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -237,7 +237,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "35.42",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -246,11 +246,11 @@
     "id": "mock-product-4"
   },
   {
-    "handle": "mock-product-5",
-    "collection": "apparel",
-    "title": "Mock Product 5",
-    "description": "This is Mock Product 5.",
-    "descriptionHtml": "<p>This is Mock Product 5.</p>",
+    "handle": "דשן-לצמיחה",
+    "collection": "עשבי-תיבול",
+    "title": "דשן לצמיחה",
+    "description": "המוצר 'דשן לצמיחה' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'דשן לצמיחה' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/506/500/500.jpg?hmac=BYrIaxLp-KtrJuj8yi-NqJw-tWEyGrponrzphcgZnj8",
@@ -276,11 +276,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "131.63",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "131.63",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -291,7 +291,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "131.63",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -300,11 +300,11 @@
     "id": "mock-product-5"
   },
   {
-    "handle": "mock-product-6",
-    "collection": "apparel",
-    "title": "Mock Product 6",
-    "description": "This is Mock Product 6.",
-    "descriptionHtml": "<p>This is Mock Product 6.</p>",
+    "handle": "כלי-שתילה-מעוצב",
+    "collection": "עשבי-תיבול",
+    "title": "כלי שתילה מעוצב",
+    "description": "המוצר 'כלי שתילה מעוצב' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'כלי שתילה מעוצב' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/260/500/500.jpg?hmac=KrCyDoFtAZ6bfs9TSpN-cySHgOentnXIBcRCBbqstHQ",
@@ -348,11 +348,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "50.08",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "50.08",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -363,7 +363,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "50.08",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -372,11 +372,11 @@
     "id": "mock-product-6"
   },
   {
-    "handle": "mock-product-7",
-    "collection": "books",
-    "title": "Mock Product 7",
-    "description": "This is Mock Product 7.",
-    "descriptionHtml": "<p>This is Mock Product 7.</p>",
+    "handle": "סט-כלים-לגינון",
+    "collection": "צמחי-בית",
+    "title": "סט כלים לגינון",
+    "description": "המוצר 'סט כלים לגינון' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סט כלים לגינון' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/499/500/500.jpg?hmac=D-I77qFVEma5D99kB4nYUGZTTNCViQjnoq7o4Da6J2g",
@@ -420,11 +420,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "71.13",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "71.13",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -435,7 +435,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "71.13",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -444,11 +444,11 @@
     "id": "mock-product-7"
   },
   {
-    "handle": "mock-product-8",
-    "collection": "books",
-    "title": "Mock Product 8",
-    "description": "This is Mock Product 8.",
-    "descriptionHtml": "<p>This is Mock Product 8.</p>",
+    "handle": "נענע-טרייה",
+    "collection": "צמחי-בית",
+    "title": "נענע טרייה",
+    "description": "המוצר 'נענע טרייה' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'נענע טרייה' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/313/500/500.jpg?hmac=AuvZHwM0VDJc6Gw7BIRkIO02v2abNgDbRWX40UjiORg",
@@ -480,11 +480,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "43.69",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "43.69",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -495,7 +495,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "43.69",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -504,11 +504,11 @@
     "id": "mock-product-8"
   },
   {
-    "handle": "mock-product-9",
-    "collection": "home",
-    "title": "Mock Product 9",
-    "description": "This is Mock Product 9.",
-    "descriptionHtml": "<p>This is Mock Product 9.</p>",
+    "handle": "אדמת-שתילה-איכותית",
+    "collection": "דשנים-ואדמה",
+    "title": "אדמת שתילה איכותית",
+    "description": "המוצר 'אדמת שתילה איכותית' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדמת שתילה איכותית' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/797/500/500.jpg?hmac=NWRKOEOrKLNHbNC4jvtk2sabKk9I15LUlswiImh7o0Q",
@@ -534,11 +534,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "21.01",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "21.01",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -549,7 +549,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "21.01",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -558,11 +558,11 @@
     "id": "mock-product-9"
   },
   {
-    "handle": "mock-product-10",
-    "collection": "home",
-    "title": "Mock Product 10",
-    "description": "This is Mock Product 10.",
-    "descriptionHtml": "<p>This is Mock Product 10.</p>",
+    "handle": "מעמד-עץ-לצמחים",
+    "collection": "דשנים-ואדמה",
+    "title": "מעמד עץ לצמחים",
+    "description": "המוצר 'מעמד עץ לצמחים' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מעמד עץ לצמחים' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/881/500/500.jpg?hmac=8qhn5AvId5cvKckdKIbLzN_S9nQjvx0RIquHtt8RPIM",
@@ -606,11 +606,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "30.03",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "30.03",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -621,7 +621,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "30.03",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -630,11 +630,11 @@
     "id": "mock-product-10"
   },
   {
-    "handle": "mock-product-11",
-    "collection": "accessories",
-    "title": "Mock Product 11",
-    "description": "This is Mock Product 11.",
-    "descriptionHtml": "<p>This is Mock Product 11.</p>",
+    "handle": "מנורת-גידול",
+    "collection": "עיצוב-הגינה",
+    "title": "מנורת גידול LED",
+    "description": "המוצר 'מנורת גידול LED' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מנורת גידול LED' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/830/500/500.jpg?hmac=KC35WCb0_sG3NNDb9rNSm_LAmswJ8RohbTwuNZ0p4oI",
@@ -678,11 +678,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "20.61",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "20.61",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -693,7 +693,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "20.61",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -702,11 +702,11 @@
     "id": "mock-product-11"
   },
   {
-    "handle": "mock-product-12",
-    "collection": "outdoors",
-    "title": "Mock Product 12",
-    "description": "This is Mock Product 12.",
-    "descriptionHtml": "<p>This is Mock Product 12.</p>",
+    "handle": "קישוט-גינה-עם-אורות",
+    "collection": "צמחי-חוץ",
+    "title": "קישוט גינה עם אורות",
+    "description": "המוצר 'קישוט גינה עם אורות' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קישוט גינה עם אורות' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/330/500/500.jpg?hmac=g-Rujc9tN1-gadnrO6mAVLrKvspCudlw5MTEnTiSNmk",
@@ -726,11 +726,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "95.37",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "95.37",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -741,7 +741,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "95.37",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -750,11 +750,11 @@
     "id": "mock-product-12"
   },
   {
-    "handle": "mock-product-13",
-    "collection": "outdoors",
-    "title": "Mock Product 13",
-    "description": "This is Mock Product 13.",
-    "descriptionHtml": "<p>This is Mock Product 13.</p>",
+    "handle": "עץ-זית-קטן",
+    "collection": "צמחי-חוץ",
+    "title": "עץ זית קטן",
+    "description": "המוצר 'עץ זית קטן' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עץ זית קטן' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/519/500/500.jpg?hmac=Id7MtS3kGuVLcnZK4gYpgGZbT6kKW7aoWUWbv2J9O-s",
@@ -792,11 +792,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "107.58",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "107.58",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -807,7 +807,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "107.58",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -816,11 +816,11 @@
     "id": "mock-product-13"
   },
   {
-    "handle": "mock-product-14",
-    "collection": "beauty",
-    "title": "Mock Product 14",
-    "description": "This is Mock Product 14.",
-    "descriptionHtml": "<p>This is Mock Product 14.</p>",
+    "handle": "עץ-רימון-ננסי",
+    "collection": "מתנות",
+    "title": "עץ רימון ננסי",
+    "description": "המוצר 'עץ רימון ננסי' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עץ רימון ננסי' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/936/500/500.jpg?hmac=NGsNH7_soMkC0Co3hO_l691M2v2TWXWJLjl2GGDoSOs",
@@ -840,11 +840,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "120.75",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "120.75",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -855,7 +855,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "120.75",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -864,11 +864,11 @@
     "id": "mock-product-14"
   },
   {
-    "handle": "mock-product-15",
-    "collection": "outdoors",
-    "title": "Mock Product 15",
-    "description": "This is Mock Product 15.",
-    "descriptionHtml": "<p>This is Mock Product 15.</p>",
+    "handle": "עץ-תפוח-בגידול-ביתי",
+    "collection": "צמחי-חוץ",
+    "title": "עץ תפוח בגידול ביתי",
+    "description": "המוצר 'עץ תפוח בגידול ביתי' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עץ תפוח בגידול ביתי' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/662/500/500.jpg?hmac=_urzWs8zVmCmWpTWndJYlUGd2CLInnuEQ9djt7xmMUk",
@@ -894,11 +894,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "121.66",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "121.66",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -909,7 +909,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "121.66",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -918,11 +918,11 @@
     "id": "mock-product-15"
   },
   {
-    "handle": "mock-product-16",
-    "collection": "accessories",
-    "title": "Mock Product 16",
-    "description": "This is Mock Product 16.",
-    "descriptionHtml": "<p>This is Mock Product 16.</p>",
+    "handle": "שתיל-עגבניות",
+    "collection": "עיצוב-הגינה",
+    "title": "שתיל עגבניות",
+    "description": "המוצר 'שתיל עגבניות' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'שתיל עגבניות' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/45/500/500.jpg?hmac=KZ-kuXRiRuRjXKcoLzeNxs2AjEbpN0myBDwGv5w9Cmg",
@@ -948,11 +948,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "87.53",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "87.53",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -963,7 +963,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "87.53",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -972,11 +972,11 @@
     "id": "mock-product-16"
   },
   {
-    "handle": "mock-product-17",
-    "collection": "books",
-    "title": "Mock Product 17",
-    "description": "This is Mock Product 17.",
-    "descriptionHtml": "<p>This is Mock Product 17.</p>",
+    "handle": "שתיל-פלפל-חריף",
+    "collection": "צמחי-בית",
+    "title": "שתיל פלפל חריף",
+    "description": "המוצר 'שתיל פלפל חריף' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'שתיל פלפל חריף' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/813/500/500.jpg?hmac=KJQVph7OZuPGTejyf2coxgnrw2kuE3wLl54M8MYfxoY",
@@ -1008,11 +1008,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "143.5",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "143.5",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1023,7 +1023,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "143.5",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1032,11 +1032,11 @@
     "id": "mock-product-17"
   },
   {
-    "handle": "mock-product-18",
-    "collection": "beauty",
-    "title": "Mock Product 18",
-    "description": "This is Mock Product 18.",
-    "descriptionHtml": "<p>This is Mock Product 18.</p>",
+    "handle": "שתיל-בזיליקום",
+    "collection": "מתנות",
+    "title": "שתיל בזיליקום",
+    "description": "המוצר 'שתיל בזיליקום' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'שתיל בזיליקום' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/174/500/500.jpg?hmac=_tWp1MWsMJFk29AbMxJKhx1MEHxlpQ4MEABUDsysxTU",
@@ -1062,11 +1062,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "81.25",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "81.25",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1077,7 +1077,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "81.25",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1086,11 +1086,11 @@
     "id": "mock-product-18"
   },
   {
-    "handle": "mock-product-19",
-    "collection": "home",
-    "title": "Mock Product 19",
-    "description": "This is Mock Product 19.",
-    "descriptionHtml": "<p>This is Mock Product 19.</p>",
+    "handle": "סוקולנט-בצורת-לב",
+    "collection": "דשנים-ואדמה",
+    "title": "סוקולנט בצורת לב",
+    "description": "המוצר 'סוקולנט בצורת לב' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סוקולנט בצורת לב' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/685/500/500.jpg?hmac=lnsNPNacFnoZyBILLlfASmAxlZtbbUVCnGFWA3mUYNM",
@@ -1134,11 +1134,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "147.99",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "147.99",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1149,7 +1149,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "147.99",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1158,11 +1158,11 @@
     "id": "mock-product-19"
   },
   {
-    "handle": "mock-product-20",
-    "collection": "home",
-    "title": "Mock Product 20",
-    "description": "This is Mock Product 20.",
-    "descriptionHtml": "<p>This is Mock Product 20.</p>",
+    "handle": "פוטוס-זהוב",
+    "collection": "דשנים-ואדמה",
+    "title": "פוטוס זהוב",
+    "description": "המוצר 'פוטוס זהוב' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'פוטוס זהוב' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/387/500/500.jpg?hmac=1QmctCe6JuOK66mhfGHPpkRC_hm5myYZaTU3TffRId4",
@@ -1206,11 +1206,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "60.38",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "60.38",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1221,7 +1221,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "60.38",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1230,11 +1230,11 @@
     "id": "mock-product-20"
   },
   {
-    "handle": "mock-product-21",
-    "collection": "beauty",
-    "title": "Mock Product 21",
-    "description": "This is Mock Product 21.",
-    "descriptionHtml": "<p>This is Mock Product 21.</p>",
+    "handle": "דקל-ננסי",
+    "collection": "מתנות",
+    "title": "דקל ננסי",
+    "description": "המוצר 'דקל ננסי' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'דקל ננסי' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/434/500/500.jpg?hmac=FPqmawt8p20vxeYkoiBbWG1qVXM5vlSKIRwqu06IYrk",
@@ -1272,11 +1272,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "52.75",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "52.75",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1287,7 +1287,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "52.75",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1296,11 +1296,11 @@
     "id": "mock-product-21"
   },
   {
-    "handle": "mock-product-22",
-    "collection": "home",
-    "title": "Mock Product 22",
-    "description": "This is Mock Product 22.",
-    "descriptionHtml": "<p>This is Mock Product 22.</p>",
+    "handle": "קקטוס-פריחה",
+    "collection": "דשנים-ואדמה",
+    "title": "קקטוס פריחה",
+    "description": "המוצר 'קקטוס פריחה' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קקטוס פריחה' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/618/500/500.jpg?hmac=-U8GAgEI7ChUZUiD9rdvxo3EGQq0MR81ViM7ze8HDYc",
@@ -1326,11 +1326,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "77.32",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "77.32",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1341,7 +1341,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "77.32",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1350,11 +1350,11 @@
     "id": "mock-product-22"
   },
   {
-    "handle": "mock-product-23",
-    "collection": "books",
-    "title": "Mock Product 23",
-    "description": "This is Mock Product 23.",
-    "descriptionHtml": "<p>This is Mock Product 23.</p>",
+    "handle": "קישוטי-עץ-טבעיים",
+    "collection": "צמחי-בית",
+    "title": "קישוטי עץ טבעיים",
+    "description": "המוצר 'קישוטי עץ טבעיים' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קישוטי עץ טבעיים' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/818/500/500.jpg?hmac=gm6k4It137OUao6Tabm1Dwkiu7WE-9qWiPMW42phI_k",
@@ -1392,11 +1392,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "141.13",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "141.13",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1407,7 +1407,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "141.13",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1416,11 +1416,11 @@
     "id": "mock-product-23"
   },
   {
-    "handle": "mock-product-24",
-    "collection": "electronics",
-    "title": "Mock Product 24",
-    "description": "This is Mock Product 24.",
-    "descriptionHtml": "<p>This is Mock Product 24.</p>",
+    "handle": "אדנית-תלייה-צבעונית",
+    "collection": "כלי-גינון",
+    "title": "אדנית תלייה צבעונית",
+    "description": "המוצר 'אדנית תלייה צבעונית' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדנית תלייה צבעונית' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/732/500/500.jpg?hmac=faRbsgyl_RyPtgF3u3Qq7W-nttBK__vvJv3ZQm6J37M",
@@ -1446,11 +1446,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "126.34",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "126.34",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1461,7 +1461,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "126.34",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1470,11 +1470,11 @@
     "id": "mock-product-24"
   },
   {
-    "handle": "mock-product-25",
-    "collection": "books",
-    "title": "Mock Product 25",
-    "description": "This is Mock Product 25.",
-    "descriptionHtml": "<p>This is Mock Product 25.</p>",
+    "handle": "כלי-דישון",
+    "collection": "צמחי-בית",
+    "title": "כלי דישון",
+    "description": "המוצר 'כלי דישון' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'כלי דישון' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/154/500/500.jpg?hmac=FllRw28Q-FvNcaoMKFebIn1ozCKAz0vitCYTygZJD7I",
@@ -1494,11 +1494,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "138.98",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "138.98",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1509,7 +1509,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "138.98",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1518,11 +1518,11 @@
     "id": "mock-product-25"
   },
   {
-    "handle": "mock-product-26",
-    "collection": "accessories",
-    "title": "Mock Product 26",
-    "description": "This is Mock Product 26.",
-    "descriptionHtml": "<p>This is Mock Product 26.</p>",
+    "handle": "מרסס-מים",
+    "collection": "עיצוב-הגינה",
+    "title": "מרסס מים",
+    "description": "המוצר 'מרסס מים' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מרסס מים' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/502/500/500.jpg?hmac=0YIjLggwzTog25K0Ahm4id-VAHyMWcick0NynKp42XY",
@@ -1554,11 +1554,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "88.47",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "88.47",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1569,7 +1569,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "88.47",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1578,11 +1578,11 @@
     "id": "mock-product-26"
   },
   {
-    "handle": "mock-product-27",
-    "collection": "books",
-    "title": "Mock Product 27",
-    "description": "This is Mock Product 27.",
-    "descriptionHtml": "<p>This is Mock Product 27.</p>",
+    "handle": "מיכל-השקיה",
+    "collection": "צמחי-בית",
+    "title": "מיכל השקיה",
+    "description": "המוצר 'מיכל השקיה' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מיכל השקיה' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/13/500/500.jpg?hmac=oIMjG56df3J3cWXHmJTmMSVj1huozLkKwY4NAUXpxOw",
@@ -1614,11 +1614,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "134.52",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "134.52",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1629,7 +1629,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "134.52",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1638,11 +1638,11 @@
     "id": "mock-product-27"
   },
   {
-    "handle": "mock-product-28",
-    "collection": "electronics",
-    "title": "Mock Product 28",
-    "description": "This is Mock Product 28.",
-    "descriptionHtml": "<p>This is Mock Product 28.</p>",
+    "handle": "צמח-נענע-מרענן",
+    "collection": "כלי-גינון",
+    "title": "צמח נענע מרענן",
+    "description": "המוצר 'צמח נענע מרענן' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'צמח נענע מרענן' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/774/500/500.jpg?hmac=E0lO7phH91QDC-xgCT0v4XuybbExyZsZ-f99GDS21tA",
@@ -1674,11 +1674,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "106.39",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "106.39",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1689,7 +1689,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "106.39",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1698,11 +1698,11 @@
     "id": "mock-product-28"
   },
   {
-    "handle": "mock-product-29",
-    "collection": "beauty",
-    "title": "Mock Product 29",
-    "description": "This is Mock Product 29.",
-    "descriptionHtml": "<p>This is Mock Product 29.</p>",
+    "handle": "עציץ-רוזמרין",
+    "collection": "מתנות",
+    "title": "עציץ רוזמרין",
+    "description": "המוצר 'עציץ רוזמרין' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עציץ רוזמרין' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/287/500/500.jpg?hmac=_3noAomaHvNHwr4FpelZX-90Cw1OEmo2ovuVn6bAHKk",
@@ -1734,11 +1734,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "139.9",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "139.9",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1749,7 +1749,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "139.9",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1758,11 +1758,11 @@
     "id": "mock-product-29"
   },
   {
-    "handle": "mock-product-30",
-    "collection": "accessories",
-    "title": "Mock Product 30",
-    "description": "This is Mock Product 30.",
-    "descriptionHtml": "<p>This is Mock Product 30.</p>",
+    "handle": "גזם-תפוחי-אדמה",
+    "collection": "עיצוב-הגינה",
+    "title": "גזם תפוחי אדמה",
+    "description": "המוצר 'גזם תפוחי אדמה' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'גזם תפוחי אדמה' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/758/500/500.jpg?hmac=iYYs5WvuFnjFkDWpU2f9qtAabJYCUZEYYY7h9GLyVyo",
@@ -1788,11 +1788,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "64.49",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "64.49",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1803,7 +1803,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "64.49",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1812,11 +1812,11 @@
     "id": "mock-product-30"
   },
   {
-    "handle": "mock-product-31",
-    "collection": "home",
-    "title": "Mock Product 31",
-    "description": "This is Mock Product 31.",
-    "descriptionHtml": "<p>This is Mock Product 31.</p>",
+    "handle": "פוטוס-מטפס-2",
+    "collection": "דשנים-ואדמה",
+    "title": "פוטוס מטפס #2",
+    "description": "המוצר 'פוטוס מטפס #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'פוטוס מטפס #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/106/500/500.jpg?hmac=gJXKJglipb1aD_WnrD1O_wu2AQFYs8s7Izy6Yww8fp4",
@@ -1836,11 +1836,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "99.45",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "99.45",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1851,7 +1851,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "99.45",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1860,11 +1860,11 @@
     "id": "mock-product-31"
   },
   {
-    "handle": "mock-product-32",
-    "collection": "shoes",
-    "title": "Mock Product 32",
-    "description": "This is Mock Product 32.",
-    "descriptionHtml": "<p>This is Mock Product 32.</p>",
+    "handle": "סוקולנט-ירוק-2",
+    "collection": "עציצים-ואדניות",
+    "title": "סוקולנט ירוק #2",
+    "description": "המוצר 'סוקולנט ירוק #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סוקולנט ירוק #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/241/500/500.jpg?hmac=5e0H7x5lf1-dRbxyLe5xcgSFfnXRMBwGzPNZdPh6HO0",
@@ -1890,11 +1890,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "63.32",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "63.32",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1905,7 +1905,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "63.32",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1914,11 +1914,11 @@
     "id": "mock-product-32"
   },
   {
-    "handle": "mock-product-33",
-    "collection": "electronics",
-    "title": "Mock Product 33",
-    "description": "This is Mock Product 33.",
-    "descriptionHtml": "<p>This is Mock Product 33.</p>",
+    "handle": "קקטוס-קטן-2",
+    "collection": "כלי-גינון",
+    "title": "קקטוס קטן #2",
+    "description": "המוצר 'קקטוס קטן #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קקטוס קטן #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/1024/500/500.jpg?hmac=dLr0aDZbynsr8ZvWIWsQSU54QOEPaS6YGRtg5fjatow",
@@ -1944,11 +1944,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "140.49",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "140.49",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -1959,7 +1959,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "140.49",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -1968,11 +1968,11 @@
     "id": "mock-product-33"
   },
   {
-    "handle": "mock-product-34",
-    "collection": "apparel",
-    "title": "Mock Product 34",
-    "description": "This is Mock Product 34.",
-    "descriptionHtml": "<p>This is Mock Product 34.</p>",
+    "handle": "אדנית-קרמית-2",
+    "collection": "עשבי-תיבול",
+    "title": "אדנית קרמית #2",
+    "description": "המוצר 'אדנית קרמית #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדנית קרמית #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/1080/500/500.jpg?hmac=yIT2RDfQXaNeihJn27EjmEjuQzADHzr-QtozN0qaz7Y",
@@ -1992,11 +1992,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "62.63",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "62.63",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2007,7 +2007,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "62.63",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2016,11 +2016,11 @@
     "id": "mock-product-34"
   },
   {
-    "handle": "mock-product-35",
-    "collection": "shoes",
-    "title": "Mock Product 35",
-    "description": "This is Mock Product 35.",
-    "descriptionHtml": "<p>This is Mock Product 35.</p>",
+    "handle": "דשן-לצמיחה-2",
+    "collection": "עציצים-ואדניות",
+    "title": "דשן לצמיחה #2",
+    "description": "המוצר 'דשן לצמיחה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'דשן לצמיחה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/727/500/500.jpg?hmac=qu0BGavrXEqRBVFjRQml2GsrlzWcJVSlOBFwbd8M-TE",
@@ -2058,11 +2058,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "68.81",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "68.81",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2073,7 +2073,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "68.81",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2082,11 +2082,11 @@
     "id": "mock-product-35"
   },
   {
-    "handle": "mock-product-36",
-    "collection": "outdoors",
-    "title": "Mock Product 36",
-    "description": "This is Mock Product 36.",
-    "descriptionHtml": "<p>This is Mock Product 36.</p>",
+    "handle": "כלי-שתילה-מעוצב-2",
+    "collection": "צמחי-חוץ",
+    "title": "כלי שתילה מעוצב #2",
+    "description": "המוצר 'כלי שתילה מעוצב #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'כלי שתילה מעוצב #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/1020/500/500.jpg?hmac=X5Wk7p9iT87vc8u9qmrI_CjloYVsXbvH0jUq-VKwUvE",
@@ -2118,11 +2118,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "24.31",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "24.31",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2133,7 +2133,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "24.31",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2142,11 +2142,11 @@
     "id": "mock-product-36"
   },
   {
-    "handle": "mock-product-37",
-    "collection": "apparel",
-    "title": "Mock Product 37",
-    "description": "This is Mock Product 37.",
-    "descriptionHtml": "<p>This is Mock Product 37.</p>",
+    "handle": "סט-כלים-לגינון-2",
+    "collection": "עשבי-תיבול",
+    "title": "סט כלים לגינון #2",
+    "description": "המוצר 'סט כלים לגינון #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סט כלים לגינון #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/220/500/500.jpg?hmac=BI2JJ-HO8Y-sPg5VypbxvFcnn_kODMPs1eFverLVdD0",
@@ -2178,11 +2178,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "47.66",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "47.66",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2193,7 +2193,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "47.66",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2202,11 +2202,11 @@
     "id": "mock-product-37"
   },
   {
-    "handle": "mock-product-38",
-    "collection": "shoes",
-    "title": "Mock Product 38",
-    "description": "This is Mock Product 38.",
-    "descriptionHtml": "<p>This is Mock Product 38.</p>",
+    "handle": "נענע-טרייה-2",
+    "collection": "עציצים-ואדניות",
+    "title": "נענע טרייה #2",
+    "description": "המוצר 'נענע טרייה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'נענע טרייה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/339/500/500.jpg?hmac=ZhgAUBAey1SZkz0i4smhORK-fjdk-QgfdFhQa7ABDm8",
@@ -2238,11 +2238,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "64.12",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "64.12",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2253,7 +2253,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "64.12",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2262,11 +2262,11 @@
     "id": "mock-product-38"
   },
   {
-    "handle": "mock-product-39",
-    "collection": "outdoors",
-    "title": "Mock Product 39",
-    "description": "This is Mock Product 39.",
-    "descriptionHtml": "<p>This is Mock Product 39.</p>",
+    "handle": "אדמת-שתילה-איכותית-2",
+    "collection": "צמחי-חוץ",
+    "title": "אדמת שתילה איכותית #2",
+    "description": "המוצר 'אדמת שתילה איכותית #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדמת שתילה איכותית #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/195/500/500.jpg?hmac=L0aQHXtbCWaqlgWJm8avFI8JAdJyk9EJlRXQcOM9RLc",
@@ -2292,11 +2292,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "99.73",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "99.73",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2307,7 +2307,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "99.73",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2316,11 +2316,11 @@
     "id": "mock-product-39"
   },
   {
-    "handle": "mock-product-40",
-    "collection": "home",
-    "title": "Mock Product 40",
-    "description": "This is Mock Product 40.",
-    "descriptionHtml": "<p>This is Mock Product 40.</p>",
+    "handle": "מעמד-עץ-לצמחים-2",
+    "collection": "דשנים-ואדמה",
+    "title": "מעמד עץ לצמחים #2",
+    "description": "המוצר 'מעמד עץ לצמחים #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מעמד עץ לצמחים #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/573/500/500.jpg?hmac=qt0S_C7_O1aXj7vVDp3WJezCVH777wRHWOAN5FF5L6U",
@@ -2346,11 +2346,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "58.58",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "58.58",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2361,7 +2361,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "58.58",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2370,11 +2370,11 @@
     "id": "mock-product-40"
   },
   {
-    "handle": "mock-product-41",
-    "collection": "books",
-    "title": "Mock Product 41",
-    "description": "This is Mock Product 41.",
-    "descriptionHtml": "<p>This is Mock Product 41.</p>",
+    "handle": "מנורת-גידול-2",
+    "collection": "צמחי-בית",
+    "title": "מנורת גידול LED #2",
+    "description": "המוצר 'מנורת גידול LED #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מנורת גידול LED #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/225/500/500.jpg?hmac=hMlGAONwRiiQOiIs0P_QIPSvl28d7RnwxwVpbjIb49k",
@@ -2406,11 +2406,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "119.22",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "119.22",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2421,7 +2421,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "119.22",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2430,11 +2430,11 @@
     "id": "mock-product-41"
   },
   {
-    "handle": "mock-product-42",
-    "collection": "apparel",
-    "title": "Mock Product 42",
-    "description": "This is Mock Product 42.",
-    "descriptionHtml": "<p>This is Mock Product 42.</p>",
+    "handle": "קישוט-גינה-עם-אורות-2",
+    "collection": "עשבי-תיבול",
+    "title": "קישוט גינה עם אורות #2",
+    "description": "המוצר 'קישוט גינה עם אורות #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קישוט גינה עם אורות #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/651/500/500.jpg?hmac=70YdysGdDZN_blewD0jhzMufhsJYxBQTYNrYSVZGucM",
@@ -2460,11 +2460,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "105.31",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "105.31",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2475,7 +2475,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "105.31",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2484,11 +2484,11 @@
     "id": "mock-product-42"
   },
   {
-    "handle": "mock-product-43",
-    "collection": "books",
-    "title": "Mock Product 43",
-    "description": "This is Mock Product 43.",
-    "descriptionHtml": "<p>This is Mock Product 43.</p>",
+    "handle": "עץ-זית-קטן-2",
+    "collection": "צמחי-בית",
+    "title": "עץ זית קטן #2",
+    "description": "המוצר 'עץ זית קטן #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עץ זית קטן #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/485/500/500.jpg?hmac=bnkpe2bK8fs_wZvREyifGZl4Kc-1jvUwqK4tWBCM3yU",
@@ -2526,11 +2526,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "61.5",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "61.5",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2541,7 +2541,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "61.5",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2550,11 +2550,11 @@
     "id": "mock-product-43"
   },
   {
-    "handle": "mock-product-44",
-    "collection": "outdoors",
-    "title": "Mock Product 44",
-    "description": "This is Mock Product 44.",
-    "descriptionHtml": "<p>This is Mock Product 44.</p>",
+    "handle": "עץ-רימון-ננסי-2",
+    "collection": "צמחי-חוץ",
+    "title": "עץ רימון ננסי #2",
+    "description": "המוצר 'עץ רימון ננסי #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עץ רימון ננסי #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/805/500/500.jpg?hmac=kARmBh40HEEvzhVf6n8NBWFd510cdp9ZjAwFmRr34wc",
@@ -2586,11 +2586,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "21.5",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "21.5",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2601,7 +2601,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "21.5",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2610,11 +2610,11 @@
     "id": "mock-product-44"
   },
   {
-    "handle": "mock-product-45",
-    "collection": "books",
-    "title": "Mock Product 45",
-    "description": "This is Mock Product 45.",
-    "descriptionHtml": "<p>This is Mock Product 45.</p>",
+    "handle": "עץ-תפוח-בגידול-ביתי-2",
+    "collection": "צמחי-בית",
+    "title": "עץ תפוח בגידול ביתי #2",
+    "description": "המוצר 'עץ תפוח בגידול ביתי #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עץ תפוח בגידול ביתי #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/15/500/500.jpg?hmac=YIdwbnReqRQwfTvAZijylkS_2Oya-9yQRKHpNqd5wT4",
@@ -2652,11 +2652,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "76.39",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "76.39",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2667,7 +2667,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "76.39",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2676,11 +2676,11 @@
     "id": "mock-product-45"
   },
   {
-    "handle": "mock-product-46",
-    "collection": "electronics",
-    "title": "Mock Product 46",
-    "description": "This is Mock Product 46.",
-    "descriptionHtml": "<p>This is Mock Product 46.</p>",
+    "handle": "שתיל-עגבניות-2",
+    "collection": "כלי-גינון",
+    "title": "שתיל עגבניות #2",
+    "description": "המוצר 'שתיל עגבניות #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'שתיל עגבניות #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/1049/500/500.jpg?hmac=PoSSwzcyKoiRMJSvEwXROTsogHGRdnrMJN8caWV2eO4",
@@ -2706,11 +2706,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "40.44",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "40.44",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2721,7 +2721,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "40.44",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2730,11 +2730,11 @@
     "id": "mock-product-46"
   },
   {
-    "handle": "mock-product-47",
-    "collection": "shoes",
-    "title": "Mock Product 47",
-    "description": "This is Mock Product 47.",
-    "descriptionHtml": "<p>This is Mock Product 47.</p>",
+    "handle": "שתיל-פלפל-חריף-2",
+    "collection": "עציצים-ואדניות",
+    "title": "שתיל פלפל חריף #2",
+    "description": "המוצר 'שתיל פלפל חריף #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'שתיל פלפל חריף #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/973/500/500.jpg?hmac=Bn1YsnZwwdtKXVDb89FA361RO8WOADSBeLAP8Ckfsgo",
@@ -2772,11 +2772,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "81.71",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "81.71",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2787,7 +2787,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "81.71",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2796,11 +2796,11 @@
     "id": "mock-product-47"
   },
   {
-    "handle": "mock-product-48",
-    "collection": "electronics",
-    "title": "Mock Product 48",
-    "description": "This is Mock Product 48.",
-    "descriptionHtml": "<p>This is Mock Product 48.</p>",
+    "handle": "שתיל-בזיליקום-2",
+    "collection": "כלי-גינון",
+    "title": "שתיל בזיליקום #2",
+    "description": "המוצר 'שתיל בזיליקום #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'שתיל בזיליקום #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/170/500/500.jpg?hmac=9cB7MCe6Puz7ndZI1jxxwhDw4TEFTrPPCTEkEiMPnT0",
@@ -2844,11 +2844,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "42.62",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "42.62",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2859,7 +2859,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "42.62",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2868,11 +2868,11 @@
     "id": "mock-product-48"
   },
   {
-    "handle": "mock-product-49",
-    "collection": "shoes",
-    "title": "Mock Product 49",
-    "description": "This is Mock Product 49.",
-    "descriptionHtml": "<p>This is Mock Product 49.</p>",
+    "handle": "סוקולנט-בצורת-לב-2",
+    "collection": "עציצים-ואדניות",
+    "title": "סוקולנט בצורת לב #2",
+    "description": "המוצר 'סוקולנט בצורת לב #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סוקולנט בצורת לב #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/981/500/500.jpg?hmac=jI0JpUDEQuFcGv4b05zl90aEzbjiq62ejNmdxDFfurQ",
@@ -2904,11 +2904,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "75.69",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "75.69",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2919,7 +2919,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "75.69",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2928,11 +2928,11 @@
     "id": "mock-product-49"
   },
   {
-    "handle": "mock-product-50",
-    "collection": "beauty",
-    "title": "Mock Product 50",
-    "description": "This is Mock Product 50.",
-    "descriptionHtml": "<p>This is Mock Product 50.</p>",
+    "handle": "פוטוס-זהוב-2",
+    "collection": "מתנות",
+    "title": "פוטוס זהוב #2",
+    "description": "המוצר 'פוטוס זהוב #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'פוטוס זהוב #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/51/500/500.jpg?hmac=KK8QBlKH-MqYiaSH4n0nSL2n5ydkXEIJerIoaPbM1lc",
@@ -2952,11 +2952,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "16.24",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "16.24",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -2967,7 +2967,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "16.24",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -2976,11 +2976,11 @@
     "id": "mock-product-50"
   },
   {
-    "handle": "mock-product-51",
-    "collection": "shoes",
-    "title": "Mock Product 51",
-    "description": "This is Mock Product 51.",
-    "descriptionHtml": "<p>This is Mock Product 51.</p>",
+    "handle": "דקל-ננסי-2",
+    "collection": "עציצים-ואדניות",
+    "title": "דקל ננסי #2",
+    "description": "המוצר 'דקל ננסי #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'דקל ננסי #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/98/500/500.jpg?hmac=Ey7RSliG_DIUv6n2APfXCsPDthK2I7Ml8im4VOXoehE",
@@ -3006,11 +3006,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "33.33",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "33.33",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3021,7 +3021,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "33.33",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3030,11 +3030,11 @@
     "id": "mock-product-51"
   },
   {
-    "handle": "mock-product-52",
-    "collection": "electronics",
-    "title": "Mock Product 52",
-    "description": "This is Mock Product 52.",
-    "descriptionHtml": "<p>This is Mock Product 52.</p>",
+    "handle": "קקטוס-פריחה-2",
+    "collection": "כלי-גינון",
+    "title": "קקטוס פריחה #2",
+    "description": "המוצר 'קקטוס פריחה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קקטוס פריחה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/68/500/500.jpg?hmac=pKyI0LMvS_HyH_vx_jWvbwbytO_vxmfxFsrjvX9X5D8",
@@ -3054,11 +3054,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "36.88",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "36.88",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3069,7 +3069,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "36.88",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3078,11 +3078,11 @@
     "id": "mock-product-52"
   },
   {
-    "handle": "mock-product-53",
-    "collection": "electronics",
-    "title": "Mock Product 53",
-    "description": "This is Mock Product 53.",
-    "descriptionHtml": "<p>This is Mock Product 53.</p>",
+    "handle": "קישוטי-עץ-טבעיים-2",
+    "collection": "כלי-גינון",
+    "title": "קישוטי עץ טבעיים #2",
+    "description": "המוצר 'קישוטי עץ טבעיים #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קישוטי עץ טבעיים #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/469/500/500.jpg?hmac=BHkrKLd_URIkqjZ1czEQW8VU6jk4NBixFMVPNud2LPg",
@@ -3108,11 +3108,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "66.36",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "66.36",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3123,7 +3123,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "66.36",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3132,11 +3132,11 @@
     "id": "mock-product-53"
   },
   {
-    "handle": "mock-product-54",
-    "collection": "apparel",
-    "title": "Mock Product 54",
-    "description": "This is Mock Product 54.",
-    "descriptionHtml": "<p>This is Mock Product 54.</p>",
+    "handle": "אדנית-תלייה-צבעונית-2",
+    "collection": "עשבי-תיבול",
+    "title": "אדנית תלייה צבעונית #2",
+    "description": "המוצר 'אדנית תלייה צבעונית #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדנית תלייה צבעונית #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/645/500/500.jpg?hmac=2nNGRjcMTBqW8BiCQk8Jl-ofYXQGNrvr_B4G1QgBKi4",
@@ -3174,11 +3174,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "98.7",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "98.7",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3189,7 +3189,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "98.7",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3198,11 +3198,11 @@
     "id": "mock-product-54"
   },
   {
-    "handle": "mock-product-55",
-    "collection": "outdoors",
-    "title": "Mock Product 55",
-    "description": "This is Mock Product 55.",
-    "descriptionHtml": "<p>This is Mock Product 55.</p>",
+    "handle": "כלי-דישון-2",
+    "collection": "צמחי-חוץ",
+    "title": "כלי דישון #2",
+    "description": "המוצר 'כלי דישון #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'כלי דישון #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/682/500/500.jpg?hmac=-obFWBRFVHON2ku5QDQCKtwWprQWsXzeJge1pJqbhjA",
@@ -3222,11 +3222,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "83.34",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "83.34",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3237,7 +3237,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "83.34",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3246,11 +3246,11 @@
     "id": "mock-product-55"
   },
   {
-    "handle": "mock-product-56",
-    "collection": "beauty",
-    "title": "Mock Product 56",
-    "description": "This is Mock Product 56.",
-    "descriptionHtml": "<p>This is Mock Product 56.</p>",
+    "handle": "מרסס-מים-2",
+    "collection": "מתנות",
+    "title": "מרסס מים #2",
+    "description": "המוצר 'מרסס מים #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מרסס מים #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/796/500/500.jpg?hmac=zfGdoJAHg_9nbZ2Qz1CeybzAvD-cD-3Ds5FpF8KsfzM",
@@ -3294,11 +3294,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "119.54",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "119.54",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3309,7 +3309,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "119.54",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3318,11 +3318,11 @@
     "id": "mock-product-56"
   },
   {
-    "handle": "mock-product-57",
-    "collection": "books",
-    "title": "Mock Product 57",
-    "description": "This is Mock Product 57.",
-    "descriptionHtml": "<p>This is Mock Product 57.</p>",
+    "handle": "מיכל-השקיה-2",
+    "collection": "צמחי-בית",
+    "title": "מיכל השקיה #2",
+    "description": "המוצר 'מיכל השקיה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מיכל השקיה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/705/500/500.jpg?hmac=8LnfL2R-2-z-3SsB0yQU69qZ8hFqb7w8th6KuHaTOOQ",
@@ -3366,11 +3366,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "27.08",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "27.08",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3381,7 +3381,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "27.08",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3390,11 +3390,11 @@
     "id": "mock-product-57"
   },
   {
-    "handle": "mock-product-58",
-    "collection": "electronics",
-    "title": "Mock Product 58",
-    "description": "This is Mock Product 58.",
-    "descriptionHtml": "<p>This is Mock Product 58.</p>",
+    "handle": "צמח-נענע-מרענן-2",
+    "collection": "כלי-גינון",
+    "title": "צמח נענע מרענן #2",
+    "description": "המוצר 'צמח נענע מרענן #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'צמח נענע מרענן #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/155/500/500.jpg?hmac=pb5YrtFe826CIq-hgqS9u6BrbzGKdpBiTy84Te-c5NY",
@@ -3420,11 +3420,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "60.17",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "60.17",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3435,7 +3435,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "60.17",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3444,11 +3444,11 @@
     "id": "mock-product-58"
   },
   {
-    "handle": "mock-product-59",
-    "collection": "shoes",
-    "title": "Mock Product 59",
-    "description": "This is Mock Product 59.",
-    "descriptionHtml": "<p>This is Mock Product 59.</p>",
+    "handle": "עציץ-רוזמרין-2",
+    "collection": "עציצים-ואדניות",
+    "title": "עציץ רוזמרין #2",
+    "description": "המוצר 'עציץ רוזמרין #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עציץ רוזמרין #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/381/500/500.jpg?hmac=W9wKLETo6ZzP7oKoEC-g4T4D9yLKQYi5M0ITakLkwGk",
@@ -3468,11 +3468,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "39.06",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "39.06",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3483,7 +3483,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "39.06",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3492,11 +3492,11 @@
     "id": "mock-product-59"
   },
   {
-    "handle": "mock-product-60",
-    "collection": "electronics",
-    "title": "Mock Product 60",
-    "description": "This is Mock Product 60.",
-    "descriptionHtml": "<p>This is Mock Product 60.</p>",
+    "handle": "גזם-תפוחי-אדמה-2",
+    "collection": "כלי-גינון",
+    "title": "גזם תפוחי אדמה #2",
+    "description": "המוצר 'גזם תפוחי אדמה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'גזם תפוחי אדמה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/118/500/500.jpg?hmac=UWNWgDwjYpynxDGAJeOONxlkcUSxEsl7Xto6mKqHJuQ",
@@ -3522,11 +3522,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "118.59",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "118.59",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3537,7 +3537,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "118.59",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3546,11 +3546,11 @@
     "id": "mock-product-60"
   },
   {
-    "handle": "mock-product-61",
-    "collection": "shoes",
-    "title": "Mock Product 61",
-    "description": "This is Mock Product 61.",
-    "descriptionHtml": "<p>This is Mock Product 61.</p>",
+    "handle": "פוטוס-מטפס-2-2",
+    "collection": "עציצים-ואדניות",
+    "title": "פוטוס מטפס #2",
+    "description": "המוצר 'פוטוס מטפס #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'פוטוס מטפס #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/975/500/500.jpg?hmac=RbP64Moc9jYQ-y_USaysuhkSI0GE6SVL4P5KujtpiGI",
@@ -3576,11 +3576,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "71.73",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "71.73",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3591,7 +3591,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "71.73",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3600,11 +3600,11 @@
     "id": "mock-product-61"
   },
   {
-    "handle": "mock-product-62",
-    "collection": "shoes",
-    "title": "Mock Product 62",
-    "description": "This is Mock Product 62.",
-    "descriptionHtml": "<p>This is Mock Product 62.</p>",
+    "handle": "סוקולנט-ירוק-2-2",
+    "collection": "עציצים-ואדניות",
+    "title": "סוקולנט ירוק #2",
+    "description": "המוצר 'סוקולנט ירוק #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סוקולנט ירוק #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/1044/500/500.jpg?hmac=Uz_GCA4ZqpXNg9t-4DnKMcS2iTz66EH9EUqjqflAtgU",
@@ -3648,11 +3648,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "15.27",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "15.27",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3663,7 +3663,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "15.27",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3672,11 +3672,11 @@
     "id": "mock-product-62"
   },
   {
-    "handle": "mock-product-63",
-    "collection": "outdoors",
-    "title": "Mock Product 63",
-    "description": "This is Mock Product 63.",
-    "descriptionHtml": "<p>This is Mock Product 63.</p>",
+    "handle": "קקטוס-קטן-2-2",
+    "collection": "צמחי-חוץ",
+    "title": "קקטוס קטן #2",
+    "description": "המוצר 'קקטוס קטן #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קקטוס קטן #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/200/500/500.jpg?hmac=E_EVOEAtqEt5G6rpKi5EmNv7_jIm9efS6I1fxRmKK8Q",
@@ -3720,11 +3720,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "84.35",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "84.35",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3735,7 +3735,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "84.35",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3744,11 +3744,11 @@
     "id": "mock-product-63"
   },
   {
-    "handle": "mock-product-64",
-    "collection": "books",
-    "title": "Mock Product 64",
-    "description": "This is Mock Product 64.",
-    "descriptionHtml": "<p>This is Mock Product 64.</p>",
+    "handle": "אדנית-קרמית-2-2",
+    "collection": "צמחי-בית",
+    "title": "אדנית קרמית #2",
+    "description": "המוצר 'אדנית קרמית #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדנית קרמית #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/1065/500/500.jpg?hmac=8k9DzFyMRu1WVL37AueWysvty3UIv6rZUCUJtsoNif0",
@@ -3768,11 +3768,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "76.7",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "76.7",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3783,7 +3783,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "76.7",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3792,11 +3792,11 @@
     "id": "mock-product-64"
   },
   {
-    "handle": "mock-product-65",
-    "collection": "outdoors",
-    "title": "Mock Product 65",
-    "description": "This is Mock Product 65.",
-    "descriptionHtml": "<p>This is Mock Product 65.</p>",
+    "handle": "דשן-לצמיחה-2-2",
+    "collection": "צמחי-חוץ",
+    "title": "דשן לצמיחה #2",
+    "description": "המוצר 'דשן לצמיחה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'דשן לצמיחה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/796/500/500.jpg?hmac=zfGdoJAHg_9nbZ2Qz1CeybzAvD-cD-3Ds5FpF8KsfzM",
@@ -3822,11 +3822,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "142.4",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "142.4",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3837,7 +3837,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "142.4",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3846,11 +3846,11 @@
     "id": "mock-product-65"
   },
   {
-    "handle": "mock-product-66",
-    "collection": "apparel",
-    "title": "Mock Product 66",
-    "description": "This is Mock Product 66.",
-    "descriptionHtml": "<p>This is Mock Product 66.</p>",
+    "handle": "כלי-שתילה-מעוצב-2-2",
+    "collection": "עשבי-תיבול",
+    "title": "כלי שתילה מעוצב #2",
+    "description": "המוצר 'כלי שתילה מעוצב #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'כלי שתילה מעוצב #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/152/500/500.jpg?hmac=jIqM6SBDBTI5Tf5QVawY6HKVQAUyZwqfIOWCw2RtJf4",
@@ -3876,11 +3876,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "93.19",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "93.19",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3891,7 +3891,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "93.19",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3900,11 +3900,11 @@
     "id": "mock-product-66"
   },
   {
-    "handle": "mock-product-67",
-    "collection": "beauty",
-    "title": "Mock Product 67",
-    "description": "This is Mock Product 67.",
-    "descriptionHtml": "<p>This is Mock Product 67.</p>",
+    "handle": "סט-כלים-לגינון-2-2",
+    "collection": "מתנות",
+    "title": "סט כלים לגינון #2",
+    "description": "המוצר 'סט כלים לגינון #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סט כלים לגינון #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/607/500/500.jpg?hmac=cd2V_aaDN9hu-zOT0QfHgpvGlgV099szrF-qUspUo_o",
@@ -3924,11 +3924,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "147.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "147.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3939,7 +3939,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "147.15",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -3948,11 +3948,11 @@
     "id": "mock-product-67"
   },
   {
-    "handle": "mock-product-68",
-    "collection": "apparel",
-    "title": "Mock Product 68",
-    "description": "This is Mock Product 68.",
-    "descriptionHtml": "<p>This is Mock Product 68.</p>",
+    "handle": "נענע-טרייה-2-2",
+    "collection": "עשבי-תיבול",
+    "title": "נענע טרייה #2",
+    "description": "המוצר 'נענע טרייה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'נענע טרייה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/509/500/500.jpg?hmac=W5fv3N64CIkdzh89B53ZSbhPcxEOpYvVMs00ZwzyMT8",
@@ -3984,11 +3984,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "78.49",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "78.49",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -3999,7 +3999,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "78.49",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4008,11 +4008,11 @@
     "id": "mock-product-68"
   },
   {
-    "handle": "mock-product-69",
-    "collection": "books",
-    "title": "Mock Product 69",
-    "description": "This is Mock Product 69.",
-    "descriptionHtml": "<p>This is Mock Product 69.</p>",
+    "handle": "אדמת-שתילה-איכותית-2-2",
+    "collection": "צמחי-בית",
+    "title": "אדמת שתילה איכותית #2",
+    "description": "המוצר 'אדמת שתילה איכותית #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדמת שתילה איכותית #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/358/500/500.jpg?hmac=LgDJuTIIyUilTJ_z7Ojf6F8mQjngiDisMgG7fCL4vLY",
@@ -4038,11 +4038,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "103.12",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "103.12",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4053,7 +4053,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "103.12",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4062,11 +4062,11 @@
     "id": "mock-product-69"
   },
   {
-    "handle": "mock-product-70",
-    "collection": "accessories",
-    "title": "Mock Product 70",
-    "description": "This is Mock Product 70.",
-    "descriptionHtml": "<p>This is Mock Product 70.</p>",
+    "handle": "מעמד-עץ-לצמחים-2-2",
+    "collection": "עיצוב-הגינה",
+    "title": "מעמד עץ לצמחים #2",
+    "description": "המוצר 'מעמד עץ לצמחים #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מעמד עץ לצמחים #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/698/500/500.jpg?hmac=uxgzs7vncEwTz_EgnEYOKyHj2OnHrgwu4DzufJlkNTY",
@@ -4104,11 +4104,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "30.89",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "30.89",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4119,7 +4119,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "30.89",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4128,11 +4128,11 @@
     "id": "mock-product-70"
   },
   {
-    "handle": "mock-product-71",
-    "collection": "beauty",
-    "title": "Mock Product 71",
-    "description": "This is Mock Product 71.",
-    "descriptionHtml": "<p>This is Mock Product 71.</p>",
+    "handle": "מנורת-גידול-2-2",
+    "collection": "מתנות",
+    "title": "מנורת גידול LED #2",
+    "description": "המוצר 'מנורת גידול LED #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מנורת גידול LED #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/966/500/500.jpg?hmac=oGdKcKaNxPeQYOBIciLtIWBI-OqK_N_eoPODQp4iRR0",
@@ -4170,11 +4170,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "67.69",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "67.69",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4185,7 +4185,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "67.69",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4194,11 +4194,11 @@
     "id": "mock-product-71"
   },
   {
-    "handle": "mock-product-72",
-    "collection": "accessories",
-    "title": "Mock Product 72",
-    "description": "This is Mock Product 72.",
-    "descriptionHtml": "<p>This is Mock Product 72.</p>",
+    "handle": "קישוט-גינה-עם-אורות-2-2",
+    "collection": "עיצוב-הגינה",
+    "title": "קישוט גינה עם אורות #2",
+    "description": "המוצר 'קישוט גינה עם אורות #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קישוט גינה עם אורות #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/78/500/500.jpg?hmac=LscBxrUb4H07PoDScWQHRrfYZYbVIQsu3ZGOg1WGJQ0",
@@ -4230,11 +4230,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "102.37",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "102.37",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4245,7 +4245,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "102.37",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4254,11 +4254,11 @@
     "id": "mock-product-72"
   },
   {
-    "handle": "mock-product-73",
-    "collection": "books",
-    "title": "Mock Product 73",
-    "description": "This is Mock Product 73.",
-    "descriptionHtml": "<p>This is Mock Product 73.</p>",
+    "handle": "עץ-זית-קטן-2-2",
+    "collection": "צמחי-בית",
+    "title": "עץ זית קטן #2",
+    "description": "המוצר 'עץ זית קטן #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עץ זית קטן #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/53/500/500.jpg?hmac=8cx_zoIK3Y-QmkUUz0H-wQla8q6BX14wyExh0KyJHJc",
@@ -4296,11 +4296,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "66.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "66.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4311,7 +4311,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "66.15",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4320,11 +4320,11 @@
     "id": "mock-product-73"
   },
   {
-    "handle": "mock-product-74",
-    "collection": "home",
-    "title": "Mock Product 74",
-    "description": "This is Mock Product 74.",
-    "descriptionHtml": "<p>This is Mock Product 74.</p>",
+    "handle": "עץ-רימון-ננסי-2-2",
+    "collection": "דשנים-ואדמה",
+    "title": "עץ רימון ננסי #2",
+    "description": "המוצר 'עץ רימון ננסי #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עץ רימון ננסי #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/315/500/500.jpg?hmac=AbWYq_roDJyGvETLXoklwv1TjHEIIamXL4Z03YNQtn0",
@@ -4356,11 +4356,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "42.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "42.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4371,7 +4371,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "42.15",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4380,11 +4380,11 @@
     "id": "mock-product-74"
   },
   {
-    "handle": "mock-product-75",
-    "collection": "books",
-    "title": "Mock Product 75",
-    "description": "This is Mock Product 75.",
-    "descriptionHtml": "<p>This is Mock Product 75.</p>",
+    "handle": "עץ-תפוח-בגידול-ביתי-2-2",
+    "collection": "צמחי-בית",
+    "title": "עץ תפוח בגידול ביתי #2",
+    "description": "המוצר 'עץ תפוח בגידול ביתי #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עץ תפוח בגידול ביתי #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/545/500/500.jpg?hmac=K4OWAwOqQdjSpTM41kKy26Ii0fXj6DRI51RAqr8emBk",
@@ -4416,11 +4416,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "13.98",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "13.98",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4431,7 +4431,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "13.98",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4440,11 +4440,11 @@
     "id": "mock-product-75"
   },
   {
-    "handle": "mock-product-76",
-    "collection": "books",
-    "title": "Mock Product 76",
-    "description": "This is Mock Product 76.",
-    "descriptionHtml": "<p>This is Mock Product 76.</p>",
+    "handle": "שתיל-עגבניות-2-2",
+    "collection": "צמחי-בית",
+    "title": "שתיל עגבניות #2",
+    "description": "המוצר 'שתיל עגבניות #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'שתיל עגבניות #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/412/500/500.jpg?hmac=qKfvn_UA0PP65u0xBAnAEXUIUSH9EG-SgCbyfOGQjaE",
@@ -4476,11 +4476,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "50.27",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "50.27",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4491,7 +4491,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "50.27",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4500,11 +4500,11 @@
     "id": "mock-product-76"
   },
   {
-    "handle": "mock-product-77",
-    "collection": "electronics",
-    "title": "Mock Product 77",
-    "description": "This is Mock Product 77.",
-    "descriptionHtml": "<p>This is Mock Product 77.</p>",
+    "handle": "שתיל-פלפל-חריף-2-2",
+    "collection": "כלי-גינון",
+    "title": "שתיל פלפל חריף #2",
+    "description": "המוצר 'שתיל פלפל חריף #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'שתיל פלפל חריף #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/654/500/500.jpg?hmac=kgpTNBLWV4m-_q3UocuHI4AjklIGOB5U_fE0mfErB88",
@@ -4524,11 +4524,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "145.71",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "145.71",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4539,7 +4539,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "145.71",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4548,11 +4548,11 @@
     "id": "mock-product-77"
   },
   {
-    "handle": "mock-product-78",
-    "collection": "accessories",
-    "title": "Mock Product 78",
-    "description": "This is Mock Product 78.",
-    "descriptionHtml": "<p>This is Mock Product 78.</p>",
+    "handle": "שתיל-בזיליקום-2-2",
+    "collection": "עיצוב-הגינה",
+    "title": "שתיל בזיליקום #2",
+    "description": "המוצר 'שתיל בזיליקום #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'שתיל בזיליקום #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/718/500/500.jpg?hmac=guJUsAxsai63V1hlhDUD0JenDvsN_vRj-ijSPsA3XAs",
@@ -4578,11 +4578,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "133.69",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "133.69",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4593,7 +4593,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "133.69",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4602,11 +4602,11 @@
     "id": "mock-product-78"
   },
   {
-    "handle": "mock-product-79",
-    "collection": "shoes",
-    "title": "Mock Product 79",
-    "description": "This is Mock Product 79.",
-    "descriptionHtml": "<p>This is Mock Product 79.</p>",
+    "handle": "סוקולנט-בצורת-לב-2-2",
+    "collection": "עציצים-ואדניות",
+    "title": "סוקולנט בצורת לב #2",
+    "description": "המוצר 'סוקולנט בצורת לב #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סוקולנט בצורת לב #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/120/500/500.jpg?hmac=s7K3Er5BzS7X73c31STVRCaHMDFx4EIH4CMIzyDwis8",
@@ -4626,11 +4626,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "75.31",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "75.31",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4641,7 +4641,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "75.31",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4650,11 +4650,11 @@
     "id": "mock-product-79"
   },
   {
-    "handle": "mock-product-80",
-    "collection": "shoes",
-    "title": "Mock Product 80",
-    "description": "This is Mock Product 80.",
-    "descriptionHtml": "<p>This is Mock Product 80.</p>",
+    "handle": "פוטוס-זהוב-2-2",
+    "collection": "עציצים-ואדניות",
+    "title": "פוטוס זהוב #2",
+    "description": "המוצר 'פוטוס זהוב #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'פוטוס זהוב #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/171/500/500.jpg?hmac=MCXIAr8YFm04Dt5GrbpOYzwu_60yAoQ-SIAZIRZU-So",
@@ -4680,11 +4680,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "48.75",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "48.75",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4695,7 +4695,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "48.75",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4704,11 +4704,11 @@
     "id": "mock-product-80"
   },
   {
-    "handle": "mock-product-81",
-    "collection": "beauty",
-    "title": "Mock Product 81",
-    "description": "This is Mock Product 81.",
-    "descriptionHtml": "<p>This is Mock Product 81.</p>",
+    "handle": "דקל-ננסי-2-2",
+    "collection": "מתנות",
+    "title": "דקל ננסי #2",
+    "description": "המוצר 'דקל ננסי #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'דקל ננסי #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/1077/500/500.jpg?hmac=G9rMQboDKXGgVzsfHSnMilGCILSw60o0KMqzqOnxrew",
@@ -4740,11 +4740,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "39.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "39.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4755,7 +4755,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "39.15",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4764,11 +4764,11 @@
     "id": "mock-product-81"
   },
   {
-    "handle": "mock-product-82",
-    "collection": "beauty",
-    "title": "Mock Product 82",
-    "description": "This is Mock Product 82.",
-    "descriptionHtml": "<p>This is Mock Product 82.</p>",
+    "handle": "קקטוס-פריחה-2-2",
+    "collection": "מתנות",
+    "title": "קקטוס פריחה #2",
+    "description": "המוצר 'קקטוס פריחה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קקטוס פריחה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/591/500/500.jpg?hmac=zxF8U9WlK6KezfMa92WuWUCdt2hNr828JqLBFlLueU0",
@@ -4794,11 +4794,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "131.66",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "131.66",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4809,7 +4809,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "131.66",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4818,11 +4818,11 @@
     "id": "mock-product-82"
   },
   {
-    "handle": "mock-product-83",
-    "collection": "shoes",
-    "title": "Mock Product 83",
-    "description": "This is Mock Product 83.",
-    "descriptionHtml": "<p>This is Mock Product 83.</p>",
+    "handle": "קישוטי-עץ-טבעיים-2-2",
+    "collection": "עציצים-ואדניות",
+    "title": "קישוטי עץ טבעיים #2",
+    "description": "המוצר 'קישוטי עץ טבעיים #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קישוטי עץ טבעיים #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/230/500/500.jpg?hmac=Dl0gFRz3E4HI8CWxnaQKSLdbEjjqAhsszIW772MoToM",
@@ -4860,11 +4860,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "120.68",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "120.68",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4875,7 +4875,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "120.68",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4884,11 +4884,11 @@
     "id": "mock-product-83"
   },
   {
-    "handle": "mock-product-84",
-    "collection": "outdoors",
-    "title": "Mock Product 84",
-    "description": "This is Mock Product 84.",
-    "descriptionHtml": "<p>This is Mock Product 84.</p>",
+    "handle": "אדנית-תלייה-צבעונית-2-2",
+    "collection": "צמחי-חוץ",
+    "title": "אדנית תלייה צבעונית #2",
+    "description": "המוצר 'אדנית תלייה צבעונית #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדנית תלייה צבעונית #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/331/500/500.jpg?hmac=0FFpRZ0BS73LXeHgN8lEEutHN42SiDgh6EaB42V7tiU",
@@ -4932,11 +4932,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "85.87",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "85.87",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -4947,7 +4947,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "85.87",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -4956,11 +4956,11 @@
     "id": "mock-product-84"
   },
   {
-    "handle": "mock-product-85",
-    "collection": "beauty",
-    "title": "Mock Product 85",
-    "description": "This is Mock Product 85.",
-    "descriptionHtml": "<p>This is Mock Product 85.</p>",
+    "handle": "כלי-דישון-2-2",
+    "collection": "מתנות",
+    "title": "כלי דישון #2",
+    "description": "המוצר 'כלי דישון #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'כלי דישון #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/32/500/500.jpg?hmac=86FEqhvXyxxme4FgaTbH6jvuyREKzGILn-5Ub25aURE",
@@ -4992,11 +4992,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "70.24",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "70.24",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5007,7 +5007,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "70.24",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5016,11 +5016,11 @@
     "id": "mock-product-85"
   },
   {
-    "handle": "mock-product-86",
-    "collection": "shoes",
-    "title": "Mock Product 86",
-    "description": "This is Mock Product 86.",
-    "descriptionHtml": "<p>This is Mock Product 86.</p>",
+    "handle": "מרסס-מים-2-2",
+    "collection": "עציצים-ואדניות",
+    "title": "מרסס מים #2",
+    "description": "המוצר 'מרסס מים #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מרסס מים #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/848/500/500.jpg?hmac=Dyl9QTzYSUHeVxzrDD1wP3w1-9YCx92hJx5MIq5skDY",
@@ -5052,11 +5052,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "24.96",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "24.96",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5067,7 +5067,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "24.96",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5076,11 +5076,11 @@
     "id": "mock-product-86"
   },
   {
-    "handle": "mock-product-87",
-    "collection": "apparel",
-    "title": "Mock Product 87",
-    "description": "This is Mock Product 87.",
-    "descriptionHtml": "<p>This is Mock Product 87.</p>",
+    "handle": "מיכל-השקיה-2-2",
+    "collection": "עשבי-תיבול",
+    "title": "מיכל השקיה #2",
+    "description": "המוצר 'מיכל השקיה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מיכל השקיה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/369/500/500.jpg?hmac=STU-BqFhIzXCboTJTIWy8cT1dsE7LvHE2SXKH5GLr4Q",
@@ -5112,11 +5112,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "85.56",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "85.56",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5127,7 +5127,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "85.56",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5136,11 +5136,11 @@
     "id": "mock-product-87"
   },
   {
-    "handle": "mock-product-88",
-    "collection": "shoes",
-    "title": "Mock Product 88",
-    "description": "This is Mock Product 88.",
-    "descriptionHtml": "<p>This is Mock Product 88.</p>",
+    "handle": "צמח-נענע-מרענן-2-2",
+    "collection": "עציצים-ואדניות",
+    "title": "צמח נענע מרענן #2",
+    "description": "המוצר 'צמח נענע מרענן #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'צמח נענע מרענן #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/306/500/500.jpg?hmac=xYmmVM0OCIBaM2cAGgCptS5KceVD00yx9GDgy8NTcog",
@@ -5178,11 +5178,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "43.45",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "43.45",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5193,7 +5193,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "43.45",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5202,11 +5202,11 @@
     "id": "mock-product-88"
   },
   {
-    "handle": "mock-product-89",
-    "collection": "outdoors",
-    "title": "Mock Product 89",
-    "description": "This is Mock Product 89.",
-    "descriptionHtml": "<p>This is Mock Product 89.</p>",
+    "handle": "עציץ-רוזמרין-2-2",
+    "collection": "צמחי-חוץ",
+    "title": "עציץ רוזמרין #2",
+    "description": "המוצר 'עציץ רוזמרין #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'עציץ רוזמרין #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/471/500/500.jpg?hmac=AMDsZc3bZ60RQCvCvhvVVuwzyVSqH3c0ZokUeWbNoVU",
@@ -5244,11 +5244,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "132.5",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "132.5",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5259,7 +5259,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "132.5",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5268,11 +5268,11 @@
     "id": "mock-product-89"
   },
   {
-    "handle": "mock-product-90",
-    "collection": "beauty",
-    "title": "Mock Product 90",
-    "description": "This is Mock Product 90.",
-    "descriptionHtml": "<p>This is Mock Product 90.</p>",
+    "handle": "גזם-תפוחי-אדמה-2-2",
+    "collection": "מתנות",
+    "title": "גזם תפוחי אדמה #2",
+    "description": "המוצר 'גזם תפוחי אדמה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'גזם תפוחי אדמה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/778/500/500.jpg?hmac=jZLZ6WV_OGRxAIIYPk7vGRabcAGAILzxVxhqSH9uLas",
@@ -5304,11 +5304,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "45.53",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "45.53",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5319,7 +5319,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "45.53",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5328,11 +5328,11 @@
     "id": "mock-product-90"
   },
   {
-    "handle": "mock-product-91",
-    "collection": "accessories",
-    "title": "Mock Product 91",
-    "description": "This is Mock Product 91.",
-    "descriptionHtml": "<p>This is Mock Product 91.</p>",
+    "handle": "פוטוס-מטפס-2-3",
+    "collection": "עיצוב-הגינה",
+    "title": "פוטוס מטפס #2",
+    "description": "המוצר 'פוטוס מטפס #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'פוטוס מטפס #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/249/500/500.jpg?hmac=ZmYf-jLyT_wczYDejsW--LqTOTei7xRELmO4SJgvMfs",
@@ -5376,11 +5376,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "90.42",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "90.42",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5391,7 +5391,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "90.42",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5400,11 +5400,11 @@
     "id": "mock-product-91"
   },
   {
-    "handle": "mock-product-92",
-    "collection": "apparel",
-    "title": "Mock Product 92",
-    "description": "This is Mock Product 92.",
-    "descriptionHtml": "<p>This is Mock Product 92.</p>",
+    "handle": "סוקולנט-ירוק-2-3",
+    "collection": "עשבי-תיבול",
+    "title": "סוקולנט ירוק #2",
+    "description": "המוצר 'סוקולנט ירוק #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סוקולנט ירוק #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/268/500/500.jpg?hmac=r-0APcoPbU3x8RzPNFDB1dwGUSl2Uh4ybCV6dEKUvxo",
@@ -5436,11 +5436,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "80.96",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "80.96",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5451,7 +5451,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "80.96",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5460,11 +5460,11 @@
     "id": "mock-product-92"
   },
   {
-    "handle": "mock-product-93",
-    "collection": "accessories",
-    "title": "Mock Product 93",
-    "description": "This is Mock Product 93.",
-    "descriptionHtml": "<p>This is Mock Product 93.</p>",
+    "handle": "קקטוס-קטן-2-3",
+    "collection": "עיצוב-הגינה",
+    "title": "קקטוס קטן #2",
+    "description": "המוצר 'קקטוס קטן #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'קקטוס קטן #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/19/500/500.jpg?hmac=xBWDwhm8Tc1r2q-K5_u3E65nyLoU7rSX6WWUHCeJZbw",
@@ -5508,11 +5508,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "148.28",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "148.28",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5523,7 +5523,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "148.28",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5532,11 +5532,11 @@
     "id": "mock-product-93"
   },
   {
-    "handle": "mock-product-94",
-    "collection": "beauty",
-    "title": "Mock Product 94",
-    "description": "This is Mock Product 94.",
-    "descriptionHtml": "<p>This is Mock Product 94.</p>",
+    "handle": "אדנית-קרמית-2-3",
+    "collection": "מתנות",
+    "title": "אדנית קרמית #2",
+    "description": "המוצר 'אדנית קרמית #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדנית קרמית #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/518/500/500.jpg?hmac=PrrOHMRDF_jUhrcQVpJo0afLvH8yft6HA4veoxgfWmw",
@@ -5562,11 +5562,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "46.22",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "46.22",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5577,7 +5577,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "46.22",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5586,11 +5586,11 @@
     "id": "mock-product-94"
   },
   {
-    "handle": "mock-product-95",
-    "collection": "outdoors",
-    "title": "Mock Product 95",
-    "description": "This is Mock Product 95.",
-    "descriptionHtml": "<p>This is Mock Product 95.</p>",
+    "handle": "דשן-לצמיחה-2-3",
+    "collection": "צמחי-חוץ",
+    "title": "דשן לצמיחה #2",
+    "description": "המוצר 'דשן לצמיחה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'דשן לצמיחה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/878/500/500.jpg?hmac=jrsXtoZttXpgs9ie43un2PsJVpe4evGLGDVpVfUXJFc",
@@ -5616,11 +5616,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "75.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "75.15",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5631,7 +5631,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "75.15",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5640,11 +5640,11 @@
     "id": "mock-product-95"
   },
   {
-    "handle": "mock-product-96",
-    "collection": "outdoors",
-    "title": "Mock Product 96",
-    "description": "This is Mock Product 96.",
-    "descriptionHtml": "<p>This is Mock Product 96.</p>",
+    "handle": "כלי-שתילה-מעוצב-2-3",
+    "collection": "צמחי-חוץ",
+    "title": "כלי שתילה מעוצב #2",
+    "description": "המוצר 'כלי שתילה מעוצב #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'כלי שתילה מעוצב #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/164/500/500.jpg?hmac=UkssNxw5xFhuAWPK8GqUQkk6nqUss579NUlewt838LM",
@@ -5670,11 +5670,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "13.25",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "13.25",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5685,7 +5685,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "13.25",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5694,11 +5694,11 @@
     "id": "mock-product-96"
   },
   {
-    "handle": "mock-product-97",
-    "collection": "apparel",
-    "title": "Mock Product 97",
-    "description": "This is Mock Product 97.",
-    "descriptionHtml": "<p>This is Mock Product 97.</p>",
+    "handle": "סט-כלים-לגינון-2-3",
+    "collection": "עשבי-תיבול",
+    "title": "סט כלים לגינון #2",
+    "description": "המוצר 'סט כלים לגינון #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'סט כלים לגינון #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/1014/500/500.jpg?hmac=IzRie6X2O3Z3eNoIESSHwScKgUrmrQ2ozOVNmeTT9g4",
@@ -5724,11 +5724,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "54.16",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "54.16",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5739,7 +5739,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "54.16",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5748,11 +5748,11 @@
     "id": "mock-product-97"
   },
   {
-    "handle": "mock-product-98",
-    "collection": "books",
-    "title": "Mock Product 98",
-    "description": "This is Mock Product 98.",
-    "descriptionHtml": "<p>This is Mock Product 98.</p>",
+    "handle": "נענע-טרייה-2-3",
+    "collection": "צמחי-בית",
+    "title": "נענע טרייה #2",
+    "description": "המוצר 'נענע טרייה #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'נענע טרייה #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/809/500/500.jpg?hmac=43lNB4aPEU6nDhvct1f6S9yEIvjc3ICLGPFcSFIckSs",
@@ -5784,11 +5784,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "47.4",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "47.4",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5799,7 +5799,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "47.4",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5808,11 +5808,11 @@
     "id": "mock-product-98"
   },
   {
-    "handle": "mock-product-99",
-    "collection": "outdoors",
-    "title": "Mock Product 99",
-    "description": "This is Mock Product 99.",
-    "descriptionHtml": "<p>This is Mock Product 99.</p>",
+    "handle": "אדמת-שתילה-איכותית-2-3",
+    "collection": "צמחי-חוץ",
+    "title": "אדמת שתילה איכותית #2",
+    "description": "המוצר 'אדמת שתילה איכותית #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'אדמת שתילה איכותית #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/354/500/500.jpg?hmac=FcHIgT6i78_JcALBkt5QT6H3gfOtXoWcvFCRaLpdoRg",
@@ -5838,11 +5838,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "107.36",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "107.36",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5853,7 +5853,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "107.36",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }
@@ -5862,11 +5862,11 @@
     "id": "mock-product-99"
   },
   {
-    "handle": "mock-product-100",
-    "collection": "home",
-    "title": "Mock Product 100",
-    "description": "This is Mock Product 100.",
-    "descriptionHtml": "<p>This is Mock Product 100.</p>",
+    "handle": "מעמד-עץ-לצמחים-2-3",
+    "collection": "דשנים-ואדמה",
+    "title": "מעמד עץ לצמחים #2",
+    "description": "המוצר 'מעמד עץ לצמחים #2' מושלם לגינה או לבית שלך.",
+    "descriptionHtml": "<p>המוצר 'מעמד עץ לצמחים #2' מושלם לגינה או לבית שלך.</p>",
     "tags": [],
     "featuredImage": {
       "url": "https://fastly.picsum.photos/id/744/500/500.jpg?hmac=--mE5rhbp6mrgNmP4FAJzWMIlzrJkFv0FPQlsRUbpws",
@@ -5886,11 +5886,11 @@
     "priceRange": {
       "minVariantPrice": {
         "amount": "48.42",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       },
       "maxVariantPrice": {
         "amount": "48.42",
-        "currencyCode": "USD"
+        "currencyCode": "ILS"
       }
     },
     "options": [],
@@ -5901,7 +5901,7 @@
         "selectedOptions": [],
         "price": {
           "amount": "48.42",
-          "currencyCode": "USD"
+          "currencyCode": "ILS"
         },
         "title": "Variant 1"
       }

@@ -2,11 +2,16 @@ import { headers } from 'next/headers';
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { mockProducts } from 'lib/shopify';
-
+function safeDecodeURIComponent(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
 export default async function CollectionPage() {
   const headersList = await headers();
-  const pathname = headersList.get('x-next-url') || '/';
-
+  const pathname = safeDecodeURIComponent( headersList.get('x-next-url') || '/');
   // Extract collection handle from path (e.g., /collection/shoes)
   const collectionMatch = pathname.match(/^\/collection\/([^/]+)$/);
   const collectionHandle = collectionMatch ? collectionMatch[1] : null;

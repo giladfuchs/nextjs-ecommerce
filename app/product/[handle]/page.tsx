@@ -17,11 +17,17 @@ async function getHandleFromHeaders(): Promise<string | null> {
     const headerList = await headers(); // ✅ await here
     return headerList.get('x-product-handle');
 }
+function safeDecodeURIComponent(value: string): string {
+    try {
+        return decodeURIComponent(value);
+    } catch {
+        return value;
+    }
+}
 export default async function ProductPage() {
-    const handle =await getHandleFromHeaders(); // ✅ safely isolate header access
+    const rawHandle = await getHandleFromHeaders(); // ✅ safely isolate header access
+    const handle = safeDecodeURIComponent(rawHandle as string);
 
-
-    console.log(handle)
     const product = mockProducts.find((p) => p.handle === handle)
 
     if (!product) return notFound();

@@ -1,7 +1,24 @@
 @import 'tailwindcss';
-
 @plugin "@tailwindcss/container-queries";
 @plugin "@tailwindcss/typography";
+
+html {
+    direction: rtl;
+    font-family: 'Assistant', sans-serif;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: inherit;
+}
+
+/* Optional - override Tailwind's default text alignment for RTL */
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
 
 @layer base {
     *,
