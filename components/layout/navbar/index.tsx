@@ -1,7 +1,7 @@
-import { getMenu } from "lib/shopify";
 import NavbarClient from "./Navbar.client";
+import { Menu } from "../../../lib/shopify/types";
 
 export async function Navbar() {
-  const menu = await getMenu("next-js-frontend-header-menu");
+  const menu = [] as Menu[];
   return <NavbarClient menu={menu} />;
 }

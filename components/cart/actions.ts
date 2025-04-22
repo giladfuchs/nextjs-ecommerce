@@ -12,22 +12,6 @@ import { revalidateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export async function addItem(
-  prevState: any,
-  selectedVariantId: string | undefined,
-) {
-  if (!selectedVariantId) {
-    return "Error adding item to cart";
-  }
-
-  try {
-    await addToCart([{ merchandiseId: selectedVariantId, quantity: 1 }]);
-    revalidateTag(TAGS.cart);
-  } catch (e) {
-    return "Error adding item to cart";
-  }
-}
-
 export async function removeItem(prevState: any, merchandiseId: string) {
   try {
     const cart = await getCart();
@@ -93,11 +77,6 @@ export async function updateItemQuantity(
     console.error(e);
     return "Error updating item quantity";
   }
-}
-
-export async function redirectToCheckout() {
-  let cart = await getCart();
-  redirect(cart!.checkoutUrl);
 }
 
 export async function createCartAndSetCookie() {
