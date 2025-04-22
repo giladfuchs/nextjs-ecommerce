@@ -11,17 +11,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { useFormStatus } from 'react-dom';
-import { createCartAndSetCookie, redirectToCheckout } from './actions';
+import { createCartAndSetCookie } from './actions';
 import { useCart } from './cart-context';
 import { DeleteItemButton } from './delete-item-button';
 import { EditItemQuantityButton } from './edit-item-quantity-button';
 import OpenCart from './open-cart';
+import {useRouter} from "next/navigation";
 
 type MerchandiseSearchParams = {
   [key: string]: string;
 };
 
 export default function CartModal() {
+  const router = useRouter();
+
   const { cart, updateCartItem } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const quantityRef = useRef(cart?.totalQuantity);
@@ -45,7 +48,10 @@ export default function CartModal() {
       quantityRef.current = cart?.totalQuantity;
     }
   }, [isOpen, cart?.totalQuantity, quantityRef]);
-
+    const redirectToCheckout= ()=>{
+        closeCart()
+        router.push("/checkout")
+    }
   return (
     <>
       <button aria-label="Open cart" onClick={openCart}>
@@ -217,6 +223,7 @@ export default function CartModal() {
                     </div>
                   </div>
                   <form action={redirectToCheckout}>
+
                     <CheckoutButton />
                   </form>
                 </div>
