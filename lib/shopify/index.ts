@@ -365,6 +365,7 @@ export async function getCollection(handle: string) {
     return mockCollections.find((collection) => collection.handle === handle);
 }
 
+
 export async function getCollectionProducts({
                                                 collection,
                                                 reverse,

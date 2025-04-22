@@ -2,18 +2,8 @@ import { headers } from 'next/headers';
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { mockProducts } from 'lib/shopify';
-// import {useStore} from "../../lib/store";
 
-
-export default async function CollectionPage(props: {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
-}) {
-  const searchParams = await props.searchParams;
-  const { sort, q: searchValue } = (searchParams ?? {}) as { [key: string]: string };
-
-  // const { products } = useStore();
-  // console.log(products)
-
+export default async function CollectionPage() {
   const headersList = await headers();
   const pathname = headersList.get('x-next-url') || '/';
 
@@ -29,30 +19,23 @@ export default async function CollectionPage(props: {
         (product) => product.collection === collectionHandle
     );
   }
-  if (searchValue) {
-    filteredProducts = filteredProducts.filter((product) =>
-        product.title.toLowerCase().includes(searchValue.toLowerCase())
-    );
-  }
 
   const resultsText = filteredProducts.length === 1 ? 'result' : 'results';
 
   return (
       <>
-        {searchValue ? (
-            <p className="mb-4">
-              {filteredProducts.length === 0
-                  ? 'There are no products that match '
-                  : `Showing ${filteredProducts.length} ${resultsText} for `}
-              <span className="font-bold">&quot;{searchValue}&quot;</span>
-            </p>
-        ) : null}
+        <p className="mb-4">
+          Showing {filteredProducts.length} {resultsText}
+          {collectionHandle ? ` in "${collectionHandle}"` : null}
+        </p>
 
         {filteredProducts.length > 0 ? (
             <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               <ProductGridItems products={filteredProducts} />
             </Grid>
-        ) : null}
+        ) : (
+            <p>No products found.</p>
+        )}
       </>
   );
 }

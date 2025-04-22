@@ -12,7 +12,7 @@ export const metadata = {
     }
 };
 
-export default function HomePage() {
+export default async function HomePage() {
     // const {fetchData} = useStore();
     //
     // fetchData();
