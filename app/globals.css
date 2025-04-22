@@ -1,75 +1,74 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/container-queries";
 @plugin "@tailwindcss/typography";
 
 html {
-    direction: rtl;
-    font-family: 'Assistant', sans-serif;
+  direction: rtl;
+  font-family: "Assistant", sans-serif;
 }
 
 body {
-    direction: rtl;
-    text-align: right;
-    font-family: inherit;
+  direction: rtl;
+  text-align: right;
+  font-family: inherit;
 }
 
 /* Optional - override Tailwind's default text alignment for RTL */
 .rtl {
-    direction: rtl;
-    text-align: right;
+  direction: rtl;
+  text-align: right;
 }
 
-
 @layer base {
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, currentColor);
-    }
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
+  html {
+    color-scheme: dark;
+  }
 }
 
 @supports (font: -apple-system-body) and (-webkit-appearance: none) {
-    img[loading='lazy'] {
-        clip-path: inset(0.6px);
-    }
+  img[loading="lazy"] {
+    clip-path: inset(0.6px);
+  }
 }
 
 a,
 input,
 button {
-    @apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-50 dark:focus-visible:ring-neutral-600 dark:focus-visible:ring-offset-neutral-900;
+  @apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-neutral-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-50 dark:focus-visible:ring-neutral-600 dark:focus-visible:ring-offset-neutral-900;
 }
 
 @layer base {
-    .text-theme {
-        color: var(--color-text);
-    }
+  .text-theme {
+    color: var(--color-text);
+  }
 
-    .text-theme-strong {
-        color: var(--color-text-strong);
-    }
+  .text-theme-strong {
+    color: var(--color-text-strong);
+  }
 
-    .bg-theme {
-        background-color: var(--color-bg);
-    }
+  .bg-theme {
+    background-color: var(--color-bg);
+  }
 
-    .bg-theme-dark {
-        background-color: var(--color-bg-dark);
-    }
+  .bg-theme-dark {
+    background-color: var(--color-bg-dark);
+  }
 
-    .border-theme {
-        border-color: var(--color-border);
-    }
+  .border-theme {
+    border-color: var(--color-border);
+  }
 
-    .text-accent {
-        color: var(--color-accent);
-    }
+  .text-accent {
+    color: var(--color-accent);
+  }
 }

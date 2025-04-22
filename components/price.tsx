@@ -1,21 +1,21 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
 const Price = ({
   amount,
   className,
-  currencyCode = 'USD',
-  currencyCodeClassName
+  currencyCode = "USD",
+  currencyCodeClassName,
 }: {
   amount: string;
   className?: string;
   currencyCode: string;
   currencyCodeClassName?: string;
-} & React.ComponentProps<'p'>) => (
+} & React.ComponentProps<"p">) => (
   <p suppressHydrationWarning={true} className={className}>
     {`${new Intl.NumberFormat(undefined, {
-      style: 'currency',
+      style: "currency",
       currency: currencyCode,
-      currencyDisplay: 'narrowSymbol'
+      currencyDisplay: "narrowSymbol",
     }).format(parseFloat(amount))}`}
   </p>
 );

@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { usePathname } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import type { ListItem } from '.';
-import { FilterItem } from './item';
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import type { ListItem } from ".";
+import { FilterItem } from "./item";
 
 export default function FilterItemDropdown({ list }: { list: ListItem[] }) {
   const pathname = usePathname();
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState("");
   const [openSelect, setOpenSelect] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -20,19 +20,17 @@ export default function FilterItemDropdown({ list }: { list: ListItem[] }) {
       }
     };
 
-    window.addEventListener('click', handleClickOutside);
-    return () => window.removeEventListener('click', handleClickOutside);
+    window.addEventListener("click", handleClickOutside);
+    return () => window.removeEventListener("click", handleClickOutside);
   }, []);
 
   useEffect(() => {
     list.forEach((listItem: ListItem) => {
-      if (
-        ('path' in listItem && pathname === listItem.path)
-      ) {
+      if ("path" in listItem && pathname === listItem.path) {
         setActive(listItem.title);
       }
     });
-  }, [pathname, list,]);
+  }, [pathname, list]);
 
   return (
     <div className="relative" ref={ref}>

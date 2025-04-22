@@ -1,24 +1,21 @@
 'use client';
 
-import {useRouter} from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import React, {
     createContext,
     useContext,
     useMemo,
     useOptimistic
 } from 'react';
-import {Product, ProductVariant} from 'lib/shopify/types';
+import { Product, ProductVariant } from 'lib/shopify/types';
 
 type ProductState = {
     [key: string]: string;
-} & {
-    image?: string;
 };
 
 type ProductContextType = {
     state: ProductState;
     updateOption: (name: string, value: string) => ProductState;
-    updateImage: (index: string) => ProductState;
     selectedVariant?: ProductVariant;
 };
 
@@ -31,19 +28,12 @@ export function ProductProvider({
     children: React.ReactNode;
     product: Product;
 }) {
-
-    const getInitialState = () => {
+    const getInitialState = (): ProductState => {
         const params: ProductState = {};
 
-
-        // fallback: default to first value of each option
-        if (product) {
-            for (const option of product.options) {
-                const key = option.name.toLowerCase();
-                if (!params[key]) {
-                    params[key] = option.values[0] ?? '';
-                }
-            }
+        for (const option of product.options) {
+            const key = option.name.toLowerCase();
+            params[key] = option.values[0] ?? '';
         }
 
         return params;
@@ -58,15 +48,9 @@ export function ProductProvider({
     );
 
     const updateOption = (name: string, value: string) => {
-        const newState = {[name]: value};
+        const newState: ProductState = { [name]: value };
         setOptimisticState(newState);
-        return {...state, ...newState};
-    };
-
-    const updateImage = (index: string) => {
-        const newState = {image: index};
-        setOptimisticState(newState);
-        return {...state, ...newState};
+        return { ...state, ...newState };
     };
 
     const selectedVariant = useMemo(() => {
@@ -82,7 +66,6 @@ export function ProductProvider({
         () => ({
             state,
             updateOption,
-            updateImage,
             selectedVariant
         }),
         [state, selectedVariant]
@@ -97,7 +80,7 @@ export function ProductProvider({
 
 export function useProduct() {
     const context = useContext(ProductContext);
-    if (context === undefined) {
+    if (!context) {
         throw new Error('useProduct must be used within a ProductProvider');
     }
     return context;
@@ -111,6 +94,6 @@ export function useUpdateURL() {
         Object.entries(state).forEach(([key, value]) => {
             newParams.set(key, value);
         });
-        router.push(`?${newParams.toString()}`, {scroll: false});
+        router.push(`?${newParams.toString()}`, { scroll: false });
     };
 }
