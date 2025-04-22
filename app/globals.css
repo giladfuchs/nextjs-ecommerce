@@ -6,7 +6,18 @@ html {
   direction: rtl;
   font-family: "Assistant", sans-serif;
 }
+html.high-contrast {
+  background-color: black !important;
+  color: yellow !important;
+}
 
+html.grayscale {
+  filter: grayscale(1);
+}
+
+html.underline-links a {
+  text-decoration: underline !important;
+}
 body {
   direction: rtl;
   text-align: right;

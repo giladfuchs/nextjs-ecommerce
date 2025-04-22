@@ -7,6 +7,8 @@ import Providers from "./providers";
 import "../styles/theme.scss";
 
 import { Assistant } from "next/font/google";
+import AccessibilityBar from "./AccessibilityBar";
+
 
 const assistant = Assistant({
   subsets: ["hebrew"],
@@ -41,6 +43,7 @@ export default async function RootLayout({
         <Providers>
           <Navbar />
           <main>{children}</main>
+          <AccessibilityBar/>
         </Providers>
       </body>
     </html>
