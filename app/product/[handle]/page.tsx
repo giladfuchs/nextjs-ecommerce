@@ -11,47 +11,18 @@ import {getMockProduct, getProduct, getProductRecommendations, mockProducts} fro
 import {Image} from 'lib/shopify/types';
 import Link from 'next/link';
 import {Suspense} from 'react';
+import {headers} from "next/headers";
 
-
-export async function generateMetadata({params}: {
-    params: { handle: string };
-}): Promise<Metadata> {
-
-    const product = mockProducts.find((p) => p.handle === params.handle)
-    if (!product) return notFound();
-
-    const {url, width, height, altText: alt} = product.featuredImage || {};
-    const indexable = !product.tags.includes(HIDDEN_PRODUCT_TAG);
-
-    return {
-        title: product.title,
-        description: product.description,
-        robots: {
-            index: indexable,
-            follow: indexable,
-            googleBot: {
-                index: indexable,
-                follow: indexable
-            }
-        },
-        openGraph: url
-            ? {
-                images: [
-                    {
-                        url,
-                        width,
-                        height,
-                        alt
-                    }
-                ]
-            }
-            : null
-    };
+async function getHandleFromHeaders(): Promise<string | null> {
+    const headerList = await headers(); // ✅ await here
+    return headerList.get('x-product-handle');
 }
+export default async function ProductPage() {
+    const handle =await getHandleFromHeaders(); // ✅ safely isolate header access
 
-export default async function ProductPage({params}: { params: { handle: string } }) {
 
-    const product = mockProducts.find((p) => p.handle === params.handle)
+    console.log(handle)
+    const product = mockProducts.find((p) => p.handle === handle)
 
     if (!product) return notFound();
 
@@ -85,7 +56,7 @@ export default async function ProductPage({params}: { params: { handle: string }
             <div className="mx-auto max-w-(--breakpoint-2xl) px-4">
                 <div
                     className="flex flex-col rounded-lg border border-theme bg-theme p-8 md:p-12 lg:flex-row lg:gap-8 dark:border-theme dark:bg-theme-dark"
->
+                >
                     <div className="h-full w-full basis-full lg:basis-4/6">
 
                         <Suspense

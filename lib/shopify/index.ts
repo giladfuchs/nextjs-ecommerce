@@ -349,10 +349,13 @@ import mockProductsJson from './mock_products.json'
 export const mockProducts = mockProductsJson
 
 
-export async function getMockProduct(handle: string): Promise<Product | undefined> {
+
+export async function getMockProduct(handle: string) {
     return mockProducts.find((p) => p.handle === handle);
 }
-
+// export async function getMockProduct({ handle }: { handle: string }) {
+//     return mockProducts.find((p) => p.handle === handle);
+// }
 export async function getProduct(handle: string): Promise<Product | undefined> {
 
 
