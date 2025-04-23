@@ -7,7 +7,7 @@ import Providers from "./providers";
 import "../styles/theme.scss";
 
 import { Assistant } from "next/font/google";
-import AccessibilityBar from "./AccessibilityBar";
+import AccessibilityBar from "../components/accessibility-bar";
 
 
 const assistant = Assistant({
