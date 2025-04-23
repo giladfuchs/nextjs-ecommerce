@@ -1,179 +1,17 @@
 import {
-  HIDDEN_PRODUCT_TAG,
   SHOPIFY_GRAPHQL_API_ENDPOINT,
-  TAGS,
 } from "lib/constants";
-import { isShopifyError } from "lib/type-guards";
 import { ensureStartsWith } from "lib/utils";
 
-import { NextRequest, NextResponse } from "next/server";
-import {
-  addToCartMutation,
-  createCartMutation,
-  editCartItemsMutation,
-  removeFromCartMutation,
-} from "./mutations/cart";
 
 import {
-  Cart,
   Collection,
-  Connection,
   Product,
-  ShopifyAddToCartOperation,
-  ShopifyCart,
-  ShopifyCreateCartOperation,
-  ShopifyRemoveFromCartOperation,
-  ShopifyUpdateCartOperation,
+
 } from "./types";
 
-const domain = process.env.SHOPIFY_STORE_DOMAIN
-  ? ensureStartsWith(process.env.SHOPIFY_STORE_DOMAIN, "https://")
-  : "";
-const endpoint = `${domain}${SHOPIFY_GRAPHQL_API_ENDPOINT}`;
-const key = process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN!;
 
-type ExtractVariables<T> = T extends { variables: object }
-  ? T["variables"]
-  : never;
 
-export async function shopifyFetch<T>({
-  headers,
-  query,
-  variables,
-}: {
-  headers?: HeadersInit;
-  query: string;
-  variables?: ExtractVariables<T>;
-}): Promise<{ status: number; body: T } | never> {
-  return Promise.resolve({ status: 200, body: {} as T });
-}
-
-const removeEdgesAndNodes = <T>(array: Connection<T>): T[] => {
-  return array.edges.map((edge) => edge?.node);
-};
-
-const reshapeCart = (cart: ShopifyCart): Cart => {
-  if (!cart.cost?.totalTaxAmount) {
-    cart.cost.totalTaxAmount = {
-      amount: "0.0",
-      currencyCode: cart.cost.totalAmount.currencyCode,
-    };
-  }
-
-  return {
-    ...cart,
-    lines: removeEdgesAndNodes(cart.lines),
-  };
-};
-
-export async function createCart(): Promise<Cart> {
-  const res = await shopifyFetch<ShopifyCreateCartOperation>({
-    query: createCartMutation,
-  });
-
-  return reshapeCart(res.body.data.cartCreate.cart);
-}
-
-export async function addToCart(
-  lines: { merchandiseId: string; quantity: number }[],
-): Promise<Cart> {
-  const cartId = "2";
-  const res = await shopifyFetch<ShopifyAddToCartOperation>({
-    query: addToCartMutation,
-    variables: {
-      cartId,
-      lines,
-    },
-  });
-  return reshapeCart(res.body.data.cartLinesAdd.cart);
-}
-
-export async function removeFromCart(lineIds: string[]): Promise<Cart> {
-  const cartId = "2";
-  const res = await shopifyFetch<ShopifyRemoveFromCartOperation>({
-    query: removeFromCartMutation,
-    variables: {
-      cartId,
-      lineIds,
-    },
-  });
-
-  return reshapeCart(res.body.data.cartLinesRemove.cart);
-}
-
-export async function updateCart(
-  lines: { id: string; merchandiseId: string; quantity: number }[],
-): Promise<Cart> {
-  const cartId = "2";
-  const res = await shopifyFetch<ShopifyUpdateCartOperation>({
-    query: editCartItemsMutation,
-    variables: {
-      cartId,
-      lines,
-    },
-  });
-
-  return reshapeCart(res.body.data.cartLinesUpdate.cart);
-}
-
-export const mockCart = {
-  id: "mock-cart-id",
-  checkoutUrl: "https://example.com/checkout",
-  totalQuantity: 2,
-  lines: [
-    {
-      id: "line-1",
-      quantity: 2,
-      merchandise: {
-        id: "prod-1",
-        title: "Mock Shirt",
-        selectedOptions: [
-          { name: "Size", value: "M" },
-          { name: "Color", value: "Blue" },
-        ],
-        product: {
-          id: "product-1",
-          title: "Mock Shirt",
-          handle: "mock-shirt",
-          featuredImage: {
-            url: "/placeholder.jpg",
-            altText: "Mock Shirt",
-            width: 800,
-            height: 800,
-          },
-        },
-        image: {
-          url: "/placeholder.jpg",
-          altText: "Mock Shirt",
-        },
-        price: {
-          amount: "29.99",
-          currencyCode: "USD",
-        },
-      },
-      cost: {
-        totalAmount: {
-          amount: "59.98",
-          currencyCode: "USD",
-        },
-      },
-    },
-  ],
-  cost: {
-    subtotalAmount: {
-      amount: "59.98",
-      currencyCode: "USD",
-    },
-    totalAmount: {
-      amount: "59.98",
-      currencyCode: "USD",
-    },
-    totalTaxAmount: {
-      amount: "0.00",
-      currencyCode: "USD",
-    },
-  },
-};
 
 export const mockCollections = [
   {
@@ -254,9 +92,6 @@ export async function getCollections(): Promise<Collection[]> {
   return Promise.resolve(mockCollections);
 }
 
-export async function getCart(): Promise<Cart | undefined> {
-  return Promise.resolve(mockCart) as Promise<Cart>;
-}
 
 export async function getCollection(handle: string) {
   return mockCollections.find((collection) => collection.handle === handle);
@@ -277,6 +112,7 @@ export async function getCollectionProducts({
 }
 
 import mockProductsJson from "./mock_products.json";
+import {NextRequest, NextResponse} from "next/server";
 
 export const mockProducts = mockProductsJson;
 

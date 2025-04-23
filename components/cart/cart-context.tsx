@@ -124,9 +124,9 @@ function createEmptyCart(): Cart {
     totalQuantity: 0,
     lines: [],
     cost: {
-      subtotalAmount: { amount: "0", currencyCode: "USD" },
-      totalAmount: { amount: "0", currencyCode: "USD" },
-      totalTaxAmount: { amount: "0", currencyCode: "USD" },
+      subtotalAmount: { amount: "0", currencyCode: "ILS" },
+      totalAmount: { amount: "0", currencyCode: "ILS" },
+      totalTaxAmount: { amount: "0", currencyCode: "ILS" },
     },
   };
 }
