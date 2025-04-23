@@ -117,7 +117,7 @@ function updateCartTotals(
   };
 }
 
-export function createEmptyCart(): Cart {
+function createEmptyCart(): Cart {
   return {
     id: "mock-cart-id",
     checkoutUrl: "",
@@ -130,7 +130,6 @@ export function createEmptyCart(): Cart {
     },
   };
 }
-
 function cartReducer(state: Cart, action: CartAction): Cart {
   switch (action.type) {
     case "UPDATE_ITEM": {
@@ -180,12 +179,12 @@ function cartReducer(state: Cart, action: CartAction): Cart {
 
 export function CartProvider({
   children,
-  initialCart,
+
 }: {
   children: React.ReactNode;
-  initialCart: Cart;
+
 }) {
-  const [cart, dispatch] = useReducer(cartReducer, initialCart);
+  const [cart, dispatch] = useReducer(cartReducer, createEmptyCart());
 
   const addCartItem = (variant: ProductVariant, product: Product) => {
     dispatch({

@@ -18,13 +18,10 @@ import {
   Cart,
   Collection,
   Connection,
-  Image,
   Product,
   ShopifyAddToCartOperation,
   ShopifyCart,
-  ShopifyCollection,
   ShopifyCreateCartOperation,
-  ShopifyProduct,
   ShopifyRemoveFromCartOperation,
   ShopifyUpdateCartOperation,
 } from "./types";
