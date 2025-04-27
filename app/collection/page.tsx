@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
+import {useSearchParams} from "next/navigation";
 import Grid from "components/grid";
 import ProductGridItems from "components/layout/product-grid-items";
-import { Product } from "lib/types";
-import { getProducts } from "lib/api"; // ✅ Import real helper
+import {Product} from "lib/types";
+import {getProducts} from "lib/api"; // ✅ Import real helper
 
 function safeDecodeURIComponent(value: string): string {
     try {
@@ -16,6 +17,9 @@ function safeDecodeURIComponent(value: string): string {
 
 export default function CollectionPage() {
     const [products, setProducts] = useState<Product[]>([]);
+    const searchParams = useSearchParams();
+
+    const q = searchParams.get("q") || "";
 
     useEffect(() => {
         async function loadProducts() {
@@ -34,9 +38,18 @@ export default function CollectionPage() {
     const collectionMatch = pathname.match(/^\/collection\/([^/]+)$/);
     const collectionHandle = collectionMatch ? collectionMatch[1] : null;
 
-    const filteredProducts = collectionHandle && collectionHandle !== "all"
+    // ✅ First filter by collection
+    let filteredProducts = collectionHandle && collectionHandle !== "all"
         ? products.filter((product) => product.collection === collectionHandle)
         : products;
+
+    // ✅ Then filter by search query
+    if (q) {
+        const regex = new RegExp(q, 'i');
+        filteredProducts = filteredProducts.filter((product) =>
+            regex.test(Object.values(product).join(' '))
+        );
+    }
 
     const resultsText = filteredProducts.length === 1 ? "result" : "results";
 
@@ -48,7 +61,7 @@ export default function CollectionPage() {
 
             {filteredProducts.length > 0 ? (
                 <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                    <ProductGridItems products={filteredProducts} />
+                    <ProductGridItems products={filteredProducts}/>
                 </Grid>
             ) : (
                 <p>No products found.</p>
