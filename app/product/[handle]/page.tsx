@@ -7,6 +7,7 @@ import {Image} from "lib/types";
 import {Suspense} from "react";
 import {headers} from "next/headers";
 import {getProducts} from "../../../lib/api";
+import {Metadata} from "next";
 
 async function getHandleFromHeaders(): Promise<string | null> {
     const headerList = await headers();
@@ -19,6 +20,34 @@ function safeDecodeURIComponent(value: string): string {
     } catch {
         return value;
     }
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+    const rawHandle = await getHandleFromHeaders();
+
+    const handle = safeDecodeURIComponent(rawHandle as string);
+    const product = (await getProducts()).find((p) => p.handle === handle);
+    if (!product) {
+        return {};
+    }
+
+    return {
+        title: product.title,
+        description: product.description,
+        openGraph: {
+            title: product.title,
+            description: product.description,
+            images: [
+                {
+                    url: product.featuredImage.url,
+                    width: product.featuredImage.width || 1200,
+                    height: product.featuredImage.height || 630,
+                    alt: product.featuredImage.altText || product.title,
+                },
+            ],
+            type: "website",
+        },
+    };
 }
 
 export default async function ProductPage() {
