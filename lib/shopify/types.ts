@@ -1,22 +1,28 @@
-export type Maybe<T> = T | null;
-
-export type Connection<T> = {
-    edges: Array<Edge<T>>;
+export type Money = {
+    amount: string;
+    currencyCode: string;
 };
 
-export type Edge<T> = {
-    node: T;
+export type Image = {
+    url: string;
+    altText: string;
+    width: number;
+    height: number;
 };
 
-export type Cart = {
 
-    totalQuantity: number;
-    lines: CartItem[];
-    cost: {
 
-        totalAmount: Money;
-
-    };
+export type Product = {
+    id: string;
+    handle: string;
+    availableForSale: boolean;
+    title: string;
+    description: string;
+    price: Money;
+    featuredImage: Image;
+    images: Image[];
+    tags: string[];
+    updatedAt: string;
 };
 
 export type CartProduct = {
@@ -32,7 +38,6 @@ export type CartItem = {
     cost: {
         totalAmount: Money;
         unitAmount: Money;
-
     };
     merchandise: {
         id: string;
@@ -45,15 +50,12 @@ export type CartItem = {
     };
 };
 
-export type Collection = ShopifyCollection & {
-    path: string;
-};
-
-export type Image = {
-    url: string;
-    altText: string;
-    width: number;
-    height: number;
+export type Cart = {
+    totalQuantity: number;
+    lines: CartItem[];
+    cost: {
+        totalAmount: Money;
+    };
 };
 
 export type Menu = {
@@ -61,59 +63,10 @@ export type Menu = {
     path: string;
 };
 
-export type Money = {
-    amount: string;
-    currencyCode: string;
-};
-
-
-export type Product = Omit<ShopifyProduct, "variants" | "images"> & {
-    variants: ProductVariant[];
-    images: Image[];
-};
-
-export type ProductOption = {
-    id: string;
-    name: string;
-    values: string[];
-};
-
-export type ProductVariant = {
-    id: string;
-    title: string;
-    availableForSale: boolean;
-    selectedOptions: {
-        name: string;
-        value: string;
-    }[];
-    price: Money;
-};
-
-
-export type ShopifyCollection = {
+export type Collection = {
     handle: string;
     title: string;
     description: string;
     updatedAt: string;
+    path: string;
 };
-
-export type ShopifyProduct = {
-    id: string;
-    handle: string;
-    availableForSale: boolean;
-    title: string;
-    description: string;
-    options: ProductOption[];
-    priceRange: {
-        maxVariantPrice: Money;
-        minVariantPrice: Money;
-    };
-    variants: Connection<ProductVariant>;
-    featuredImage: Image;
-    images: Connection<Image>;
-    tags: string[];
-    updatedAt: string;
-};
-
-
-

@@ -12,8 +12,8 @@ export function ProductDescription({product}: { product: Product }) {
                 <h1 className="mb-2 text-5xl font-medium">{product.title}</h1>
                 <div className="w-fit rounded-full bg-blue-600 p-2 text-sm text-white">
                     <Price
-                        amount={product.priceRange.minVariantPrice.amount}
-                        currencyCode={product.priceRange.minVariantPrice.currencyCode}
+                        amount={product.price.amount}
+                        currencyCode={product.price.currencyCode}
                     />
                 </div>
             </div>

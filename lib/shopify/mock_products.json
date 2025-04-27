@@ -38,31 +38,13 @@
         "altText": "Mock Product 1"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "52.55",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "52.55",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-1",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "52.55",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-1"
+    "id": "mock-product-1",
+    "price": {
+      "amount": "52.55",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סוקולנט-ירוק",
@@ -97,31 +79,13 @@
         "altText": "Mock Product 2"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "67.65",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "67.65",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-2",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "67.65",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-2"
+    "id": "mock-product-2",
+    "price": {
+      "amount": "67.65",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קקטוס-קטן",
@@ -156,31 +120,13 @@
         "altText": "Mock Product 3"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "31.31",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "31.31",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-3",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "31.31",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-3"
+    "id": "mock-product-3",
+    "price": {
+      "amount": "31.31",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדנית-קרמית",
@@ -215,31 +161,13 @@
         "altText": "Mock Product 4"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "35.42",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "35.42",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-4",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "35.42",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-4"
+    "id": "mock-product-4",
+    "price": {
+      "amount": "35.42",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "דשן-לצמיחה",
@@ -268,31 +196,13 @@
         "altText": "Mock Product 5"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "131.63",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "131.63",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-5",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "131.63",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-5"
+    "id": "mock-product-5",
+    "price": {
+      "amount": "131.63",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "כלי-שתילה-מעוצב",
@@ -339,31 +249,13 @@
         "altText": "Mock Product 6"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "50.08",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "50.08",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-6",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "50.08",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-6"
+    "id": "mock-product-6",
+    "price": {
+      "amount": "50.08",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סט-כלים-לגינון",
@@ -410,31 +302,13 @@
         "altText": "Mock Product 7"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "71.13",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "71.13",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-7",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "71.13",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-7"
+    "id": "mock-product-7",
+    "price": {
+      "amount": "71.13",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "נענע-טרייה",
@@ -469,31 +343,13 @@
         "altText": "Mock Product 8"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "43.69",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "43.69",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-8",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "43.69",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-8"
+    "id": "mock-product-8",
+    "price": {
+      "amount": "43.69",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדמת-שתילה-איכותית",
@@ -522,31 +378,13 @@
         "altText": "Mock Product 9"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "21.01",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "21.01",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-9",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "21.01",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-9"
+    "id": "mock-product-9",
+    "price": {
+      "amount": "21.01",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מעמד-עץ-לצמחים",
@@ -593,31 +431,13 @@
         "altText": "Mock Product 10"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "30.03",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "30.03",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-10",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "30.03",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-10"
+    "id": "mock-product-10",
+    "price": {
+      "amount": "30.03",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מנורת-גידול",
@@ -664,31 +484,13 @@
         "altText": "Mock Product 11"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "20.61",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "20.61",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-11",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "20.61",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-11"
+    "id": "mock-product-11",
+    "price": {
+      "amount": "20.61",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קישוט-גינה-עם-אורות",
@@ -711,31 +513,13 @@
         "altText": "Mock Product 12"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "95.37",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "95.37",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-12",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "95.37",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-12"
+    "id": "mock-product-12",
+    "price": {
+      "amount": "95.37",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עץ-זית-קטן",
@@ -776,31 +560,13 @@
         "altText": "Mock Product 13"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "107.58",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "107.58",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-13",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "107.58",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-13"
+    "id": "mock-product-13",
+    "price": {
+      "amount": "107.58",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עץ-רימון-ננסי",
@@ -823,31 +589,13 @@
         "altText": "Mock Product 14"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "120.75",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "120.75",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-14",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "120.75",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-14"
+    "id": "mock-product-14",
+    "price": {
+      "amount": "120.75",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עץ-תפוח-בגידול-ביתי",
@@ -876,31 +624,13 @@
         "altText": "Mock Product 15"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "121.66",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "121.66",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-15",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "121.66",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-15"
+    "id": "mock-product-15",
+    "price": {
+      "amount": "121.66",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "שתיל-עגבניות",
@@ -929,31 +659,13 @@
         "altText": "Mock Product 16"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "87.53",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "87.53",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-16",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "87.53",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-16"
+    "id": "mock-product-16",
+    "price": {
+      "amount": "87.53",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "שתיל-פלפל-חריף",
@@ -988,31 +700,13 @@
         "altText": "Mock Product 17"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "143.5",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "143.5",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-17",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "143.5",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-17"
+    "id": "mock-product-17",
+    "price": {
+      "amount": "143.5",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "שתיל-בזיליקום",
@@ -1041,31 +735,13 @@
         "altText": "Mock Product 18"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "81.25",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "81.25",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-18",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "81.25",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-18"
+    "id": "mock-product-18",
+    "price": {
+      "amount": "81.25",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סוקולנט-בצורת-לב",
@@ -1112,31 +788,13 @@
         "altText": "Mock Product 19"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "147.99",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "147.99",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-19",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "147.99",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-19"
+    "id": "mock-product-19",
+    "price": {
+      "amount": "147.99",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "פוטוס-זהוב",
@@ -1183,31 +841,13 @@
         "altText": "Mock Product 20"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "60.38",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "60.38",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-20",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "60.38",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-20"
+    "id": "mock-product-20",
+    "price": {
+      "amount": "60.38",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "דקל-ננסי",
@@ -1248,31 +888,13 @@
         "altText": "Mock Product 21"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "52.75",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "52.75",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-21",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "52.75",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-21"
+    "id": "mock-product-21",
+    "price": {
+      "amount": "52.75",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קקטוס-פריחה",
@@ -1301,31 +923,13 @@
         "altText": "Mock Product 22"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "77.32",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "77.32",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-22",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "77.32",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-22"
+    "id": "mock-product-22",
+    "price": {
+      "amount": "77.32",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קישוטי-עץ-טבעיים",
@@ -1366,31 +970,13 @@
         "altText": "Mock Product 23"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "141.13",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "141.13",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-23",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "141.13",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-23"
+    "id": "mock-product-23",
+    "price": {
+      "amount": "141.13",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדנית-תלייה-צבעונית",
@@ -1419,31 +1005,13 @@
         "altText": "Mock Product 24"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "126.34",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "126.34",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-24",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "126.34",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-24"
+    "id": "mock-product-24",
+    "price": {
+      "amount": "126.34",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "כלי-דישון",
@@ -1466,31 +1034,13 @@
         "altText": "Mock Product 25"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "138.98",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "138.98",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-25",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "138.98",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-25"
+    "id": "mock-product-25",
+    "price": {
+      "amount": "138.98",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מרסס-מים",
@@ -1525,31 +1075,13 @@
         "altText": "Mock Product 26"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "88.47",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "88.47",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-26",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "88.47",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-26"
+    "id": "mock-product-26",
+    "price": {
+      "amount": "88.47",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מיכל-השקיה",
@@ -1584,31 +1116,13 @@
         "altText": "Mock Product 27"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "134.52",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "134.52",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-27",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "134.52",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-27"
+    "id": "mock-product-27",
+    "price": {
+      "amount": "134.52",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "צמח-נענע-מרענן",
@@ -1643,31 +1157,13 @@
         "altText": "Mock Product 28"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "106.39",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "106.39",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-28",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "106.39",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-28"
+    "id": "mock-product-28",
+    "price": {
+      "amount": "106.39",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עציץ-רוזמרין",
@@ -1702,31 +1198,13 @@
         "altText": "Mock Product 29"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "139.9",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "139.9",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-29",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "139.9",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-29"
+    "id": "mock-product-29",
+    "price": {
+      "amount": "139.9",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "גזם-תפוחי-אדמה",
@@ -1755,31 +1233,13 @@
         "altText": "Mock Product 30"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "64.49",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "64.49",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-30",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "64.49",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-30"
+    "id": "mock-product-30",
+    "price": {
+      "amount": "64.49",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "פוטוס-מטפס-2",
@@ -1802,31 +1262,13 @@
         "altText": "Mock Product 31"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "99.45",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "99.45",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-31",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "99.45",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-31"
+    "id": "mock-product-31",
+    "price": {
+      "amount": "99.45",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סוקולנט-ירוק-2",
@@ -1855,31 +1297,13 @@
         "altText": "Mock Product 32"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "63.32",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "63.32",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-32",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "63.32",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-32"
+    "id": "mock-product-32",
+    "price": {
+      "amount": "63.32",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קקטוס-קטן-2",
@@ -1908,31 +1332,13 @@
         "altText": "Mock Product 33"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "140.49",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "140.49",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-33",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "140.49",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-33"
+    "id": "mock-product-33",
+    "price": {
+      "amount": "140.49",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדנית-קרמית-2",
@@ -1955,31 +1361,13 @@
         "altText": "Mock Product 34"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "62.63",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "62.63",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-34",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "62.63",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-34"
+    "id": "mock-product-34",
+    "price": {
+      "amount": "62.63",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "דשן-לצמיחה-2",
@@ -2020,31 +1408,13 @@
         "altText": "Mock Product 35"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "68.81",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "68.81",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-35",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "68.81",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-35"
+    "id": "mock-product-35",
+    "price": {
+      "amount": "68.81",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "כלי-שתילה-מעוצב-2",
@@ -2079,31 +1449,13 @@
         "altText": "Mock Product 36"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "24.31",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "24.31",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-36",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "24.31",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-36"
+    "id": "mock-product-36",
+    "price": {
+      "amount": "24.31",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סט-כלים-לגינון-2",
@@ -2138,31 +1490,13 @@
         "altText": "Mock Product 37"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "47.66",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "47.66",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-37",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "47.66",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-37"
+    "id": "mock-product-37",
+    "price": {
+      "amount": "47.66",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "נענע-טרייה-2",
@@ -2197,31 +1531,13 @@
         "altText": "Mock Product 38"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "64.12",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "64.12",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-38",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "64.12",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-38"
+    "id": "mock-product-38",
+    "price": {
+      "amount": "64.12",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדמת-שתילה-איכותית-2",
@@ -2250,31 +1566,13 @@
         "altText": "Mock Product 39"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "99.73",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "99.73",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-39",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "99.73",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-39"
+    "id": "mock-product-39",
+    "price": {
+      "amount": "99.73",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מעמד-עץ-לצמחים-2",
@@ -2303,31 +1601,13 @@
         "altText": "Mock Product 40"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "58.58",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "58.58",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-40",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "58.58",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-40"
+    "id": "mock-product-40",
+    "price": {
+      "amount": "58.58",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מנורת-גידול-2",
@@ -2362,31 +1642,13 @@
         "altText": "Mock Product 41"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "119.22",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "119.22",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-41",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "119.22",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-41"
+    "id": "mock-product-41",
+    "price": {
+      "amount": "119.22",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קישוט-גינה-עם-אורות-2",
@@ -2415,31 +1677,13 @@
         "altText": "Mock Product 42"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "105.31",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "105.31",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-42",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "105.31",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-42"
+    "id": "mock-product-42",
+    "price": {
+      "amount": "105.31",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עץ-זית-קטן-2",
@@ -2480,31 +1724,13 @@
         "altText": "Mock Product 43"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "61.5",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "61.5",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-43",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "61.5",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-43"
+    "id": "mock-product-43",
+    "price": {
+      "amount": "61.5",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עץ-רימון-ננסי-2",
@@ -2539,31 +1765,13 @@
         "altText": "Mock Product 44"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "21.5",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "21.5",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-44",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "21.5",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-44"
+    "id": "mock-product-44",
+    "price": {
+      "amount": "21.5",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עץ-תפוח-בגידול-ביתי-2",
@@ -2604,31 +1812,13 @@
         "altText": "Mock Product 45"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "76.39",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "76.39",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-45",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "76.39",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-45"
+    "id": "mock-product-45",
+    "price": {
+      "amount": "76.39",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "שתיל-עגבניות-2",
@@ -2657,31 +1847,13 @@
         "altText": "Mock Product 46"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "40.44",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "40.44",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-46",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "40.44",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-46"
+    "id": "mock-product-46",
+    "price": {
+      "amount": "40.44",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "שתיל-פלפל-חריף-2",
@@ -2722,31 +1894,13 @@
         "altText": "Mock Product 47"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "81.71",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "81.71",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-47",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "81.71",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-47"
+    "id": "mock-product-47",
+    "price": {
+      "amount": "81.71",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "שתיל-בזיליקום-2",
@@ -2793,31 +1947,13 @@
         "altText": "Mock Product 48"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "42.62",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "42.62",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-48",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "42.62",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-48"
+    "id": "mock-product-48",
+    "price": {
+      "amount": "42.62",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סוקולנט-בצורת-לב-2",
@@ -2852,31 +1988,13 @@
         "altText": "Mock Product 49"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "75.69",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "75.69",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-49",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "75.69",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-49"
+    "id": "mock-product-49",
+    "price": {
+      "amount": "75.69",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "פוטוס-זהוב-2",
@@ -2899,31 +2017,13 @@
         "altText": "Mock Product 50"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "16.24",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "16.24",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-50",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "16.24",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-50"
+    "id": "mock-product-50",
+    "price": {
+      "amount": "16.24",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "דקל-ננסי-2",
@@ -2952,31 +2052,13 @@
         "altText": "Mock Product 51"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "33.33",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "33.33",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-51",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "33.33",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-51"
+    "id": "mock-product-51",
+    "price": {
+      "amount": "33.33",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קקטוס-פריחה-2",
@@ -2999,31 +2081,13 @@
         "altText": "Mock Product 52"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "36.88",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "36.88",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-52",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "36.88",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-52"
+    "id": "mock-product-52",
+    "price": {
+      "amount": "36.88",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קישוטי-עץ-טבעיים-2",
@@ -3052,31 +2116,13 @@
         "altText": "Mock Product 53"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "66.36",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "66.36",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-53",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "66.36",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-53"
+    "id": "mock-product-53",
+    "price": {
+      "amount": "66.36",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדנית-תלייה-צבעונית-2",
@@ -3117,31 +2163,13 @@
         "altText": "Mock Product 54"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "98.7",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "98.7",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-54",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "98.7",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-54"
+    "id": "mock-product-54",
+    "price": {
+      "amount": "98.7",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "כלי-דישון-2",
@@ -3164,31 +2192,13 @@
         "altText": "Mock Product 55"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "83.34",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "83.34",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-55",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "83.34",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-55"
+    "id": "mock-product-55",
+    "price": {
+      "amount": "83.34",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מרסס-מים-2",
@@ -3235,31 +2245,13 @@
         "altText": "Mock Product 56"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "119.54",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "119.54",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-56",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "119.54",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-56"
+    "id": "mock-product-56",
+    "price": {
+      "amount": "119.54",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מיכל-השקיה-2",
@@ -3306,31 +2298,13 @@
         "altText": "Mock Product 57"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "27.08",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "27.08",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-57",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "27.08",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-57"
+    "id": "mock-product-57",
+    "price": {
+      "amount": "27.08",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "צמח-נענע-מרענן-2",
@@ -3359,31 +2333,13 @@
         "altText": "Mock Product 58"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "60.17",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "60.17",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-58",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "60.17",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-58"
+    "id": "mock-product-58",
+    "price": {
+      "amount": "60.17",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עציץ-רוזמרין-2",
@@ -3406,31 +2362,13 @@
         "altText": "Mock Product 59"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "39.06",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "39.06",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-59",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "39.06",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-59"
+    "id": "mock-product-59",
+    "price": {
+      "amount": "39.06",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "גזם-תפוחי-אדמה-2",
@@ -3459,31 +2397,13 @@
         "altText": "Mock Product 60"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "118.59",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "118.59",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-60",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "118.59",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-60"
+    "id": "mock-product-60",
+    "price": {
+      "amount": "118.59",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "פוטוס-מטפס-2-2",
@@ -3512,31 +2432,13 @@
         "altText": "Mock Product 61"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "71.73",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "71.73",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-61",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "71.73",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-61"
+    "id": "mock-product-61",
+    "price": {
+      "amount": "71.73",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סוקולנט-ירוק-2-2",
@@ -3583,31 +2485,13 @@
         "altText": "Mock Product 62"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "15.27",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "15.27",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-62",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "15.27",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-62"
+    "id": "mock-product-62",
+    "price": {
+      "amount": "15.27",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קקטוס-קטן-2-2",
@@ -3654,31 +2538,13 @@
         "altText": "Mock Product 63"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "84.35",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "84.35",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-63",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "84.35",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-63"
+    "id": "mock-product-63",
+    "price": {
+      "amount": "84.35",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדנית-קרמית-2-2",
@@ -3701,31 +2567,13 @@
         "altText": "Mock Product 64"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "76.7",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "76.7",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-64",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "76.7",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-64"
+    "id": "mock-product-64",
+    "price": {
+      "amount": "76.7",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "דשן-לצמיחה-2-2",
@@ -3754,31 +2602,13 @@
         "altText": "Mock Product 65"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "142.4",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "142.4",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-65",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "142.4",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-65"
+    "id": "mock-product-65",
+    "price": {
+      "amount": "142.4",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "כלי-שתילה-מעוצב-2-2",
@@ -3807,31 +2637,13 @@
         "altText": "Mock Product 66"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "93.19",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "93.19",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-66",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "93.19",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-66"
+    "id": "mock-product-66",
+    "price": {
+      "amount": "93.19",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סט-כלים-לגינון-2-2",
@@ -3854,31 +2666,13 @@
         "altText": "Mock Product 67"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "147.15",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "147.15",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-67",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "147.15",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-67"
+    "id": "mock-product-67",
+    "price": {
+      "amount": "147.15",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "נענע-טרייה-2-2",
@@ -3913,31 +2707,13 @@
         "altText": "Mock Product 68"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "78.49",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "78.49",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-68",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "78.49",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-68"
+    "id": "mock-product-68",
+    "price": {
+      "amount": "78.49",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדמת-שתילה-איכותית-2-2",
@@ -3966,31 +2742,13 @@
         "altText": "Mock Product 69"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "103.12",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "103.12",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-69",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "103.12",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-69"
+    "id": "mock-product-69",
+    "price": {
+      "amount": "103.12",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מעמד-עץ-לצמחים-2-2",
@@ -4031,31 +2789,13 @@
         "altText": "Mock Product 70"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "30.89",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "30.89",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-70",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "30.89",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-70"
+    "id": "mock-product-70",
+    "price": {
+      "amount": "30.89",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מנורת-גידול-2-2",
@@ -4096,31 +2836,13 @@
         "altText": "Mock Product 71"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "67.69",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "67.69",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-71",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "67.69",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-71"
+    "id": "mock-product-71",
+    "price": {
+      "amount": "67.69",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קישוט-גינה-עם-אורות-2-2",
@@ -4155,31 +2877,13 @@
         "altText": "Mock Product 72"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "102.37",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "102.37",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-72",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "102.37",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-72"
+    "id": "mock-product-72",
+    "price": {
+      "amount": "102.37",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עץ-זית-קטן-2-2",
@@ -4220,31 +2924,13 @@
         "altText": "Mock Product 73"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "66.15",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "66.15",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-73",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "66.15",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-73"
+    "id": "mock-product-73",
+    "price": {
+      "amount": "66.15",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עץ-רימון-ננסי-2-2",
@@ -4279,31 +2965,13 @@
         "altText": "Mock Product 74"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "42.15",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "42.15",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-74",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "42.15",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-74"
+    "id": "mock-product-74",
+    "price": {
+      "amount": "42.15",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עץ-תפוח-בגידול-ביתי-2-2",
@@ -4338,31 +3006,13 @@
         "altText": "Mock Product 75"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "13.98",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "13.98",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-75",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "13.98",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-75"
+    "id": "mock-product-75",
+    "price": {
+      "amount": "13.98",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "שתיל-עגבניות-2-2",
@@ -4397,31 +3047,13 @@
         "altText": "Mock Product 76"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "50.27",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "50.27",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-76",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "50.27",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-76"
+    "id": "mock-product-76",
+    "price": {
+      "amount": "50.27",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "שתיל-פלפל-חריף-2-2",
@@ -4444,31 +3076,13 @@
         "altText": "Mock Product 77"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "145.71",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "145.71",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-77",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "145.71",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-77"
+    "id": "mock-product-77",
+    "price": {
+      "amount": "145.71",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "שתיל-בזיליקום-2-2",
@@ -4497,31 +3111,13 @@
         "altText": "Mock Product 78"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "133.69",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "133.69",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-78",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "133.69",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-78"
+    "id": "mock-product-78",
+    "price": {
+      "amount": "133.69",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סוקולנט-בצורת-לב-2-2",
@@ -4544,31 +3140,13 @@
         "altText": "Mock Product 79"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "75.31",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "75.31",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-79",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "75.31",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-79"
+    "id": "mock-product-79",
+    "price": {
+      "amount": "75.31",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "פוטוס-זהוב-2-2",
@@ -4597,31 +3175,13 @@
         "altText": "Mock Product 80"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "48.75",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "48.75",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-80",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "48.75",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-80"
+    "id": "mock-product-80",
+    "price": {
+      "amount": "48.75",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "דקל-ננסי-2-2",
@@ -4656,31 +3216,13 @@
         "altText": "Mock Product 81"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "39.15",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "39.15",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-81",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "39.15",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-81"
+    "id": "mock-product-81",
+    "price": {
+      "amount": "39.15",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קקטוס-פריחה-2-2",
@@ -4709,31 +3251,13 @@
         "altText": "Mock Product 82"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "131.66",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "131.66",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-82",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "131.66",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-82"
+    "id": "mock-product-82",
+    "price": {
+      "amount": "131.66",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קישוטי-עץ-טבעיים-2-2",
@@ -4774,31 +3298,13 @@
         "altText": "Mock Product 83"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "120.68",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "120.68",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-83",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "120.68",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-83"
+    "id": "mock-product-83",
+    "price": {
+      "amount": "120.68",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדנית-תלייה-צבעונית-2-2",
@@ -4845,31 +3351,13 @@
         "altText": "Mock Product 84"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "85.87",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "85.87",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-84",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "85.87",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-84"
+    "id": "mock-product-84",
+    "price": {
+      "amount": "85.87",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "כלי-דישון-2-2",
@@ -4904,31 +3392,13 @@
         "altText": "Mock Product 85"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "70.24",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "70.24",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-85",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "70.24",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-85"
+    "id": "mock-product-85",
+    "price": {
+      "amount": "70.24",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מרסס-מים-2-2",
@@ -4963,31 +3433,13 @@
         "altText": "Mock Product 86"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "24.96",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "24.96",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-86",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "24.96",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-86"
+    "id": "mock-product-86",
+    "price": {
+      "amount": "24.96",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מיכל-השקיה-2-2",
@@ -5022,31 +3474,13 @@
         "altText": "Mock Product 87"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "85.56",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "85.56",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-87",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "85.56",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-87"
+    "id": "mock-product-87",
+    "price": {
+      "amount": "85.56",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "צמח-נענע-מרענן-2-2",
@@ -5087,31 +3521,13 @@
         "altText": "Mock Product 88"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "43.45",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "43.45",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-88",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "43.45",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-88"
+    "id": "mock-product-88",
+    "price": {
+      "amount": "43.45",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "עציץ-רוזמרין-2-2",
@@ -5152,31 +3568,13 @@
         "altText": "Mock Product 89"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "132.5",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "132.5",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-89",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "132.5",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-89"
+    "id": "mock-product-89",
+    "price": {
+      "amount": "132.5",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "גזם-תפוחי-אדמה-2-2",
@@ -5211,31 +3609,13 @@
         "altText": "Mock Product 90"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "45.53",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "45.53",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-90",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "45.53",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-90"
+    "id": "mock-product-90",
+    "price": {
+      "amount": "45.53",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "פוטוס-מטפס-2-3",
@@ -5282,31 +3662,13 @@
         "altText": "Mock Product 91"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "90.42",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "90.42",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-91",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "90.42",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-91"
+    "id": "mock-product-91",
+    "price": {
+      "amount": "90.42",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סוקולנט-ירוק-2-3",
@@ -5341,31 +3703,13 @@
         "altText": "Mock Product 92"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "80.96",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "80.96",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-92",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "80.96",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-92"
+    "id": "mock-product-92",
+    "price": {
+      "amount": "80.96",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "קקטוס-קטן-2-3",
@@ -5412,31 +3756,13 @@
         "altText": "Mock Product 93"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "148.28",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "148.28",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-93",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "148.28",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-93"
+    "id": "mock-product-93",
+    "price": {
+      "amount": "148.28",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדנית-קרמית-2-3",
@@ -5465,31 +3791,13 @@
         "altText": "Mock Product 94"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "46.22",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "46.22",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-94",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "46.22",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-94"
+    "id": "mock-product-94",
+    "price": {
+      "amount": "46.22",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "דשן-לצמיחה-2-3",
@@ -5518,31 +3826,13 @@
         "altText": "Mock Product 95"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "75.15",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "75.15",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-95",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "75.15",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-95"
+    "id": "mock-product-95",
+    "price": {
+      "amount": "75.15",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "כלי-שתילה-מעוצב-2-3",
@@ -5571,31 +3861,13 @@
         "altText": "Mock Product 96"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "13.25",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "13.25",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-96",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "13.25",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-96"
+    "id": "mock-product-96",
+    "price": {
+      "amount": "13.25",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "סט-כלים-לגינון-2-3",
@@ -5624,31 +3896,13 @@
         "altText": "Mock Product 97"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "54.16",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "54.16",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-97",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "54.16",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-97"
+    "id": "mock-product-97",
+    "price": {
+      "amount": "54.16",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "נענע-טרייה-2-3",
@@ -5683,31 +3937,13 @@
         "altText": "Mock Product 98"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "47.4",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "47.4",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-98",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "47.4",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-98"
+    "id": "mock-product-98",
+    "price": {
+      "amount": "47.4",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "אדמת-שתילה-איכותית-2-3",
@@ -5736,31 +3972,13 @@
         "altText": "Mock Product 99"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "107.36",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "107.36",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-99",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "107.36",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
+
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-99"
+    "id": "mock-product-99",
+    "price": {
+      "amount": "107.36",
+      "currencyCode": "ILS"
+    }
   },
   {
     "handle": "מעמד-עץ-לצמחים-2-3",
@@ -5783,30 +4001,11 @@
         "altText": "Mock Product 100"
       }
     ],
-    "priceRange": {
-      "minVariantPrice": {
-        "amount": "48.42",
-        "currencyCode": "ILS"
-      },
-      "maxVariantPrice": {
-        "amount": "48.42",
-        "currencyCode": "ILS"
-      }
-    },
-    "options": [],
-    "variants": [
-      {
-        "id": "variant-100",
-        "availableForSale": true,
-        "selectedOptions": [],
-        "price": {
-          "amount": "48.42",
-          "currencyCode": "ILS"
-        },
-        "title": "Variant 1"
-      }
-    ],
     "updatedAt": "2025-04-22T10:18:27Z",
-    "id": "mock-product-100"
+    "id": "mock-product-100",
+    "price": {
+      "amount": "48.42",
+      "currencyCode": "ILS"
+    }
   }
 ]

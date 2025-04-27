@@ -112,30 +112,8 @@ import {NextRequest, NextResponse} from "next/server";
 
 export const mockProducts = mockProductsJson;
 
-export async function getMockProduct(handle: string) {
-  return mockProducts.find((p) => p.handle === handle);
-}
 
-// export async function getMockProduct({ handle }: { handle: string }) {
-//     return mockProducts.find((p) => p.handle === handle);
-// }
 
-export async function getProductRecommendations(
-  productId: string,
-): Promise<Product[]> {
-  return Promise.resolve([]);
-  // cacheTag(TAGS.products);
-  // cacheLife('days');
-  //
-  // const res = await shopifyFetch<ShopifyProductRecommendationsOperation>({
-  //     query: getProductRecommendationsQuery,
-  //     variables: {
-  //         productId
-  //     }
-  // });
-  //
-  // return reshapeProducts(res.body.data.productRecommendations);
-}
 
 export async function getProducts({
   query,
