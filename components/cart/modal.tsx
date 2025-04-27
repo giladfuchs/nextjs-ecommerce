@@ -54,7 +54,7 @@ export default function CartModal() {
         closeCart();
         router.push("/checkout");
     };
-
+    console.log(cart)
     return (
         <>
             <button aria-label="Open cart" onClick={openCart}>
@@ -157,6 +157,7 @@ export default function CartModal() {
                                                                             {item.merchandise.title !== DEFAULT_OPTION ? (
                                                                                 <p className="text-sm text-neutral-500 dark:text-neutral-400">
                                                                                     {item.merchandise.title}
+
                                                                                 </p>
                                                                             ) : null}
                                                                         </div>

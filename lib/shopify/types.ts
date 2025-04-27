@@ -114,7 +114,6 @@ export type ShopifyProduct = {
   availableForSale: boolean;
   title: string;
   description: string;
-  descriptionHtml: string;
   options: ProductOption[];
   priceRange: {
     maxVariantPrice: Money;

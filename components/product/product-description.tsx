@@ -1,36 +1,33 @@
 "use client";
 
-import { AddToCart } from "components/cart/add-to-cart";
+import {AddToCart} from "components/cart/add-to-cart";
 import Price from "components/price";
-import Prose from "components/prose";
-import { Product } from "lib/shopify/types";
+import {Product} from "lib/shopify/types";
+import clsx from "clsx";
 
-export function ProductDescription({ product }: { product: Product }) {
-  return (
-    <>
-      <div className="mb-6 flex flex-col border-b pb-6 dark:border-neutral-700">
-        <h1 className="mb-2 text-5xl font-medium">{product.title}</h1>
-        <div className="mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white">
-          <Price
-            amount={
+export function ProductDescription({product}: { product: Product }) {
+    return (
+        <>
+            <div className="mb-6 flex flex-col border-b pb-6 dark:border-neutral-700">
+                <h1 className="mb-2 text-5xl font-medium">{product.title}</h1>
+                <div className="w-fit rounded-full bg-blue-600 p-2 text-sm text-white">
+                    <Price
+                        amount={product.priceRange.minVariantPrice.amount}
+                        currencyCode={product.priceRange.minVariantPrice.currencyCode}
+                    />
+                </div>
+            </div>
 
-              product.priceRange.minVariantPrice.amount
-            }
-            currencyCode={
-              product.priceRange.minVariantPrice.currencyCode
-            }
-          />
-        </div>
-      </div>
+            {product.description ? (
+                <div
+                    className={clsx(
+                        "prose mx-auto mb-6 max-w-6xl text-lg leading-7 text-black dark:prose-invert"
+                    )}
+                    dangerouslySetInnerHTML={{__html: `<p>${product.description}</p>`}}
+                />
+            ) : null}
 
-      {product.descriptionHtml ? (
-        <Prose
-          className="mb-6 text-sm leading-tight dark:text-white/[60%]"
-          html={product.descriptionHtml}
-        />
-      ) : null}
-
-      <AddToCart product={product} />
-    </>
-  );
+            <AddToCart product={product}/>
+        </>
+    );
 }
