@@ -1,10 +1,15 @@
-"use client";
+'use client';
 
-import {CartProvider} from "components/cart/cart-context";
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { store, persistor } from 'store';
 
-
-export default function Providers({children}: { children: React.ReactNode }) {
+export function ReduxProvider({ children }: { children: React.ReactNode }) {
     return (
-        <CartProvider>{children}</CartProvider>
+        <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+                {children}
+            </PersistGate>
+        </Provider>
     );
 }

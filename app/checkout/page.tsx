@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { useCart } from "../../components/cart/cart-context";
+import {useSelector} from "react-redux";
+import {RootState} from "../../store";
 
 export default function CheckoutPage() {
-  const { cart } = useCart();
+  const cart = useSelector((state: RootState) => state.cart);
+
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
       <div className="w-full md:w-1/2 p-6 md:p-12">

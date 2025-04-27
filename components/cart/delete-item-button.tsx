@@ -2,7 +2,6 @@
 
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import type { CartItem } from "lib/shopify/types";
-import { useCart } from "./cart-context"; // adjust import path if needed
 
 export function DeleteItemButton({
                                    item,
