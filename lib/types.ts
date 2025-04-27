@@ -43,10 +43,6 @@ export type CartItem = {
     merchandise: {
         id: string;
         title: string;
-        selectedOptions: {
-            name: string;
-            value: string;
-        }[];
         product: CartProduct;
     };
 };
@@ -67,7 +63,6 @@ export type Menu = {
 export type Collection = {
     handle: string;
     title: string;
-    description: string;
     updatedAt: string;
     path: string;
 };

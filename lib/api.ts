@@ -4,7 +4,7 @@ import mockJson from "./mock_products.json";
 
 const API_URL = "http://0.0.0.0:5002/data"; // ✅ Your fastapi endpoint
 
-let cachedData: { products: Product[]; collections: Collection[] } | null = null;
+let cachedData: { products: Product[]; collections: Collection[] }  = { products: [],collections: [] };
 let lastFetched = 0;
 
 const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
@@ -23,7 +23,8 @@ async function fetchData() {
     //
     // const data = await response.json();
     const data = mockJson
-    cachedData = data;
+
+    cachedData = data
     lastFetched = now;
 
     return data;
@@ -36,6 +37,7 @@ export async function getProducts(): Promise<Product[]> {
 
 export async function getCollections(): Promise<Collection[]> {
     const {collections} = await fetchData();
+
     return collections;
 }
 

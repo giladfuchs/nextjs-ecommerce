@@ -1,5 +1,5 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {Cart, CartItem, Product} from 'lib/types';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Cart, CartItem, Product } from 'lib/types';
 
 // Helpers
 function createEmptyCart(): Cart {
@@ -7,7 +7,7 @@ function createEmptyCart(): Cart {
         totalQuantity: 0,
         lines: [],
         cost: {
-            totalAmount: {amount: '0', currencyCode: 'ILS'},
+            totalAmount: { amount: '0', currencyCode: 'ILS' },
         },
     };
 }
@@ -20,14 +20,13 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         addItem(state, action: PayloadAction<{ product: Product }>) {
-            const {product} = action.payload;
+            const { product } = action.payload;
 
             const existingItem = state.lines.find(
                 (item) => item.merchandise.id === product.id
             );
 
             const quantity = existingItem ? existingItem.quantity + 1 : 1;
-            console.log(product)
             const updatedItem: CartItem = {
                 id: existingItem?.id ?? product.id,
                 quantity,
@@ -44,7 +43,6 @@ const cartSlice = createSlice({
                 merchandise: {
                     id: product.id,
                     title: product.title,
-                    selectedOptions: [], // ✅ ADD THIS LINE
                     product: {
                         id: product.id,
                         handle: product.handle,
@@ -53,7 +51,6 @@ const cartSlice = createSlice({
                     },
                 },
             };
-
 
             const updatedLines = existingItem
                 ? state.lines.map((item) =>
@@ -76,7 +73,7 @@ const cartSlice = createSlice({
         },
 
         updateItem(state, action: PayloadAction<{ merchandiseId: string; updateType: "plus" | "minus" | "delete" }>) {
-            const {merchandiseId, updateType} = action.payload;
+            const { merchandiseId, updateType } = action.payload;
 
             const updatedLines = state.lines
                 .map((item) => {
@@ -110,13 +107,14 @@ const cartSlice = createSlice({
 
             state.lines = updatedLines;
             state.totalQuantity = totalQuantity;
+
             if (updatedLines.length > 0) {
                 state.cost.totalAmount = {
                     amount: totalAmount.toFixed(2),
-                    currencyCode: updatedLines[0].cost.totalAmount.currencyCode,
+                    currencyCode: 'ILS',
                 };
             } else {
-                state.cost.totalAmount = {amount: '0', currencyCode: 'ILS'};
+                state.cost.totalAmount = { amount: '0', currencyCode: 'ILS' };
             }
         },
 
@@ -126,5 +124,5 @@ const cartSlice = createSlice({
     },
 });
 
-export const {addItem, updateItem, clearCart} = cartSlice.actions;
+export const { addItem, updateItem, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;

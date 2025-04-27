@@ -25,7 +25,7 @@ export async function generateMetadata(props: {
 
     return {
         title: collection.title,
-        description: collection.description || `${collection.title} products`,
+        description:   `${collection.title} products`,
     };
 }
 
@@ -44,11 +44,12 @@ export default async function CategoryPage(props: {
     const query = searchParams["q"];
     const queryText = Array.isArray(query) ? query[0] : query || "";
 
-    const regex = new RegExp(queryText, 'i');
+    const regex = queryText ? new RegExp(queryText, 'i') : null;
+
 
     const filteredProducts = queryText
         ? products.filter((product) =>
-            regex.test(Object.values(product).join(' '))
+            regex!.test(Object.values(product).join(' '))
         )
         : products;
 

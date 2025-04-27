@@ -45,9 +45,9 @@ export default function CollectionPage() {
 
     // ✅ Then filter by search query
     if (q) {
-        const regex = new RegExp(q, 'i');
+        const regex = q ? new RegExp(q, 'i') : null;
         filteredProducts = filteredProducts.filter((product) =>
-            regex.test(Object.values(product).join(' '))
+            regex!.test(Object.values(product).join(' '))
         );
     }
 
