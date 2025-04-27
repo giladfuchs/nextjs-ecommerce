@@ -1,9 +1,9 @@
-import { getCollection, getCollectionProducts } from "lib/shopify";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import Grid from "components/grid";
 import ProductGridItems from "components/layout/product-grid-items";
+import {getCollection, getCollectionProducts} from "../../../lib/api";
 function safeDecodeURIComponent(value: string): string {
   try {
     return decodeURIComponent(value);
@@ -11,6 +11,7 @@ function safeDecodeURIComponent(value: string): string {
     return value;
   }
 }
+
 export async function generateMetadata(props: {
   params: Promise<{ collection: string }>;
 }): Promise<Metadata> {

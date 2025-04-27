@@ -1,5 +1,5 @@
 import NavbarClient from "./Navbar.client";
-import { Menu } from "../../../lib/shopify/types";
+import { Menu } from "../../../lib/types";
 
 export async function Navbar() {
   const menu = [] as Menu[];

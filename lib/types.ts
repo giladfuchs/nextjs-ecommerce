@@ -15,6 +15,7 @@ export type Image = {
 export type Product = {
     id: string;
     handle: string;
+    collection: string;
     availableForSale: boolean;
     title: string;
     description: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Menu } from "lib/shopify/types";
+import { Menu } from "lib/types";
 import MobileMenu from "./mobile-menu";
 import Search, { SearchSkeleton } from "./search";
 import CartModal from "components/cart/modal";

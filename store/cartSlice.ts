@@ -1,5 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {Cart, CartItem, Product} from 'lib/shopify/types';
+import {Cart, CartItem, Product} from 'lib/types';
 
 // Helpers
 function createEmptyCart(): Cart {

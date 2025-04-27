@@ -2,7 +2,7 @@
 
 import { PlusIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
-import { Product } from "lib/shopify/types";
+import { Product } from "lib/types";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../store/cartSlice";
 
