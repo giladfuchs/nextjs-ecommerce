@@ -1,23 +1,25 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Cart, CartItem, Product, ProductVariant } from 'lib/shopify/types';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {Cart, CartItem, Product, ProductVariant} from 'lib/shopify/types';
 
-
-function calculateItemCost(quantity: number, price: string): string {
-    return (Number(price) * quantity).toFixed(2);
-}
+// Helpers
 
 function createOrUpdateCartItem(
     existingItem: CartItem | undefined,
     variant: ProductVariant,
-    product: Product,
+    product: Product
 ): CartItem {
     const quantity = existingItem ? existingItem.quantity + 1 : 1;
-    const totalAmount = calculateItemCost(quantity, variant.price.amount);
+    const unitPrice = Number(variant.price.amount);
+    const totalAmount = (unitPrice * quantity).toFixed(2);
 
     return {
         id: existingItem?.id ?? variant.id,
         quantity,
         cost: {
+            unitAmount: {
+                amount: unitPrice.toFixed(2),
+                currencyCode: variant.price.currencyCode,
+            },
             totalAmount: {
                 amount: totalAmount,
                 currencyCode: variant.price.currencyCode,
@@ -39,13 +41,14 @@ function createOrUpdateCartItem(
 
 function updateCartItem(
     item: CartItem,
-    updateType: "plus" | "minus" | "delete",
+    updateType: 'plus' | 'minus' | 'delete'
 ): CartItem | null {
-    if (updateType === "delete") return null;
-    const newQuantity = updateType === "plus" ? item.quantity + 1 : item.quantity - 1;
+    if (updateType === 'delete') return null;
+    const newQuantity = updateType === 'plus' ? item.quantity + 1 : item.quantity - 1;
     if (newQuantity === 0) return null;
-    const singleItemAmount = Number(item.cost.totalAmount.amount) / item.quantity;
-    const newTotalAmount = calculateItemCost(newQuantity, singleItemAmount.toString());
+
+    const unitPrice = Number(item.cost.unitAmount.amount);
+    const newTotalAmount = (unitPrice * newQuantity).toFixed(2);
 
     return {
         ...item,
@@ -53,8 +56,8 @@ function updateCartItem(
         cost: {
             ...item.cost,
             totalAmount: {
-                ...item.cost.totalAmount,
                 amount: newTotalAmount,
+                currencyCode: item.cost.unitAmount.currencyCode,
             },
         },
     };
@@ -62,34 +65,32 @@ function updateCartItem(
 
 function updateCartTotals(lines: CartItem[]): Pick<Cart, 'totalQuantity' | 'cost'> {
     const totalQuantity = lines.reduce((sum, item) => sum + item.quantity, 0);
-    const totalAmount = lines.reduce((sum, item) => sum + Number(item.cost.totalAmount.amount), 0);
+    const totalAmount = lines.reduce(
+        (sum, item) => sum + Number(item.cost.totalAmount.amount),
+        0
+    );
     const currencyCode = lines[0]?.cost.totalAmount.currencyCode ?? 'ILS';
 
     return {
         totalQuantity,
         cost: {
-            subtotalAmount: { amount: totalAmount.toFixed(2), currencyCode },
-            totalAmount: { amount: totalAmount.toFixed(2), currencyCode },
-            totalTaxAmount: { amount: '0', currencyCode },
+            totalAmount: {
+                amount: totalAmount.toFixed(2),
+                currencyCode,
+            },
         },
     };
 }
 
 function createEmptyCart(): Cart {
     return {
-        id: 'mock-cart-id',
-        checkoutUrl: '',
         totalQuantity: 0,
         lines: [],
         cost: {
-            subtotalAmount: { amount: '0', currencyCode: 'ILS' },
-            totalAmount: { amount: '0', currencyCode: 'ILS' },
-            totalTaxAmount: { amount: '0', currencyCode: 'ILS' },
+            totalAmount: {amount: '0', currencyCode: 'ILS'},
         },
     };
 }
-
-// Slice
 
 const initialState: Cart = createEmptyCart();
 
@@ -98,14 +99,14 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         addItem(state, action: PayloadAction<{ variant: ProductVariant; product: Product }>) {
-            const { variant, product } = action.payload;
+            const {variant, product} = action.payload;
             const existingItem = state.lines.find(
-                (item) => item.merchandise.id === variant.id,
+                (item) => item.merchandise.id === variant.id
             );
             const updatedItem = createOrUpdateCartItem(existingItem, variant, product);
             const updatedLines = existingItem
                 ? state.lines.map((item) =>
-                    item.merchandise.id === variant.id ? updatedItem : item,
+                    item.merchandise.id === variant.id ? updatedItem : item
                 )
                 : [...state.lines, updatedItem];
 
@@ -115,13 +116,13 @@ const cartSlice = createSlice({
             state.cost = totals.cost;
         },
 
-        updateItem(state, action: PayloadAction<{ merchandiseId: string; updateType: "plus" | "minus" | "delete" }>) {
-            const { merchandiseId, updateType } = action.payload;
+        updateItem(state, action: PayloadAction<{ merchandiseId: string; updateType: 'plus' | 'minus' | 'delete' }>) {
+            const {merchandiseId, updateType} = action.payload;
             const updatedLines = state.lines
                 .map((item) =>
                     item.merchandise.id === merchandiseId
                         ? updateCartItem(item, updateType)
-                        : item,
+                        : item
                 )
                 .filter(Boolean) as CartItem[];
 
@@ -133,9 +134,9 @@ const cartSlice = createSlice({
 
         clearCart(state) {
             Object.assign(state, createEmptyCart());
-        }
-    }
+        },
+    },
 });
 
-export const { addItem, updateItem, clearCart } = cartSlice.actions;
+export const {addItem, updateItem, clearCart} = cartSlice.actions;
 export default cartSlice.reducer;

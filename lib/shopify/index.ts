@@ -1,7 +1,3 @@
-import {
-  SHOPIFY_GRAPHQL_API_ENDPOINT,
-} from "lib/constants";
-import { ensureStartsWith } from "lib/utils";
 
 
 import {
