@@ -6,33 +6,32 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export function PathFilterItem({ item }: { item: PathFilterItem }) {
-  const pathname = usePathname();
-  const active = pathname === item.path;
+    const pathname = usePathname();
+    const active = pathname === item.path;
 
-  if (!item.path) {
-    // Optionally log or skip rendering
-    console.warn("Missing path for filter item:", item);
-    return null;
-  }
 
-  const DynamicTag = active ? "p" : Link;
 
-  return (
-    <li className="mt-2 flex text-theme dark:text-theme" key={item.title}>
-      <DynamicTag
-        href={item.path}
-        className={clsx(
-          "w-full text-sm underline-offset-4 hover:underline hover:text-accent dark:hover:text-accent",
-          {
-            "underline underline-offset-4": active,
-          },
-        )}
-      >
-        {item.title}
-      </DynamicTag>
-    </li>
-  );
+    const DynamicTag = active ? "p" : Link;
+
+    return (
+        <li className="mt-2 flex">
+            <DynamicTag
+                href={item.path}
+                className={clsx(
+                    "w-full rounded-md p-2 text-center text-sm font-medium",
+                    "bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700",
+                    "text-black dark:text-white",
+                    {
+                        "underline underline-offset-4": active,
+                    }
+                )}
+            >
+                {item.title}
+            </DynamicTag>
+        </li>
+    );
 }
+
 export function FilterItem({ item }: { item: ListItem }) {
-  return <PathFilterItem item={item} />;
+    return <PathFilterItem item={item} />;
 }
