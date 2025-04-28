@@ -29,7 +29,6 @@ export default function CollectionPage() {
 
         loadProducts();
     }, []);
-
     const pathname =
         typeof window !== "undefined"
             ? safeDecodeURIComponent(window.location.pathname)

@@ -32,12 +32,10 @@ const cartSlice = createSlice({
                 quantity,
                 cost: {
                     totalAmount: {
-                        amount: (Number(product.price.amount) * quantity).toFixed(2),
-                        currencyCode: product.price.currencyCode,
+                        amount: (Number(product.price) * quantity).toFixed(2),
                     },
                     unitAmount: {
-                        amount: product.price.amount,
-                        currencyCode: product.price.currencyCode,
+                        amount: product.price,
                     },
                 },
                 merchandise: {
@@ -60,7 +58,7 @@ const cartSlice = createSlice({
 
             const totalQuantity = updatedLines.reduce((sum, item) => sum + item.quantity, 0);
             const totalAmount = updatedLines.reduce(
-                (sum, item) => sum + Number(item.cost.totalAmount.amount),
+                (sum, item) => sum + Number(item.cost.totalAmount),
                 0
             );
 
@@ -68,7 +66,6 @@ const cartSlice = createSlice({
             state.totalQuantity = totalQuantity;
             state.cost.totalAmount = {
                 amount: totalAmount.toFixed(2),
-                currencyCode: product.price.currencyCode,
             };
         },
 
@@ -84,7 +81,7 @@ const cartSlice = createSlice({
 
                     if (newQuantity <= 0) return null;
 
-                    const unitPrice = Number(item.cost.unitAmount.amount);
+                    const unitPrice = Number(item.cost.unitAmount);
                     return {
                         ...item,
                         quantity: newQuantity,
@@ -101,7 +98,7 @@ const cartSlice = createSlice({
 
             const totalQuantity = updatedLines.reduce((sum, item) => sum + item.quantity, 0);
             const totalAmount = updatedLines.reduce(
-                (sum, item) => sum + Number(item.cost.totalAmount.amount),
+                (sum, item) => sum + Number(item.cost.totalAmount),
                 0
             );
 
@@ -111,10 +108,9 @@ const cartSlice = createSlice({
             if (updatedLines.length > 0) {
                 state.cost.totalAmount = {
                     amount: totalAmount.toFixed(2),
-                    currencyCode: 'ILS',
                 };
             } else {
-                state.cost.totalAmount = { amount: '0', currencyCode: 'ILS' };
+                state.cost.totalAmount = { amount: '0',   };
             }
         },
 

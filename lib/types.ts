@@ -1,13 +1,10 @@
 export type Money = {
     amount: string;
-    currencyCode: string;
 };
 
 export type Image = {
     url: string;
     altText: string;
-    width: number;
-    height: number;
 };
 
 
@@ -19,7 +16,7 @@ export type Product = {
     availableForSale: boolean;
     title: string;
     description: string;
-    price: Money;
+    price: string;
     featuredImage: Image;
     images: Image[];
     tags: string[];
@@ -37,8 +34,8 @@ export type CartItem = {
     id: string | undefined;
     quantity: number;
     cost: {
-        totalAmount: Money;
-        unitAmount: Money;
+        totalAmount: string;
+        unitAmount: string;
     };
     merchandise: {
         id: string;

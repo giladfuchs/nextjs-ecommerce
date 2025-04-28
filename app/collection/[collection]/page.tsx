@@ -40,7 +40,6 @@ export default async function CategoryPage(props: {
     collection = safeDecodeURIComponent(collection);
 
     const products = await getCollectionProducts({ collection });
-
     const query = searchParams["q"];
     const queryText = Array.isArray(query) ? query[0] : query || "";
 

@@ -69,9 +69,8 @@ export default async function ProductPage() {
             availability: product.availableForSale
                 ? "https://schema.org/InStock"
                 : "https://schema.org/OutOfStock",
-            priceCurrency: product.price.currencyCode,
-            highPrice: product.price.amount,
-            lowPrice: product.price.amount,
+            priceCurrency: "ILS",
+            price: product.price,
         },
     };
 

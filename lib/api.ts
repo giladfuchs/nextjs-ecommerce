@@ -16,13 +16,13 @@ async function fetchData() {
         return cachedData;
     }
 
-    // const response = await fetch(API_URL, {cache: "no-store"}); // ✅ always fresh
-    // if (!response.ok) {
-    //     throw new Error("Failed to fetch data from API");
-    // }
-    //
-    // const data = await response.json();
-    const data = mockJson
+    const response = await fetch(API_URL, {cache: "no-store"}); // ✅ always fresh
+    if (!response.ok) {
+        throw new Error("Failed to fetch data from API");
+    }
+
+    const data = await response.json();
+    // const data = mockJson
 
     cachedData = data
     lastFetched = now;

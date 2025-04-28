@@ -69,13 +69,13 @@ export default function CheckoutSummary() {
                             </Typography>
 
                             <Typography variant="body2" color="var(--color-text)" textAlign="right">
-                                מחיר ליחידה <Price amount={product.cost.unitAmount.amount} />
+                                מחיר ליחידה <Price amount={product.cost.unitAmount} />
                             </Typography>
                         </Box>
 
                         {/* Price */}
                         <Typography fontWeight="bold" fontSize="1.2rem" textAlign="right" minWidth={70}>
-                            ₪{product.cost.totalAmount.amount}
+                            ₪{product.cost.totalAmount}
                         </Typography>
                     </Box>
                 ))
@@ -100,7 +100,7 @@ export default function CheckoutSummary() {
                 </Typography>
                 <Typography variant="h6" fontWeight="bold">
 
-                    <Price amount={cart?.cost.totalAmount.amount} />
+                    <Price amount={cart?.cost.totalAmount} />
                 </Typography>
             </Box>
         </Box>

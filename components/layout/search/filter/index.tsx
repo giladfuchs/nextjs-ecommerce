@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
 export type ListItem = PathFilterItem;
-export type PathFilterItem = { title: string; path: string };
+export type PathFilterItem = { title: string; handle: string };
 
 function safeDecodeURIComponent(value: string): string {
     try {
@@ -23,11 +23,11 @@ function FilterItemList({ list }: { list: ListItem[] }) {
     return (
         <>
             {list.map((item: ListItem, index: number) => {
-                const isActive = pathname === item.path;
+                const isActive = pathname === item.handle;
                 return (
                     <ListItemButton
                         key={index}
-                        onClick={() => router.push(item.path)}
+                        onClick={() => router.push(`/collection/${item.handle}`)}
                         sx={{
                             borderRadius: "8px",
                             mb: 0.5,
@@ -83,12 +83,12 @@ export default function FilterList({ list }: { list: ListItem[] }) {
     const router = useRouter();
     const pathname = safeDecodeURIComponent(usePathname());
 
-    const initialItem = list.find((item) => pathname === item.path) || list.find((item) => item.title === "הכל") || undefined;
+    const initialItem = list.find((item) => pathname === item.handle) || list.find((item) => item.title === "הכל") || undefined;
 
     const [selectedItem, setSelectedItem] = useState<ListItem | undefined>(initialItem);
 
     useEffect(() => {
-        const matching = list.find((item) => pathname === item.path) || list.find((item) => item.title === "הכל") || undefined;
+        const matching = list.find((item) => pathname === item.handle) || list.find((item) => item.title === "הכל") || undefined;
         setSelectedItem(matching);
     }, [pathname, list]);
 
@@ -108,6 +108,7 @@ export default function FilterList({ list }: { list: ListItem[] }) {
                     onChange={(event, value) => {
                         if (value?.path) {
                             router.push(value.path);
+                            router.push(`/collection/${value.path}`)
                         }
                         setSelectedItem(value || undefined);
                     }}
