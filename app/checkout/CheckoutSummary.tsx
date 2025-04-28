@@ -35,27 +35,27 @@ export default function CheckoutSummary() {
                                 ₪{product.cost.totalAmount.amount}
                             </Typography>
                         </Grid>
+                        <Grid container direction="column" spacing={1}>
+                            <Grid item>
+                                <Typography fontWeight="medium" fontSize="0.9rem" textAlign="right">
+                                    {product.merchandise.product.title}
+                                </Typography>
+                            </Grid>
 
-                        {/* Product title */}
-                        <Grid item>
-                            <Typography fontWeight="medium" fontSize="0.9rem" textAlign="right">
-                                {product.merchandise.product.title}
-                            </Typography>
-                        </Grid>
+                            {/* Quantity */}
+                            <Grid item>
+                                <Typography variant="body2" color="var(--color-text)" textAlign="right">
+                                    כמות {product.quantity}
+                                </Typography>
+                            </Grid>
 
-                        {/* Quantity */}
-                        <Grid item>
-                            <Typography variant="body2" color="var(--color-text)" textAlign="right">
-                                כמות {product.quantity}
-                            </Typography>
-                        </Grid>
-
-                        {/* Unit Price */}
-                        <Grid item>
-                            <Typography variant="body2" color="var(--color-text)" textAlign="right">
-                                מחיר ליחידה&nbsp;
-                                ₪{product.cost.unitAmount.amount}
-                            </Typography>
+                            {/* Unit Price */}
+                            <Grid item>
+                                <Typography variant="body2" color="var(--color-text)" textAlign="right">
+                                    מחיר ליחידה&nbsp;
+                                    ₪{product.cost.unitAmount.amount}
+                                </Typography>
+                            </Grid>
                         </Grid>
 
                         {/* Image */}
