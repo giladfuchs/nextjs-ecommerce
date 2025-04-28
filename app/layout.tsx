@@ -8,6 +8,7 @@ import "../styles/theme.scss";
 
 import {Assistant} from "next/font/google";
 import AccessibilityBar from "../components/accessibility-bar";
+import { Analytics } from '@vercel/analytics/react';
 
 
 const assistant = Assistant({
@@ -45,6 +46,7 @@ export default async function RootLayout({
 
             <Navbar/>
             <main>{children}</main>
+            <Analytics />
             <AccessibilityBar/>
         </ReduxProvider>
         </body>
