@@ -1,8 +1,6 @@
 import Collections from "components/layout/search/collections";
 import ChildrenWrapper from "./children-wrapper";
 import {Suspense} from "react";
-import Search, {SearchSkeleton} from "../../components/layout/navbar/search";
-
 export default function SearchLayout({
                                          children,
                                      }: {
@@ -17,13 +15,6 @@ export default function SearchLayout({
                 <div className="order-first w-full flex-none md:max-w-[125px]">
                     {/* Collections */}
                     <Collections/>
-
-                    {/* Search under Collections - ONLY MOBILE */}
-                    <div className="mt-4 w-full md:hidden">
-                        <Suspense fallback={<SearchSkeleton/>}>
-                            <Search/>
-                        </Suspense>
-                    </div>
                 </div>
 
                 {/* Main content */}

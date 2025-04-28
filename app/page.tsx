@@ -4,7 +4,7 @@ import CollectionPage from "./collection/page";
 
 export const metadata = {
   description:
-    "High-performance ecommerce store built with Next.js, Vercel, and Shopify.",
+    "חנות שתילים של יערה",
   openGraph: {
     type: "website",
   },

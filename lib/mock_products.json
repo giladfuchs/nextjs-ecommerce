@@ -3913,6 +3913,12 @@
   ],
   "collections": [
     {
+      "handle": "הכל",
+      "title": "הכל",
+      "path": "/",
+      "updatedAt": "2025-04-22T10:18:27Z"
+    },
+    {
       "handle": "צמחי-חוץ",
       "title": "צמחי חוץ",
       "path": "/collection/צמחי-חוץ",

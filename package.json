@@ -10,8 +10,11 @@
     "test": "pnpm prettier:check"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "@mui/material": "^7.0.2",
     "@reduxjs/toolkit": "^2.7.0",
     "@vercel/analytics": "^1.5.0",
     "clsx": "^2.1.1",
