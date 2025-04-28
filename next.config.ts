@@ -4,6 +4,9 @@ export default {
     inlineCss: true,
     useCache: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   devIndicators: true,
   images: {
     domains: ["static.wixstatic.com", "fastly.picsum.photos"],

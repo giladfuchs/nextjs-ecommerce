@@ -1,86 +1,109 @@
+// @ts-ignore
+
 "use client";
 
-import Image from "next/image";
-import {useSelector} from "react-redux";
-import {RootState} from "../../store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store";
+
+import {
+    Typography,
+    Divider,
+    Box,
+    Avatar,
+    Container,Grid
+} from "@mui/material";
+
+import Info from "./Info";
+
+function CheckoutSummary() {
+    const cart = useSelector((state: RootState) => state.cart);
+
+    return (
+        <Box
+            sx={{
+                bgcolor: "var(--color-bg-dark)",
+                color: "var(--color-text-strong)",
+                borderRadius: 3,
+                p: 4,
+                minHeight: "100%"
+            }}
+        >
+            <Typography variant="h6" fontWeight="bold" gutterBottom textAlign="right">
+                סיכום הזמנה
+            </Typography>
+
+            {cart?.lines.length ? (
+                <Box>
+                    {cart.lines.map((product) => (
+                        <Grid
+                            container
+                            spacing={2}
+                            key={product.id}
+                            alignItems="center"
+                            mb={2}
+                            sx={{ direction: "rtl" }}
+                        >
+                            {/* Price */}
+                            <Grid item xs={3}>
+                                <Typography fontWeight="bold">
+                                    {product.cost.totalAmount.amount} {product.cost.totalAmount.currencyCode}
+                                </Typography>
+                            </Grid>
+
+                            {/* Title + Quantity */}
+                            <Grid item  xs={6}>
+                                <Typography fontWeight="medium" fontSize="0.9rem" noWrap>
+                                    {product.merchandise.product.title}
+                                </Typography>
+                                <Typography variant="body2" color="var(--color-text)">
+                                    כמות {product.quantity}
+                                </Typography>
+                            </Grid>
+
+                            {/* Image */}
+                            <Grid item  xs={3}>
+                                <Avatar
+                                    variant="rounded"
+                                    src={product.merchandise.product.featuredImage.url}
+                                    alt={product.merchandise.product.title}
+                                    sx={{ width: 56, height: 56 }}
+                                />
+                            </Grid>
+                        </Grid>
+                    ))}
+                </Box>
+            ) : (
+                <Typography variant="body2" color="text.secondary" textAlign="center">
+                    העגלה שלך ריקה
+                </Typography>
+            )}
+
+            <Divider sx={{ my: 2, bgcolor: "var(--color-border)" }} />
+
+            <Grid container justifyContent="space-between" sx={{ direction: "rtl" }}>
+                <Typography variant="subtitle1" fontWeight="bold">
+                    סה\"כ
+                </Typography>
+                <Typography variant="subtitle1" fontWeight="bold">
+                    {cart?.cost.totalAmount.amount} {cart?.cost.totalAmount.currencyCode}
+                </Typography>
+            </Grid>
+        </Box>
+    );
+}
 
 export default function CheckoutPage() {
-  const cart = useSelector((state: RootState) => state.cart);
-
-  return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
-      <div className="w-full md:w-1/2 p-6 md:p-12">
-        <h2 className="text-xl font-bold mb-6 text-[var(--color-text-strong)]">
-          Contact
-        </h2>
-        <input
-          type="text"
-          placeholder="Email"
-          className="w-full p-4 rounded border border-[var(--color-border)] bg-transparent mb-4"
-        />
-        <input
-          type="number"
-          placeholder="Phone"
-          className="w-full p-4 rounded border border-[var(--color-border)] bg-transparent mb-4"
-        />
-        <input
-          type="text"
-          placeholder="First name"
-          className="w-full p-4 rounded border border-[var(--color-border)] bg-transparent mb-4"
-        />
-        <input
-          type="text"
-          placeholder="Last name"
-          className="w-full p-4 rounded border border-[var(--color-border)] bg-transparent mb-4"
-        />
-
-        <button className="mt-8 bg-[var(--color-accent)] rounded text-white py-3 px-6 w-full">
-          Continue to shipping
-        </button>
-      </div>
-
-      <div className="w-full md:w-1/2 p-6 md:p-12 bg-[var(--color-bg-dark)] text-[var(--color-text-strong)]">
-        <h2 className="text-xl font-bold mb-6">Order Summary</h2>
-        {cart?.lines.length ? (
-          <ul>
-            {cart.lines.map((item) => (
-              <li key={item.id} className="flex items-center mb-4">
-                <Image
-                  src={item.merchandise.product.featuredImage.url}
-                  alt={item.merchandise.product.title}
-                  width={60}
-                  height={60}
-                  className="rounded border border-[var(--color-border)]"
-                />
-                <div className="ml-4 flex-1">
-                  <h3 className="font-semibold text-sm md:text-base">
-                    {item.merchandise.product.title}
-                  </h3>
-                  <p className="text-xs md:text-sm text-[var(--color-text)]">
-                    Quantity: {item.quantity}
-                  </p>
-                </div>
-                <div className="font-semibold text-sm md:text-base">
-                  {item.cost.totalAmount.amount}{" "}
-                  {item.cost.totalAmount.currencyCode}
-                </div>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>Your cart is empty.</p>
-        )}
-
-        <div className="border-t border-[var(--color-border)] pt-4 mt-4">
-          <div className="flex justify-between text-lg font-bold">
-            <span>Total</span>
-            <span>
-              {cart?.cost.totalAmount.amount}{" "}
-              {cart?.cost.totalAmount.currencyCode}
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    return (
+        <Container maxWidth="lg" sx={{ py: 4 }}>
+            <Grid container spacing={4}>
+                {/* Order Summary */}
+                <Grid item xs={12} md={9}>
+                    <CheckoutSummary />
+                </Grid>
+                <Grid item xs={12} md={3}>
+                    <Info />
+                </Grid>
+            </Grid>
+        </Container>
+    );
 }
