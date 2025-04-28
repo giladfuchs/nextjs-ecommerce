@@ -9,6 +9,10 @@ import "../styles/theme.scss";
 import {Assistant} from "next/font/google";
 import AccessibilityBar from "../components/accessibility-bar";
 import { Analytics } from '@vercel/analytics/react';
+import theme from "../lib/theme";
+import { ThemeProvider } from "@mui/material/styles";
+import {ThemeClientProvider} from "../components/theme-provider";
+
 
 
 const assistant = Assistant({
@@ -43,11 +47,12 @@ export default async function RootLayout({
         <body
             className="bg-theme text-theme selection:bg-teal-300 dark:bg-theme-dark dark:text-theme dark:selection:bg-pink-500 dark:selection:text-white">
         <ReduxProvider>
-
+            <ThemeClientProvider  >
             <Navbar/>
             <main>{children}</main>
             <Analytics />
             <AccessibilityBar/>
+            </ThemeClientProvider>
         </ReduxProvider>
         </body>
         </html>
