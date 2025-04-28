@@ -2,7 +2,7 @@
 
 import {
     Box,
-    Button,
+    Button, Divider,
     FormControl,
     FormHelperText,
     Grid,
@@ -12,9 +12,6 @@ import {
 } from '@mui/material';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import MainCard from "./MainCard";
-
-// Your custom input styling
 const customInput = {
     marginTop: 1,
     marginBottom: 1,
@@ -53,10 +50,19 @@ const fields = [
 
 const CheckoutInfo = () => {
     return (
-        <Box sx={{ width: '100%', maxWidth: 300, mx: 'auto' }}>
+        <Box             sx={{
+            width: '100%',
+            mx: 'auto',
+            p: 2,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+        }}>
             <Grid container direction="column" spacing={2}>
 
-                <MainCard title={"פרטי קשר"}>
+                    <Typography variant="h4" textAlign="center" fontWeight="bold" mb={2}>
+                        פרטי קשר
+                    </Typography>
                 <Grid item>
                     <Formik
                         initialValues={{
@@ -136,7 +142,7 @@ const CheckoutInfo = () => {
                                                 </FormControl>
                                             </Grid>
                                         ))}
-                                        {/* Submit Button */}
+                                        <Divider />
                                         <Grid item>
                                             <Button
                                                 fullWidth
@@ -163,7 +169,6 @@ const CheckoutInfo = () => {
                         )}
                     </Formik>
                 </Grid>
-                </MainCard>
             </Grid>
         </Box>
     );
