@@ -2,10 +2,11 @@
 
 import { Autocomplete, TextField, ListItemButton, ListItemText, Typography } from "@mui/material";
 import { usePathname, useRouter } from "next/navigation";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export type ListItem = PathFilterItem;
 export type PathFilterItem = { title: string; path: string };
+
 function safeDecodeURIComponent(value: string): string {
     try {
         return decodeURIComponent(value);
@@ -18,11 +19,11 @@ function safeDecodeURIComponent(value: string): string {
 function FilterItemList({ list }: { list: ListItem[] }) {
     const router = useRouter();
     const pathname = safeDecodeURIComponent(usePathname());
+
     return (
         <>
             {list.map((item: ListItem, index: number) => {
-                const isActive = pathname === item.path; // Exact match
-
+                const isActive = pathname === item.path;
                 return (
                     <ListItemButton
                         key={index}
@@ -77,12 +78,19 @@ function renderAutocompleteInput(params: any) {
     );
 }
 
-// Main component
+// Main
 export default function FilterList({ list }: { list: ListItem[] }) {
     const router = useRouter();
-    const pathname = usePathname();
-    const defaultItem = list.find((item) => pathname === item.path) || list.find((item) => item.title === "הכל") || undefined;
+    const pathname = safeDecodeURIComponent(usePathname());
 
+    const initialItem = list.find((item) => pathname === item.path) || list.find((item) => item.title === "הכל") || undefined;
+
+    const [selectedItem, setSelectedItem] = useState<ListItem | undefined>(initialItem);
+
+    useEffect(() => {
+        const matching = list.find((item) => pathname === item.path) || list.find((item) => item.title === "הכל") || undefined;
+        setSelectedItem(matching);
+    }, [pathname, list]);
 
     return (
         <nav>
@@ -96,13 +104,14 @@ export default function FilterList({ list }: { list: ListItem[] }) {
                 <Autocomplete
                     options={list}
                     getOptionLabel={(option) => option.title}
-                    defaultValue={defaultItem}
+                    value={selectedItem}
                     onChange={(event, value) => {
                         if (value?.path) {
                             router.push(value.path);
                         }
+                        setSelectedItem(value || undefined);
                     }}
-                    isOptionEqualToValue={(option, value) => option.path === value.path}
+                    isOptionEqualToValue={(option, value) => option.path === value?.path}
                     disableClearable
                     renderInput={renderAutocompleteInput}
                 />
