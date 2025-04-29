@@ -60,17 +60,17 @@ export default function CheckoutSummary() {
                                 minWidth: 0,     // 🛠 Allow text to grow properly
                             }}
                         >
-                            <Typography fontWeight="bold" fontSize="1.2rem" textAlign="right" noWrap>
+                            <Typography variant="subtitle1" textAlign="right" >
                                 {product.merchandise.product.title}
                             </Typography>
 
 
-                            <Typography variant="body2" color="var(--color-text)" textAlign="right">
+                            <Typography variant="body2"   textAlign="right">
                                  <Price amount={product.cost.unitAmount} />
                             </Typography>
                         </Grid>
-                        <Divider  />
-                        <Divider  />
+                        <Divider sx={{ display: { xs: 'none', md: 'block' }, my: 1 }} />
+
                         <Grid
                             sx={{
                                 mt:1,
