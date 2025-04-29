@@ -83,7 +83,7 @@ export default function CheckoutSummary() {
                         <Typography fontWeight="bold" fontSize="1.2rem" textAlign="right" minWidth={70}>
                            < Price amount={product.cost.totalAmount} />
                         </Typography>
-                        <Typography variant="bold" color="var(--color-text)" textAlign="center">
+                        <Typography variant="bold" color="var(--color-text)" textAlign="right">
                           כמות:  {product.quantity}
                         </Typography>
 
