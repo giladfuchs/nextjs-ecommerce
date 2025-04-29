@@ -19,7 +19,6 @@ export type Product = {
     price: string;
     featuredImage: Image;
     images: Image[];
-    tags: string[];
     updatedAt: string;
 };
 
@@ -61,5 +60,4 @@ export type Collection = {
     handle: string;
     title: string;
     updatedAt: string;
-    path: string;
 };

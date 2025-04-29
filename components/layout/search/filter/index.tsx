@@ -23,7 +23,8 @@ function FilterItemList({ list }: { list: ListItem[] }) {
     return (
         <>
             {list.map((item: ListItem, index: number) => {
-                const isActive = pathname === item.handle;
+                const isActive = pathname.endsWith(`/collection/${item.handle}`);
+
                 return (
                     <ListItemButton
                         key={index}
@@ -83,15 +84,14 @@ export default function FilterList({ list }: { list: ListItem[] }) {
     const router = useRouter();
     const pathname = safeDecodeURIComponent(usePathname());
 
-    const initialItem = list.find((item) => pathname === item.handle) || list.find((item) => item.title === "הכל") || undefined;
+    const initialItem = list.find((item) => pathname.endsWith(`/collection/${item.handle}`)) || undefined;
 
     const [selectedItem, setSelectedItem] = useState<ListItem | undefined>(initialItem);
 
     useEffect(() => {
-        const matching = list.find((item) => pathname === item.handle) || list.find((item) => item.title === "הכל") || undefined;
+        const matching = list.find((item) => pathname.endsWith(`/collection/${item.handle}`)) || undefined;
         setSelectedItem(matching);
     }, [pathname, list]);
-
     return (
         <nav>
             {/* Desktop */}
@@ -106,13 +106,12 @@ export default function FilterList({ list }: { list: ListItem[] }) {
                     getOptionLabel={(option) => option.title}
                     value={selectedItem}
                     onChange={(event, value) => {
-                        if (value?.path) {
-                            router.push(value.path);
-                            router.push(`/collection/${value.path}`)
+                        if (value?.handle) {
+                            router.push(`/collection/${value.handle}`)
                         }
                         setSelectedItem(value || undefined);
                     }}
-                    isOptionEqualToValue={(option, value) => option.path === value?.path}
+                    isOptionEqualToValue={(option, value) => option.handle === value?.handle}
                     disableClearable
                     renderInput={renderAutocompleteInput}
                 />

@@ -2,7 +2,8 @@ import {Product, Collection} from "lib/types";
 import mockJson from "./mock_products.json";
 
 
-const API_URL = "http://0.0.0.0:5002/data"; // ✅ Your fastapi endpoint
+const API_URL = "https://yaara-api-nu.vercel.app/data"; // ✅ Your fastapi endpoint
+// const API_URL = "http://0.0.0.0:5002/data"; // ✅ Your fastapi endpoint
 
 let cachedData: { products: Product[]; collections: Collection[] }  = { products: [],collections: [] };
 let lastFetched = 0;
