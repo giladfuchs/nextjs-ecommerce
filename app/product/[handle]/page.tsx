@@ -73,7 +73,6 @@ export default async function ProductPage() {
             price: product.price,
         },
     };
-
     return (
         <>
             <script

@@ -39,7 +39,6 @@ export default function CartModal() {
         closeCart();
         router.push("/checkout");
     };
-
     return (
         <>
             <button aria-label="Open cart" onClick={openCart}>
@@ -149,7 +148,7 @@ export default function CartModal() {
                                                 <p>לתשלום</p>
                                                 <Price
                                                     className="text-right text-base text-black dark:text-white"
-                                                    amount={cart.cost.totalAmount}
+                                                    amount={cart.cost}
                                                 />
                                             </div>
                                         </div>

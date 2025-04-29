@@ -1,18 +1,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Cart, CartItem, Product } from 'lib/types';
 
-// Helpers
 function createEmptyCart(): Cart {
     return {
         totalQuantity: 0,
         lines: [],
-        cost: {
-            totalAmount: { amount: '0', currencyCode: 'ILS' },
-        },
+        cost: '0.00',
     };
 }
 
-// Slice
 const initialState: Cart = createEmptyCart();
 
 const cartSlice = createSlice({
@@ -21,22 +17,18 @@ const cartSlice = createSlice({
     reducers: {
         addItem(state, action: PayloadAction<{ product: Product }>) {
             const { product } = action.payload;
-
             const existingItem = state.lines.find(
                 (item) => item.merchandise.id === product.id
             );
 
             const quantity = existingItem ? existingItem.quantity + 1 : 1;
+
             const updatedItem: CartItem = {
                 id: existingItem?.id ?? product.id,
                 quantity,
                 cost: {
-                    totalAmount: {
-                        amount: (Number(product.price) * quantity).toFixed(2),
-                    },
-                    unitAmount: {
-                        amount: product.price,
-                    },
+                    totalAmount: (Number(product.price) * quantity).toFixed(2),
+                    unitAmount: product.price,
                 },
                 merchandise: {
                     id: product.id,
@@ -64,20 +56,23 @@ const cartSlice = createSlice({
 
             state.lines = updatedLines;
             state.totalQuantity = totalQuantity;
-            state.cost.totalAmount = {
-                amount: totalAmount.toFixed(2),
-            };
+            state.cost = totalAmount.toFixed(2);
         },
 
-        updateItem(state, action: PayloadAction<{ merchandiseId: string; updateType: "plus" | "minus" | "delete" }>) {
+        updateItem(
+            state,
+            action: PayloadAction<{ merchandiseId: string; updateType: 'plus' | 'minus' | 'delete' }>
+        ) {
             const { merchandiseId, updateType } = action.payload;
 
             const updatedLines = state.lines
                 .map((item) => {
                     if (item.merchandise.id !== merchandiseId) return item;
 
+                    if (updateType === 'delete') return null;
+
                     const newQuantity =
-                        updateType === "plus" ? item.quantity + 1 : item.quantity - 1;
+                        updateType === 'plus' ? item.quantity + 1 : item.quantity - 1;
 
                     if (newQuantity <= 0) return null;
 
@@ -86,11 +81,8 @@ const cartSlice = createSlice({
                         ...item,
                         quantity: newQuantity,
                         cost: {
-                            ...item.cost,
-                            totalAmount: {
-                                ...item.cost.totalAmount,
-                                amount: (unitPrice * newQuantity).toFixed(2),
-                            },
+                            totalAmount: (unitPrice * newQuantity).toFixed(2),
+                            unitAmount: item.cost.unitAmount,
                         },
                     };
                 })
@@ -104,14 +96,7 @@ const cartSlice = createSlice({
 
             state.lines = updatedLines;
             state.totalQuantity = totalQuantity;
-
-            if (updatedLines.length > 0) {
-                state.cost.totalAmount = {
-                    amount: totalAmount.toFixed(2),
-                };
-            } else {
-                state.cost.totalAmount = { amount: '0',   };
-            }
+            state.cost = updatedLines.length > 0 ? totalAmount.toFixed(2) : '0.00';
         },
 
         clearCart(state) {

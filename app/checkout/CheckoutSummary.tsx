@@ -5,7 +5,6 @@ import Price from '../../components/price';
 
 export default function CheckoutSummary() {
     const cart = useSelector((state: RootState) => state.cart);
-
     return (
         <Box
             sx={{
@@ -75,7 +74,7 @@ export default function CheckoutSummary() {
 
                         {/* Price */}
                         <Typography fontWeight="bold" fontSize="1.2rem" textAlign="right" minWidth={70}>
-                            ₪{product.cost.totalAmount}
+                           < Price amount={product.cost.totalAmount} />
                         </Typography>
                     </Box>
                 ))
@@ -100,7 +99,7 @@ export default function CheckoutSummary() {
                 </Typography>
                 <Typography variant="h6" fontWeight="bold">
 
-                    <Price amount={cart?.cost.totalAmount} />
+                    <Price amount={cart?.cost} />
                 </Typography>
             </Box>
         </Box>

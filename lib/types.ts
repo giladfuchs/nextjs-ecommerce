@@ -1,6 +1,3 @@
-export type Money = {
-    amount: string;
-};
 
 export type Image = {
     url: string;
@@ -46,9 +43,7 @@ export type CartItem = {
 export type Cart = {
     totalQuantity: number;
     lines: CartItem[];
-    cost: {
-        totalAmount: Money;
-    };
+    cost: number;
 };
 
 export type Menu = {
