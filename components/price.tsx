@@ -10,13 +10,13 @@ const Price = ({
   currencyCode?: string;
   currencyCodeClassName?: string;
 } & React.ComponentProps<"p">) => (
-  <p suppressHydrationWarning={true} className={className}>
+  <span suppressHydrationWarning={true} className={className}>
     {`${new Intl.NumberFormat(undefined, {
       style: "currency",
       currency: currencyCode,
       currencyDisplay: "narrowSymbol",
     }).format(parseFloat(amount))}`}
-  </p>
+  </span>
 );
 
 export default Price;
