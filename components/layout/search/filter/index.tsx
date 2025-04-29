@@ -1,8 +1,8 @@
 'use client';
 
-import { Autocomplete, TextField, ListItemButton, ListItemText, Typography } from "@mui/material";
-import { usePathname, useRouter } from "next/navigation";
-import React, { useState, useEffect } from "react";
+import {Autocomplete, TextField, ListItemButton, ListItemText, Typography} from "@mui/material";
+import {usePathname, useRouter} from "next/navigation";
+import React, {useState, useEffect} from "react";
 
 export type ListItem = PathFilterItem;
 export type PathFilterItem = { title: string; handle: string };
@@ -16,7 +16,7 @@ function safeDecodeURIComponent(value: string): string {
 }
 
 // Desktop list
-function FilterItemList({ list }: { list: ListItem[] }) {
+function FilterItemList({list}: { list: ListItem[] }) {
     const router = useRouter();
     const pathname = safeDecodeURIComponent(usePathname());
 
@@ -25,10 +25,11 @@ function FilterItemList({ list }: { list: ListItem[] }) {
             {list.map((item: ListItem, index: number) => {
                 const isActive = pathname.endsWith(`/collection/${item.handle}`);
 
+
                 return (
                     <ListItemButton
                         key={index}
-                        onClick={() => router.push(`/collection/${item.handle}`)}
+                        onClick={() => router.push(item.handle === "הכל" ? '/' : `/collection/${item.handle}`)}
                         sx={{
                             borderRadius: "8px",
                             mb: 0.5,
@@ -69,18 +70,18 @@ function renderAutocompleteInput(params: any) {
             label="בחר קטגוריה"
             InputProps={{
                 ...params.InputProps,
-                style: { direction: "rtl" },
+                style: {direction: "rtl"},
             }}
             InputLabelProps={{
                 ...params.InputLabelProps,
-                style: { direction: "rtl", textAlign: "right" },
+                style: {direction: "rtl", textAlign: "right"},
             }}
         />
     );
 }
 
 // Main
-export default function FilterList({ list }: { list: ListItem[] }) {
+export default function FilterList({list}: { list: ListItem[] }) {
     const router = useRouter();
     const pathname = safeDecodeURIComponent(usePathname());
 
@@ -96,7 +97,7 @@ export default function FilterList({ list }: { list: ListItem[] }) {
         <nav>
             {/* Desktop */}
             <div className="hidden md:block p-2">
-                <FilterItemList list={list} />
+                <FilterItemList list={list}/>
             </div>
 
             {/* Mobile */}
@@ -107,7 +108,8 @@ export default function FilterList({ list }: { list: ListItem[] }) {
                     value={selectedItem}
                     onChange={(event, value) => {
                         if (value?.handle) {
-                            router.push(`/collection/${value.handle}`)
+
+                            router.push(value.handle === "הכל" ? '/' : `/collection/${value.handle}`)
                         }
                         setSelectedItem(value || undefined);
                     }}
