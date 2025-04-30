@@ -3,6 +3,8 @@
 import React from 'react';
 import {Grid, Button, TextField, Autocomplete, Typography} from '@mui/material';
 import {FieldAutoComplete, FormField, FormType} from "./form";
+import ImagesEditor from "./[model]/[id]/ImagesEditor";
+import {Image} from "../../lib/types";
 
 type FormFieldProps = {
     field: FormField;
@@ -15,8 +17,8 @@ const FieldRenderer = ({field, onChange, collections}: FormFieldProps) => {
     const placeholder = field.key
     switch (field.type) {
         case FormType.AutoComplete:
-            if(field.key === 'collection')
-                (field as FieldAutoComplete).options =collections
+            if (field.key === 'collection')
+                (field as FieldAutoComplete).options = collections
             return (
                 <Autocomplete
                     disablePortal
@@ -30,7 +32,6 @@ const FieldRenderer = ({field, onChange, collections}: FormFieldProps) => {
         case FormType.TEXTAREA:
         case FormType.NUMBER:
         default:
-            console.log(field.value)
             return (
                 <TextField
                     fullWidth
@@ -51,11 +52,13 @@ interface FormChildProps {
     title: string;
     collections: string[];
     fields: FormField[];
-    onSubmit: (send_fields: FormField[]) => void;
+    onSubmit: (send_fields: FormField[], images: Image[]) => void;
 }
 
 export default function FormChild({title, fields, onSubmit, collections}: FormChildProps) {
     const [localFields, setLocalFields] = React.useState<FormField[]>(fields);
+    const [images, setImages] = React.useState<Image[]>(Array(5).fill({url: '', altText: ''}));
+
     const handleChange = (value: any, key: string) => {
         const updatedFields = localFields.map((field) => {
             if (field.key === key) {
@@ -67,7 +70,10 @@ export default function FormChild({title, fields, onSubmit, collections}: FormCh
     };
 
     const handleSubmit = () => {
-        onSubmit(localFields);
+        const filteredImages = images.filter(
+            (img) => img.url.trim() !== '' || img.altText.trim() !== ''
+        )
+        onSubmit(localFields, filteredImages);
     };
     return (
         <Grid container justifyContent="center">
@@ -79,9 +85,10 @@ export default function FormChild({title, fields, onSubmit, collections}: FormCh
                 <Grid container direction="column" spacing={3}>
                     {localFields.map((field) => (
                         <Grid item key={field.key}>
-                            <FieldRenderer field={field} onChange={handleChange} collections={collections} />
+                            <FieldRenderer field={field} onChange={handleChange} collections={collections}/>
                         </Grid>
                     ))}
+                    <ImagesEditor images={images} onChange={setImages}/>
 
                     <Grid item display="flex" justifyContent="center">
                         <Button
@@ -102,7 +109,6 @@ export default function FormChild({title, fields, onSubmit, collections}: FormCh
                         </Button>
                     </Grid>
                 </Grid>
-
 
 
             </Grid>

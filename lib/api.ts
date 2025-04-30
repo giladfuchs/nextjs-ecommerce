@@ -2,17 +2,33 @@ import {Product, Collection} from "lib/types";
 import mockJson from "./mock_products.json";
 
 import type { Order } from 'lib/types';
+import {ModelType} from "../app/form/form";
 
 const isDev = process.env.NODE_ENV === 'development';
 
 export const API_URL = isDev
-    ? 'http://0.0.0.0:4000'
+    ? 'http://localhost:4000'
     : 'https://yaara-api-nu.vercel.app';
 
 let cachedData: { products: Product[]; collections: Collection[] }  = { products: [],collections: [] };
 let lastFetched = 0;
 
 const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
+
+export async function submitModel(model: ModelType, idOrAdd: string, body: any): Promise<Response> {
+    const response = await fetch(`${API_URL}/auth/${model}/${idOrAdd}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+    });
+
+    if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err?.error || 'Failed to submit model');
+    }
+
+    return response;
+}
 
 export async function submitOrder(order: Order): Promise<Response> {
     const response = await fetch(`${API_URL}/checkout`, {

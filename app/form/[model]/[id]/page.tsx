@@ -3,7 +3,8 @@ import {Container} from "@mui/material";
 import FormChild from "../../FormChild";
 import {array_obj_to_obj_with_key, create_form_fields, FormField, get_form_by_model, ModelType} from "../../form";
 import {use, useEffect, useState} from "react";
-import {getCollections, getProducts} from "../../../../lib/api";
+import {getCollections, getProducts, submitModel} from "../../../../lib/api";
+import {Image} from "../../../../lib/types";
 
 export default function FormPage({
                                      params,
@@ -40,11 +41,21 @@ export default function FormPage({
 
     const title = `${is_add ? "הוספה" : "עריכה"}_${model}`;
 
-    const handleSubmit = async (send_fields: FormField[]) => {
-        const data = Object.fromEntries(send_fields.map((f) => [f.key, f.value]));
-        console.log(data);
-    };
+    const handleSubmit = async (send_fields: FormField[], images: Image[]) => {
+        const data: any = Object.fromEntries(send_fields.map((f) => [f.key, f.value]));
 
+        if (model === ModelType.product) {
+            data.images = images;
+        }
+
+        try {
+            const response = await submitModel(model, id, data);
+            const result = await response.json();
+            console.log('✅ Submitted:', result);
+        } catch (err) {
+            console.error('❌ Failed to submit:', err);
+        }
+    };
     return (
         <Container maxWidth="lg" disableGutters sx={{py: 4}}>
             <>
