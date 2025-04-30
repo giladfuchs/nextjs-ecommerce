@@ -30,6 +30,7 @@ const FieldRenderer = ({field, onChange, collections}: FormFieldProps) => {
         case FormType.TEXTAREA:
         case FormType.NUMBER:
         default:
+            console.log(field.value)
             return (
                 <TextField
                     fullWidth

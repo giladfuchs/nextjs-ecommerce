@@ -47,8 +47,11 @@ export const product_fields: InputField[] = [
     {key: 'title', type: FormType.TEXT},
     {key: 'price', type: FormType.NUMBER},
     {key: 'description', type: FormType.TEXTAREA},
-    {key: 'imageUrl', type: FormType.TEXT},
-    {key: 'imageAlt', type: FormType.TEXT}
+    {
+        key: 'collection',
+        type: FormType.AutoComplete,
+        options: []
+    },
 ];
 export const collection_fields: InputField[] = [
     {key: 'title', type: FormType.TEXT},

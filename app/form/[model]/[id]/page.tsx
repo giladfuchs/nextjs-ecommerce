@@ -1,17 +1,9 @@
 'use client'
 import {Container} from "@mui/material";
 import FormChild from "../../FormChild";
-import {
-    array_obj_to_obj_with_key,
-    create_form_fields,
-    FormField,
-    FormType,
-    get_form_by_model,
-    ModelType
-} from "../../form";
-import {useEffect, useState} from "react";
+import {array_obj_to_obj_with_key, create_form_fields, FormField, get_form_by_model, ModelType} from "../../form";
+import {use, useEffect, useState} from "react";
 import {getCollections, getProducts} from "../../../../lib/api";
-import {use} from 'react';
 
 export default function FormPage({
                                      params,
@@ -30,19 +22,11 @@ export default function FormPage({
             const collections = await getCollections();
             setList({product: products, collection: collections});
 
-            const model_objs = list[model];
-            const obj = is_add ? {} : array_obj_to_obj_with_key(model_objs, id, "id") ?? {};
+            const model_objs = model === ModelType.product ? products : collections;
+            const obj = is_add ? {} : array_obj_to_obj_with_key(model_objs, Number(id), "id") ?? {};
 
             const fields_to_set: FormField[] = create_form_fields(get_form_by_model(model), obj);
 
-            if (model === ModelType.product) {
-                fields_to_set.push({
-                    key: 'collection',
-                    value: '',
-                    type: FormType.AutoComplete,
-                    options: []
-                });
-            }
 
             setFields(fields_to_set);
 

@@ -33,6 +33,12 @@ importers:
       '@vercel/analytics':
         specifier: ^1.5.0
         version: 1.5.0(next@15.3.0-canary.13(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.3))(react@18.2.0)
+      ag-grid-community:
+        specifier: 29.3.3
+        version: 29.3.3
+      ag-grid-react:
+        specifier: 29.3.3
+        version: 29.3.3(ag-grid-community@29.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -806,6 +812,16 @@ packages:
         optional: true
       vue-router:
         optional: true
+
+  ag-grid-community@29.3.3:
+    resolution: {integrity: sha512-5XHG2NtXfUFroST/IvWyIYzM7GnbAM1mX7YsKvUHRWk0iMY1kAMJMk6AOoNKe1BBj7jg+Wgbig123T4X7bNZPw==}
+
+  ag-grid-react@29.3.3:
+    resolution: {integrity: sha512-xciimp9q8FXv2bgLOIyPT11dKEW0KNDTF8hyDuAKuK3541YBTZpiycwtmYxVimUM4c007TRTEYgw6Kql/gqWiA==}
+    peerDependencies:
+      ag-grid-community: ~29.3.3
+      react: 18.2.0
+      react-dom: 18.2.0
 
   babel-plugin-macros@3.1.0:
     resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
@@ -2049,6 +2065,15 @@ snapshots:
     optionalDependencies:
       next: 15.3.0-canary.13(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.86.3)
       react: 18.2.0
+
+  ag-grid-community@29.3.3: {}
+
+  ag-grid-react@29.3.3(ag-grid-community@29.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      ag-grid-community: 29.3.3
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
 
   babel-plugin-macros@3.1.0:
     dependencies:
