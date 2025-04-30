@@ -1,23 +1,41 @@
 import {Product, Collection} from "lib/types";
 import mockJson from "./mock_products.json";
 
+import type { Order } from 'lib/types';
 
-const API_URL = "https://yaara-api-nu.vercel.app/data";
-// const API_URL = "http://0.0.0.0:5002/data";
+const isDev = process.env.NODE_ENV === 'development';
+
+export const API_URL = isDev
+    ? 'http://0.0.0.0:4000'
+    : 'https://yaara-api-nu.vercel.app/';
 
 let cachedData: { products: Product[]; collections: Collection[] }  = { products: [],collections: [] };
 let lastFetched = 0;
 
 const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
 
+export async function submitOrder(order: Order): Promise<Response> {
+    const response = await fetch(`${API_URL}/checkout`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(order),
+    });
+
+    if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err?.error || 'Failed to submit order');
+    }
+
+    return response;
+}
 async function fetchData() {
     const now = Date.now();
 
-    // if (cachedData && now - lastFetched < CACHE_DURATION) {
-    //     return cachedData;
-    // }
+    if (cachedData && now - lastFetched < CACHE_DURATION) {
+        return cachedData;
+    }
 
-    const response = await fetch(API_URL, {cache: "no-store"}); // ✅ always fresh
+    const response = await fetch(`${API_URL}/data`, {cache: "no-store"}); // ✅ always fresh
     if (!response.ok) {
         throw new Error("Failed to fetch data from API");
     }

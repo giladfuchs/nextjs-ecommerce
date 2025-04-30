@@ -1,10 +1,13 @@
+export type Collection = {
+    handle: string;
+    title: string;
+    updatedAt: string;
+};
 
 export type Image = {
     url: string;
     altText: string;
 };
-
-
 
 export type Product = {
     id: string;
@@ -27,17 +30,14 @@ export type CartProduct = {
 };
 
 export type CartItem = {
-    id: string | undefined;
+    productId: string;
+    handle: string;
+    title: string;
+    imageUrl: string;
+    imageAlt: string;
     quantity: number;
-    cost: {
-        totalAmount: string;
-        unitAmount: string;
-    };
-    merchandise: {
-        id: string;
-        title: string;
-        product: CartProduct;
-    };
+    unitAmount: number;
+    totalAmount: number;
 };
 
 export type Cart = {
@@ -46,13 +46,14 @@ export type Cart = {
     cost: number;
 };
 
-export type Menu = {
-    title: string;
-    path: string;
+export type OrderInfo = {
+    name: string;
+    email: string;
+    phone: number;
 };
 
-export type Collection = {
-    handle: string;
-    title: string;
-    updatedAt: string;
+export type Order = OrderInfo & {
+    cart: Cart;
 };
+
+

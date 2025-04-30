@@ -2,7 +2,8 @@
 
 import {
     Box,
-    Button, Divider,
+    Button,
+    Divider,
     FormControl,
     FormHelperText,
     Grid,
@@ -11,7 +12,12 @@ import {
     Typography
 } from '@mui/material';
 import * as Yup from 'yup';
-import { Formik } from 'formik';
+import {Formik} from 'formik';
+import {useSelector} from 'react-redux';
+import {RootState} from '../../store';
+import {Cart, Order} from 'lib/types';
+import {submitOrder} from "../../lib/api"; // Make sure your types are in lib/types.ts
+
 const customInput = {
     marginTop: 1,
     marginBottom: 1,
@@ -19,60 +25,62 @@ const customInput = {
         top: 23,
         left: 0,
         color: '#9e9e9e',
-        '&[data-shrink="false"]': { top: 5 }
+        '&[data-shrink="false"]': {top: 5}
     },
     '& > div > input': {
         padding: '30.5px 14px 11.5px !important',
         textAlign: 'right'
     },
-    '& legend': { display: 'none' },
-    '& fieldset': { top: 0 }
+    '& legend': {display: 'none'},
+    '& fieldset': {top: 0}
 };
 
-// 🛠 Define your fields
 const fields = [
     {
         name: 'name',
         label: 'שם מלא',
-        type: 'text',
+        type: 'text'
     },
     {
         name: 'email',
         label: 'אימייל',
-        type: 'text',
+        type: 'text'
     },
     {
         name: 'phone',
         label: 'טלפון',
-        type: 'number',
-    },
+        type: 'number'
+    }
 ];
 
 const CheckoutInfo = () => {
-    return (
-        <Box             sx={{
-            width: '100%',
-            mx: 'auto',
-            p: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 2,
-        }}>
-            <Grid container direction="column" spacing={2}>
+    const cart: Cart = useSelector((state: RootState) => state.cart);
 
-                    <Typography variant="h4" textAlign="center" fontWeight="bold" mb={2}>
-                        פרטי קשר
-                    </Typography>
+    return (
+        <Box
+            sx={{
+                width: '100%',
+                mx: 'auto',
+                p: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 2
+            }}
+        >
+            <Grid container direction="column" spacing={2}>
+                <Typography variant="h4" textAlign="center" fontWeight="bold" mb={2}>
+                    פרטי קשר
+                </Typography>
+
                 <Grid item>
                     <Formik
                         initialValues={{
                             email: '',
                             phone: '',
                             name: '',
-                            submit: null
                         }}
                         validationSchema={Yup.object().shape({
-                            name: Yup.string().min(5).max(255).required('חובה למלא שם מלא'),
+                            name: Yup.string().min(2).max(255).required('חובה למלא שם מלא'),
                             email: Yup.string()
                                 .email('חובה למלא אימייל תקין')
                                 .max(255)
@@ -83,7 +91,18 @@ const CheckoutInfo = () => {
                                 .max(15, 'מספר טלפון לא יכול להיות יותר מ-15 ספרות')
                                 .required('חובה למלא טלפון')
                         })}
-                        onSubmit={(values) => console.log(values)}
+                        onSubmit={async (values) => {
+                            const order: Order = {
+                                ...values,
+                                cart
+                            } as Order
+                            try {
+                                const res = await submitOrder(order);
+                                const saved = await res.json();
+                            } catch (err) {
+                                console.error('❌ Order failed:', err);
+                            }
+                        }}
                     >
                         {({
                               errors,
@@ -95,14 +114,19 @@ const CheckoutInfo = () => {
                               values
                           }) => (
                             <form noValidate onSubmit={handleSubmit} dir="rtl">
-                                <Box sx={{ p: 2 }}>
+                                <Box sx={{p: 2}}>
                                     <Grid container direction="column" spacing={2}>
                                         {fields.map((field) => (
                                             <Grid item key={field.name}>
                                                 <FormControl
                                                     fullWidth
-                                                    error={Boolean(touched[field.name as keyof typeof touched] && errors[field.name as keyof typeof errors])}
-                                                    sx={{ ...customInput }}
+                                                    error={
+                                                        Boolean(
+                                                            touched[field.name as keyof typeof touched] &&
+                                                            errors[field.name as keyof typeof errors]
+                                                        )
+                                                    }
+                                                    sx={{...customInput}}
                                                 >
                                                     <InputLabel
                                                         htmlFor={`outlined-adornment-${field.name}-info`}
@@ -125,24 +149,27 @@ const CheckoutInfo = () => {
                                                         onBlur={handleBlur}
                                                         onChange={handleChange}
                                                         label={field.label}
-                                                        inputProps={{ dir: 'rtl' }}
+                                                        inputProps={{dir: 'rtl'}}
                                                         sx={{
                                                             direction: 'rtl',
-                                                            '& input': { textAlign: 'right' }
+                                                            '& input': {textAlign: 'right'}
                                                         }}
                                                     />
-                                                    {touched[field.name as keyof typeof touched] && errors[field.name as keyof typeof errors] && (
-                                                        <FormHelperText
-                                                            error
-                                                            sx={{ textAlign: 'right', marginRight: 1 }}
-                                                        >
-                                                            {errors[field.name as keyof typeof errors]}
-                                                        </FormHelperText>
-                                                    )}
+                                                    {touched[field.name as keyof typeof touched] &&
+                                                        errors[field.name as keyof typeof errors] && (
+                                                            <FormHelperText
+                                                                error
+                                                                sx={{textAlign: 'right', marginRight: 1}}
+                                                            >
+                                                                {errors[field.name as keyof typeof errors]}
+                                                            </FormHelperText>
+                                                        )}
                                                 </FormControl>
                                             </Grid>
                                         ))}
-                                        <Divider />
+
+                                        <Divider/>
+
                                         <Grid item>
                                             <Button
                                                 fullWidth
@@ -156,7 +183,9 @@ const CheckoutInfo = () => {
                                                     fontWeight: 'bold',
                                                     borderRadius: 2,
                                                     py: 1.5,
-                                                    '&:hover': { backgroundColor: 'var(--color-accent)' }
+                                                    '&:hover': {
+                                                        backgroundColor: 'var(--color-accent)'
+                                                    }
                                                 }}
                                             >
                                                 בצע הזמנה
@@ -165,7 +194,6 @@ const CheckoutInfo = () => {
                                     </Grid>
                                 </Box>
                             </form>
-
                         )}
                     </Formik>
                 </Grid>

@@ -1,11 +1,12 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Cart, CartItem, Product } from 'lib/types';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {Cart, CartItem, Product} from 'lib/types';
+
 
 function createEmptyCart(): Cart {
     return {
         totalQuantity: 0,
         lines: [],
-        cost: '0.00',
+        cost: 0,
     };
 }
 
@@ -16,87 +17,67 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         addItem(state, action: PayloadAction<{ product: Product }>) {
-            const { product } = action.payload;
-            const existingItem = state.lines.find(
-                (item) => item.merchandise.id === product.id
-            );
-
+            const {product} = action.payload;
+            const existingItem = state.lines.find((item) => item.productId === product.id);
             const quantity = existingItem ? existingItem.quantity + 1 : 1;
 
             const updatedItem: CartItem = {
-                id: existingItem?.id ?? product.id,
+                productId: product.id,
+                handle: product.handle,
+                title: product.title,
+                imageUrl: product.featuredImage.url,
+                imageAlt: product.featuredImage.altText,
                 quantity,
-                cost: {
-                    totalAmount: (Number(product.price) * quantity).toFixed(2),
-                    unitAmount: product.price,
-                },
-                merchandise: {
-                    id: product.id,
-                    title: product.title,
-                    product: {
-                        id: product.id,
-                        handle: product.handle,
-                        title: product.title,
-                        featuredImage: product.featuredImage,
-                    },
-                },
+                unitAmount: Number(product.price),
+                totalAmount: Number(product.price) * quantity,
             };
 
             const updatedLines = existingItem
                 ? state.lines.map((item) =>
-                    item.merchandise.id === product.id ? updatedItem : item
+                    item.productId === product.id ? updatedItem : item
                 )
                 : [...state.lines, updatedItem];
 
             const totalQuantity = updatedLines.reduce((sum, item) => sum + item.quantity, 0);
-            const totalAmount = updatedLines.reduce(
-                (sum, item) => sum + Number(item.cost.totalAmount),
-                0
-            );
+            const totalAmount = updatedLines.reduce((sum, item) => sum + item.totalAmount, 0);
 
             state.lines = updatedLines;
             state.totalQuantity = totalQuantity;
-            state.cost = totalAmount.toFixed(2);
+            state.cost = totalAmount;
         },
 
         updateItem(
             state,
-            action: PayloadAction<{ merchandiseId: string; updateType: 'plus' | 'minus' | 'delete' }>
+            action: PayloadAction<{ productId: string; updateType: 'plus' | 'minus' | 'delete' }>
         ) {
-            const { merchandiseId, updateType } = action.payload;
+            const {productId, updateType} = action.payload;
 
             const updatedLines = state.lines
                 .map((item) => {
-                    if (item.merchandise.id !== merchandiseId) return item;
+                    if (item.productId !== productId) return item;
 
                     if (updateType === 'delete') return null;
 
-                    const newQuantity =
-                        updateType === 'plus' ? item.quantity + 1 : item.quantity - 1;
+                    const newQuantity = updateType === 'plus'
+                        ? item.quantity + 1
+                        : item.quantity - 1;
 
                     if (newQuantity <= 0) return null;
 
-                    const unitPrice = Number(item.cost.unitAmount);
                     return {
                         ...item,
                         quantity: newQuantity,
-                        cost: {
-                            totalAmount: (unitPrice * newQuantity).toFixed(2),
-                            unitAmount: item.cost.unitAmount,
-                        },
+                        totalAmount: item.unitAmount * newQuantity,
                     };
                 })
                 .filter(Boolean) as CartItem[];
 
             const totalQuantity = updatedLines.reduce((sum, item) => sum + item.quantity, 0);
-            const totalAmount = updatedLines.reduce(
-                (sum, item) => sum + Number(item.cost.totalAmount),
-                0
-            );
+            const totalAmount = updatedLines.reduce((sum, item) => sum + item.totalAmount, 0);
 
             state.lines = updatedLines;
             state.totalQuantity = totalQuantity;
-            state.cost = updatedLines.length > 0 ? totalAmount.toFixed(2) : '0.00';
+            state.cost = updatedLines.length > 0 ? totalAmount : 0;
         },
 
         clearCart(state) {
@@ -105,5 +86,5 @@ const cartSlice = createSlice({
     },
 });
 
-export const { addItem, updateItem, clearCart } = cartSlice.actions;
+export const {addItem, updateItem, clearCart} = cartSlice.actions;
 export default cartSlice.reducer;

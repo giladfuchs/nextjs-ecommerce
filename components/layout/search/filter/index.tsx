@@ -3,9 +3,8 @@
 import {Autocomplete, TextField, ListItemButton, ListItemText, Typography} from "@mui/material";
 import {usePathname, useRouter} from "next/navigation";
 import React, {useState, useEffect} from "react";
+import {Collection} from "../../../../lib/types";
 
-export type ListItem = PathFilterItem;
-export type PathFilterItem = { title: string; handle: string };
 
 function safeDecodeURIComponent(value: string): string {
     try {
@@ -16,13 +15,13 @@ function safeDecodeURIComponent(value: string): string {
 }
 
 // Desktop list
-function FilterItemList({list}: { list: ListItem[] }) {
+function FilterItemList({list}: { list: Collection[] }) {
     const router = useRouter();
     const pathname = safeDecodeURIComponent(usePathname());
 
     return (
         <>
-            {list.map((item: ListItem, index: number) => {
+            {list.map((item: Collection, index: number) => {
                 const isActive = pathname.endsWith(`/collection/${item.handle}`);
 
 
@@ -81,13 +80,13 @@ function renderAutocompleteInput(params: any) {
 }
 
 // Main
-export default function FilterList({list}: { list: ListItem[] }) {
+export default function FilterList({list}: { list: Collection[] }) {
     const router = useRouter();
     const pathname = safeDecodeURIComponent(usePathname());
 
     const initialItem = list.find((item) => pathname.endsWith(`/collection/${item.handle}`)) || undefined;
 
-    const [selectedItem, setSelectedItem] = useState<ListItem | undefined>(initialItem);
+    const [selectedItem, setSelectedItem] = useState<Collection | undefined>(initialItem);
 
     useEffect(() => {
         const matching = list.find((item) => pathname.endsWith(`/collection/${item.handle}`)) || undefined;

@@ -1,11 +1,12 @@
-import {Box, Divider, Grid, Typography} from '@mui/material';
+import { Box, Divider, Grid, Typography } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store';
 import Price from '../../components/price';
-import React from "react";
+import React from 'react';
 
 export default function CheckoutSummary() {
     const cart = useSelector((state: RootState) => state.cart);
+
     return (
         <Box
             sx={{
@@ -24,7 +25,7 @@ export default function CheckoutSummary() {
             {cart?.lines.length ? (
                 cart.lines.map((product) => (
                     <Grid
-                        key={product.id}
+                        key={product.productId}
                         sx={{
                             display: 'flex',
                             flexDirection: 'row',
@@ -34,60 +35,69 @@ export default function CheckoutSummary() {
                             p: 2,
                             gap: 2,
                             boxShadow: '0 2px 6px rgba(0,0,0,0.05)',
-                            direction: 'rtl'
+                            direction: 'rtl',
                         }}
                     >
                         {/* Image */}
                         <Box
                             component="img"
-                            src={product.merchandise.product.featuredImage.url}
-                            alt={product.merchandise.product.title}
+                            src={product.imageUrl}
+                            alt={product.imageAlt}
                             sx={{
                                 width: 80,
                                 height: 80,
                                 borderRadius: 2,
                                 objectFit: 'cover',
-                                flexShrink: 0
+                                flexShrink: 0,
                             }}
                         />
 
                         {/* Text block */}
-                        <Grid item
+                        <Grid
+                            item
                             sx={{
                                 display: 'flex',
                                 flexDirection: 'column',
-                                flexGrow: 1,     // 🛠 Text takes full space!
-                                minWidth: 0,     // 🛠 Allow text to grow properly
+                                flexGrow: 1,
+                                minWidth: 0,
                             }}
                         >
-                            <Typography variant="subtitle1" textAlign="right" >
-                                {product.merchandise.product.title}
+                            <Typography variant="subtitle1" textAlign="right">
+                                {product.title}
                             </Typography>
 
-
-                            <Typography variant="body2"   textAlign="right">
-                                 <Price amount={product.cost.unitAmount} />
+                            <Typography variant="body2" textAlign="right">
+                                <Price amount={product.unitAmount} />
                             </Typography>
                         </Grid>
+
                         <Divider sx={{ display: { xs: 'none', md: 'block' }, my: 1 }} />
 
                         <Grid
                             sx={{
-                                mt:1,
+                                mt: 1,
                                 display: 'flex',
                                 flexDirection: 'column',
-                                flexGrow: 1,     // 🛠 Text takes full space!
-                                minWidth: 0,     // 🛠 Allow text to grow properly
+                                flexGrow: 1,
+                                minWidth: 0,
                             }}
                         >
-                        <Typography fontWeight="bold" fontSize="1.2rem" textAlign="right" minWidth={70}>
-                           < Price amount={product.cost.totalAmount} />
-                        </Typography>
-                        <Typography variant="bold" color="var(--color-text)" textAlign="right">
-                          כמות:  {product.quantity}
-                        </Typography>
-
-                    </Grid>
+                            <Typography
+                                fontWeight="bold"
+                                fontSize="1.2rem"
+                                textAlign="right"
+                                minWidth={70}
+                            >
+                                <Price amount={product.totalAmount} />
+                            </Typography>
+                            <Typography
+                                variant="body2"
+                                color="var(--color-text)"
+                                textAlign="right"
+                            >
+                                כמות: {product.quantity}
+                            </Typography>
+                        </Grid>
                     </Grid>
                 ))
             ) : (
@@ -103,14 +113,13 @@ export default function CheckoutSummary() {
                     display: 'flex',
                     justifyContent: 'center',
                     gap: 1,
-                    direction: 'rtl'
+                    direction: 'rtl',
                 }}
             >
                 <Typography variant="h6" fontWeight="bold">
                     סה"כ
                 </Typography>
                 <Typography variant="h6" fontWeight="bold">
-
                     <Price amount={cart?.cost} />
                 </Typography>
             </Box>
