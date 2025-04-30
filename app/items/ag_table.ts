@@ -5,26 +5,26 @@ import {Product} from "../../lib/types";
 export type AGTableModelType = Product;
 export const columns_product: ColDef<Product>[] = [
     {
-        "field": "id",
-        "headerName": "צפה",
-        "cellRenderer": "ActionRender",
-        "width": 100
-    },
-    {
-        "field": "imageUrl",
-        "headerName": "תמונה"
-    },
-    {
-        "field": "collection",
-        "headerName": "קטגוריה"
+        "field": "title",
+        "headerName": "כותרת"
     },
     {
         "field": "price",
         "headerName": "מחיר"
     },
     {
-        "field": "title",
-        "headerName": "כותרת"
+        "field": "collection",
+        "headerName": "קטגוריה"
+    },
+    {
+        "field": "imageUrl",
+        "headerName": "תמונה"
+    },
+    {
+        "field": "id",
+        "headerName": "צפה",
+        "cellRenderer": "ActionRender",
+        "width": 100
     }
 ]as ColDef<Product>[];
 
@@ -38,6 +38,6 @@ export const get_columns_by_title = (title: ModelType): ColDef<AGTableModelType>
         default:
             columns = [...columns_product];
     }
-    // console.log(columns)
+
     return columns as ColDef<AGTableModelType>[];
 };

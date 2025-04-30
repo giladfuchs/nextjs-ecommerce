@@ -12,12 +12,13 @@ const defaultColDef: ColDef = {
 };
 
 const AGTable = ({cols, rows}: { cols: ColDef<AGTableModelType>[]; rows: AGTableModelType[] }) => (
-    <div className="ag-theme-alpine" style={{height: 600, width: '100%',  direction: 'rtl',  padding: 0, margin: 0}}>
-        <AgGridReact<AGTableModelType>
+    <div className="ag-theme-alpine bg-theme" style={{ height: 600, width: '100%', overflowX: 'hidden' }}>
+
+    <AgGridReact<AGTableModelType>
             rowData={rows}
             columnDefs={cols}
             defaultColDef={defaultColDef}
-            paginationPageSize={10}
+            enableRtl
             rowSelection="multiple"
             frameworkComponents={{
                 ActionRender

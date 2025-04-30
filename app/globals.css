@@ -91,35 +91,8 @@ input {
   }
 }
 
-.ag-rtl-header {
-  direction: rtl;
-  text-align: right;
-}
-
-.ag-rtl-cell {
-  direction: rtl;
-  text-align: right;
-}
-
-.ag-header-cell-label {
-  justify-content: flex-end !important;
-}
 .ag-theme-alpine {
-  direction: rtl !important;
-  text-align: right !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow-x: hidden !important;
-}
+  --ag-background-color: var(--color-bg);
+  --ag-header-background-color: var(--color-bg);
 
-.ag-center-cols-container {
-  margin: 0 !important;
-  padding: 0 !important;
-  transform: none !important;
-}
-
-.ag-root-wrapper {
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
 }
