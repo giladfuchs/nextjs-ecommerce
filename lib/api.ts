@@ -1,5 +1,4 @@
 import {Product, Collection} from "lib/types";
-import mockJson from "./mock_products.json";
 
 import type { Order } from 'lib/types';
 import {ModelType} from "../app/form/form";

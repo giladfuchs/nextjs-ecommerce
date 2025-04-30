@@ -46,8 +46,9 @@ export default function FormPage({
 
         if (model === ModelType.product) {
             data.images = images;
+            data.availableForSale = true;
         }
-
+        console.log(data)
         try {
             const response = await submitModel(model, id, data);
             const result = await response.json();
