@@ -7,7 +7,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 export const API_URL = isDev
     ? 'http://0.0.0.0:4000'
-    : 'https://yaara-api-nu.vercel.app/';
+    : 'https://yaara-api-nu.vercel.app';
 
 let cachedData: { products: Product[]; collections: Collection[] }  = { products: [],collections: [] };
 let lastFetched = 0;
