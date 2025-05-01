@@ -82,7 +82,7 @@ export default async function ProductPage() {
       />
 
       <div className="mx-auto max-w-(--breakpoint-2xl) px-4">
-        <div className="flex flex-col rounded-lg border border-theme bg-theme p-8 md:p-12 lg:flex-row lg:gap-8 dark:border-theme dark:bg-theme-dark">
+        <div className="flex flex-col gap-6 rounded-lg border border-theme bg-theme p-8 md:p-12 lg:flex-row lg:gap-8 ">
           <div className="basis-full lg:basis-2/6">
             <Suspense fallback={null}>
               <ProductDescription product={product} />

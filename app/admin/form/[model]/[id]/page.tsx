@@ -1,5 +1,5 @@
 "use client";
-import {Box, Typography} from "@mui/material";
+import {Container, Typography} from "@mui/material";
 import FormChild from "../../FormChild";
 import {
     array_obj_to_obj_with_key,
@@ -93,7 +93,7 @@ export default function FormPage({
     };
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <Container maxWidth="lg" disableGutters sx={{py: 4}}>
             {fields.length > 0 && (
                 <>
                     {imagesError && model === ModelType.product && (
@@ -114,6 +114,6 @@ export default function FormPage({
                     />
                 </>
             )}
-        </Box>
+        </Container>
     );
 }
