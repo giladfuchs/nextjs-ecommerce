@@ -40,8 +40,8 @@ export async function generateMetadata(): Promise<Metadata> {
             images: [
                 {
                     url: product.featuredImage.url,
-                    width: product.featuredImage.width || 1200,
-                    height: product.featuredImage.height || 630,
+                    width: 1200,
+                    height: 630,
                     alt: product.featuredImage.altText || product.title,
                 },
             ],

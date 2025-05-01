@@ -36,7 +36,7 @@ export const columns_order: ColDef<Order>[] = [
     {
         field: 'email',
         headerName: 'אימייל',
-        width: 160,
+        width: 222,
     },
     {
         field: 'phone',

@@ -9,8 +9,7 @@ import "../styles/theme.scss";
 import {Assistant} from "next/font/google";
 import AccessibilityBar from "../components/accessibility-bar";
 import { Analytics } from '@vercel/analytics/react';
-import theme from "../lib/theme";
-import { ThemeProvider } from "@mui/material/styles";
+
 import {ThemeClientProvider} from "../components/theme-provider";
 
 
@@ -19,7 +18,7 @@ const assistant = Assistant({
     subsets: ["hebrew"],
     weight: ["400", "700"],
 });
-const {SITE_NAME} = process.env;
+const SITE_NAME = process.env.SITE_NAME;
 
 export const metadata = {
     metadataBase: new URL(baseUrl),
