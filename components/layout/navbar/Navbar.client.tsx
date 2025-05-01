@@ -5,7 +5,6 @@ import Search from "./search";
 import CartModal from "components/cart/modal";
 import LogoSquare from "components/logo-square";
 
-
 export default function NavbarClient( ) {
     return (
         <nav className="relative flex flex-col items-center p-4 lg:px-6">

@@ -1,5 +1,4 @@
 import clsx from "clsx";
-// import LogoIcon from "./icons/logo";
 import Image from 'next/image';
 
 export default function LogoSquare({ size }: { size?: "sm" | undefined }) {
@@ -14,9 +13,9 @@ export default function LogoSquare({ size }: { size?: "sm" | undefined }) {
       )}
     >
       <Image
-        src="/logo.ico" // ✅ put your logo file in /public/logo.png
+        src="/logo.ico"
         alt={`  logo`}
-        width={80}      // 👈 adjust as needed
+        width={80}
         height={20}
       />
     </div>
