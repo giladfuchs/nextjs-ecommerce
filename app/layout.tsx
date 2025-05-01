@@ -29,11 +29,6 @@ export const metadata = {
     follow: true,
     index: true,
   },
-  // icons: {
-  //   icon: "/logo.ico",
-  //   shortcut: "/logo.ico",
-  //   apple: "/logo.ico",
-  // },
 };
 
 export default async function RootLayout({

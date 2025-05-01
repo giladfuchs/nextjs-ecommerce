@@ -16,8 +16,9 @@ import { Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { Cart, Order } from "lib/types";
-import { submitOrder } from "../../lib/api";
+import {submitModel, submitOrder} from "../../lib/api";
 import { clearCart } from "../../store/cartSlice";
+import {toast} from "sonner";
 
 const customInput = {
   marginTop: 1,
@@ -88,9 +89,13 @@ export default function CheckoutInfo({
             const res = await submitOrder(order);
             const saved = await res.json();
             onSuccess(saved.id);
+            toast.success("✅  ההזמנה בוצעה בהצלחה!", {
+              description: `${saved.id} מספר הזמנה: `,
+            });
             dispatch(clearCart());
           } catch (err) {
             console.error("❌ Order failed:", err);
+            toast.error("❌הזמנה לא התקבלה!")
             onError();
           } finally {
             setSubmitting(false);

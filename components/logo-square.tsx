@@ -12,7 +12,7 @@ export default function LogoSquare({ size }: { size?: "sm" | undefined }) {
         },
       )}
     >
-      <Image src="/logo.ico" alt={`  logo`} width={80} height={20} />
+      <Image src="/favicon.ico" alt={`  logo`} width={80} height={20} />
     </div>
   );
 }
