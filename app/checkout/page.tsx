@@ -3,7 +3,7 @@
 import {Grid, Container, Typography} from "@mui/material";
 import CheckoutInfo from "./CheckoutInfo";
 import CheckoutSummary from "./CheckoutSummary";
-import {JSX, useState} from "react";
+import {useState} from "react";
 
 export default function CheckoutPage() {
     const [orderSuccess, setOrderSuccess] = useState<number | null>(null);

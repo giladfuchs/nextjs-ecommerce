@@ -40,15 +40,9 @@ export type Cart = {
   cost: number;
 };
 
-export type OrderInfo = {
-  name: string;
-  email: string;
-  phone: number;
-};
 
-export type Order = OrderInfo & {
-  cart: Cart;
-};
+
+
 
 export type OrderItem = {
   id: number;

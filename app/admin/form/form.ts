@@ -1,6 +1,5 @@
 /* eslint-disable max-classes-per-file */
 import _ from "lodash";
-import { columns_order } from "../ag_table";
 
 export enum FormType {
   TEXT = "text",
