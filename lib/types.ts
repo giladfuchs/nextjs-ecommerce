@@ -17,7 +17,7 @@ export type Product = {
     available: boolean;
     title: string;
     description: string;
-    price: string;
+    price: number;
     featuredImage: Image;
     images: Image[];
     updatedAt: string;
@@ -51,4 +51,26 @@ export type Order = OrderInfo & {
     cart: Cart;
 };
 
+export type OrderItem = {
+    id: number;
+    productId: number;
+    handle: string;
+    title: string;
+    imageUrl: string;
+    imageAlt: string;
+    quantity: number;
+    unitAmount: number;
+    totalAmount: number;
+};
+
+export type Order = {
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+    totalQuantity: number;
+    cost: number;
+    createdAt: Date;
+    items: OrderItem[];
+};
 

@@ -2,7 +2,7 @@
 
 import {useState, useEffect} from "react";
 import {useRouter, usePathname, useSearchParams} from "next/navigation";
-import {TextField, InputAdornment} from "@mui/material"; // 🛠 no Skeleton needed now
+import {TextField, InputAdornment, Button, Box} from "@mui/material";
 import {MagnifyingGlassIcon} from "@heroicons/react/24/outline";
 
 export default function Search() {
@@ -14,14 +14,15 @@ export default function Search() {
     const [query, setQuery] = useState(initialQuery);
 
     const isProductPage = pathname.startsWith("/product/");
+    const isAdminPage = pathname.startsWith("/admin");
 
     useEffect(() => {
-        if (isProductPage) return;
+        if (isProductPage || isAdminPage) return;
         setQuery(searchParams.get("q") || "");
     }, [searchParams, pathname]);
 
     useEffect(() => {
-        if (isProductPage) return;
+        if (isProductPage || isAdminPage) return;
 
         const timeout = setTimeout(() => {
             const params = new URLSearchParams(searchParams.toString());
@@ -48,27 +49,43 @@ export default function Search() {
         setQuery(e.target.value);
     };
 
-    if (isProductPage) {
-        return null;
+    if (isProductPage) return null;
+
+    // 👉 Admin section buttons
+    if (isAdminPage) {
+        return (
+            <Box display="flex" gap={2}>
+                <Button variant="outlined" onClick={() => router.push('/admin/product')}>
+                    מוצרים
+                </Button>
+                <Button variant="outlined" onClick={() => router.push('/admin/order')}>
+                    הזמנות
+                </Button>
+            </Box>
+        );
     }
 
+    // 👉 Normal search bar with "Admin" button
     return (
-        <TextField
-            value={query}
-            onChange={handleChange}
-            placeholder="חיפוש מוצרים"
-            variant="outlined"
-            size="small"
-            fullWidth
-            InputProps={{
-                endAdornment: (
-                    <InputAdornment position="end">
-                        <MagnifyingGlassIcon className="h-5 w-5 text-gray-400"/>
-                    </InputAdornment>
-                ),
-
-            }}
-        />
-
+        <Box display="flex" gap={2}>
+            <TextField
+                value={query}
+                onChange={handleChange}
+                placeholder="חיפוש מוצרים"
+                variant="outlined"
+                size="small"
+                fullWidth
+                InputProps={{
+                    endAdornment: (
+                        <InputAdornment position="end">
+                            <MagnifyingGlassIcon className="h-5 w-5 text-gray-400"/>
+                        </InputAdornment>
+                    ),
+                }}
+            />
+            <Button variant="contained" color="primary" onClick={() => router.push('/admin')}>
+                ניהול
+            </Button>
+        </Box>
     );
 }

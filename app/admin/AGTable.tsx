@@ -4,6 +4,7 @@ import {AgGridReact} from 'ag-grid-react';
 import {ColDef} from 'ag-grid-community';
 import ActionRender from './ActionRender';
 import {AGTableModelType} from './ag_table';
+import OrderItemsRender from "./OrderItemsRender";
 
 const defaultColDef: ColDef = {
     resizable: true,
@@ -19,8 +20,9 @@ const AGTable = ({cols, rows}: { cols: ColDef<AGTableModelType>[]; rows: AGTable
             columnDefs={cols}
             defaultColDef={defaultColDef}
             enableRtl
+            rowHeight={30}
             frameworkComponents={{
-                ActionRender
+                ActionRender,OrderItemsRender
             }}
         />
     </div>

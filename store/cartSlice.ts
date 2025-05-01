@@ -28,8 +28,8 @@ const cartSlice = createSlice({
                 imageUrl: product.featuredImage.url,
                 imageAlt: product.featuredImage.altText,
                 quantity,
-                unitAmount: Number(product.price),
-                totalAmount: Number(product.price) * quantity,
+                unitAmount: product.price,
+                totalAmount: product.price * quantity,
             };
 
             const updatedLines = existingItem

@@ -4,7 +4,7 @@ const Price = ({
                  className,
                  currencyCode = "ILS",
                }: {
-  amount: string;
+  amount: number;
   className?: string;
   currencyCode?: string;
   currencyCodeClassName?: string;
@@ -16,7 +16,7 @@ const Price = ({
       currencyDisplay: "narrowSymbol",
       minimumFractionDigits: 0,
       maximumFractionDigits: 2,
-    }).format(parseFloat(amount))}
+    }).format(amount)}
   </span>
 );
 

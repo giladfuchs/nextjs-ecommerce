@@ -1,5 +1,6 @@
 /* eslint-disable max-classes-per-file */
 import _ from 'lodash';
+import {columns_order} from "../admin/ag_table";
 
 export enum FormType {
     TEXT = 'text',
@@ -40,6 +41,7 @@ export type InputField = {
 
 export enum ModelType {
     collection = 'collection',
+    order = 'order',
     product = 'product'
 }
 

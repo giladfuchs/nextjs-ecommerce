@@ -63,6 +63,18 @@ async function fetchData() {
 
     return data;
 }
+export async function getOrders() {
+    const response = await fetch(`${API_URL}/auth/orders`, {
+        cache: "no-store",
+    });
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch orders from API");
+    }
+
+    return response.json();
+}
+
 
 export async function getProducts(): Promise<Product[]> {
     const {products} = await fetchData();
