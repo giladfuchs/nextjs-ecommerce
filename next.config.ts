@@ -7,7 +7,6 @@ export default {
   typescript: {
     ignoreBuildErrors: true,
   },
-  devIndicators: true,
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
