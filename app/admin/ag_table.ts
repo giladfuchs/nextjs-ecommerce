@@ -1,8 +1,8 @@
 import {ColDef} from 'ag-grid-community';
-import {ModelType} from "../form/form";
-import {Order, Product} from "../../lib/types";
+import {ModelType} from "./form/form";
+import {Collection, Order, Product} from "../../lib/types";
 
-export type AGTableModelType = Product;
+export type AGTableModelType = Product | Collection | Order;
 export const columns_product: ColDef<Product>[] = [
     {
         "field": "title",
@@ -67,7 +67,28 @@ export const columns_order: ColDef<Order>[] = [
         cellRenderer: 'ActionRender',
         width: 80,
     },
-]as ColDef<Order>[];
+] as ColDef<Order>[];
+
+export const columns_collection: ColDef<Collection>[] = [
+    {
+        field: 'title',
+        headerName: 'שם',
+        width: 122,
+    },
+
+    {
+        field: 'position',
+        headerName: 'מיקום',
+        width: 120,
+    },
+
+    {
+        field: 'id',
+        headerName: 'צפה',
+        cellRenderer: 'ActionRender',
+        width: 80,
+    },
+] as ColDef<Collection>[];
 export const get_columns_by_title = (title: ModelType): ColDef<AGTableModelType>[] => {
     let columns = [];
     switch (title) {
@@ -77,6 +98,9 @@ export const get_columns_by_title = (title: ModelType): ColDef<AGTableModelType>
 
         case ModelType.order:
             columns = [...columns_order];
+            break;
+        case ModelType.collection:
+            columns = [...columns_collection];
             break;
 
         default:

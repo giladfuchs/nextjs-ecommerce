@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { SimpleTreeView } from '@mui/x-tree-view/SimpleTreeView';
 import { TreeItem } from '@mui/x-tree-view/TreeItem';
-import {Image} from "../../../../lib/types";
+import {Image} from "../../../../../lib/types";
 import { Box, Divider, Grid, TextField, Typography } from '@mui/material';
 
 export default function ImagesEditor({

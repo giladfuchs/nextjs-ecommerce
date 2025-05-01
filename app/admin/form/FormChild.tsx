@@ -4,7 +4,7 @@ import React from 'react';
 import {Grid, Button, TextField, Autocomplete, Typography, FormControlLabel, Switch} from '@mui/material';
 import {FieldAutoComplete, FormField, FormType} from "./form";
 import ImagesEditor from "./[model]/[id]/ImagesEditor";
-import {Image} from "../../lib/types";
+import {Image} from "../../../lib/types";
 
 type FormFieldProps = {
     field: FormField;

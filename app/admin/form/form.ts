@@ -1,6 +1,6 @@
 /* eslint-disable max-classes-per-file */
 import _ from 'lodash';
-import {columns_order} from "../admin/ag_table";
+import {columns_order} from "../ag_table";
 
 export enum FormType {
     TEXT = 'text',
@@ -60,6 +60,7 @@ export const product_fields: InputField[] = [
 ];
 export const collection_fields: InputField[] = [
     {key: 'title', type: FormType.TEXT},
+    {key: 'position', type: FormType.NUMBER},
 ];
 type InputFormType = FormType.TEXT | FormType.TEXTAREA | FormType.NUMBER;
 

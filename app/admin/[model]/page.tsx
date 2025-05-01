@@ -5,8 +5,8 @@ import * as React from 'react';
 import {use, useState} from 'react';
 
 import {Container, Grid, Paper} from '@mui/material';
-import {ModelType} from "../../form/form";
-import {getOrders, getProducts} from "../../../lib/api";
+import {ModelType} from "../form/form";
+import {getCollections, getOrders, getProducts} from "../../../lib/api";
 import {AGTableModelType, get_columns_by_title} from "../ag_table";
 import {ColDef} from "ag-grid-community";
 import AGTable from "../AGTable";
@@ -23,7 +23,7 @@ export default function AdminPage({
 
     React.useEffect(() => {
         const init = async () => {
-            const objs = model === ModelType.product ? await getProducts() : await getOrders();
+            const objs = model === ModelType.product ? await getProducts() : model === ModelType.order ? await getOrders() : await getCollections();
             setRows(objs)
         }
 

@@ -3,8 +3,8 @@ import {Container} from "@mui/material";
 import FormChild from "../../FormChild";
 import {array_obj_to_obj_with_key, create_form_fields, FormField, get_form_by_model, ModelType} from "../../form";
 import {use, useEffect, useState} from "react";
-import {getCollections, getProducts, submitModel} from "../../../../lib/api";
-import {Image} from "../../../../lib/types";
+import {getCollections, getProducts, submitModel} from "../../../../../lib/api";
+import {Image} from "../../../../../lib/types";
 
 export default function FormPage({
                                      params,

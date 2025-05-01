@@ -1,7 +1,7 @@
 import {Product, Collection} from "lib/types";
 
 import type { Order } from 'lib/types';
-import {ModelType} from "../app/form/form";
+import {ModelType} from "../app/admin/form/form";
 import {API_URL} from "./utils";
 
 

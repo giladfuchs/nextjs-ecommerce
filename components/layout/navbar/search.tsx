@@ -4,6 +4,7 @@ import {useState, useEffect} from "react";
 import {useRouter, usePathname, useSearchParams} from "next/navigation";
 import {TextField, InputAdornment, Button, Box} from "@mui/material";
 import {MagnifyingGlassIcon} from "@heroicons/react/24/outline";
+import {ModelType} from "../../../app/admin/form/form";
 
 export default function Search() {
     const router = useRouter();
@@ -55,11 +56,14 @@ export default function Search() {
     if (isAdminPage) {
         return (
             <Box display="flex" gap={2}>
-                <Button variant="outlined" onClick={() => router.push('/admin/product')}>
+                <Button variant="outlined" onClick={() => router.push(`/admin/${ModelType.product}`)}>
                     מוצרים
                 </Button>
-                <Button variant="outlined" onClick={() => router.push('/admin/order')}>
+                <Button variant="outlined" onClick={() => router.push(`/admin/${ModelType.order}`)}>
                     הזמנות
+                </Button>
+                <Button variant="outlined" onClick={() => router.push(`/admin/${ModelType.collection}`)}>
+                    קטגוריות
                 </Button>
             </Box>
         );
