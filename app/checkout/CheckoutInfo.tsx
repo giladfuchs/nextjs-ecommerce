@@ -90,7 +90,7 @@ export default function CheckoutInfo({
             const saved = await res.json();
             onSuccess(saved.id);
             toast.success("✅  ההזמנה בוצעה בהצלחה!", {
-              description: `${saved.id} מספר הזמנה: `,
+              description: ` מספר הזמנה: ${saved.id}`,
             });
             dispatch(clearCart());
           } catch (err) {
