@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function LogoSquare({ size }: { size?: "sm" | undefined }) {
   return (
@@ -12,13 +12,7 @@ export default function LogoSquare({ size }: { size?: "sm" | undefined }) {
         },
       )}
     >
-      <Image
-        src="/logo.ico"
-        alt={`  logo`}
-        width={80}
-        height={20}
-      />
+      <Image src="/logo.ico" alt={`  logo`} width={80} height={20} />
     </div>
   );
 }
-

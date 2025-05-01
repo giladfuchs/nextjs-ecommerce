@@ -1,10 +1,9 @@
-@import 'ag-grid-community/styles/ag-theme-alpine.css';
-@import 'ag-grid-community/styles/ag-grid.css';
+@import "ag-grid-community/styles/ag-theme-alpine.css";
+@import "ag-grid-community/styles/ag-grid.css";
 
 @import "tailwindcss";
 @plugin "@tailwindcss/container-queries";
 @plugin "@tailwindcss/typography";
-
 
 html {
   direction: rtl;
@@ -94,5 +93,4 @@ input {
 .ag-theme-alpine {
   --ag-background-color: var(--color-bg);
   --ag-header-background-color: var(--color-bg);
-
 }

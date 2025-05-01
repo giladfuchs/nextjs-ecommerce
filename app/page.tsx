@@ -3,8 +3,7 @@ import SearchLayout from "./collection/layout";
 import CollectionPage from "./collection/page";
 
 export const metadata = {
-  description:
-    "חנות שתילים של יערה",
+  description: "חנות שתילים של יערה",
   openGraph: {
     type: "website",
   },

@@ -1,65 +1,60 @@
-import {Navbar} from "components/layout/navbar";
-import {GeistSans} from "geist/font/sans";
-import {ReactNode} from "react";
+import { Navbar } from "components/layout/navbar";
+import { GeistSans } from "geist/font/sans";
+import { ReactNode } from "react";
 import "./globals.css";
-import {baseUrl, SITE_NAME} from "lib/utils";
-import {ReduxProvider} from "./providers";
+import { baseUrl, SITE_NAME } from "lib/utils";
+import { ReduxProvider } from "./providers";
 import "../styles/theme.scss";
 
-import {Assistant} from "next/font/google";
+import { Assistant } from "next/font/google";
 import AccessibilityBar from "../components/accessibility-bar";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
-import {ThemeClientProvider} from "../components/theme-provider";
-
-
+import { ThemeClientProvider } from "../components/theme-provider";
 
 const assistant = Assistant({
-    subsets: ["hebrew"],
-    weight: ["400", "700"],
+  subsets: ["hebrew"],
+  weight: ["400", "700"],
 });
 
-
 export const metadata = {
-    metadataBase: new URL(baseUrl),
-    title: {
-        default: SITE_NAME!,
-        template: `%s | ${SITE_NAME}`,
-    },
-    robots: {
-        follow: true,
-        index: true,
-    },
-    icons: {
-        icon: '/logo.ico',
-        shortcut: '/logo.ico',
-        apple: '/logo.ico',
-    },
-
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: SITE_NAME!,
+    template: `%s | ${SITE_NAME}`,
+  },
+  robots: {
+    follow: true,
+    index: true,
+  },
+  icons: {
+    icon: "/logo.ico",
+    shortcut: "/logo.ico",
+    apple: "/logo.ico",
+  },
 };
 
 export default async function RootLayout({
-                                             children,
-                                         }: {
-    children: ReactNode;
+  children,
+}: {
+  children: ReactNode;
 }) {
-    return (
-        <html
-            lang="he"
-            dir="rtl"
-            className={`${GeistSans.variable} ${assistant.className}`}
-        >
-        <body
-            className="bg-theme text-theme selection:bg-teal-300 dark:bg-theme-dark dark:text-theme dark:selection:bg-pink-500 dark:selection:text-white">
+  return (
+    <html
+      lang="he"
+      dir="rtl"
+      className={`${GeistSans.variable} ${assistant.className}`}
+    >
+      <body className="bg-theme text-theme selection:bg-teal-300 dark:bg-theme-dark dark:text-theme dark:selection:bg-pink-500 dark:selection:text-white">
         <ReduxProvider>
-            <ThemeClientProvider  >
-            <Navbar/>
+          <ThemeClientProvider>
+            <Navbar />
             <main>{children}</main>
             <Analytics />
-            <AccessibilityBar/>
-            </ThemeClientProvider>
+            <AccessibilityBar />
+          </ThemeClientProvider>
         </ReduxProvider>
-        </body>
-        </html>
-    );
+      </body>
+    </html>
+  );
 }

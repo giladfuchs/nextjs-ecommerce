@@ -1,108 +1,115 @@
 /* eslint-disable max-classes-per-file */
-import _ from 'lodash';
-import {columns_order} from "../ag_table";
+import _ from "lodash";
+import { columns_order } from "../ag_table";
 
 export enum FormType {
-    TEXT = 'text',
-    TEXTAREA = 'textarea',
-    NUMBER = 'number',
-    AutoComplete = 'AutoComplete',
-    Switch = 'Switch'
+  TEXT = "text",
+  TEXTAREA = "textarea",
+  NUMBER = "number",
+  AutoComplete = "AutoComplete",
+  Switch = "Switch",
 }
 
 export class FieldInput {
-    constructor(
-        readonly type: FormType = FormType.TEXT,
-        public key: string,
-        public value: string = ''
-    ) {
-    }
+  constructor(
+    readonly type: FormType = FormType.TEXT,
+    public key: string,
+    public value: string = "",
+  ) {}
 }
 
 export class FieldAutoComplete {
-    constructor(
-        readonly type: FormType = FormType.AutoComplete,
-        public key: string,
-        public options: string[],
-        public value: string = ''
-    ) {
-        this.value = options[0];
-    }
+  constructor(
+    readonly type: FormType = FormType.AutoComplete,
+    public key: string,
+    public options: string[],
+    public value: string = "",
+  ) {
+    this.value = options[0];
+  }
 }
 
 export type FormField = FieldAutoComplete | FieldInput;
 
 export type InputField = {
-    key: string;
-    type: FormType;
-    options?: string[];
+  key: string;
+  type: FormType;
+  options?: string[];
 };
 
-
 export enum ModelType {
-    collection = 'collection',
-    order = 'order',
-    product = 'product'
+  collection = "collection",
+  order = "order",
+  product = "product",
 }
 
-
 export const product_fields: InputField[] = [
-    {key: 'title', type: FormType.TEXT},
-    {key: 'price', type: FormType.NUMBER},
-    {key: 'description', type: FormType.TEXTAREA},
-    {
-        key: 'collection',
-        type: FormType.AutoComplete,
-        options: []
-    },
-    {key: 'available', type: FormType.Switch},
-
+  { key: "title", type: FormType.TEXT },
+  { key: "price", type: FormType.NUMBER },
+  { key: "description", type: FormType.TEXTAREA },
+  {
+    key: "collection",
+    type: FormType.AutoComplete,
+    options: [],
+  },
+  { key: "available", type: FormType.Switch },
 ];
 export const collection_fields: InputField[] = [
-    {key: 'title', type: FormType.TEXT},
-    {key: 'position', type: FormType.NUMBER},
+  { key: "title", type: FormType.TEXT },
+  { key: "position", type: FormType.NUMBER },
 ];
 type InputFormType = FormType.TEXT | FormType.TEXTAREA | FormType.NUMBER;
 
 const isInputFormType = (type: FormType): type is InputFormType => {
-    return (
-        type === FormType.TEXT ||
-        type === FormType.TEXTAREA ||
-        type === FormType.NUMBER
-    );
+  return (
+    type === FormType.TEXT ||
+    type === FormType.TEXTAREA ||
+    type === FormType.NUMBER
+  );
 };
 export const json_field_to_form_field = (json_field: InputField): FormField => {
-    if (isInputFormType(json_field.type)) {
-        return new FieldInput(json_field.type, json_field.key);
-    }
-
-    if (json_field.type === FormType.AutoComplete) {
-        return new FieldAutoComplete(json_field.type, json_field.key, json_field.options!);
-    }
-
+  if (isInputFormType(json_field.type)) {
     return new FieldInput(json_field.type, json_field.key);
+  }
+
+  if (json_field.type === FormType.AutoComplete) {
+    return new FieldAutoComplete(
+      json_field.type,
+      json_field.key,
+      json_field.options!,
+    );
+  }
+
+  return new FieldInput(json_field.type, json_field.key);
 };
 
-export const json_fields_to_form_fields = (json_fields: InputField[]): FormField[] =>
-    json_fields.map((obj: InputField) => json_field_to_form_field(obj));
+export const json_fields_to_form_fields = (
+  json_fields: InputField[],
+): FormField[] =>
+  json_fields.map((obj: InputField) => json_field_to_form_field(obj));
 
 export const get_form_by_model = (type_form: ModelType): FormField[] => {
-    switch (type_form) {
-
-        case ModelType.product:
-            return json_fields_to_form_fields([...product_fields]);
-        case ModelType.collection:
-            return json_fields_to_form_fields([...collection_fields]);
-    }
+  switch (type_form) {
+    case ModelType.product:
+      return json_fields_to_form_fields([...product_fields]);
+    case ModelType.collection:
+      return json_fields_to_form_fields([...collection_fields]);
+  }
 };
-export const array_obj_to_obj_with_key = (iterable: any[], value: any, key: string) =>
-    iterable.find((o: any) => o[key]?.toString() === value.toString());
-export const create_form_fields = (source: FormField[], target: any): FormField[] => {
-    if (_.isEmpty(target)) return source.map((field) => ({...field}));
-    return source.map((field) => {
-        const updatedValue = target[field.key] ?? '';
-        return {...field, value: updatedValue};
-    });
+export const array_obj_to_obj_with_key = (
+  iterable: any[],
+  value: any,
+  key: string,
+) => iterable.find((o: any) => o[key]?.toString() === value.toString());
+export const create_form_fields = (
+  source: FormField[],
+  target: any,
+): FormField[] => {
+  if (_.isEmpty(target)) return source.map((field) => ({ ...field }));
+  return source.map((field) => {
+    const updatedValue = target[field.key] ?? "";
+    return { ...field, value: updatedValue };
+  });
 };
 
 /* eslint-enable max-classes-per-file */
