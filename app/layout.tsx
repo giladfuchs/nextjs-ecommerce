@@ -5,6 +5,8 @@ import "./globals.css";
 import { baseUrl, SITE_NAME } from "lib/utils";
 import { ReduxProvider } from "./providers";
 import "../styles/theme.scss";
+import { Toaster } from 'sonner';
+
 
 import { Assistant } from "next/font/google";
 import AccessibilityBar from "../components/accessibility-bar";
@@ -27,11 +29,11 @@ export const metadata = {
     follow: true,
     index: true,
   },
-  icons: {
-    icon: "/logo.ico",
-    shortcut: "/logo.ico",
-    apple: "/logo.ico",
-  },
+  // icons: {
+  //   icon: "/logo.ico",
+  //   shortcut: "/logo.ico",
+  //   apple: "/logo.ico",
+  // },
 };
 
 export default async function RootLayout({
@@ -51,6 +53,7 @@ export default async function RootLayout({
             <Navbar />
             <main>{children}</main>
             <Analytics />
+            <Toaster richColors position="bottom-center" />
             <AccessibilityBar />
           </ThemeClientProvider>
         </ReduxProvider>
