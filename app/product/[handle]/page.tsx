@@ -84,6 +84,13 @@ export default async function ProductPage() {
             <div className="mx-auto max-w-(--breakpoint-2xl) px-4">
                 <div
                     className="flex flex-col rounded-lg border border-theme bg-theme p-8 md:p-12 lg:flex-row lg:gap-8 dark:border-theme dark:bg-theme-dark">
+
+
+                    <div className="basis-full lg:basis-2/6">
+                        <Suspense fallback={null}>
+                            <ProductDescription product={product}/>
+                        </Suspense>
+                    </div>
                     <div className="h-full w-full basis-full lg:basis-4/6">
                         <Suspense
                             fallback={
@@ -96,12 +103,6 @@ export default async function ProductPage() {
                                     altText: image.altText,
                                 }))}
                             />
-                        </Suspense>
-                    </div>
-
-                    <div className="basis-full lg:basis-2/6">
-                        <Suspense fallback={null}>
-                            <ProductDescription product={product}/>
                         </Suspense>
                     </div>
                 </div>
