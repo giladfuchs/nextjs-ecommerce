@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 import LogoIcon from "./icons/logo";
 import { join } from "path";
 import { readFile } from "fs/promises";
+import {SITE_NAME} from "../lib/utils";
 
 export type Props = {
   title?: string;
@@ -12,7 +13,7 @@ export default async function OpengraphImage(
 ): Promise<ImageResponse> {
   const { title } = {
     ...{
-      title: process.env.SITE_NAME,
+      title: SITE_NAME,
     },
     ...props,
   };

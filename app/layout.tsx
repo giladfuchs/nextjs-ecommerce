@@ -2,7 +2,7 @@ import {Navbar} from "components/layout/navbar";
 import {GeistSans} from "geist/font/sans";
 import {ReactNode} from "react";
 import "./globals.css";
-import {baseUrl} from "lib/utils";
+import {baseUrl, SITE_NAME} from "lib/utils";
 import {ReduxProvider} from "./providers";
 import "../styles/theme.scss";
 
@@ -18,7 +18,7 @@ const assistant = Assistant({
     subsets: ["hebrew"],
     weight: ["400", "700"],
 });
-const SITE_NAME = process.env.SITE_NAME;
+
 
 export const metadata = {
     metadataBase: new URL(baseUrl),

@@ -4,8 +4,8 @@ import Link from "next/link";
 import Search from "./search";
 import CartModal from "components/cart/modal";
 import LogoSquare from "components/logo-square";
+import {SITE_NAME} from "../../../lib/utils";
 
-const { SITE_NAME } = process.env;
 
 export default function NavbarClient( ) {
     return (
