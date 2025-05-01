@@ -1,5 +1,6 @@
 /* eslint-disable max-classes-per-file */
 import _ from "lodash";
+import ImagesEditor from "./[model]/[id]/ImagesEditor";
 
 export enum FormType {
   TEXT = "text",
@@ -7,6 +8,7 @@ export enum FormType {
   NUMBER = "number",
   AutoComplete = "AutoComplete",
   Switch = "Switch",
+  ImagesEditor = "ImagesEditor",
 }
 
 export class FieldInput {
@@ -52,6 +54,7 @@ export const product_fields: InputField[] = [
     options: [],
   },
   { key: "available", type: FormType.Switch },
+  { key: "images", type: FormType.ImagesEditor },
 ];
 export const collection_fields: InputField[] = [
   { key: "title", type: FormType.TEXT },
