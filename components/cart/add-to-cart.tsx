@@ -7,17 +7,17 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../../store/cartSlice";
 
 function SubmitButton({
-                          availableForSale,
+                          available,
                           onClick,
                       }: {
-    availableForSale: boolean;
+    available: boolean;
     onClick: () => void;
 }) {
     const buttonClasses =
         "relative flex w-full items-center justify-center rounded-full bg-blue-600 p-4 tracking-wide text-white";
     const disabledClasses = "cursor-not-allowed opacity-60 hover:opacity-60";
 
-    if (!availableForSale) {
+    if (!available) {
         return (
             <button disabled className={clsx(buttonClasses, disabledClasses)}>
                 לא זמין במלאי
@@ -57,7 +57,7 @@ export function AddToCart({ product }: { product: Product }) {
 
     return (
         <SubmitButton
-            availableForSale={product.availableForSale}
+            available={product.available}
             onClick={handleAddToCart}
         />
     );

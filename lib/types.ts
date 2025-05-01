@@ -1,6 +1,7 @@
 export type Collection = {
     handle: string;
     title: string;
+    position: number;
     updatedAt: string;
 };
 
@@ -13,7 +14,7 @@ export type Product = {
     id: string;
     handle: string;
     collection: string;
-    availableForSale: boolean;
+    available: boolean;
     title: string;
     description: string;
     price: string;
@@ -22,13 +23,7 @@ export type Product = {
     updatedAt: string;
 };
 
-export type CartProduct = {
-    id: string;
-    handle: string;
-    title: string;
-    featuredImage: Image;
-};
-
+ 
 export type CartItem = {
     productId: string;
     handle: string;

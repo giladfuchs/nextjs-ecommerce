@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import {Grid, Button, TextField, Autocomplete, Typography} from '@mui/material';
+import {Grid, Button, TextField, Autocomplete, Typography, FormControlLabel, Switch} from '@mui/material';
 import {FieldAutoComplete, FormField, FormType} from "./form";
 import ImagesEditor from "./[model]/[id]/ImagesEditor";
 import {Image} from "../../lib/types";
@@ -28,6 +28,10 @@ const FieldRenderer = ({field, onChange, collections}: FormFieldProps) => {
                     renderInput={(params) => <TextField {...params} label={field.key}/>}
                 />
             );
+        case FormType.Switch:
+            return <FormControlLabel
+                control={<Switch onChange={(e, value) => onChange(value, field.key)}
+                                 checked={field.value as boolean}/>} label={placeholder}       />
         case FormType.TEXT:
         case FormType.TEXTAREA:
         case FormType.NUMBER:
@@ -89,6 +93,7 @@ export default function FormChild({title, fields, onSubmit, collections}: FormCh
                         </Grid>
                     ))}
                     <ImagesEditor images={images} onChange={setImages}/>
+
 
                     <Grid item display="flex" justifyContent="center">
                         <Button

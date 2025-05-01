@@ -55,7 +55,6 @@ export default async function ProductPage() {
     const handle = safeDecodeURIComponent(rawHandle as string);
     const product = (await getProducts()).find((p) => p.handle === handle);
 
-
     if (!product) return notFound();
 
     const productJsonLd = {
@@ -66,7 +65,7 @@ export default async function ProductPage() {
         image: product.featuredImage.url,
         offers: {
             "@type": "AggregateOffer",
-            availability: product.availableForSale
+            availability: product.available
                 ? "https://schema.org/InStock"
                 : "https://schema.org/OutOfStock",
             priceCurrency: "ILS",

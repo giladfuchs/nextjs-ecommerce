@@ -5,7 +5,8 @@ export enum FormType {
     TEXT = 'text',
     TEXTAREA = 'textarea',
     NUMBER = 'number',
-    AutoComplete = 'AutoComplete'
+    AutoComplete = 'AutoComplete',
+    Switch = 'Switch'
 }
 
 export class FieldInput {
@@ -52,6 +53,8 @@ export const product_fields: InputField[] = [
         type: FormType.AutoComplete,
         options: []
     },
+    {key: 'available', type: FormType.Switch},
+
 ];
 export const collection_fields: InputField[] = [
     {key: 'title', type: FormType.TEXT},

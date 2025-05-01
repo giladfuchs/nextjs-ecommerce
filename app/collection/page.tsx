@@ -33,7 +33,6 @@ export default function CollectionPage() {
         typeof window !== "undefined"
             ? safeDecodeURIComponent(window.location.pathname)
             : "/";
-
     const collectionMatch = pathname.match(/^\/collection\/([^/]+)$/);
     const collectionHandle = collectionMatch ? collectionMatch[1] : null;
 

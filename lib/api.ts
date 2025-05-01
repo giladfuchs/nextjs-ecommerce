@@ -46,9 +46,9 @@ export async function submitOrder(order: Order): Promise<Response> {
 async function fetchData() {
     const now = Date.now();
 
-    if (cachedData && now - lastFetched < CACHE_DURATION) {
-        return cachedData;
-    }
+    // if (cachedData && now - lastFetched < CACHE_DURATION) {
+    //     return cachedData;
+    // }
 
     const response = await fetch(`${API_URL}/data`, {cache: "no-store"}); // ✅ always fresh
     if (!response.ok) {
