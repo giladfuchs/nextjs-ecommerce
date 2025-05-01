@@ -2,12 +2,8 @@ import {Product, Collection} from "lib/types";
 
 import type { Order } from 'lib/types';
 import {ModelType} from "../app/form/form";
+import {API_URL} from "./utils";
 
-const isDev = process.env.NODE_ENV === 'development';
-
-export const API_URL = isDev
-    ? 'http://localhost:4000'
-    : 'https://yaara-api-nu.vercel.app';
 
 let cachedData: { products: Product[]; collections: Collection[] }  = { products: [],collections: [] };
 let lastFetched = 0;

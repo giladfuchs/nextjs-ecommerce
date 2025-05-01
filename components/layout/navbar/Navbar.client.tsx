@@ -4,7 +4,6 @@ import Link from "next/link";
 import Search from "./search";
 import CartModal from "components/cart/modal";
 import LogoSquare from "components/logo-square";
-import {SITE_NAME} from "../../../lib/utils";
 
 
 export default function NavbarClient( ) {
@@ -14,9 +13,7 @@ export default function NavbarClient( ) {
                 {/* Logo */}
                 <Link href="/" prefetch={true} className="flex items-center">
                     <LogoSquare />
-                    <div className="ml-2 text-sm font-medium uppercase">
-                        {SITE_NAME}
-                    </div>
+
                 </Link>
 
                 {/* Search */}
