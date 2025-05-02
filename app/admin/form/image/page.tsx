@@ -1,18 +1,23 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Box, Button, Typography, CircularProgress } from '@mui/material';
-import {toast} from "sonner";
-
-import { ClipboardIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
-import {uploadImage} from "../../../../lib/api";
-import {MAX_FILE_SIZE_MB} from "../../../../lib/utils";
+import {
+    Box,
+    Button,
+    Typography,
+    CircularProgress,
+    IconButton,
+} from '@mui/material';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { toast } from 'sonner';
+import { uploadImage } from '../../../../lib/api';
+import { MAX_FILE_SIZE_MB } from '../../../../lib/utils';
 
 export default function UploadImagePage() {
     const [file, setFile] = useState<File | null>(null);
     const [imageUrl, setImageUrl] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
-
 
     const handleUpload = async () => {
         if (!file) return;
@@ -20,8 +25,8 @@ export default function UploadImagePage() {
         try {
             setLoading(true);
             const url = await uploadImage(file);
-
             setImageUrl(url);
+
             toast.success('✅ התמונה הועלתה בהצלחה!', {
                 description: `URL: ${url}`,
             });
@@ -33,6 +38,7 @@ export default function UploadImagePage() {
             setLoading(false);
         }
     };
+
     const copyToClipboard = async () => {
         if (!imageUrl) return;
         await navigator.clipboard.writeText(imageUrl);
@@ -58,6 +64,7 @@ export default function UploadImagePage() {
 
         setFile(selectedFile);
     };
+
     return (
         <Box sx={{ maxWidth: 500, mx: 'auto', mt: 4, p: 2 }}>
             <Box textAlign="center">
@@ -95,8 +102,7 @@ export default function UploadImagePage() {
                                 fontSize: '0.875rem',
                                 fontWeight: 500,
                                 color: '#333',
-                                display: 'inline-block', // so the width fits the content
-                                mt: 1,
+                                display: 'inline-block',
                             }}
                         >
                             📎 {file.name}
@@ -118,7 +124,9 @@ export default function UploadImagePage() {
 
             {imageUrl && (
                 <Box mt={4} textAlign="center">
-                    <Typography variant="body1" gutterBottom>כתובת התמונה:</Typography>
+                    <Typography variant="body1" gutterBottom>
+                        כתובת התמונה:
+                    </Typography>
 
                     <Box mt={3}>
                         <Box
@@ -127,36 +135,18 @@ export default function UploadImagePage() {
                             alignItems="center"
                             justifyContent="center"
                         >
-                            <button
-                                onClick={copyToClipboard}
-                                title="העתק ללוח"
-                                style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    padding: 6,
-                                    border: 'none',
-                                    background: 'transparent',
-                                    cursor: 'pointer',
-                                }}
-                            >
-                                <ClipboardIcon className="w-5 h-5 text-gray-700" />
-                            </button>
+                            <IconButton onClick={copyToClipboard} title="העתק ללוח">
+                                <ContentCopyIcon fontSize="small" />
+                            </IconButton>
 
-                            <a
+                            <IconButton
                                 href={imageUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title="פתח בלשונית חדשה"
-                                style={{
-                                    display: 'inline-flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    padding: 6,
-                                }}
                             >
-                                <ArrowTopRightOnSquareIcon className="w-5 h-5 text-gray-700" />
-                            </a>
+                                <OpenInNewIcon fontSize="small" />
+                            </IconButton>
                         </Box>
 
                         <Typography
@@ -175,6 +165,7 @@ export default function UploadImagePage() {
                             {imageUrl}
                         </Typography>
                     </Box>
+
                     <Box mt={2} p={1} border="1px solid #ccc" borderRadius={2}>
                         <img
                             src={imageUrl}
