@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import {
     useRouter,
     usePathname,
@@ -16,17 +16,20 @@ import {
     Typography,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import { ModelType } from '../../../app/admin/form/form';
+import {toast} from 'sonner';
+import {ModelType} from '../../../app/admin/form/form';
 
 const adminRoutes = [
-    { label: 'מוצרים', model: ModelType.product },
-    { label: 'הזמנות', model: ModelType.order },
-    { label: 'קטגוריות', model: ModelType.collection },
+    {label: 'מוצרים', model: ModelType.product},
+    {label: 'הזמנות', model: ModelType.order},
+    {label: 'קטגוריות', model: ModelType.collection},
 ];
 
 function AdminNav() {
     const router = useRouter();
     const pathname = usePathname();
+
+
 
     return (
         <Box display="flex" gap={2} flexDirection="row">
@@ -64,6 +67,7 @@ function AdminNav() {
                     </ListItemButton>
                 );
             })}
+
         </Box>
     );
 }
@@ -75,14 +79,24 @@ export default function Search() {
 
     const initialQuery = searchParams.get('q') || '';
     const [query, setQuery] = useState(initialQuery);
+    const [hasToken, setHasToken] = useState(false);
 
     const isProductPage = pathname.startsWith('/product/');
     const isAdminPage = pathname.startsWith('/admin');
-
+    function handleLogout() {
+        document.cookie = 'token=; path=/; max-age=0';
+        toast.success('התנתקת בהצלחה');
+        router.push('/');
+    }
     useEffect(() => {
         if (isProductPage || isAdminPage) return;
         setQuery(searchParams.get('q') || '');
     }, [searchParams, pathname]);
+
+    useEffect(() => {
+        const tokenExists = document.cookie.includes('token=');
+        setHasToken(tokenExists);
+    }, [pathname]);
 
     useEffect(() => {
         if (isProductPage || isAdminPage) return;
@@ -115,7 +129,7 @@ export default function Search() {
     if (isProductPage) return null;
 
     return isAdminPage ? (
-        <AdminNav />
+        <AdminNav/>
     ) : (
         <Box display="flex" gap={2}>
             <TextField
@@ -128,18 +142,25 @@ export default function Search() {
                 InputProps={{
                     endAdornment: (
                         <InputAdornment position="end">
-                            <SearchIcon className="text-gray-400" fontSize="small" />
+                            <SearchIcon className="text-gray-400" fontSize="small"/>
                         </InputAdornment>
                     ),
                 }}
             />
-            <Button
-                variant="contained"
-                color="primary"
-                onClick={() => router.push('/admin')}
-            >
-                ניהול
-            </Button>
+            {hasToken && (
+                <>
+                    <Button
+                        variant="contained"
+                        color="primary"
+                        onClick={() => router.push('/admin')}
+                    >
+                        ניהול
+                    </Button>
+                    <Button variant="outlined" color="error" onClick={handleLogout}>
+                        התנתקות
+                    </Button>
+                </>
+            )}
         </Box>
     );
 }

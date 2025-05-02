@@ -16,7 +16,7 @@ import {Formik} from "formik";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../store";
 import {Cart, Order} from "lib/types";
-import {submitModel, submitOrder} from "../../lib/api";
+import {  submitOrder} from "../../lib/api";
 import {clearCart} from "../../store/cartSlice";
 import {toast} from "sonner";
 

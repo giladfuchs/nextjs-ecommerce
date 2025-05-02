@@ -1,6 +1,5 @@
-import {Product, Collection} from "lib/types";
+import {Order, OrderStatus, Product, Collection} from './types';
 
-import type {Order} from "lib/types";
 import {ModelType} from "../app/admin/form/form";
 import {API_URL} from "./utils";
 
@@ -111,7 +110,6 @@ export async function getOrderById(id: number) {
     return res.json();
 }
 
-import {Order, OrderStatus} from './types';
 
 export async function updateOrderStatus(id: number, status: OrderStatus): Promise<Order> {
     const res = await fetch(`${API_URL}/auth/order/status`, {
@@ -126,6 +124,24 @@ export async function updateOrderStatus(id: number, status: OrderStatus): Promis
     }
 
     return res.json();
+}
+
+export async function loginUser(username: string, password: string): Promise<Response> {
+    const response = await fetch(`${API_URL}/login`, {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({email: username, password}),
+    });
+
+    if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err?.error || 'Login failed');
+    }
+
+    return response;
 }
 
 export async function getProducts(): Promise<Product[]> {
