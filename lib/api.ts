@@ -12,6 +12,23 @@ let lastFetched = 0;
 
 const CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
 
+export async function uploadImage(file: File): Promise<string> {
+  const formData = new FormData();
+  formData.append('image', file);
+
+  const response = await fetch(`${API_URL}/auth/image`, {
+    method: 'POST',
+    body: formData,
+  });
+
+  if (!response.ok) {
+    const err = await response.json().catch(() => ({}));
+    throw new Error(err?.error || 'Failed to upload image');
+  }
+
+  const data = await response.json();
+  return data.url as string;
+}
 export async function submitModel(
   model: ModelType,
   idOrAdd: string,
@@ -48,10 +65,12 @@ export async function submitOrder(order: Order): Promise<Response> {
 async function fetchData() {
   const now = Date.now();
 
-  // if (cachedData && now - lastFetched < CACHE_DURATION) {
-  //     return cachedData;
-  // }
+  if (cachedData && now - lastFetched < CACHE_DURATION) {
+    console.log("cachedData")
 
+      return cachedData;
+  }
+  console.log("call to server")
   const response = await fetch(`${API_URL}/data`, { cache: "no-store" }); // ✅ always fresh
   if (!response.ok) {
     throw new Error("Failed to fetch data from API");

@@ -57,7 +57,6 @@ export default function FormPage({
         init();
     }, [model]);
 
-    const collections_title: string[] = list.collection.map((c) => c.title);
     const title = `${is_add ? "הוספה" : "עריכה"}_${model}`;
 
     const handleSubmit = async (send_fields: FormField[]) => {
@@ -108,7 +107,6 @@ export default function FormPage({
 
                     <FormChild
                         title={title}
-                        collections={collections_title}
                         fields={fields}
                         onSubmit={handleSubmit}
                     />

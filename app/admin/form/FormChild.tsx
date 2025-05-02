@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {
     Grid,
     Button,
@@ -13,6 +13,7 @@ import {
 import {FieldAutoComplete, FormField, FormType} from "./form";
 import ImagesEditor from "./[model]/[id]/ImagesEditor";
 import {Image} from "../../../lib/types";
+import {getCollections} from "../../../lib/api";
 
 type FormFieldProps = {
     field: FormField;
@@ -21,23 +22,42 @@ type FormFieldProps = {
     onChange: (value: any, key: string) => void;
 };
 
-const FieldRenderer = ({field, onChange, collections}: FormFieldProps) => {
+
+export const FieldRenderer = ({field, onChange}: FormFieldProps) => {
     const placeholder = field.key;
+    const [options, setOptions] = useState<string[]>([]);
+
+    useEffect(() => {
+        const loadOptions = async () => {
+            if (field.type === FormType.AutoComplete && field.key === 'collection') {
+                const collections = (await getCollections()).map((c) => c.title);
+                setOptions(collections);
+            }
+        };
+        loadOptions();
+    }, [field]);
+
     switch (field.type) {
         case FormType.ImagesEditor:
-            return <ImagesEditor placeholder={field.key} images={field.value as Image[]}   onChange={(updatedImages) => onChange(updatedImages, field.key)}/>
+            return (
+                <ImagesEditor
+                    placeholder={field.key}
+                    images={field.value as Image[]}
+                    onChange={(updatedImages) => onChange(updatedImages, field.key)}
+                />
+            );
+
         case FormType.AutoComplete:
-            if (field.key === "collection")
-                (field as FieldAutoComplete).options = collections;
             return (
                 <Autocomplete
                     disablePortal
-                    options={(field as FieldAutoComplete).options}
+                    options={options}
                     value={field.value}
                     onChange={(e, value) => onChange(value, field.key)}
                     renderInput={(params) => <TextField {...params} label={field.key}/>}
                 />
             );
+
         case FormType.Switch:
             return (
                 <FormControlLabel
@@ -50,6 +70,7 @@ const FieldRenderer = ({field, onChange, collections}: FormFieldProps) => {
                     label={placeholder}
                 />
             );
+
         case FormType.TEXT:
         case FormType.TEXTAREA:
         case FormType.NUMBER:
@@ -61,7 +82,7 @@ const FieldRenderer = ({field, onChange, collections}: FormFieldProps) => {
                     label={placeholder}
                     placeholder={placeholder}
                     value={field.value}
-                    type={field.type === FormType.NUMBER ? "number" : "text"}
+                    type={field.type === FormType.NUMBER ? 'number' : 'text'}
                     multiline={field.type === FormType.TEXTAREA}
                     rows={field.type === FormType.TEXTAREA ? 5 : undefined}
                     onChange={(e) => onChange(e.target.value, field.key)}
@@ -72,7 +93,6 @@ const FieldRenderer = ({field, onChange, collections}: FormFieldProps) => {
 
 interface FormChildProps {
     title: string;
-    collections: string[];
     fields: FormField[];
     onSubmit: (send_fields: FormField[]) => void;
 }
@@ -81,7 +101,6 @@ export default function FormChild({
                                       title,
                                       fields,
                                       onSubmit,
-                                      collections,
                                   }: FormChildProps) {
     const [localFields, setLocalFields] = React.useState<FormField[]>(fields);
 
@@ -113,7 +132,6 @@ export default function FormChild({
                             <FieldRenderer
                                 field={field}
                                 onChange={handleChange}
-                                collections={collections}
                             />
                         </Grid>
                     ))}

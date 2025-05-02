@@ -22,7 +22,6 @@ const ActionRender = ({ data }: ICellRendererParams) => {
       {data.title && (
         <a
           href={`/admin/form/${data.collection ? ModelType.product : ModelType.collection}/${data.id}`}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <IconButton size="small" aria-label="view" color="inherit">
