@@ -5,6 +5,7 @@ import { SimpleTreeView } from "@mui/x-tree-view/SimpleTreeView";
 import { TreeItem } from "@mui/x-tree-view/TreeItem";
 import { Image } from "../../../../../lib/types";
 import { Box, Divider, Grid, TextField, Typography } from "@mui/material";
+import {toast} from "sonner";
 
 export default function ImagesEditor({
                                          placeholder,
@@ -33,15 +34,48 @@ export default function ImagesEditor({
                             <Grid item xs={12} key={index}>
                                 <Typography fontWeight="bold">תמונה {index + 1}</Typography>
                                 <Grid container direction="column" spacing={2}>
-                                    <Grid item xs={12}>
-                                        <TextField
-                                            fullWidth
-                                            label="קישור לתמונה"
-                                            value={imagesState[index]?.url || ""}
-                                            onChange={(e) =>
-                                                handleChange(index, "url", e.target.value)
-                                            }
-                                        />
+                                    <Grid direction="column" display="flex" alignItems="center" gap={1} item xs={12}>
+                                            <TextField
+                                                fullWidth
+                                                label="קישור לתמונה"
+                                                value={imagesState[index]?.url || ""}
+                                                onChange={(e) => handleChange(index, "url", e.target.value)}
+                                            />
+
+                                            <button
+                                                type="button"
+                                                title="הדבק מהלוח"
+                                                onClick={async () => {
+                                                    try {
+                                                        const text = await navigator.clipboard.readText();
+                                                        if (text && text.startsWith("http")) {
+                                                            handleChange(index, "url", text);
+                                                            toast.success("📋 הכתובת הודבקה בהצלחה!", {
+                                                                description: text,
+                                                            });
+                                                        } else {
+                                                            toast.error("❌ הלוח לא מכיל כתובת חוקית");
+                                                        }
+                                                    } catch (err) {
+                                                        toast.error("⚠️ שגיאה בגישה ללוח", {
+                                                            description: "נסה שוב או אפשר הרשאות",
+                                                        });
+                                                    }
+                                                }}
+                                                style={{
+                                                    display: 'inline-flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'center',
+                                                    padding: 6,
+                                                    border: '1px solid #ccc',
+                                                    background: '#f9f9f9',
+                                                    borderRadius: 4,
+                                                    cursor: 'pointer',
+                                                    height: '56px', // match TextField height
+                                                }}
+                                            >
+                                                📋
+                                            </button>
                                     </Grid>
                                     <Grid item xs={12}>
                                         <TextField
