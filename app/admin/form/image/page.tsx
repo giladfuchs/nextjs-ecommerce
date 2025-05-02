@@ -6,6 +6,7 @@ import {toast} from "sonner";
 
 import { ClipboardIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import {uploadImage} from "../../../../lib/api";
+import {MAX_FILE_SIZE_MB} from "../../../../lib/utils";
 
 export default function UploadImagePage() {
     const [file, setFile] = useState<File | null>(null);
@@ -38,6 +39,25 @@ export default function UploadImagePage() {
         toast.success('📋 הועתק ללוח!');
     };
 
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const selectedFile = e.target.files?.[0];
+        if (!selectedFile) return;
+
+        const isImage = selectedFile.type.startsWith('image/');
+        const isTooLarge = selectedFile.size > MAX_FILE_SIZE_MB * 1024 * 1024;
+
+        if (!isImage) {
+            toast.error('❌ קובץ לא תקין. רק תמונות מותרות');
+            return;
+        }
+
+        if (isTooLarge) {
+            toast.error('❌ גודל הקובץ גדול מדי. עד 1MB בלבד');
+            return;
+        }
+
+        setFile(selectedFile);
+    };
     return (
         <Box sx={{ maxWidth: 500, mx: 'auto', mt: 4, p: 2 }}>
             <Box textAlign="center">
@@ -52,7 +72,7 @@ export default function UploadImagePage() {
                             type="file"
                             id="upload-input"
                             style={{ display: 'none' }}
-                            onChange={(e) => setFile(e.target.files?.[0] || null)}
+                            onChange={handleFileChange}
                         />
 
                         <label htmlFor="upload-input">

@@ -9,3 +9,5 @@ export const baseUrl = isDev
   : "http://localhost:3000";
 
 export const SITE_NAME = "יערה";
+
+export const MAX_FILE_SIZE_MB = 1;

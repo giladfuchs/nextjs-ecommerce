@@ -77,7 +77,6 @@ async function fetchData() {
   }
 
   const data = await response.json();
-  // const data = mockJson
 
   cachedData = data;
   lastFetched = now;
