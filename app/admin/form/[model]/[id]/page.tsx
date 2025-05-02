@@ -61,7 +61,7 @@ export default function FormPage({
 
     const handleSubmit = async (send_fields: FormField[]) => {
         const data: any = Object.fromEntries(
-            send_fields.map((f) => [f.key, f.value])
+            send_fields.map((f) => [f.key, f.value?.trim()])
         );
 
         if (model === ModelType.product) {

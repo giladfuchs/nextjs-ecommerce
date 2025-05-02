@@ -100,7 +100,7 @@ export default function OrderViewPage({
                                     <AccessTimeTwoToneIcon sx={{fontSize: '1.3rem'}}/>
                                 </ListItemIcon>
                                 <ListItemText
-                                    primary={<Typography variant="subtitle1">תאריך יצירה</Typography>}
+                                    primary={<Typography variant="subtitle1">תאריך הזמנה</Typography>}
                                     secondary={
                                         <Typography variant="body2">
                                             {new Date(order.createdAt).toLocaleDateString('he-IL')}
