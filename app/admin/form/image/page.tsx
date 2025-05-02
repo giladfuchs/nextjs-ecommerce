@@ -34,6 +34,7 @@ export default function UploadImagePage() {
             toast.error('❌ שגיאה בהעלאה', {
                 description: err?.message || 'נסה שוב בעוד רגע',
             });
+            setImageUrl(null);
         } finally {
             setLoading(false);
         }
