@@ -5,7 +5,7 @@ export const API_URL = isDev
   : "https://yaara-api-nu.vercel.app";
 
 export const baseUrl = isDev
-  ? "https://yaara-tau.vercel.app/"
+  ? "https://yaara-store.vercel.app/"
   : "http://localhost:3000";
 
 export const SITE_NAME = "יערה";
