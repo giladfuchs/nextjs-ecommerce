@@ -1,68 +1,73 @@
 export type Collection = {
-  handle: string;
-  title: string;
-  position: number;
-  updatedAt: string;
+    handle: string;
+    title: string;
+    position: number;
+    updatedAt: string;
 };
 
 export type Image = {
-  url: string;
-  altText: string;
+    url: string;
+    altText: string;
 };
 
 export type Product = {
-  id: string;
-  handle: string;
-  collection: string;
-  available: boolean;
-  title: string;
-  description: string;
-  price: number;
-  featuredImage: Image;
-  images: Image[];
-  updatedAt: string;
+    id: string;
+    handle: string;
+    collection: string;
+    available: boolean;
+    title: string;
+    description: string;
+    price: number;
+    featuredImage: Image;
+    images: Image[];
+    updatedAt: string;
 };
 
 export type CartItem = {
-  productId: string;
-  handle: string;
-  title: string;
-  imageUrl: string;
-  imageAlt: string;
-  quantity: number;
-  unitAmount: number;
-  totalAmount: number;
+    productId: string;
+    handle: string;
+    title: string;
+    imageUrl: string;
+    imageAlt: string;
+    quantity: number;
+    unitAmount: number;
+    totalAmount: number;
 };
 
 export type Cart = {
-  totalQuantity: number;
-  lines: CartItem[];
-  cost: number;
+    totalQuantity: number;
+    lines: CartItem[];
+    cost: number;
 };
-
-
-
 
 
 export type OrderItem = {
-  id: number;
-  productId: number;
-  handle: string;
-  title: string;
-  imageUrl: string;
-  imageAlt: string;
-  quantity: number;
-  unitAmount: number;
-  totalAmount: number;
+    id: number;
+    productId: number;
+    handle: string;
+    title: string;
+    imageUrl: string;
+    imageAlt: string;
+    quantity: number;
+    unitAmount: number;
+    totalAmount: number;
 };
 
+export enum OrderStatus {
+    NEW = 'new',
+    READY = 'ready',
+    DONE = 'done',
+    CANCELED = 'canceled',
+}
+
 export type Order = {
-  id: number;
-  name: string;
-  email: string;
-  phone: string;
-  totalQuantity: number;
-  cost: number;
-  createdAt: Date;
-  items: OrderItem[];
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+    totalQuantity: number;
+    cost: number;
+    status: OrderStatus;
+    createdAt: Date;
+    items: OrderItem[];
 };

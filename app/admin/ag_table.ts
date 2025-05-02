@@ -61,6 +61,12 @@ export const columns_order: ColDef<Order>[] = [
     cellRenderer: "OrderItemsRender",
   },
   {
+    field: "status",
+    headerName: "סטטוס",
+    width: 80,
+
+  },
+  {
     field: "id",
     headerName: "צפה",
     cellRenderer: "ActionRender",

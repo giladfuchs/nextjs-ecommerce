@@ -111,6 +111,23 @@ export async function getOrderById(id: number) {
     return res.json();
 }
 
+import {Order, OrderStatus} from './types';
+
+export async function updateOrderStatus(id: number, status: OrderStatus): Promise<Order> {
+    const res = await fetch(`${API_URL}/auth/order/status`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({id, status}),
+    });
+
+    if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err?.error || 'שגיאה בעדכון הסטטוס');
+    }
+
+    return res.json();
+}
+
 export async function getProducts(): Promise<Product[]> {
     const {products} = await fetchData();
     return products;

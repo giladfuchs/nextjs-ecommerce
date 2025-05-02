@@ -1,7 +1,7 @@
 "use client";
 
 import { ICellRendererParams } from "ag-grid-community";
-import { OrderItem } from "../../lib/types"; // ודא שהנתיב נכון בהתאם לפרויקט שלך
+import { OrderItem } from "../../lib/types";
 
 export default function OrderItemsRender({
   value,
@@ -11,7 +11,7 @@ export default function OrderItemsRender({
     <div style={{ lineHeight: 1.6, whiteSpace: "normal", padding: "4px 0" }}>
       {value.map((item, idx) => (
         <div key={idx}>
-          {item.title} × {item.quantity}
+          {item.title} × {item.quantity} × {item.unitAmount}
         </div>
       ))}
     </div>
