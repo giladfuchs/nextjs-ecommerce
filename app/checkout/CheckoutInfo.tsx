@@ -84,6 +84,7 @@ export default function CheckoutInfo({
                     const trimmedValues = Object.fromEntries(
                         Object.entries(values).map(([key, val]) => [key, val.trim()])
                     );
+                    trimmedValues.phone = '0'+ trimmedValues.phone
                     const order: Order = {...trimmedValues, cart} as Order;
                     try {
                         const res = await submitOrder(order);
@@ -145,7 +146,11 @@ export default function CheckoutInfo({
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
                                                 label={field.label}
-                                                inputProps={{dir: "rtl"}}
+                                                inputProps={{
+                                                    dir: 'rtl',
+                                                    autoComplete: field.name === 'phone' ? 'tel' : field.name,
+
+                                                }}
                                                 sx={{
                                                     direction: "rtl",
                                                     "& input": {textAlign: "right"},
