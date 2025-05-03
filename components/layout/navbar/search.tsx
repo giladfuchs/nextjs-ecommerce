@@ -86,6 +86,7 @@ export default function Search() {
     function handleLogout() {
         document.cookie = 'token=; path=/; max-age=0';
         toast.success('התנתקת בהצלחה');
+        setHasToken(false);
         router.push('/');
     }
     useEffect(() => {
