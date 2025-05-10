@@ -1,0 +1,255 @@
+"use client";
+
+import { notFound } from "next/navigation";
+import Price from "components/shared/Price";
+import { getOrderById, updateOrderStatus } from "../../../../lib/api";
+import {
+  Box,
+  Divider,
+  Grid,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Typography,
+} from "@mui/material";
+import {
+  PersonTwoTone as PersonTwoToneIcon,
+  MailTwoTone as MailTwoToneIcon,
+  PhonelinkRingTwoTone as PhonelinkRingTwoToneIcon,
+  AccessTimeTwoTone as AccessTimeTwoToneIcon,
+  MonetizationOnTwoTone as MonetizationOnTwoToneIcon,
+  ShoppingBagTwoTone as ShoppingBagTwoToneIcon,
+} from "@mui/icons-material";
+import * as React from "react";
+import { Order, OrderStatus } from "../../../../lib/types";
+import { toast } from "sonner";
+import { useIntl, FormattedMessage } from "react-intl";
+
+export default function OrderViewPage({ params }: { params: { id: string } }) {
+  const { id } = params;
+  const [order, setOrder] = React.useState<Order | undefined | null>(undefined);
+  const intl = useIntl();
+
+  React.useEffect(() => {
+    const init = async () => {
+      const obj = await getOrderById(Number(id));
+      setOrder(obj);
+    };
+    init();
+  }, [id]);
+
+  if (order === null) return notFound();
+
+  const statusOptions: Record<OrderStatus, OrderStatus[]> = {
+    [OrderStatus.NEW]: [
+      OrderStatus.READY,
+      OrderStatus.DONE,
+      OrderStatus.CANCELED,
+    ],
+    [OrderStatus.READY]: [OrderStatus.DONE, OrderStatus.CANCELED],
+    [OrderStatus.DONE]: [],
+    [OrderStatus.CANCELED]: [OrderStatus.NEW],
+  };
+
+  return (
+    order && (
+      <Box sx={{ maxWidth: 800, mx: "auto", p: 3, direction: "rtl" }}>
+        <Typography variant="h4" fontWeight="bold" textAlign="center" mb={3}>
+          <FormattedMessage id="order.title" /> #{order.id}
+        </Typography>
+
+        <Grid container justifyContent="center" sx={{ mb: 4 }}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <List component="nav" disablePadding>
+                <ListItem disableGutters>
+                  <ListItemIcon sx={{ minWidth: 40 }}>
+                    <PersonTwoToneIcon sx={{ fontSize: "1.3rem" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={<FormattedMessage id="order.name" />}
+                    secondary={order.name}
+                    sx={{ textAlign: "right" }}
+                  />
+                </ListItem>
+                <ListItem disableGutters>
+                  <ListItemIcon sx={{ minWidth: 40 }}>
+                    <MailTwoToneIcon sx={{ fontSize: "1.3rem" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={<FormattedMessage id="order.email" />}
+                    secondary={order.email}
+                    sx={{ textAlign: "right" }}
+                  />
+                </ListItem>
+                <ListItem disableGutters>
+                  <ListItemIcon sx={{ minWidth: 40 }}>
+                    <PhonelinkRingTwoToneIcon sx={{ fontSize: "1.3rem" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={<FormattedMessage id="order.phone" />}
+                    secondary={order.phone}
+                    sx={{ textAlign: "right" }}
+                  />
+                </ListItem>
+              </List>
+            </Grid>
+
+            <Grid item xs={12} sm={6}>
+              <List component="nav" disablePadding>
+                <ListItem disableGutters>
+                  <ListItemIcon sx={{ minWidth: 40 }}>
+                    <AccessTimeTwoToneIcon sx={{ fontSize: "1.3rem" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={<FormattedMessage id="order.date" />}
+                    secondary={new Date(order.createdAt).toLocaleDateString(
+                      "he-IL",
+                    )}
+                    sx={{ textAlign: "right" }}
+                  />
+                </ListItem>
+                <ListItem disableGutters>
+                  <ListItemIcon sx={{ minWidth: 40 }}>
+                    <ShoppingBagTwoToneIcon sx={{ fontSize: "1.3rem" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={<FormattedMessage id="order.quantity" />}
+                    secondary={order.totalQuantity}
+                    sx={{ textAlign: "right" }}
+                  />
+                </ListItem>
+                <ListItem disableGutters>
+                  <ListItemIcon sx={{ minWidth: 40 }}>
+                    <MonetizationOnTwoToneIcon sx={{ fontSize: "1.3rem" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={<FormattedMessage id="order.total" />}
+                    secondary={<Price amount={order.cost} />}
+                    sx={{ textAlign: "right" }}
+                  />
+                </ListItem>
+              </List>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Divider sx={{ my: 2 }} />
+
+        {order.items.map((product: any) => (
+          <Grid
+            key={product.id}
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              bgcolor: "var(--color-bg)",
+              borderRadius: 2,
+              p: 2,
+              gap: 2,
+              boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
+              direction: "rtl",
+              mb: 2,
+            }}
+          >
+            <Box
+              component="img"
+              src={product.imageUrl}
+              alt={product.imageAlt}
+              sx={{
+                width: 80,
+                height: 80,
+                borderRadius: 2,
+                objectFit: "cover",
+                flexShrink: 0,
+              }}
+            />
+            <Grid item sx={{ flexGrow: 1, minWidth: 0 }}>
+              <Typography fontWeight="bold">{product.title}</Typography>
+              <Typography variant="body2">
+                <FormattedMessage id="order.item" />: {product.quantity} ×{" "}
+                <Price amount={product.unitAmount} />
+              </Typography>
+            </Grid>
+            <Typography fontWeight="bold" sx={{ minWidth: 80 }}>
+              <Price amount={product.totalAmount} />
+            </Typography>
+          </Grid>
+        ))}
+
+        <Typography
+          variant="h4"
+          color="primary"
+          textAlign="center"
+          sx={{ mb: 2, fontWeight: "bold", textTransform: "uppercase" }}
+        >
+          <FormattedMessage id="order.status" />: {order.status}
+        </Typography>
+
+        {statusOptions[order.status].length > 0 && (
+          <Box textAlign="center" mt={4}>
+            <Typography variant="h6" gutterBottom>
+              <FormattedMessage id="order.statusUpdate" />
+            </Typography>
+
+            <Grid container justifyContent="center" spacing={2}>
+              {statusOptions[order.status].map((nextStatus) => (
+                <Grid item key={nextStatus}>
+                  <button
+                    onClick={async () => {
+                      try {
+                        const updated = await updateOrderStatus(
+                          order.id,
+                          nextStatus,
+                        );
+                        toast.success(
+                          "✅ " +
+                            intl.formatMessage({
+                              id: "order.statusUpdate.success",
+                            }),
+                          {
+                            description: intl.formatMessage(
+                              { id: "order.statusUpdate.newStatus" },
+                              { status: nextStatus },
+                            ),
+                          },
+                        );
+                        setOrder(updated);
+                      } catch (err: any) {
+                        toast.error(
+                          "❌ " +
+                            intl.formatMessage({
+                              id: "order.statusUpdate.error",
+                            }),
+                          {
+                            description:
+                              err?.message ||
+                              intl.formatMessage({
+                                id: "order.statusUpdate.retry",
+                              }),
+                          },
+                        );
+                      }
+                    }}
+                    style={{
+                      padding: "8px 16px",
+                      borderRadius: "6px",
+                      border: "none",
+                      backgroundColor: "var(--color-accent)",
+                      color: "white",
+                      fontWeight: 600,
+                      cursor: "pointer",
+                    }}
+                  >
+                    {nextStatus}
+                  </button>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        )}
+      </Box>
+    )
+  );
+}
