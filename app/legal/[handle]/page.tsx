@@ -27,8 +27,8 @@ export default function LegalPage({ params }: { params: { handle: string } }) {
         >
             {handle === "accessibility" ? (
                 <>
-                    <Typography variant="h6" mt={4}>
-                        <FormattedMessage id="terms.accessibility.pickupTitle" />
+                    <Typography variant="h4" fontWeight="bold" gutterBottom>
+                    <FormattedMessage id="terms.accessibility.pickupTitle" />
                     </Typography>
                     <Typography paragraph>
                         <FormattedMessage id="terms.accessibility.pickup" />
@@ -87,29 +87,32 @@ export default function LegalPage({ params }: { params: { handle: string } }) {
                         <FormattedMessage id="terms.intro" />
                     </Typography>
 
-                    <Typography variant="h6" mt={3}>
-                        <FormattedMessage id="terms.section.services" />
+                    <Typography variant="h4" fontWeight="bold" gutterBottom mt={3}>
+
+                    <FormattedMessage id="terms.section.services" />
                     </Typography>
                     <Typography paragraph>
                         <FormattedMessage id="terms.services" />
                     </Typography>
 
-                    <Typography variant="h6" mt={3}>
-                        <FormattedMessage id="terms.section.exchanges" />
+                    <Typography variant="h4" fontWeight="bold" gutterBottom mt={3}>
+                    <FormattedMessage id="terms.section.exchanges" />
                     </Typography>
                     <Typography paragraph>
                         <FormattedMessage id="terms.exchanges" />
                     </Typography>
 
-                    <Typography variant="h6" mt={3}>
-                        <FormattedMessage id="terms.section.privacy" />
+                    <Typography variant="h4" fontWeight="bold" gutterBottom mt={3}>
+
+                    <FormattedMessage id="terms.section.privacy" />
                     </Typography>
                     <Typography paragraph>
                         <FormattedMessage id="terms.privacy" />
                     </Typography>
 
-                    <Typography variant="h6" mt={3}>
-                        <FormattedMessage id="terms.section.contact" />
+                    <Typography variant="h4" fontWeight="bold" gutterBottom mt={3}>
+
+                    <FormattedMessage id="terms.section.contact" />
                     </Typography>
                     <Typography>
                         <FormattedMessage
