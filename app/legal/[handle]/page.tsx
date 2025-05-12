@@ -87,13 +87,6 @@ export default function LegalPage({ params }: { params: { handle: string } }) {
                         <FormattedMessage id="terms.intro" />
                     </Typography>
 
-                    <Typography variant="h4" fontWeight="bold" gutterBottom mt={3}>
-
-                    <FormattedMessage id="terms.section.services" />
-                    </Typography>
-                    <Typography paragraph>
-                        <FormattedMessage id="terms.services" />
-                    </Typography>
 
                     <Typography variant="h4" fontWeight="bold" gutterBottom mt={3}>
                     <FormattedMessage id="terms.section.exchanges" />
