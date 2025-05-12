@@ -5,11 +5,13 @@ import {
     Button,
     Divider,
     FormControl,
+    FormControlLabel,
     FormHelperText,
     Grid,
     InputLabel,
     OutlinedInput,
     Typography,
+    Checkbox,
 } from "@mui/material";
 import * as Yup from "yup";
 import {Formik} from "formik";
@@ -20,6 +22,7 @@ import {submitOrder} from "../../lib/api";
 import {clearCart} from "../../lib/store/cartSlice";
 import {toast} from "sonner";
 import {FormattedMessage, useIntl} from "react-intl";
+import Link from "next/link";
 
 const customInput = {
     marginTop: 1,
@@ -75,7 +78,7 @@ export default function CheckoutInfo({
             </Typography>
 
             <Formik
-                initialValues={{email: "", phone: "", name: ""}}
+                initialValues={{email: "", phone: "", name: "", agreed: false}}
                 validationSchema={Yup.object().shape({
                     name: Yup.string()
                         .min(2)
@@ -88,9 +91,12 @@ export default function CheckoutInfo({
                     phone: Yup.string()
                         .matches(
                             /^05\d{8}$/,
-                            intl.formatMessage({id: "form.error.phone"}),
+                            intl.formatMessage({id: "form.error.phone"})
                         )
                         .required(intl.formatMessage({id: "form.error.phone"})),
+                    agreed: Yup.boolean()
+                        .oneOf([true], intl.formatMessage({id: "form.error.agree"}))
+                        .required(),
                 })}
                 onSubmit={async (values, {setSubmitting}) => {
                     const trimmedValues = {
@@ -103,13 +109,12 @@ export default function CheckoutInfo({
                     const order: Order = {...trimmedValues, cart} as Order;
 
                     try {
-                        const saved: Order = await submitOrder(order) as Order;
-                        console.log(saved)
+                        const saved: Order = (await submitOrder(order)) as Order;
                         onSuccess(saved.id);
                         toast.success(intl.formatMessage({id: "checkout.success"}), {
                             description: intl.formatMessage(
                                 {id: "checkout.orderId"},
-                                {id: saved.id},
+                                {id: saved.id}
                             ),
                         });
                         dispatch(clearCart());
@@ -138,10 +143,10 @@ export default function CheckoutInfo({
                                     <Grid item key={field.name}>
                                         <FormControl
                                             fullWidth
-                                            error={Boolean(
+                                            error={
                                                 touched[field.name as keyof typeof touched] &&
-                                                errors[field.name as keyof typeof errors],
-                                            )}
+                                                Boolean(errors[field.name as keyof typeof errors])
+                                            }
                                             sx={customInput}
                                         >
                                             <InputLabel
@@ -189,8 +194,64 @@ export default function CheckoutInfo({
                                     </Grid>
                                 ))}
 
+
+                                <FormControl
+                                    required
+                                    error={Boolean(touched.agreed && errors.agreed)}
+                                >
+                                    <FormControlLabel
+                                        sx={{mr: 0, justifyContent: "flex-end", ml: "auto",}}
+                                        control={
+                                            <Checkbox
+                                                checked={values.agreed}
+                                                onChange={handleChange}
+                                                name="agreed"
+                                                color="primary"
+                                                sx={{ml: 1}} // give space between text and checkbox
+                                            />
+                                        }
+                                        label={
+                                            <Typography fontSize="0.9rem" textAlign="right">
+                                                <FormattedMessage
+                                                    id="checkout.agreeToTerms"
+                                                    values={{
+                                                        link: (
+                                                            <Link
+                                                                href="/legal/terms"
+                                                                target="_blank"
+                                                                style={{textDecoration: "underline"}}
+                                                            >
+                                                                <FormattedMessage id="checkout.termsLinkText"/>
+                                                            </Link>
+                                                        ),
+                                                    }}
+                                                />
+                                            </Typography>
+                                        }
+                                    />
+                                    {touched.agreed && errors.agreed && (
+                                        <FormHelperText sx={{textAlign: "right"}}>
+                                            {errors.agreed}
+                                        </FormHelperText>
+                                    )}
+                                </FormControl>
+
                                 <Divider/>
 
+                                <Grid item>
+                                    <Typography
+                                        variant="h3"
+                                        component="h3"
+                                        fontWeight="normal"
+                                        fontSize="0.9rem"
+                                        color="text.secondary"
+                                        textAlign="right"
+                                        maxWidth={280}
+                                        sx={{ width: "fit-content", ml: "auto", mr: 0 }}
+                                    >
+                                        <FormattedMessage id="checkout.pickupNotice" />
+                                    </Typography>
+                                </Grid>
                                 <Grid item>
                                     <Button
                                         fullWidth

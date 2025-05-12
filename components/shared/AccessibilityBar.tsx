@@ -10,6 +10,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import LinkIcon from "@mui/icons-material/Link";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import BarcodeIcon from "@mui/icons-material/ViewColumn";
+import GavelIcon from "@mui/icons-material/Gavel";
 import { FormattedMessage } from "react-intl";
 
 const ActionItem = ({
@@ -208,6 +209,11 @@ export default function AccessibilityBar() {
               labelId="accessibility.reset"
               icon={<RestartAltIcon />}
               onClick={reset}
+            />
+            <ActionItem
+                labelId="terms.accessibility.title"
+                icon={<GavelIcon />}
+                onClick={() => window.open("/legal/accessibility", "_blank")}
             />
           </Stack>
         </Box>
