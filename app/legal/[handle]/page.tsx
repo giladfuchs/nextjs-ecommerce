@@ -1,12 +1,73 @@
 "use client";
+
 import { Box, Typography } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 import { notFound } from "next/navigation";
-import { email } from "../../../components/layout/Footer";
+import { email } from "components/layout/Footer";
 
+export const legalContent: Record<
+    "terms" | "accessibility",
+    {
+        sections: {
+            title: string;
+            paragraphs?: string[];
+            list?: string[];
+            contact?: string;
+        }[];
+    }
+> = {
+    accessibility: {
+        sections: [
+            {
+                title: "terms.accessibility.pickupTitle",
+                paragraphs: ["terms.accessibility.pickup"],
+            },
+            {
+                title: "terms.accessibility.title",
+                paragraphs: ["terms.accessibility.intro"],
+                list: [
+                    "accessibility.zoomIn",
+                    "accessibility.zoomOut",
+                    "accessibility.grayscale",
+                    "accessibility.contrast",
+                    "accessibility.invert",
+                    "accessibility.underline",
+                    "accessibility.readableFont",
+                ],
+                contact: "terms.accessibility.contact",
+            },
+        ],
+    },
+    terms: {
+        sections: [
+            {
+                title: "terms.title",
+                paragraphs: ["terms.intro"],
+            },
+            {
+                title: "terms.section.exchanges",
+                paragraphs: ["terms.exchanges"],
+            },
+            {
+                title: "terms.section.privacy",
+                paragraphs: ["terms.privacy"],
+            },
+            {
+                title: "terms.section.contact",
+                contact: "terms.contact",
+            },
+        ],
+    },
+};
 
 export default function LegalPage({ params }: { params: { handle: string } }) {
     const { handle } = params;
+
+    if (!["terms", "accessibility"].includes(handle)) {
+        notFound();
+    }
+
+    const content = legalContent[handle as "terms" | "accessibility"];
 
     return (
         <Box
@@ -25,100 +86,45 @@ export default function LegalPage({ params }: { params: { handle: string } }) {
                 },
             }}
         >
-            {handle === "accessibility" ? (
-                <>
-                    <Typography variant="h4" fontWeight="bold" gutterBottom>
-                    <FormattedMessage id="terms.accessibility.pickupTitle" />
-                    </Typography>
-                    <Typography paragraph>
-                        <FormattedMessage id="terms.accessibility.pickup" />
-                    </Typography>
-
-                    <Typography variant="h4" fontWeight="bold" gutterBottom>
-                        <FormattedMessage id="terms.accessibility.title" />
+            {content.sections.map((section, idx) => (
+                <section key={idx}>
+                    <Typography
+                        variant="h4"
+                        fontWeight="bold"
+                        gutterBottom
+                        mt={idx > 0 ? 4 : 0}
+                    >
+                        <FormattedMessage id={section.title} />
                     </Typography>
 
-                    <Typography paragraph>
-                        <FormattedMessage id="terms.accessibility.intro" />
-                    </Typography>
+                    {section.paragraphs?.map((pid, i) => (
+                        <Typography paragraph key={i}>
+                            <FormattedMessage id={pid} />
+                        </Typography>
+                    ))}
 
-                    <ul>
-                        <li>
-                            <FormattedMessage id="accessibility.zoomIn" />
-                        </li>
-                        <li>
-                            <FormattedMessage id="accessibility.zoomOut" />
-                        </li>
-                        <li>
-                            <FormattedMessage id="accessibility.grayscale" />
-                        </li>
-                        <li>
-                            <FormattedMessage id="accessibility.contrast" />
-                        </li>
-                        <li>
-                            <FormattedMessage id="accessibility.invert" />
-                        </li>
-                        <li>
-                            <FormattedMessage id="accessibility.underline" />
-                        </li>
-                        <li>
-                            <FormattedMessage id="accessibility.readableFont" />
-                        </li>
-                    </ul>
+                    {section.list && (
+                        <ul>
+                            {section.list.map((lid, i) => (
+                                <li key={i}>
+                                    <FormattedMessage id={lid} />
+                                </li>
+                            ))}
+                        </ul>
+                    )}
 
-
-
-                    <Typography mt={3}>
-                        <FormattedMessage
-                            id="terms.accessibility.contact"
-                            values={{
-                                email: <a href={`mailto:${email}`}>{email}</a>,
-                            }}
-                        />
-                    </Typography>
-                </>
-            ) : handle === "terms" ? (
-                <>
-                    <Typography variant="h4" fontWeight="bold" gutterBottom>
-                        <FormattedMessage id="terms.title" />
-                    </Typography>
-
-                    <Typography paragraph>
-                        <FormattedMessage id="terms.intro" />
-                    </Typography>
-
-
-                    <Typography variant="h4" fontWeight="bold" gutterBottom mt={3}>
-                    <FormattedMessage id="terms.section.exchanges" />
-                    </Typography>
-                    <Typography paragraph>
-                        <FormattedMessage id="terms.exchanges" />
-                    </Typography>
-
-                    <Typography variant="h4" fontWeight="bold" gutterBottom mt={3}>
-
-                    <FormattedMessage id="terms.section.privacy" />
-                    </Typography>
-                    <Typography paragraph>
-                        <FormattedMessage id="terms.privacy" />
-                    </Typography>
-
-                    <Typography variant="h4" fontWeight="bold" gutterBottom mt={3}>
-
-                    <FormattedMessage id="terms.section.contact" />
-                    </Typography>
-                    <Typography>
-                        <FormattedMessage
-                            id="terms.contact"
-                            values={{
-                                email: <a href={`mailto:${email}`}>{email}</a>,
-                            }}
-                        />
-                    </Typography>
-                </>
-            ) : (
-                notFound()
-            )}
+                    {section.contact && (
+                        <Typography mt={2}>
+                            <FormattedMessage
+                                id={section.contact}
+                                values={{
+                                    email: <a href={`mailto:${email}`}>{email}</a>,
+                                }}
+                            />
+                        </Typography>
+                    )}
+                </section>
+            ))}
         </Box>
     );
 }
