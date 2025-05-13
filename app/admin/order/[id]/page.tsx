@@ -218,8 +218,7 @@ export default function OrderViewPage({ params }: { params: { id: string } }) {
                                 intl.formatMessage({ id: "order.statusUpdate.success" }),
                                 {
                                   description: intl.formatMessage(
-                                      { id: "order.statusUpdate.newStatus" },
-                                      { status: nextStatus }
+                                      { id: `order.status.${nextStatus}` },
                                   ),
                                 }
                             );
