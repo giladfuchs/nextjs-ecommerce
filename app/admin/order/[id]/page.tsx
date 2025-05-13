@@ -25,6 +25,7 @@ import * as React from "react";
 import { Order, OrderStatus } from "../../../../lib/types";
 import { toast } from "sonner";
 import { useIntl, FormattedMessage } from "react-intl";
+import {OrderStatusChip} from "../../../../components/shared/OrderStatusChip";
 
 export default function OrderViewPage({ params }: { params: { id: string } }) {
   const { id } = params;
@@ -178,14 +179,26 @@ export default function OrderViewPage({ params }: { params: { id: string } }) {
           </Grid>
         ))}
 
-        <Typography
-          variant="h4"
-          color="primary"
-          textAlign="center"
-          sx={{ mb: 2, fontWeight: "bold", textTransform: "uppercase" }}
+        <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            gap={2}
+            mb={3}
         >
-          <FormattedMessage id="order.status" />: {order.status}
-        </Typography>
+          <h2
+              style={{
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+                color: `var(--color-status-${order.status})`, // or var(--color-text-strong) / primary
+                textAlign: "center",
+              }}
+          >
+            <FormattedMessage id="order.status" />:
+          </h2>
+          <OrderStatusChip status={order.status} size="large" />
+        </Box>
 
         {statusOptions[order.status].length > 0 && (
           <Box textAlign="center" mt={4}>
@@ -195,56 +208,45 @@ export default function OrderViewPage({ params }: { params: { id: string } }) {
 
             <Grid container justifyContent="center" spacing={2}>
               {statusOptions[order.status].map((nextStatus) => (
-                <Grid item key={nextStatus}>
-                  <button
-                    onClick={async () => {
-                      try {
-                        const updated = await updateOrderStatus(
-                          order.id,
-                          nextStatus,
-                        );
-                        toast.success(
-                          "✅ " +
-                            intl.formatMessage({
-                              id: "order.statusUpdate.success",
-                            }),
-                          {
-                            description: intl.formatMessage(
-                              { id: "order.statusUpdate.newStatus" },
-                              { status: nextStatus },
-                            ),
-                          },
-                        );
-                        setOrder(updated);
-                      } catch (err: any) {
-                        toast.error(
-                          "❌ " +
-                            intl.formatMessage({
-                              id: "order.statusUpdate.error",
-                            }),
-                          {
-                            description:
-                              err?.message ||
-                              intl.formatMessage({
-                                id: "order.statusUpdate.retry",
-                              }),
-                          },
-                        );
-                      }
-                    }}
-                    style={{
-                      padding: "8px 16px",
-                      borderRadius: "6px",
-                      border: "none",
-                      backgroundColor: "var(--color-accent)",
-                      color: "white",
-                      fontWeight: 600,
-                      cursor: "pointer",
-                    }}
-                  >
-                    {nextStatus}
-                  </button>
-                </Grid>
+                  <Grid item key={nextStatus}>
+                    <div
+                        onClick={async () => {
+                          try {
+                            const updated = await updateOrderStatus(order.id, nextStatus);
+                            toast.success(
+                                "✅ " +
+                                intl.formatMessage({ id: "order.statusUpdate.success" }),
+                                {
+                                  description: intl.formatMessage(
+                                      { id: "order.statusUpdate.newStatus" },
+                                      { status: nextStatus }
+                                  ),
+                                }
+                            );
+                            setOrder(updated);
+                          } catch (err: any) {
+                            toast.error(
+                                "❌ " +
+                                intl.formatMessage({ id: "order.statusUpdate.error" }),
+                                {
+                                  description:
+                                      err?.message ||
+                                      intl.formatMessage({ id: "order.statusUpdate.retry" }),
+                                }
+                            );
+                          }
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.querySelector(".MuiChip-root")!.style.filter = "brightness(0.9)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.querySelector(".MuiChip-root")!.style.filter = "";
+                        }}
+                        style={{ display: "inline-block", cursor: "pointer" }}
+                    >
+                      <OrderStatusChip status={nextStatus} size="large" clickable />
+                    </div>
+                  </Grid>
               ))}
             </Grid>
           </Box>

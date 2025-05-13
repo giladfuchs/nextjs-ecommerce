@@ -75,6 +75,10 @@ export const messages = {
         "order.statusUpdate.error": "שגיאה בעדכון סטטוס",
         "order.statusUpdate.retry": "נסה שוב בעוד רגע",
 
+        "order.status.new": "חדש",
+        "order.status.ready": "מוכן",
+        "order.status.done": "הושלם",
+        "order.status.canceled": "בוטל",
         "delete.title": "למחוק את {title}?",
         "delete.description": "פעולה זו אינה הפיכה.",
         "delete.cascadeWarning":

@@ -5,6 +5,7 @@ import { ColDef } from "ag-grid-community";
 import ActionRender from "./ActionRender";
 import { AGTableModelType } from "../../../lib/types";
 import OrderItemsRender from "./OrderItemsRender";
+import OrderStatusRender from "./OrderStatusRender";
 
 const defaultColDef: ColDef = {
   resizable: true,
@@ -31,7 +32,7 @@ const AGTable = ({
       rowHeight={30}
       frameworkComponents={{
         ActionRender,
-        OrderItemsRender,
+        OrderItemsRender,OrderStatusRender
       }}
     />
   </div>
