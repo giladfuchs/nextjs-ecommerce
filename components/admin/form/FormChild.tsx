@@ -67,7 +67,7 @@ export const FieldRenderer = ({ field, onChange }: FormFieldProps) => {
           control={
             <Switch
               onChange={(e, value) => onChange(value, field.key)}
-              checked={field.value as boolean}
+              checked={!!field.value as boolean}
             />
           }
           label={placeholder}

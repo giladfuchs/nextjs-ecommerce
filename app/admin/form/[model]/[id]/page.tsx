@@ -48,7 +48,6 @@ export default function FormPage({
             const obj = is_add
                 ? {}
                 : (array_obj_to_obj_with_key(model_objs, Number(id), "id") ?? {});
-
             const fields_to_set = create_form_fields(get_form_by_model(model), obj);
             setFields(fields_to_set);
         };
@@ -61,45 +60,57 @@ export default function FormPage({
     const handleSubmit = async (send_fields: FormField[]) => {
         const data = Object.fromEntries(
             send_fields.map((f) => {
-                const value = typeof f.value === "string" ? f.value.trim() : f.value;
-                return [f.key, value === "" ? null : value];
+                let value = f.value;
+
+                if (typeof value === "string") {
+                    value = value.trim();
+                    if (value === "") return [f.key, null];
+                }
+
+                if (f.type === "number" && typeof value === "string") {
+                    const num = parseFloat(value);
+                    return [f.key, isNaN(num) ? null : num];
+                }
+
+                return [f.key, value];
             })
         );
 
         if (model === ModelType.product) {
-            const filteredImages = data.images
-                .map((img: Image) => ({
-                    url: img.url.trim(),
-                    altText: img.altText.trim(),
+            const images: Image[] = Array.isArray(data.images) ? data.images : [];
+
+            const filteredImages = images
+                .map((img) => ({
+                    url: (img.url ?? "").trim(),
+                    altText: (img.altText ?? "").trim(),
                 }))
-                .filter((img: Image) => img.url !== "" || img.altText !== "");
+                .filter((img) => img.url !== "" || img.altText !== "");
 
             const hasInvalidImage = filteredImages.some(
-                (img: Image) => img.url === "" || img.altText === "",
+                (img) => img.url === "" || img.altText === ""
             );
 
             if (filteredImages.length === 0) {
-                setFieldError(intl.formatMessage({id: "form.error.required.images"}));
+                setFieldError(intl.formatMessage({ id: "form.error.required.images" }));
                 return;
             }
 
             if (hasInvalidImage) {
-                setFieldError(intl.formatMessage({id: "form.error.required.imageFields"}));
+                setFieldError(intl.formatMessage({ id: "form.error.required.imageFields" }));
                 return;
             }
-
-
             data.images = filteredImages;
 
+            if (!data.category) {
+                setFieldError(intl.formatMessage({id: "form.error.required.category"}));
+                return;
+            }
             const category = array_obj_to_obj_with_key(
                 list.categories,
                 data.category,
                 "handle",
             );
-            if(!category) {
-                setFieldError(intl.formatMessage({id: "form.error.required.category"}));
-                return;
-            }
+
             data.category_id = category?.id;
             delete data.category;
         }
