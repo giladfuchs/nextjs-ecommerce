@@ -67,15 +67,27 @@ export default function FormPage({
         );
 
         if (model === ModelType.product) {
-            const filteredImages = data.images.filter(
-                (img: Image) => img.url.trim() !== "" || img.altText.trim() !== "",
+            const filteredImages = data.images
+                .map((img: Image) => ({
+                    url: img.url.trim(),
+                    altText: img.altText.trim(),
+                }))
+                .filter((img: Image) => img.url !== "" || img.altText !== "");
+
+            const hasInvalidImage = filteredImages.some(
+                (img: Image) => img.url === "" || img.altText === "",
             );
 
             if (filteredImages.length === 0) {
                 setFieldError(intl.formatMessage({id: "form.error.required.images"}));
-
                 return;
             }
+
+            if (hasInvalidImage) {
+                setFieldError(intl.formatMessage({id: "form.error.required.imageFields"}));
+                return;
+            }
+
 
             data.images = filteredImages;
 
@@ -123,13 +135,17 @@ export default function FormPage({
                 <>
                     <FormChild title={title} fields={fields} onSubmit={handleSubmit}/>
                     {fieldError && (
-                        <Typography
-                            variant="h3"
-                            color="error"
-                            sx={{textAlign: "center", mt: 2, fontWeight: "bold"}}
+                        <h3
+                            style={{
+                                color: "red",
+                                textAlign: "center",
+                                marginTop: "1.5rem",
+                                fontWeight: "bold",
+                                fontSize: "2em",
+                            }}
                         >
                             {fieldError}
-                        </Typography>
+                        </h3>
                     )}
                 </>
             )}
