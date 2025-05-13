@@ -1,7 +1,7 @@
 # Next.js E-commerce Template 🛍️
 
 A modern, accessible e-commerce storefront built with **Next.js 14**, **TypeScript**, **MUI**, and **Tailwind CSS** — styled primarily with MUI, extended with Tailwind utilities.
-<br>Originally based on [Vercel Commerce](https://github.com/vercel/commerce), but significantly refactored and extended — now includes a full admin dashboard, product editor, and order management.
+<br>Includes a full admin dashboard, product editor, and order management.
 
 ---
 
