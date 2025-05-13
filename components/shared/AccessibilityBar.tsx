@@ -34,10 +34,10 @@ const ActionItem = ({
       py: 0.5,
       borderRadius: 1,
       cursor: "pointer",
-      backgroundColor: selected
-        ? "var(--category-active-bg, #e0f7fa)"
-        : "transparent",
-      fontWeight: selected ? "bold" : "normal",
+      ...(selected && {
+        backgroundColor: "var(--category-active-bg, #e0f7fa)",
+        fontWeight: "bold",
+      }),
       transition: "background-color 0.2s",
       "&:hover": {
         backgroundColor: "var(--category-hover-bg, #e0f7fa)",
@@ -211,9 +211,9 @@ export default function AccessibilityBar() {
               onClick={reset}
             />
             <ActionItem
-                labelId="terms.accessibility.title"
-                icon={<GavelIcon />}
-                onClick={() => window.open("/legal/accessibility", "_blank")}
+              labelId="terms.accessibility.title"
+              icon={<GavelIcon />}
+              onClick={() => window.open("/legal/accessibility", "_blank")}
             />
           </Stack>
         </Box>

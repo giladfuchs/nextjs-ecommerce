@@ -11,7 +11,7 @@ type Props = {
 };
 
 async function getProductByHandle(
-    handle: string,
+  handle: string,
 ): Promise<Product | undefined> {
   return (await getProducts()).find((p) => p.handle === handle);
 }
@@ -73,37 +73,37 @@ export default async function ProductPage({ params }: Props) {
     offers: {
       "@type": "AggregateOffer",
       availability: product.available
-          ? "https://schema.org/InStock"
-          : "https://schema.org/OutOfStock",
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
       priceCurrency: "ILS",
       price: product.price,
     },
   };
 
   return (
-      <>
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(productJsonLd),
-            }}
-        />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productJsonLd),
+        }}
+      />
 
-        <div className="mx-auto max-w-(--breakpoint-2xl) px-4">
-          <div className="flex flex-col gap-6 rounded-lg border border-theme bg-theme p-8 md:p-12 lg:flex-row lg:gap-8 ">
-            <div className="basis-full lg:basis-2/6">
-              <ProductDescription product={product} />
-            </div>
-            <div className="h-full w-full basis-full lg:basis-4/6">
-              <ProductGallery
-                  images={product.images.slice(0, 5).map((image: Image) => ({
-                    src: image.url,
-                    altText: image.altText,
-                  }))}
-              />
-            </div>
+      <div className="mx-auto max-w-(--breakpoint-2xl) px-4">
+        <div className="flex flex-col gap-6 rounded-lg border border-theme bg-theme p-8 md:p-12 lg:flex-row lg:gap-8 ">
+          <div className="basis-full lg:basis-2/6">
+            <ProductDescription product={product} />
+          </div>
+          <div className="h-full w-full basis-full lg:basis-4/6">
+            <ProductGallery
+              images={product.images.slice(0, 5).map((image: Image) => ({
+                src: image.url,
+                altText: image.altText,
+              }))}
+            />
           </div>
         </div>
-      </>
+      </div>
+    </>
   );
 }

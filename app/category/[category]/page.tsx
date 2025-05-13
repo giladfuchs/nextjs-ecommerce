@@ -4,7 +4,10 @@ import { notFound } from "next/navigation";
 
 import { getCategory, getCategoryProducts } from "lib/api";
 import { baseUrl, ICON_IMAGE_URL, SITE_NAME } from "lib/config";
-import { getCategoryTitle, getCategoryDescription } from "lib/assets/i18n/seo_heb";
+import {
+  getCategoryTitle,
+  getCategoryDescription,
+} from "lib/assets/i18n/seo_heb";
 import { Product } from "lib/types";
 
 const ClientProduct = dynamic(

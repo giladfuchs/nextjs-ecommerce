@@ -1,16 +1,24 @@
 "use client";
 
-import {LinearProgress} from "@mui/material";
-import {useLoading} from "lib/provider/LoadingProvider";
+import { LinearProgress } from "@mui/material";
+import { useLoading } from "lib/provider/LoadingProvider";
 
 export default function GlobalLoadingBar() {
-    const {loading} = useLoading();
+  const { loading } = useLoading();
 
-    if (!loading) return null;
+  if (!loading) return null;
 
-    return (
-        <div style={{position: "fixed", top: 0, left: 0, width: "100%", zIndex: 1301}}>
-            <LinearProgress color="secondary"/>
-        </div>
-    );
+  return (
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        zIndex: 1301,
+      }}
+    >
+      <LinearProgress color="secondary" />
+    </div>
+  );
 }

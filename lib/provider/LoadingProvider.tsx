@@ -1,26 +1,25 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
-import {subscribeGlobalLoading} from "../api";
-
+import { subscribeGlobalLoading } from "../api";
 
 const LoadingContext = createContext({
-    loading: false,
+  loading: false,
 });
 
 export const useLoading = () => useContext(LoadingContext);
 
 export function LoadingProvider({ children }: { children: React.ReactNode }) {
-    const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        const unsubscribe = subscribeGlobalLoading(setLoading);
-        return unsubscribe;
-    }, []);
+  useEffect(() => {
+    const unsubscribe = subscribeGlobalLoading(setLoading);
+    return unsubscribe;
+  }, []);
 
-    return (
-        <LoadingContext.Provider value={{ loading }}>
-            {children}
-        </LoadingContext.Provider>
-    );
+  return (
+    <LoadingContext.Provider value={{ loading }}>
+      {children}
+    </LoadingContext.Provider>
+  );
 }

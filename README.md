@@ -10,6 +10,7 @@ A modern, accessible e-commerce storefront built with **Next.js 14**, **TypeScri
 **🌐 Live Preview:** [modern-ecommerce-store.vercel.app](https://modern-ecommerce-store.vercel.app) &nbsp;&nbsp;&nbsp; **🗄️ Backend Repository:** [GitHub - nextjs-ecommerce-api](https://github.com/giladfuchs/nextjs-ecommerce-api)
 
 ---
+
 ## 🚀 Getting Started
 
 To run the project locally:
@@ -36,6 +37,7 @@ If you find this project useful, consider giving it a ⭐ on GitHub — it helps
 To contribute, fork the repository and submit a pull request with your enhancements or bug fixes.
 
 ---
+
 ## ✨ Key Features
 
 - 🎨 **MUI + Tailwind CSS** hybrid styling
@@ -52,7 +54,9 @@ To contribute, fork the repository and submit a pull request with your enhanceme
   - Utilizes **Next.js 14’s Metadata API** for dynamic `<head>` tags
   - Supports **Open Graph** and **Twitter Card** metadata
   - Enables **per-page titles**, descriptions, and rich social previews
+
 ---
+
 ## 🧩 Tech Stack
 
 - **Next.js 14**, **React 18**, **TypeScript**
@@ -63,6 +67,7 @@ To contribute, fork the repository and submit a pull request with your enhanceme
 - **Sonner** (toast notifications)
 
 ---
+
 ### 🛠️ Environment Variables
 
 Create a `.env` file at the root of your project:
@@ -110,10 +115,13 @@ lib/
 ```
 
 ---
+
 ## 🙏 Acknowledgments
 
 - [Vercel Commerce](https://github.com/vercel/commerce) for the initial template.
+
 ---
+
 ## 📄 License
 
 This project is licensed under the [MIT License](./LICENSE).

@@ -32,7 +32,8 @@ const AGTable = ({
       rowHeight={30}
       frameworkComponents={{
         ActionRender,
-        OrderItemsRender,OrderStatusRender
+        OrderItemsRender,
+        OrderStatusRender,
       }}
     />
   </div>
