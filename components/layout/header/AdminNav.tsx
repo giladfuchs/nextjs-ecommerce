@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
-import { Box, IconButton, Drawer, List, ListItemButton, ListItemText, Typography, useMediaQuery } from "@mui/material";
+import {useState} from "react";
+import {useRouter, usePathname} from "next/navigation";
+import {Box, IconButton, Drawer, List, ListItemButton, ListItemText, Typography, useMediaQuery} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { FormattedMessage } from "react-intl";
-import { ModelType } from "../../../lib/types";
+import {FormattedMessage} from "react-intl";
+import {ModelType} from "../../../lib/types";
 
 const adminRoutes: ModelType[] = [
     ModelType.order,
@@ -36,6 +36,7 @@ export function AdminNav() {
                         sx={{
                             backgroundColor: isActive ? "var(--color-accent)" : "transparent",
                             "&:hover": { backgroundColor: "var(--color-accent)" },
+                            justifyContent: "flex-end", // align entire button content right
                         }}
                     >
                         <ListItemText
@@ -49,6 +50,7 @@ export function AdminNav() {
                                     <FormattedMessage id={`admin.${model}.title`} />
                                 </Typography>
                             }
+                            sx={{ textAlign: "right" }} // align text inside ListItemText
                         />
                     </ListItemButton>
                 );
@@ -83,9 +85,10 @@ export function AdminNav() {
                                         sx={{
                                             color: isActive ? "white" : "black",
                                             fontWeight: isActive ? "bold" : "normal",
+                                            textAlign: "right"
                                         }}
                                     >
-                                        <FormattedMessage id={`admin.${model}.title`} />
+                                        <FormattedMessage id={`admin.${model}.title`}/>
                                     </Typography>
                                 }
                             />
@@ -99,10 +102,12 @@ export function AdminNav() {
     return (
         <>
             <IconButton color="primary" onClick={toggleDrawer}>
-                <MenuIcon />
+                <MenuIcon/>
             </IconButton>
-            <Drawer anchor="left" open={open} onClose={toggleDrawer}>
-                {renderList}
+            <Drawer anchor="left" open={open} onClose={toggleDrawer} transitionDuration={0}>
+                <Box sx={{ width: 250 }} dir="rtl" textAlign="right">
+                    {renderList}
+                </Box>
             </Drawer>
         </>
     );
