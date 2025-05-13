@@ -30,7 +30,7 @@ body {
     background-color: var(--color-bg);
 }
 
-/* ✅ Mobile-friendly readable font styles */
+
 html.readable-font,
 html.readable-font body,
 html.readable-font .MuiButton-root,
@@ -79,6 +79,8 @@ html.high-contrast main {
     background-color: var(--color-bg) !important;
     color: var(--color-text-strong) !important;
 }
+
+
 
 html.high-contrast * {
     color: var(--color-text-strong) !important;
@@ -151,7 +153,6 @@ html.high-contrast .bg-blue-600 {
 .dialog-panel * {
     font-size: inherit !important;
 }
-
 
 
 html.grayscale {

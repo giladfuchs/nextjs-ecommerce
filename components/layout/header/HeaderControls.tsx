@@ -13,62 +13,13 @@ import {
     Box,
     ListItemButton,
     ListItemText,
-    Typography, Tooltip, IconButton,
+    Typography, Tooltip, IconButton, useMediaQuery,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 import Cart from "components/cart/Cart";
-import {ModelType} from "../../../lib/types";
+import {AdminNav} from "./AdminNav";
 
-const adminRoutes: ModelType[] = [
-    ModelType.order,
-    ModelType.product,
-    ModelType.category,
-];
-
-export function AdminNav() {
-    const router = useRouter();
-    const pathname = usePathname();
-
-    return (
-        <Box display="flex" gap={2} flexDirection="row">
-            {adminRoutes.map((model) => {
-                const isActive = pathname === `/admin/${model}`;
-
-                return (
-                    <ListItemButton
-                        key={model}
-                        onClick={() => router.push(`/admin/${model}`)}
-                        sx={{
-                            borderRadius: "12px",
-                            px: 3,
-                            py: 0.5,
-                            backgroundColor: isActive ? "var(--color-accent)" : "transparent",
-                            transition: "background-color 0.2s ease",
-                            "&:hover": {
-                                backgroundColor: "var(--color-accent)",
-                            },
-                        }}
-                    >
-                        <ListItemText
-                            primary={
-                                <Typography
-                                    variant="body1"
-                                    sx={{
-                                        color: isActive ? "white" : "black",
-                                        fontWeight: isActive ? "bold" : "normal",
-                                    }}
-                                >
-                                    <FormattedMessage id={`admin.${model}.title`}/>
-                                </Typography>
-                            }
-                        />
-                    </ListItemButton>
-                );
-            })}
-        </Box>
-    );
-}
 
 function Search() {
     const intl = useIntl();
@@ -151,23 +102,23 @@ function AuthButtons() {
 
     return (
         <>
-            <Tooltip title={<FormattedMessage id="search.admin" />}>
+            <Tooltip title={<FormattedMessage id="search.admin"/>}>
                 <IconButton
                     color="primary"
                     onClick={() => router.push("/admin")}
                     size="large"
                 >
-                    <AdminPanelSettingsIcon />
+                    <AdminPanelSettingsIcon/>
                 </IconButton>
             </Tooltip>
 
-            <Tooltip title={<FormattedMessage id="search.logout" />}>
+            <Tooltip title={<FormattedMessage id="search.logout"/>}>
                 <IconButton
                     color="error"
                     onClick={handleLogout}
                     size="large"
                 >
-                    <LogoutIcon />
+                    <LogoutIcon/>
                 </IconButton>
             </Tooltip>
         </>
@@ -179,15 +130,24 @@ export default function HeaderControls() {
     const pathname = usePathname();
 
     const isAdmin = pathname.startsWith("/admin");
+    const isDesktop = useMediaQuery("(min-width:768px)");
 
     if (isAdmin) {
         return (
             <>
-            <div className="flex w-full md:w-1/3 justify-center px-2">
-                <AdminNav/>
-            </div>
-        <div className="flex justify-end w-auto md:w-1/3">
-        </div></>
+                {isDesktop ? <><div className="flex w-full md:w-1/3 justify-center px-2">
+                        <AdminNav/>
+                    </div>
+                    <div className="flex justify-end w-auto md:w-1/3">
+                    </div></>:<>
+                    <div className="flex w-full md:w-1/3 justify-center px-2">
+
+                    </div>
+                    <div className="flex justify-end w-auto md:w-1/3">
+                        <AdminNav/>
+                    </div></>
+
+                }</>
         );
     }
 
