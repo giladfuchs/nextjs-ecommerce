@@ -15,18 +15,21 @@ import {
 } from "lib/config";
 
 import {ReduxProvider} from "../lib/provider/ReduxProvider";
-import AccessibilityBar from "../components/shared/AccessibilityBar";
 import {ThemeProviderLayout} from "../lib/provider/ThemeProviderLayout";
 import IntProvider from "../lib/provider/IntProvider";
+import {LoadingProvider} from "lib/provider/LoadingProvider";
 
+import GlobalLoadingBar from "components/shared/GlobalLoadingBar";
+import {LoadingProductsList} from "components/shared/Loading";
 import Header from "components/layout/header";
-import Footer from "../components/layout/Footer";
-import {LoadingProductsList} from "../components/shared/Loading"; // ✅ add this
+import Footer from "components/layout/Footer";
+import AccessibilityBar from "../components/shared/AccessibilityBar";
 
 import {
     metadata_site_description,
     metadata_site_title,
-} from "../lib/assets/i18n/seo_heb";
+} from "lib/assets/i18n/seo_heb";
+
 
 export const metadata = {
     metadataBase: new URL(baseUrl),
@@ -76,30 +79,35 @@ export default async function RootLayout({
         <ReduxProvider>
             <IntProvider>
                 <ThemeProviderLayout>
-                    <div
-                        id="font-scale-wrapper"
-                        className="bg-theme text-theme selection:bg-teal-300 dark:bg-theme-dark dark:text-theme dark:selection:bg-pink-500 dark:selection:text-white"
-                    >
-                        <Box
-                            sx={{
-                                display: "flex",
-                                flexDirection: "column",
-                                minHeight: "100vh",
-                                bgcolor: "var(--color-bg)",
-                            }}
+                    <LoadingProvider>
+                        <div
+                            id="font-scale-wrapper"
+                            className="bg-theme text-theme selection:bg-teal-300 dark:bg-theme-dark dark:text-theme dark:selection:bg-pink-500 dark:selection:text-white"
                         >
-                            <Header/>
-                            <Box component="main" sx={{flexGrow: 1}}>
-                                <Suspense fallback={<LoadingProductsList/>}>
-                                    {children}
-                                </Suspense>
+                            <GlobalLoadingBar/>
+
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    minHeight: "100vh",
+                                    bgcolor: "var(--color-bg)",
+                                }}
+                            >
+                                <Header/>
+                                <Box component="main" sx={{flexGrow: 1}}>
+                                    <Suspense fallback={<LoadingProductsList/>}>
+                                        {children}
+                                    </Suspense>
+                                </Box>
+                                <Footer/>
                             </Box>
-                            <Footer/>
-                        </Box>
-                        <Analytics/>
-                        <Toaster richColors position="bottom-center"/>
-                        <AccessibilityBar/>
-                    </div>
+
+                            <Analytics/>
+                            <Toaster richColors position="bottom-center"/>
+                            <AccessibilityBar/>
+                        </div>
+                    </LoadingProvider>
                 </ThemeProviderLayout>
             </IntProvider>
         </ReduxProvider>

@@ -2,7 +2,21 @@ import {Order, OrderStatus, ModelType} from "../types";
 import {API_URL} from "../config";
 import {cache} from "./cache";
 
-async function serverFetch(
+type Callback = (loading: boolean) => void;
+
+let subscribers: Callback[] = [];
+
+export function setGlobalLoading(value: boolean) {
+    subscribers.forEach((cb) => cb(value));
+}
+
+export function subscribeGlobalLoading(cb: Callback) {
+    subscribers.push(cb);
+    return () => {
+        subscribers = subscribers.filter((fn) => fn !== cb);
+    };
+}
+export async function serverFetch(
     input: string,
     init: RequestInit = {},
 ): Promise<Response> {
@@ -15,8 +29,9 @@ async function serverFetch(
         ...restInit
     } = init as any;
 
-    const token =
-        typeof window !== "undefined" ? localStorage.getItem("token") : null;
+    const isBrowser = typeof window !== "undefined";
+
+    const token = isBrowser ? localStorage.getItem("token") : null;
 
     let finalBody = body;
     let finalHeaders: HeadersInit = headers || {};
@@ -36,15 +51,21 @@ async function serverFetch(
         };
     }
 
-    return fetch(`${API_URL}${input}`, {
-        ...restInit,
-        headers: finalHeaders,
-        body: finalBody,
-        credentials: "include",
-        cache: initCache || "no-store",
-    });
-}
+    if (isBrowser) setGlobalLoading(true);
 
+    try {
+        const res = await fetch(`${API_URL}${input}`, {
+            ...restInit,
+            headers: finalHeaders,
+            body: finalBody,
+            credentials: "include",
+            cache: initCache || "no-store",
+        });
+        return res;
+    } finally {
+        if (isBrowser) setGlobalLoading(false);
+    }
+}
 async function handleResponse<T = any>(response: Response, context: string): Promise<T> {
     if (!response.ok) {
         const err = await response.json().catch(() => ({}));
