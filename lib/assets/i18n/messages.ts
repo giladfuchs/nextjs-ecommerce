@@ -41,7 +41,8 @@ export const messages = {
     "form.error.required.category_id": "חובה לבחור קטגוריה",
     "form.error.required.position": "חובה למלא מיקום בתצוגה",
     "form.error.required.images": "חובה למלא לפחות תמונה אחת",
-    "form.error.required.imageFields": "כל תמונה חייבת להכיל גם כתובת URL וגם טקסט חלופי.",
+    "form.error.required.imageFields":
+      "כל תמונה חייבת להכיל גם כתובת URL וגם טקסט חלופי.",
 
     "image.upload.title": "העלאת תמונה",
     "image.upload.choose": "בחר תמונה",
