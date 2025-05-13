@@ -3,6 +3,9 @@
 import { notFound } from "next/navigation";
 import Price from "components/shared/Price";
 import { getOrderById, updateOrderStatus } from "../../../../lib/api";
+import {green, red, blue, orange, purple, grey, lime} from "@mui/material/colors";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import PhoneIcon from "@mui/icons-material/PhonelinkRingTwoTone";
 import {
   Box,
   Divider,
@@ -60,82 +63,104 @@ export default function OrderViewPage({ params }: { params: { id: string } }) {
           <FormattedMessage id="order.title" /> #{order.id}
         </Typography>
 
+
+
+
+
+
         <Grid container justifyContent="center" sx={{ mb: 4 }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <List component="nav" disablePadding>
                 <ListItem disableGutters>
-                  <ListItemIcon sx={{ minWidth: 40 }}>
+                  <ListItemIcon sx={{ minWidth: 40, color: blue[700] }}>
                     <PersonTwoToneIcon sx={{ fontSize: "1.3rem" }} />
                   </ListItemIcon>
                   <ListItemText
-                    primary={<FormattedMessage id="order.name" />}
-                    secondary={order.name}
-                    sx={{ textAlign: "right" }}
+                      primary={<FormattedMessage id="order.name" />}
+                      secondary={order.name}
+                      sx={{ textAlign: "right" }}
                   />
+                </ListItem>
+
+                <ListItem disableGutters>
+                  <ListItemIcon sx={{ minWidth: 40 }}>
+                    <a href={`tel:${order.phone}`} style={{ color: green[500] }}>
+                      <PhoneIcon sx={{ fontSize: "1.3rem" }} />
+                    </a>
+                  </ListItemIcon>
+
+                  <ListItemText
+                      primary={<FormattedMessage id="order.phone" />}
+                      secondary={order.phone}
+                      sx={{ textAlign: "right" }}
+                  />
+
+                  <ListItemIcon sx={{ minWidth: 40, ml: 1 }}>
+                    <a
+                        href={`https://wa.me/${order.phone.replace(/^0/, "972")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "#25D366" }}
+                    >
+                      <WhatsAppIcon sx={{ fontSize: "1.3rem" }} />
+                    </a>
+                  </ListItemIcon>
                 </ListItem>
                 <ListItem disableGutters>
                   <ListItemIcon sx={{ minWidth: 40 }}>
-                    <MailTwoToneIcon sx={{ fontSize: "1.3rem" }} />
+                    <a href={`mailto:${order.email}`} style={{ color: red[500] }}>
+                      <MailTwoToneIcon sx={{ fontSize: "1.3rem" }} />
+                    </a>
                   </ListItemIcon>
                   <ListItemText
-                    primary={<FormattedMessage id="order.email" />}
-                    secondary={order.email}
-                    sx={{ textAlign: "right" }}
+                      primary={<FormattedMessage id="order.email" />}
+                      secondary={order.email}
+                      sx={{ textAlign: "right" }}
                   />
                 </ListItem>
-                <ListItem disableGutters>
-                  <ListItemIcon sx={{ minWidth: 40 }}>
-                    <PhonelinkRingTwoToneIcon sx={{ fontSize: "1.3rem" }} />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={<FormattedMessage id="order.phone" />}
-                    secondary={order.phone}
-                    sx={{ textAlign: "right" }}
-                  />
-                </ListItem>
+
               </List>
             </Grid>
 
             <Grid item xs={12} sm={6}>
               <List component="nav" disablePadding>
                 <ListItem disableGutters>
-                  <ListItemIcon sx={{ minWidth: 40 }}>
+                  <ListItemIcon sx={{ minWidth: 40, color: purple[500] }}>
                     <AccessTimeTwoToneIcon sx={{ fontSize: "1.3rem" }} />
                   </ListItemIcon>
                   <ListItemText
-                    primary={<FormattedMessage id="order.date" />}
-                    secondary={new Date(order.createdAt).toLocaleDateString(
-                      "he-IL",
-                    )}
-                    sx={{ textAlign: "right" }}
+                      primary={<FormattedMessage id="order.date" />}
+                      secondary={new Date(order.createdAt).toLocaleDateString("he-IL")}
+                      sx={{ textAlign: "right" }}
                   />
                 </ListItem>
+
                 <ListItem disableGutters>
-                  <ListItemIcon sx={{ minWidth: 40 }}>
+                  <ListItemIcon sx={{ minWidth: 40, color: lime[700] }}>
                     <ShoppingBagTwoToneIcon sx={{ fontSize: "1.3rem" }} />
                   </ListItemIcon>
                   <ListItemText
-                    primary={<FormattedMessage id="order.quantity" />}
-                    secondary={order.totalQuantity}
-                    sx={{ textAlign: "right" }}
+                      primary={<FormattedMessage id="order.quantity" />}
+                      secondary={order.totalQuantity}
+                      sx={{ textAlign: "right" }}
                   />
                 </ListItem>
+
                 <ListItem disableGutters>
-                  <ListItemIcon sx={{ minWidth: 40 }}>
+                  <ListItemIcon sx={{ minWidth: 40, color: blue[500] }}>
                     <MonetizationOnTwoToneIcon sx={{ fontSize: "1.3rem" }} />
                   </ListItemIcon>
                   <ListItemText
-                    primary={<FormattedMessage id="order.total" />}
-                    secondary={<Price amount={order.cost} />}
-                    sx={{ textAlign: "right" }}
+                      primary={<FormattedMessage id="order.total" />}
+                      secondary={<Price amount={order.cost} />}
+                      sx={{ textAlign: "right" }}
                   />
                 </ListItem>
               </List>
             </Grid>
           </Grid>
         </Grid>
-
         <Divider sx={{ my: 2 }} />
 
         {order.items.map((product: any) => (
