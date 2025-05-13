@@ -6,34 +6,51 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --font-scale-factor: 1;
-  --color-accent: #a3bf24;
-  --color-bg: #f4f9f8;
-  --color-text-strong: #000;
-  --color-chip: #f4f4f4;
-  --color-border: #ddd;
+    --font-scale-factor: 1;
+    --color-accent: #a3bf24;
+    --color-bg: #f4f9f8;
+    --color-text-strong: #000;
+    --color-chip: #f4f4f4;
+    --color-border: #ddd;
 }
 
 html {
-  direction: rtl;
-  font-family: "Assistant", sans-serif;
-  font-size: calc(16px * var(--font-scale-factor));
-  background-color: var(--color-bg);
+    direction: rtl;
+    font-family: "Assistant", sans-serif;
+    font-size: calc(16px * var(--font-scale-factor));
+    background-color: var(--color-bg);
 }
 
 body {
-  direction: rtl;
-  text-align: right;
-  font-family: inherit;
-  font-size: calc(1em * var(--font-scale-factor));
-  overflow-x: hidden;
-  background-color: var(--color-bg);
+    direction: rtl;
+    text-align: right;
+    font-family: inherit;
+    font-size: calc(1em * var(--font-scale-factor));
+    overflow-x: hidden;
+    background-color: var(--color-bg);
 }
 
+/* ✅ Mobile-friendly readable font styles */
 html.readable-font,
-html.readable-font .MuiButton-root {
-  font-family:
-    "Arial Rounded MT Bold", "Tahoma", "Verdana", sans-serif !important;
+html.readable-font body,
+html.readable-font .MuiButton-root,
+html.readable-font .MuiTypography-root,
+html.readable-font input,
+html.readable-font textarea,
+html.readable-font button,
+html.readable-font select,
+html.readable-font label,
+html.readable-font span,
+html.readable-font p,
+html.readable-font div,
+html.readable-font a {
+    font-family: "Arial Rounded MT Bold",
+    "Tahoma",
+    "Verdana",
+    "system-ui",
+    sans-serif !important;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
 }
 
 html.underline-links .MuiButton-root,
@@ -41,16 +58,16 @@ html.underline-links .MuiButton-root *,
 html.underline-links a,
 html.underline-links h3.product-title,
 html.underline-links .autocomplete-option {
-  text-decoration: underline !important;
+    text-decoration: underline !important;
 }
 
 html.high-contrast {
-  --category-hover-bg: #333 !important;
-  --category-active-bg: #444 !important;
-  --color-bg: black !important;
-  --color-text-strong: yellow !important;
-  --color-border: yellow !important;
-  --color-chip: black !important;
+    --category-hover-bg: #333 !important;
+    --category-active-bg: #444 !important;
+    --color-bg: black !important;
+    --color-text-strong: yellow !important;
+    --color-border: yellow !important;
+    --color-chip: black !important;
 }
 
 html.high-contrast,
@@ -59,38 +76,38 @@ html.high-contrast body,
 html.high-contrast #font-scale-wrapper,
 html.high-contrast .app,
 html.high-contrast main {
-  background-color: var(--color-bg) !important;
-  color: var(--color-text-strong) !important;
+    background-color: var(--color-bg) !important;
+    color: var(--color-text-strong) !important;
 }
 
 html.high-contrast * {
-  color: var(--color-text-strong) !important;
-  border-color: var(--color-border) !important;
-  caret-color: var(--color-text-strong) !important;
+    color: var(--color-text-strong) !important;
+    border-color: var(--color-border) !important;
+    caret-color: var(--color-text-strong) !important;
 }
 
 html.high-contrast .MuiButton-root,
 html.high-contrast button {
-  background-color: var(--color-bg) !important;
-  color: var(--color-text-strong) !important;
-  border-color: var(--color-border) !important;
+    background-color: var(--color-bg) !important;
+    color: var(--color-text-strong) !important;
+    border-color: var(--color-border) !important;
 }
 
 html.high-contrast input,
 html.high-contrast textarea,
 html.high-contrast .MuiOutlinedInput-root {
-  background-color: var(--color-bg) !important;
-  color: var(--color-text-strong) !important;
-  border: 1px solid var(--color-border) !important;
+    background-color: var(--color-bg) !important;
+    color: var(--color-text-strong) !important;
+    border: 1px solid var(--color-border) !important;
 }
 
 html.high-contrast .MuiSvgIcon-root {
-  color: var(--color-text-strong) !important;
+    color: var(--color-text-strong) !important;
 }
 
 html.high-contrast img {
-  border: 2px solid var(--color-border) !important;
-  border-radius: 4px;
+    border: 2px solid var(--color-border) !important;
+    border-radius: 4px;
 }
 
 html.high-contrast .MuiAutocomplete-root,
@@ -99,64 +116,72 @@ html.high-contrast .MuiFormLabel-root,
 html.high-contrast .MuiAutocomplete-listbox,
 html.high-contrast .MuiPaper-root,
 html.high-contrast .MuiAutocomplete-option {
-  background-color: var(--color-bg) !important;
-  color: var(--color-text-strong) !important;
-  border-color: var(--color-border) !important;
+    background-color: var(--color-bg) !important;
+    color: var(--color-text-strong) !important;
+    border-color: var(--color-border) !important;
 }
 
 html.high-contrast label,
 html.high-contrast .MuiInputLabel-root {
-  color: var(--color-text-strong) !important;
+    color: var(--color-text-strong) !important;
 }
 
 html.high-contrast .footer,
 html.high-contrast .accessibility-panel {
-  background-color: var(--color-bg) !important;
+    background-color: var(--color-bg) !important;
 }
 
 html.high-contrast .price-badge {
-  background-color: black !important;
-  color: yellow !important;
+    background-color: black !important;
+    color: yellow !important;
 }
 
 html.high-contrast .price-badge * {
-  color: yellow !important;
+    color: yellow !important;
 }
 
 html.high-contrast .bg-blue-600 {
-  background-color: black !important;
-  color: yellow !important;
+    background-color: black !important;
+    color: yellow !important;
 }
 
 .MuiDialog-root,
 .MuiDialogContent-root,
 .MuiTypography-root,
 .dialog-panel * {
-  font-size: inherit !important;
+    font-size: inherit !important;
 }
 
+
+
 html.grayscale {
-  filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 html.font-size-80 {
-  --font-scale-factor: 0.8;
+    --font-scale-factor: 0.8;
 }
+
 html.font-size-90 {
-  --font-scale-factor: 0.9;
+    --font-scale-factor: 0.9;
 }
+
 html.font-size-100 {
-  --font-scale-factor: 1;
+    --font-scale-factor: 1;
 }
+
 html.font-size-110 {
-  --font-scale-factor: 1.1;
+    --font-scale-factor: 1.1;
 }
+
 html.font-size-120 {
-  --font-scale-factor: 1.2;
+    --font-scale-factor: 1.2;
 }
+
 html.font-size-150 {
-  --font-scale-factor: 1.5;
+    --font-scale-factor: 1.5;
 }
+
 html.font-size-200 {
-  --font-scale-factor: 2;
+    --font-scale-factor: 2;
 }

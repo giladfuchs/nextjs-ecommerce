@@ -1,9 +1,9 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { toast } from "sonner";
-import { useIntl, FormattedMessage } from "react-intl";
+import {useState, useEffect, useRef} from "react";
+import {useRouter, usePathname, useSearchParams} from "next/navigation";
+import {useIntl, FormattedMessage} from "react-intl";
 
+import {toast} from "sonner";
 import {
   TextField,
   InputAdornment,
@@ -14,7 +14,7 @@ import {
   Typography,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import { ModelType } from "../../../lib/types";
+import {ModelType} from "../../../lib/types";
 
 const adminRoutes: ModelType[] = [
   ModelType.order,
