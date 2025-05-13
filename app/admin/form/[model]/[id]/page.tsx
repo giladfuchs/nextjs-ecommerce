@@ -96,6 +96,10 @@ export default function FormPage({
                 data.category,
                 "handle",
             );
+            if(!category) {
+                setFieldError(intl.formatMessage({id: "form.error.required.category"}));
+                return;
+            }
             data.category_id = category?.id;
             delete data.category;
         }
