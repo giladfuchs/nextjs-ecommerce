@@ -51,9 +51,9 @@ const fields = [
 ];
 
 export default function CheckoutInfo({
-                                       onSuccess,
-                                       onError,
-                                     }: {
+  onSuccess,
+  onError,
+}: {
   onSuccess: (orderId: number) => void;
   onError: () => void;
 }) {
@@ -62,217 +62,219 @@ export default function CheckoutInfo({
   const intl = useIntl();
 
   return (
-      <Box
-          data-testid="checkout-page"
-          sx={{
-            width: "100%",
-            mx: "auto",
-            p: 2,
-            display: "flex",
-            flexDirection: "column",
-            gap: 2,
-            fontSize: "inherit",
-          }}
+    <Box
+      data-testid="checkout-page"
+      sx={{
+        width: "100%",
+        mx: "auto",
+        p: 2,
+        display: "flex",
+        flexDirection: "column",
+        gap: 2,
+        fontSize: "inherit",
+      }}
+    >
+      <Typography variant="h4" textAlign="center" fontWeight="bold" mb={2}>
+        <FormattedMessage id="checkout.contactDetails" />
+      </Typography>
+
+      <Formik
+        initialValues={{ email: "", phone: "", name: "", agreed: false }}
+        validationSchema={Yup.object().shape({
+          name: Yup.string()
+            .min(2)
+            .max(255)
+            .required(intl.formatMessage({ id: "form.error.name" })),
+          email: Yup.string()
+            .email(intl.formatMessage({ id: "form.error.email" }))
+            .max(255)
+            .required(intl.formatMessage({ id: "form.error.email" })),
+          phone: Yup.string()
+            .matches(
+              /^05\d{8}$/,
+              intl.formatMessage({ id: "form.error.phone" }),
+            )
+            .required(intl.formatMessage({ id: "form.error.phone" })),
+          agreed: Yup.boolean()
+            .oneOf([true], intl.formatMessage({ id: "form.error.agree" }))
+            .required(),
+        })}
+        onSubmit={async (values, { setSubmitting }) => {
+          const trimmedValues = {
+            ...values,
+            name: values.name.trim(),
+            email: values.email.trim(),
+            phone: "0" + values.phone.trim().replace(/^0+/, ""),
+          };
+
+          const order: Order = { ...trimmedValues, cart } as Order;
+
+          try {
+            const saved: Order = (await submitOrder(order)) as Order;
+            onSuccess(saved.id);
+            toast.success(intl.formatMessage({ id: "checkout.success" }), {
+              description: intl.formatMessage(
+                { id: "checkout.orderId" },
+                { id: saved.id },
+              ),
+            });
+            dispatch(clearCart());
+          } catch (err) {
+            console.error("❌ Order failed:", err);
+            toast.error(intl.formatMessage({ id: "checkout.error" }));
+            onError();
+          } finally {
+            setSubmitting(false);
+          }
+        }}
       >
-        <Typography variant="h4" textAlign="center" fontWeight="bold" mb={2}>
-          <FormattedMessage id="checkout.contactDetails" />
-        </Typography>
-
-        <Formik
-            initialValues={{ email: "", phone: "", name: "", agreed: false }}
-            validationSchema={Yup.object().shape({
-              name: Yup.string()
-                  .min(2)
-                  .max(255)
-                  .required(intl.formatMessage({ id: "form.error.name" })),
-              email: Yup.string()
-                  .email(intl.formatMessage({ id: "form.error.email" }))
-                  .max(255)
-                  .required(intl.formatMessage({ id: "form.error.email" })),
-              phone: Yup.string()
-                  .matches(
-                      /^05\d{8}$/,
-                      intl.formatMessage({ id: "form.error.phone" }),
-                  )
-                  .required(intl.formatMessage({ id: "form.error.phone" })),
-              agreed: Yup.boolean()
-                  .oneOf([true], intl.formatMessage({ id: "form.error.agree" }))
-                  .required(),
-            })}
-            onSubmit={async (values, { setSubmitting }) => {
-              const trimmedValues = {
-                ...values,
-                name: values.name.trim(),
-                email: values.email.trim(),
-                phone: "0" + values.phone.trim().replace(/^0+/, ""),
-              };
-
-              const order: Order = { ...trimmedValues, cart } as Order;
-
-              try {
-                const saved: Order = (await submitOrder(order)) as Order;
-                onSuccess(saved.id);
-                toast.success(intl.formatMessage({ id: "checkout.success" }), {
-                  description: intl.formatMessage(
-                      { id: "checkout.orderId" },
-                      { id: saved.id },
-                  ),
-                });
-                dispatch(clearCart());
-              } catch (err) {
-                console.error("❌ Order failed:", err);
-                toast.error(intl.formatMessage({ id: "checkout.error" }));
-                onError();
-              } finally {
-                setSubmitting(false);
-              }
-            }}
-        >
-          {({
-              errors,
-              handleBlur,
-              handleChange,
-              handleSubmit,
-              isSubmitting,
-              touched,
-              values,
-            }) => (
-              <form noValidate onSubmit={handleSubmit} dir="rtl">
-                <Box sx={{ p: 2 }}>
-                  <Grid container direction="column" spacing={2}>
-                      {fields.map((field) => (
-                          <Grid item key={field.name}>
-                              <FormControl
-                                  fullWidth
-                                  error={
-                                      touched[field.name as keyof typeof touched] &&
-                                      Boolean(errors[field.name as keyof typeof errors])
-                                  }
-                                  sx={customInput}
-                              >
-                                  <InputLabel
-                                      htmlFor={`outlined-${field.name}`}
-                                      shrink
-                                      sx={{
-                                          position: "absolute",
-                                          right: 14,
-                                          left: "unset",
-                                          transformOrigin: "top right",
-                                          transform: "translate(0, -1.5px) scale(0.75)",
-                                          fontSize: "inherit",
-                                      }}
-                                  >
-                                      <FormattedMessage id={field.id} />
-                                  </InputLabel>
-                                  <OutlinedInput
-                                      id={`outlined-${field.name}`}
-                                      type={field.type}
-                                      value={values[field.name as keyof typeof values]}
-                                      name={field.name}
-                                      onBlur={handleBlur}
-                                      onChange={handleChange}
-                                      inputProps={{
-                                          dir: "rtl",
-                                          autoComplete: field.name === "phone" ? "tel" : field.name,
-                                          style: { fontSize: "inherit" },
-                                          "data-testid": `checkout-input-${field.name}`,
-
-
-                                      }}
-                                      sx={{
-                                          direction: "rtl",
-                                          fontSize: "inherit",
-                                          "& input": { textAlign: "right" },
-                                      }}
-                                  />
-                                  {touched[field.name as keyof typeof touched] &&
-                                      errors[field.name as keyof typeof errors] && (
-                                          <FormHelperText
-                                              data-testid={`checkout-error-${field.name}`}
-                                              sx={{ textAlign: "right", marginRight: 1 }}
-                                          >
-                                              {errors[field.name as keyof typeof errors]}
-                                          </FormHelperText>
-                                      )}
-                              </FormControl>
-                          </Grid>
-                      ))}
-
+        {({
+          errors,
+          handleBlur,
+          handleChange,
+          handleSubmit,
+          isSubmitting,
+          touched,
+          values,
+        }) => (
+          <form noValidate onSubmit={handleSubmit} dir="rtl">
+            <Box sx={{ p: 2 }}>
+              <Grid container direction="column" spacing={2}>
+                {fields.map((field) => (
+                  <Grid item key={field.name}>
                     <FormControl
-                        required
-                        error={Boolean(touched.agreed && errors.agreed)}
+                      fullWidth
+                      error={
+                        touched[field.name as keyof typeof touched] &&
+                        Boolean(errors[field.name as keyof typeof errors])
+                      }
+                      sx={customInput}
                     >
-                      <FormControlLabel
-                          sx={{ mr: 0, justifyContent: "flex-end", ml: "auto" }}
-                          control={
-                            <Checkbox
-                                checked={values.agreed}
-                                onChange={handleChange}
-                                name="agreed"
-                                color="primary"
-                                sx={{ ml: 1 }}
-                                data-testid="checkout-agree"
-                            />
-                          }
-                          label={
-                            <Typography fontSize="0.9rem" textAlign="right">
-                              <FormattedMessage
-                                  id="checkout.agreeToTerms"
-                                  values={{
-                                    link: (
-                                        <Link
-                                            href="/legal/terms"
-                                            target="_blank"
-                                            style={{ textDecoration: "underline" }}
-                                        >
-                                          <FormattedMessage id="checkout.termsLinkText" />
-                                        </Link>
-                                    ),
-                                  }}
-                              />
-                            </Typography>
-                          }
+                      <InputLabel
+                        htmlFor={`outlined-${field.name}`}
+                        shrink
+                        sx={{
+                          position: "absolute",
+                          right: 14,
+                          left: "unset",
+                          transformOrigin: "top right",
+                          transform: "translate(0, -1.5px) scale(0.75)",
+                          fontSize: "inherit",
+                        }}
+                      >
+                        <FormattedMessage id={field.id} />
+                      </InputLabel>
+                      <OutlinedInput
+                        id={`outlined-${field.name}`}
+                        type={field.type}
+                        value={values[field.name as keyof typeof values]}
+                        name={field.name}
+                        onBlur={handleBlur}
+                        onChange={handleChange}
+                        inputProps={{
+                          dir: "rtl",
+                          autoComplete:
+                            field.name === "phone" ? "tel" : field.name,
+                          style: { fontSize: "inherit" },
+                          "data-testid": `checkout-input-${field.name}`,
+                        }}
+                        sx={{
+                          direction: "rtl",
+                          fontSize: "inherit",
+                          "& input": { textAlign: "right" },
+                        }}
                       />
-                      {touched.agreed && errors.agreed && (
-                          <FormHelperText data-testid="checkout-error-agreed" sx={{ textAlign: "right" }}>
-                            {errors.agreed}
+                      {touched[field.name as keyof typeof touched] &&
+                        errors[field.name as keyof typeof errors] && (
+                          <FormHelperText
+                            data-testid={`checkout-error-${field.name}`}
+                            sx={{ textAlign: "right", marginRight: 1 }}
+                          >
+                            {errors[field.name as keyof typeof errors]}
                           </FormHelperText>
-                      )}
+                        )}
                     </FormControl>
-
-                    <Divider />
-
-                    <Grid item>
-                      <Typography
-                          variant="h3"
-                          component="h3"
-                          fontWeight="normal"
-                          fontSize="0.9rem"
-                          color="text.secondary"
-                          textAlign="right"
-                          maxWidth={280}
-                          sx={{ width: "fit-content", ml: "auto", mr: 0 }}
-                      >
-                        <FormattedMessage id="checkout.pickupNotice" />
-                      </Typography>
-                    </Grid>
-                    <Grid item>
-                      <Button
-                          data-testid="checkout-submit"
-                          fullWidth
-                          size="large"
-                          type="submit"
-                          variant="contained"
-                          disabled={isSubmitting}
-                      >
-                        <FormattedMessage id="checkout.submit" />
-                      </Button>
-                    </Grid>
                   </Grid>
-                </Box>
-              </form>
-          )}
-        </Formik>
-      </Box>
+                ))}
+
+                <FormControl
+                  required
+                  error={Boolean(touched.agreed && errors.agreed)}
+                >
+                  <FormControlLabel
+                    sx={{ mr: 0, justifyContent: "flex-end", ml: "auto" }}
+                    control={
+                      <Checkbox
+                        checked={values.agreed}
+                        onChange={handleChange}
+                        name="agreed"
+                        color="primary"
+                        sx={{ ml: 1 }}
+                        data-testid="checkout-agree"
+                      />
+                    }
+                    label={
+                      <Typography fontSize="0.9rem" textAlign="right">
+                        <FormattedMessage
+                          id="checkout.agreeToTerms"
+                          values={{
+                            link: (
+                              <Link
+                                href="/legal/terms"
+                                target="_blank"
+                                style={{ textDecoration: "underline" }}
+                              >
+                                <FormattedMessage id="checkout.termsLinkText" />
+                              </Link>
+                            ),
+                          }}
+                        />
+                      </Typography>
+                    }
+                  />
+                  {touched.agreed && errors.agreed && (
+                    <FormHelperText
+                      data-testid="checkout-error-agreed"
+                      sx={{ textAlign: "right" }}
+                    >
+                      {errors.agreed}
+                    </FormHelperText>
+                  )}
+                </FormControl>
+
+                <Divider />
+
+                <Grid item>
+                  <Typography
+                    variant="h3"
+                    component="h3"
+                    fontWeight="normal"
+                    fontSize="0.9rem"
+                    color="text.secondary"
+                    textAlign="right"
+                    maxWidth={280}
+                    sx={{ width: "fit-content", ml: "auto", mr: 0 }}
+                  >
+                    <FormattedMessage id="checkout.pickupNotice" />
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Button
+                    data-testid="checkout-submit"
+                    fullWidth
+                    size="large"
+                    type="submit"
+                    variant="contained"
+                    disabled={isSubmitting}
+                  >
+                    <FormattedMessage id="checkout.submit" />
+                  </Button>
+                </Grid>
+              </Grid>
+            </Box>
+          </form>
+        )}
+      </Formik>
+    </Box>
   );
 }

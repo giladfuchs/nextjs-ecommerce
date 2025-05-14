@@ -5,17 +5,17 @@ let serverProcess: ReturnType<typeof spawn>;
 export const TEST_BASE_URL = "http://localhost:3001";
 
 export default async () => {
-    serverProcess = spawn("pnpm", ["dev"], {
-        cwd: "../yaara-api",
-        env: {
-            ...process.env,
-            NODE_ENV: "test",
-            PORT: "4013",
-            SEED: "true",
-        },
-        stdio: "inherit",
-        shell: true,
-    });
+  serverProcess = spawn("pnpm", ["dev"], {
+    cwd: "../yaara-api",
+    env: {
+      ...process.env,
+      NODE_ENV: "test",
+      PORT: "4013",
+      SEED: "true",
+    },
+    stdio: "inherit",
+    shell: true,
+  });
 
-    await new Promise((res) => setTimeout(res, 2000));
+  await new Promise((res) => setTimeout(res, 2000));
 };

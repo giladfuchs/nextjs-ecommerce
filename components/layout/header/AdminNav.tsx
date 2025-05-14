@@ -35,7 +35,7 @@ export function AdminNav() {
   };
 
   const renderList = (
-    <List  >
+    <List>
       {adminRoutes.map((model) => {
         const isActive = pathname === `/admin/${model}`;
         return (
@@ -116,17 +116,17 @@ export function AdminNav() {
         <MenuIcon />
       </IconButton>
       <Drawer
-          anchor="left"
-          open={open}
-          onClose={toggleDrawer}
-          transitionDuration={0}
-          PaperProps={{
-            sx: {
-              height: "auto", // don't fill full height
-              maxHeight: 300, // control height (adjust as needed)
-              mt: 8, // some top margin to not stick to top
-            },
-          }}
+        anchor="left"
+        open={open}
+        onClose={toggleDrawer}
+        transitionDuration={0}
+        PaperProps={{
+          sx: {
+            height: "auto", // don't fill full height
+            maxHeight: 300, // control height (adjust as needed)
+            mt: 8, // some top margin to not stick to top
+          },
+        }}
       >
         <Box sx={{ width: 120, overflowY: "auto" }} dir="rtl" textAlign="right">
           {renderList}
