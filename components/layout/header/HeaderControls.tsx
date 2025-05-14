@@ -158,7 +158,7 @@ export default function HeaderControls() {
   return (
     <>
       <div className="flex w-full md:w-1/3 justify-center px-2">
-        <Box display="flex" gap={2}>
+        <Box display="flex" gap={{ xs: 0, md: 2 }}>
           {!shouldHideSearch && <Search />}
           <AuthButtons />
         </Box>
