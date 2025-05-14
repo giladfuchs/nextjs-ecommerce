@@ -12,7 +12,7 @@ export const columns_product: ColDef<Product>[] = [
   {
     field: "price",
     headerName: "מחיר",
-    width: 80,
+    width: 90,
   },
   {
     field: "category",

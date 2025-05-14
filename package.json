@@ -7,7 +7,9 @@
     "start": "next start",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "test": "pnpm prettier:check"
+    "test": "pnpm prettier:check",
+    "test:e2e": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 &  pnpm exec playwright test --headed",
+    "codegen:record": "NEXT_PUBLIC_PORT=4010 NODE_ENV=test pnpm dev & sleep 2 && pnpm exec playwright codegen http://localhost:3000"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -32,6 +34,7 @@
     "yup": "^1.6.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.52.0",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/typography": "^0.5.16",

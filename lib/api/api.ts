@@ -80,17 +80,14 @@ async function handleResponse<T = any>(
 
 export async function fetchData(force = false) {
   if (!force && cache.isFresh()) {
-    console.log("✅ Using cached data");
     return cache.get();
   }
 
   const inflight = cache.getInFlight();
   if (!force && inflight) {
-    console.log("🔄 Waiting on in-flight fetch");
     return inflight;
   }
 
-  console.log("🌐 Fetching fresh data from server...");
   const promise = serverFetch(`/data`)
     .then((res) =>
       handleResponse(res, "fetch data").then((data) => {

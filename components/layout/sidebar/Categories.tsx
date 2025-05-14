@@ -36,6 +36,7 @@ function CategoriesItemList({ list }: { list: Category[] }) {
         return (
           <ListItemButton
             key={index}
+            data-testid="category-link"
             onClick={() =>
               router.push(isAll ? "/" : `/${ModelType.category}/${item.handle}`)
             }

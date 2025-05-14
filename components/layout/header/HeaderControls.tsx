@@ -163,6 +163,7 @@ export default function HeaderControls() {
           <AuthButtons />
         </Box>
       </div>
+
       <div className="flex justify-end w-auto md:w-1/3">
         <Cart />
       </div>
