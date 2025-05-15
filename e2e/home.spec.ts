@@ -1,7 +1,5 @@
 import { test, expect } from "@playwright/test";
-import {getByTestIdsOr, gotoHomeAndWait} from "./helper-test";
-
-
+import { getByTestIdsOr, gotoHomeAndWait } from "./helper-test";
 
 test("homepage renders category list and product grid", async ({ page }) => {
   await gotoHomeAndWait(page);
@@ -14,8 +12,8 @@ test("homepage renders category list and product grid", async ({ page }) => {
 });
 
 test("navigate to second visible category and verify product list or fallback", async ({
-                                                                                         page,
-                                                                                       }) => {
+  page,
+}) => {
   await gotoHomeAndWait(page);
 
   const categoryLinks = page.getByTestId("category-link");
@@ -28,8 +26,8 @@ test("navigate to second visible category and verify product list or fallback", 
 });
 
 test("navigate to product page from grid and verify title matches", async ({
-                                                                             page,
-                                                                           }) => {
+  page,
+}) => {
   await gotoHomeAndWait(page);
 
   const productList = page.getByTestId("product-list");

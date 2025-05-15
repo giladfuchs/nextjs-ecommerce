@@ -10,7 +10,8 @@ import { Toaster } from "sonner";
 import "../lib/assets/styles/globals.css";
 import "../lib/assets/styles/theme.scss";
 import {
-  baseUrl, GOOGLE_ANALYTICS,
+  baseUrl,
+  GOOGLE_ANALYTICS,
   GOOGLE_SITE_VERIFICATION,
   ICON_IMAGE_URL,
   SITE_NAME,
@@ -77,11 +78,11 @@ export default async function RootLayout({
   return (
     <html lang="he" dir="rtl" className={GeistSans.variable}>
       <body>
-      <Script
+        <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
           strategy="afterInteractive"
-      />
-      <Script
+        />
+        <Script
           id="google-analytics"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -94,7 +95,7 @@ export default async function RootLayout({
       });
     `,
           }}
-      />
+        />
         <ReduxProvider>
           <IntProvider>
             <ThemeProviderLayout>

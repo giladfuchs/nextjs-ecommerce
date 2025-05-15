@@ -6,8 +6,6 @@ import {
   fillCheckoutForm,
 } from "./helper-test";
 
-
-
 test("add product to cart and update quantity", async ({ page }) => {
   await page.goto(`${TEST_BASE_URL}/`);
   await page.waitForSelector('[data-testid="product-list"]');
@@ -43,8 +41,8 @@ test("complete checkout after adding products", async ({ page }) => {
 });
 
 test("show validation errors when required checkout fields are missing", async ({
-                                                                                  page,
-                                                                                }) => {
+  page,
+}) => {
   await checkoutAfterAddingProducts(page);
   await page.getByTestId("checkout-submit").click();
 

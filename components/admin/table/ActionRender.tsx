@@ -56,82 +56,82 @@ const ActionRender = ({ data }: ICellRendererParams) => {
   };
 
   return (
-      <>
-        {(isOrder || isProduct) && (
-            <Link
-                href={
-                  isProduct
-                      ? `/${ModelType.product}/${data.handle}`
-                      : `/admin/${ModelType.order}/${data.id}`
-                }
-                target={isProduct ? "_blank" : undefined}
-                rel={isProduct ? "noopener noreferrer" : undefined}
-            >
-              <IconButton
-                  size="small"
-                  aria-label="view"
-                  color="info"
-                  data-testid="action-view-button"
-              >
-                <VisibilityIcon fontSize="inherit" />
-              </IconButton>
-            </Link>
-        )}
+    <>
+      {(isOrder || isProduct) && (
+        <Link
+          href={
+            isProduct
+              ? `/${ModelType.product}/${data.handle}`
+              : `/admin/${ModelType.order}/${data.id}`
+          }
+          target={isProduct ? "_blank" : undefined}
+          rel={isProduct ? "noopener noreferrer" : undefined}
+        >
+          <IconButton
+            size="small"
+            aria-label="view"
+            color="info"
+            data-testid="action-view-button"
+          >
+            <VisibilityIcon fontSize="inherit" />
+          </IconButton>
+        </Link>
+      )}
 
-        {title && (isProduct || isCategory) && (
-            <Link href={`/admin/form/${model}/${id}`}>
-              <IconButton
-                  size="small"
-                  aria-label="edit"
-                  color="primary"
-                  data-testid="action-edit-button"
-              >
-                <EditIcon fontSize="inherit" />
-              </IconButton>
-            </Link>
-        )}
+      {title && (isProduct || isCategory) && (
+        <Link href={`/admin/form/${model}/${id}`}>
+          <IconButton
+            size="small"
+            aria-label="edit"
+            color="primary"
+            data-testid="action-edit-button"
+          >
+            <EditIcon fontSize="inherit" />
+          </IconButton>
+        </Link>
+      )}
 
-        {(isProduct || isCategory) && (
-            <>
-              <IconButton
-                  size="small"
-                  aria-label="delete"
-                  color="error"
-                  onClick={handleDeleteClick}
-                  data-testid="action-delete-button"
-              >
-                <DeleteIcon fontSize="inherit" />
-              </IconButton>
+      {(isProduct || isCategory) && (
+        <>
+          <IconButton
+            size="small"
+            aria-label="delete"
+            color="error"
+            onClick={handleDeleteClick}
+            data-testid="action-delete-button"
+          >
+            <DeleteIcon fontSize="inherit" />
+          </IconButton>
 
-              <Dialog open={open} onClose={() => setOpen(false)}>
-                <DialogTitle>
-                  {intl.formatMessage({ id: "delete.title" }, { title })}
-                </DialogTitle>
-                <DialogContent>
-                  {intl.formatMessage({ id: "delete.description" })}
-                  {isCategory && (
-                      <div style={{ marginTop: 8, color: "red", fontWeight: 500 }}>
-                        {intl.formatMessage({ id: "delete.cascadeWarning" })}
-                      </div>
-                  )}
-                </DialogContent>
-                <DialogActions>
-                  <Button onClick={() => setOpen(false)}>
-                    {intl.formatMessage({ id: "delete.cancel" })}
-                  </Button>
-                  <Button
-                      onClick={handleConfirmDelete}
-                      color="error"
-                      variant="contained"
-                      data-testid="confirm-delete-button"
-                  >
-                    {intl.formatMessage({ id: "delete.confirm" })}
-                  </Button>
-                </DialogActions>
-              </Dialog>
-            </>
-        )}
-      </>
+          <Dialog open={open} onClose={() => setOpen(false)}>
+            <DialogTitle>
+              {intl.formatMessage({ id: "delete.title" }, { title })}
+            </DialogTitle>
+            <DialogContent>
+              {intl.formatMessage({ id: "delete.description" })}
+              {isCategory && (
+                <div style={{ marginTop: 8, color: "red", fontWeight: 500 }}>
+                  {intl.formatMessage({ id: "delete.cascadeWarning" })}
+                </div>
+              )}
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={() => setOpen(false)}>
+                {intl.formatMessage({ id: "delete.cancel" })}
+              </Button>
+              <Button
+                onClick={handleConfirmDelete}
+                color="error"
+                variant="contained"
+                data-testid="confirm-delete-button"
+              >
+                {intl.formatMessage({ id: "delete.confirm" })}
+              </Button>
+            </DialogActions>
+          </Dialog>
+        </>
+      )}
+    </>
   );
 };
 
