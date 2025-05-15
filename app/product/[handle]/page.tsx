@@ -72,11 +72,14 @@ export default async function ProductPage({ params }: Props) {
     image: product.featuredImage.url,
     offers: {
       "@type": "AggregateOffer",
-      availability: product.available
-        ? "https://schema.org/InStock"
-        : "https://schema.org/OutOfStock",
-      priceCurrency: "ILS",
       price: product.price,
+      priceCurrency: "ILS",
+      availability: product.available
+          ? "https://schema.org/InStock"
+          : "https://schema.org/OutOfStock",
+      offerCount: 1,
+      highPrice: product.price,
+      lowPrice: product.price,
     },
   };
 
