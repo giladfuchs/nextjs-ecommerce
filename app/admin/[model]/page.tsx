@@ -1,136 +1,140 @@
 "use client";
 
 import * as React from "react";
-import { useEffect, useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
+import {useEffect, useMemo, useState} from "react";
+import {useRouter} from "next/navigation";
 import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Skeleton,
-  TextField,
+    Box,
+    Button,
+    Container,
+    Grid,
+    TextField,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ImageIcon from "@mui/icons-material/Image";
-import { FormattedMessage, useIntl } from "react-intl";
-import { ColDef } from "ag-grid-community";
+import {FormattedMessage, useIntl} from "react-intl";
+import {ColDef} from "ag-grid-community";
 
-import { AGTableModelType, get_columns_by_title, ModelType } from "lib/types";
 import {
-  getCategories,
-  getOrders,
-  getProducts,
-  modelCache,
-  setGlobalLoading,
+    AGTableModelType,
+    get_columns_by_title,
+    ModelType,
+} from "lib/types";
+import {
+    getCategories,
+    getOrders,
+    getProducts,
+    setGlobalLoading,
 } from "lib/api";
+import {cache} from "lib/api/cache";
 import AGTable from "components/admin/table/AGTable";
-import { useLoading } from "lib/provider/LoadingProvider";
-import { LoadingTable } from "components/shared/Loading";
+import {useLoading} from "lib/provider/LoadingProvider";
+import {LoadingTable} from "components/shared/Loading";
 
 export default function AdminPage({
-  params,
-}: {
-  params: { model: ModelType };
+                                      params,
+                                  }: {
+    params: { model: ModelType };
 }) {
-  const router = useRouter();
-  const { model } = params;
-  const { formatMessage } = useIntl();
-  const { loading } = useLoading();
+    const router = useRouter();
+    const {model} = params;
+    const {formatMessage} = useIntl();
+    const {loading} = useLoading();
 
-  const [rows, setRows] = useState<AGTableModelType[]>([]);
-  const [searchValue, setSearchValue] = useState("");
+    const [rows, setRows] = useState<AGTableModelType[]>([]);
+    const [searchValue, setSearchValue] = useState("");
 
-  const cols: ColDef<AGTableModelType>[] = get_columns_by_title(model);
+    const cols: ColDef<AGTableModelType>[] = get_columns_by_title(model);
 
-  useEffect(() => {
-    const cached = modelCache.get(model);
-    if (cached) {
-      setRows(cached);
-    }
+    useEffect(() => {
+        const cached = cache.getByModel(model);
+        if (cached.length > 0) {
+            setRows(cached);
+        }
 
-    const load = async () => {
-      setGlobalLoading(true);
-      try {
-        const data =
-          model === ModelType.product
-            ? await getProducts(true)
-            : model === ModelType.order
-              ? await getOrders()
-              : await getCategories(true);
+        const load = async () => {
+            setGlobalLoading(true);
+            try {
+                const data =
+                    model === ModelType.product
+                        ? await getProducts(true)
+                        : model === ModelType.order
+                            ? await getOrders()
+                            : await getCategories(true);
 
-        modelCache.set(model, data);
-        setRows(data);
-      } finally {
-        setGlobalLoading(false);
-      }
-    };
+                cache.setByModel(model, data);
 
-    load();
-  }, [model]);
+                setRows(data);
+            } finally {
+                setGlobalLoading(false);
+            }
+        };
 
-  const filteredRows = useMemo(() => {
-    if (!searchValue) return rows;
-    const regex = new RegExp(searchValue, "i");
-    return rows.filter((row) => regex.test(Object.values(row).join(" ")));
-  }, [searchValue, rows]);
+        load();
+    }, [model]);
 
-  return (
-    <Container disableGutters sx={{ px: 2 }}>
-      <Grid
-        container
-        spacing={2}
-        alignItems="center"
-        justifyContent="space-between"
-        direction="row"
-      >
-        <h2 style={{ fontSize: "1.75rem", fontWeight: "bold" }}>
-          <FormattedMessage id={`admin.${model}.title`} />
-        </h2>
+    const filteredRows = useMemo(() => {
+        if (!searchValue) return rows;
+        const regex = new RegExp(searchValue, "i");
+        return rows.filter((row) => regex.test(Object.values(row).join(" ")));
+    }, [searchValue, rows]);
 
-        <p style={{ fontSize: "1.2rem", fontWeight: "bold", marginTop: 4 }}>
-          {filteredRows.length}
-        </p>
-
-        <TextField
-          variant="outlined"
-          size="small"
-          placeholder={formatMessage({ id: "admin.search.placeholder" })}
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
-          sx={{ minWidth: 200 }}
-        />
-
-        {model !== "order" && (
-          <Grid item display="flex" gap={2}>
-            <Button
-              variant="contained"
-              onClick={() => router.push(`/admin/form/${model}/add`)}
-              startIcon={<AddIcon />}
+    return (
+        <Container disableGutters sx={{px: 2}}>
+            <Grid
+                container
+                spacing={2}
+                alignItems="center"
+                justifyContent="space-between"
+                direction="row"
             >
-              <FormattedMessage id={`admin.${model}.add`} />
-            </Button>
+                <h2 style={{fontSize: "1.75rem", fontWeight: "bold"}}>
+                    <FormattedMessage id={`admin.${model}.title`}/>
+                </h2>
 
-            {model === "product" && (
-              <Button
-                variant="outlined"
-                onClick={() => window.open("/admin/form/image", "_blank")}
-                startIcon={<ImageIcon />}
-              >
-                <FormattedMessage id="admin.product.image" />
-              </Button>
-            )}
-          </Grid>
-        )}
-      </Grid>
+                <p style={{fontSize: "1.2rem", fontWeight: "bold", marginTop: 4}}>
+                    {filteredRows.length}
+                </p>
 
-      <Grid container justifyContent="center" mt={2}>
-        {loading && !modelCache.get(model) ? (
-          <LoadingTable />
-        ) : (
-          <AGTable cols={cols} rows={filteredRows} />
-        )}
-      </Grid>
-    </Container>
-  );
+                <TextField
+                    variant="outlined"
+                    size="small"
+                    placeholder={formatMessage({id: "admin.search.placeholder"})}
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                    sx={{minWidth: 200}}
+                />
+
+                {model !== "order" && (
+                    <Grid item display="flex" gap={2}>
+                        <Button
+                            variant="contained"
+                            onClick={() => router.push(`/admin/form/${model}/add`)}
+                            startIcon={<AddIcon/>}
+                        >
+                            <FormattedMessage id={`admin.${model}.add`}/>
+                        </Button>
+
+                        {model === "product" && (
+                            <Button
+                                variant="outlined"
+                                onClick={() => window.open("/admin/form/image", "_blank")}
+                                startIcon={<ImageIcon/>}
+                            >
+                                <FormattedMessage id="admin.product.image"/>
+                            </Button>
+                        )}
+                    </Grid>
+                )}
+            </Grid>
+
+            <Grid container justifyContent="center" mt={2}>
+                {loading && cache.getByModel(model).length === 0 ? (
+                    <LoadingTable/>
+                ) : (
+                    <AGTable cols={cols} rows={filteredRows}/>
+                )}
+            </Grid>
+        </Container>
+    );
 }

@@ -17,6 +17,9 @@
     "incremental": true,
     "baseUrl": ".",
     "noUncheckedIndexedAccess": true,
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "inlineSources": true,
     "plugins": [
       {
         "name": "next"
