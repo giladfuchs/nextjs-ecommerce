@@ -1,14 +1,16 @@
 import type { Viewport } from "next";
-import { GeistSans } from "geist/font/sans";
+import Script from "next/script";
 import { ReactNode, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
+
+import { GeistSans } from "geist/font/sans";
 import { Box } from "@mui/material";
 import { Toaster } from "sonner";
 
 import "../lib/assets/styles/globals.css";
 import "../lib/assets/styles/theme.scss";
 import {
-  baseUrl,
+  baseUrl, GOOGLE_ANALYTICS,
   GOOGLE_SITE_VERIFICATION,
   ICON_IMAGE_URL,
   SITE_NAME,
@@ -75,6 +77,24 @@ export default async function RootLayout({
   return (
     <html lang="he" dir="rtl" className={GeistSans.variable}>
       <body>
+      <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}
+          strategy="afterInteractive"
+      />
+      <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${GOOGLE_ANALYTICS}', {
+        page_path: window.location.pathname,
+      });
+    `,
+          }}
+      />
         <ReduxProvider>
           <IntProvider>
             <ThemeProviderLayout>
