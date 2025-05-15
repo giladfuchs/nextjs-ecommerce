@@ -75,6 +75,7 @@ export function AdminNav() {
           return (
             <ListItemButton
               key={model}
+              data-testid={`admin-nav-${model}`}
               onClick={() => router.push(`/admin/${model}`)}
               sx={{
                 borderRadius: "12px",

@@ -9,6 +9,7 @@
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "pnpm prettier:check",
     "test:e2e": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 &  pnpm exec playwright test --headed",
+    "test:file": "NEXT_PUBLIC_PORT=4013 NODE_ENV=test pnpm dev & sleep 2 &  pnpm exec playwright test e2e/crud.spec.ts --headed",
     "codegen:record": "NEXT_PUBLIC_PORT=4010 NODE_ENV=test pnpm dev & sleep 2 && pnpm exec playwright codegen http://localhost:3000"
   },
   "dependencies": {

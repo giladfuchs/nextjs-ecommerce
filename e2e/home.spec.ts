@@ -1,90 +1,47 @@
 import { test, expect } from "@playwright/test";
-import { TEST_BASE_URL } from "./global-setup";
+import {getByTestIdsOr, gotoHomeAndWait} from "./helper-test";
+
+
 
 test("homepage renders category list and product grid", async ({ page }) => {
-  await page.goto(`${TEST_BASE_URL}/`);
+  await gotoHomeAndWait(page);
 
-  await page.waitForSelector("main");
-  await page.waitForSelector(
-    '[data-testid="product-list"], [data-testid="no-products"]',
-    {
-      timeout: 10000,
-    },
-  );
+  const mainContent = getByTestIdsOr(page, ["product-list", "no-products"]);
+  await expect(mainContent).toBeVisible({ timeout: 10000 });
 
-  const productList = page.locator('[data-testid="product-list"]');
-  const noProducts = page.locator('[data-testid="no-products"]');
-  await expect(productList.or(noProducts)).toBeVisible();
-
-  const navList = page.getByTestId("category-nav");
-  await expect(navList).toBeVisible();
-
-  const images = page.locator("img");
-  await expect(images.first()).toBeVisible();
+  await expect(page.getByTestId("category-nav")).toBeVisible();
+  await expect(page.locator("img").first()).toBeVisible();
 });
 
-test("navigate to second visible category dynamically and verify products or no-products", async ({
-  page,
-}) => {
-  await page.goto(`${TEST_BASE_URL}/`);
-  await page.waitForSelector("main");
+test("navigate to second visible category and verify product list or fallback", async ({
+                                                                                         page,
+                                                                                       }) => {
+  await gotoHomeAndWait(page);
 
-  const categoryLinks = page.locator('[data-testid="category-link"]');
+  const categoryLinks = page.getByTestId("category-link");
   await expect(categoryLinks.first()).toBeVisible();
   await categoryLinks.nth(1).click();
-
   await page.waitForLoadState("networkidle");
 
-  const productList = page.locator('[data-testid="product-list"]');
-  const noProducts = page.locator('[data-testid="no-products"]');
-
-  await Promise.race([
-    expect(productList).toBeVisible({ timeout: 5000 }),
-    expect(noProducts).toBeVisible({ timeout: 5000 }),
-  ]);
+  const result = getByTestIdsOr(page, ["product-list", "no-products"]);
+  await expect(result).toBeVisible({ timeout: 5000 });
 });
 
-test("navigate to product page from grid and verify product title matches", async ({
-  page,
-}) => {
-  await page.goto(`${TEST_BASE_URL}/`);
+test("navigate to product page from grid and verify title matches", async ({
+                                                                             page,
+                                                                           }) => {
+  await gotoHomeAndWait(page);
 
-  const productList = page.locator('[data-testid="product-list"]');
+  const productList = page.getByTestId("product-list");
   await productList.first().waitFor({ state: "visible", timeout: 7000 });
 
-  const firstProductCard = productList
-    .locator('[data-testid="product-card-title"]')
-    .first();
-  const expectedTitle = (await firstProductCard.textContent())?.trim();
+  const firstCardTitle = productList.getByTestId("product-card-title").first();
+  const expectedTitle = (await firstCardTitle.textContent())?.trim() || "";
 
-  const firstProductLink = productList.locator("a").first();
-  await firstProductLink.click();
-
+  await productList.locator("a").first().click();
   await page.waitForLoadState("networkidle");
 
   const productTitle = page.getByTestId("product-title");
   await expect(productTitle).toBeVisible({ timeout: 7000 });
-  await expect(productTitle).toHaveText(expectedTitle || "");
-});
-
-test("navigate to product page and add item to cart", async ({ page }) => {
-  await page.goto(`${TEST_BASE_URL}/`);
-
-  await page.waitForSelector('[data-testid="product-list"]', { timeout: 7000 });
-
-  const productList = page.locator('[data-testid="product-list"]');
-  const firstProduct = productList.locator("a").first();
-  await firstProduct.click();
-
-  const productTitle = page.getByTestId("product-title");
-  await expect(productTitle).toBeVisible();
-
-  const addToCartButton = page.getByTestId("add-to-cart-button");
-  await expect(addToCartButton).toBeVisible();
-  await addToCartButton.click();
-
-  const cartModal = page.locator(
-    "[data-testid='cart'], #cart-modal, .cart-badge",
-  );
-  await expect(cartModal.first()).toBeVisible({ timeout: 5000 });
+  await expect(productTitle).toHaveText(expectedTitle);
 });

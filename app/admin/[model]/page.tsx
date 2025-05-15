@@ -92,7 +92,7 @@ export default function AdminPage({
                     <FormattedMessage id={`admin.${model}.title`}/>
                 </h2>
 
-                <p style={{fontSize: "1.2rem", fontWeight: "bold", marginTop: 4}}>
+                <p data-testid="admin-row-count" style={{fontSize: "1.2rem", fontWeight: "bold", marginTop: 4}}>
                     {filteredRows.length}
                 </p>
 
@@ -108,6 +108,7 @@ export default function AdminPage({
                 {model !== "order" && (
                     <Grid item display="flex" gap={2}>
                         <Button
+                            data-testid={`add-${model}-button`}
                             variant="contained"
                             onClick={() => router.push(`/admin/form/${model}/add`)}
                             startIcon={<AddIcon/>}
