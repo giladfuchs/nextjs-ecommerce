@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     url: baseUrl,
     type: "website",
   },
+  alternates: {
+    canonical: baseUrl,
+  },
 };
 
 export default async function HomePage() {
