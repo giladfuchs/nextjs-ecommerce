@@ -9,6 +9,7 @@ import {
   getCategoryDescription,
 } from "lib/assets/i18n/seo_heb";
 import { Product } from "lib/types";
+import {safeDecodeURIComponent} from "../../../lib/helper";
 
 const ClientProduct = dynamic(
   () => import("components/product/ClientProduct"),
@@ -17,13 +18,7 @@ const ClientProduct = dynamic(
   },
 );
 
-function safeDecodeURIComponent(value: string): string {
-  try {
-    return decodeURIComponent(value);
-  } catch {
-    return value;
-  }
-}
+
 
 type Props = {
   params: { category: string };
