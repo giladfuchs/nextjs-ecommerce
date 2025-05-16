@@ -124,7 +124,9 @@ export const messages = {
 
     "product.addToCart": "הוסף לעגלה",
     "product.outOfStock": "לא זמין במלאי",
-
+    "product.share": "שתף",
+    "product.shareFacebook": "שתף בפייסבוק",
+    "product.shareNotSupported": "שיתוף לא נתמך במכשיר הזה",
     "cart.title": "🛒 עגלה",
     "cart.empty": "העגלה ריקה.",
     "cart.checkout": "רכישה",
