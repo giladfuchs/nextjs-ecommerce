@@ -15,17 +15,20 @@ test("add product to cart and update quantity", async ({ page }) => {
   const cart = page.locator("[data-testid='cart']");
   await expect(cart).toBeVisible();
 
-  const plus = cart.getByTestId("cart-qty-plus");
-  const minus = cart.getByTestId("cart-qty-minus");
-  const qty = cart.getByTestId("cart-item-qty");
+  const plus = page.getByTestId("cart-qty-plus");
+  const minus = page.getByTestId("cart-qty-minus");
+  const qty = page.getByTestId("cart-item-qty");
 
   await plus.click();
-  await plus.click();
+  await page.waitForTimeout(50);
+
+  await expect(page.getByTestId("cart-qty-plus")).toBeVisible();
+  await page.getByTestId("cart-qty-plus").click();
+
   await minus.click();
 
-  await expect(qty).toHaveText("2");
+  await expect(qty).toHaveText("2", { timeout: 2000 });
 });
-
 test("complete checkout after adding products", async ({ page }) => {
   await checkoutAfterAddingProducts(page);
 

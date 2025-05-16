@@ -7,7 +7,6 @@ export const dynamic = "force-dynamic";
 export async function GET() {
   const staticRoutes = [
     { url: `${baseUrl}/`, lastModified: new Date().toISOString() },
-
   ];
 
   const [categories, products] = await Promise.all([

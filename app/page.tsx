@@ -4,7 +4,8 @@ import ClientProduct from "components/product/ClientProduct";
 import SidebarLayout from "components/layout/sidebar";
 import {
   metadata_site_title,
-  metadata_site_description, metadata_keywords,
+  metadata_site_description,
+  metadata_keywords,
 } from "../lib/assets/i18n/seo_heb";
 import { baseUrl, ICON_IMAGE_URL } from "../lib/config";
 
@@ -26,9 +27,7 @@ export default async function HomePage() {
 
   return (
     <SidebarLayout>
-      <h1 className="sr-only">
-        {metadata_site_description}
-      </h1>
+      <h1 className="sr-only">{metadata_site_description}</h1>
       <ClientProduct products={products} />
     </SidebarLayout>
   );

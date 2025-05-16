@@ -75,8 +75,8 @@ export default async function ProductPage({ params }: Props) {
       price: product.price,
       priceCurrency: "ILS",
       availability: product.available
-          ? "https://schema.org/InStock"
-          : "https://schema.org/OutOfStock",
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
       offerCount: 1,
       highPrice: product.price,
       lowPrice: product.price,
