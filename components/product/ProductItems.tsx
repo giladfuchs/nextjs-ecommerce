@@ -3,7 +3,7 @@ import { GridTileImage } from "components/product/grid/tile";
 import { Product } from "lib/types";
 import Link from "next/link";
 
-export default function ProductGridItems({
+export default function ProductItems({
   products,
 }: {
   products: Product[];

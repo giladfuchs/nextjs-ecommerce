@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 import { getProducts } from "lib/api/catalog";
-import { ProductDescription } from "components/product/product-description";
+import { ProductDescription } from "components/product/ProductDescription";
 import { Image, Product } from "lib/types";
 import { ProductGallery } from "../../../components/product/ProductGallery";
 

@@ -1,6 +1,5 @@
 import { AddToCart } from "components/product/AddToCart";
 import Price from "components/shared/Price";
-import ShareButtons from "./ShareButtons"; // Adjust if needed
 import { Product } from "lib/types";
 import { Box, Grid } from "@mui/material";
 
@@ -66,7 +65,7 @@ export function ProductDescription({ product }: { product: Product }) {
                 </Grid>
             <Grid item>
 
-                <ShareButtons />
+
 
             </Grid>
             </Grid>

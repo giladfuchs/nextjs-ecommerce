@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Product } from "lib/types";
-import ProductGridItems from "components/product/product-grid-items";
+import ProductItems from "components/product/ProductItems";
 
 const PRODUCTS_PER_PAGE = 3;
 
@@ -49,7 +49,7 @@ export default function ProductGrid({ products }: { products: Product[] }) {
 
   return (
     <>
-      <ProductGridItems products={visibleProducts} />
+      <ProductItems products={visibleProducts} />
 
       {hasMore && (
         <div
