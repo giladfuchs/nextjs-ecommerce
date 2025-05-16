@@ -12,13 +12,8 @@ import React, { useState, useEffect } from "react";
 import { useIntl, FormattedMessage } from "react-intl";
 import { Category, ModelType } from "../../../lib/types";
 
-function safeDecodeURIComponent(value: string): string {
-  try {
-    return decodeURIComponent(value);
-  } catch {
-    return value;
-  }
-}
+import {safeDecodeURIComponent} from "lib/helper";
+
 
 // Desktop list
 function CategoriesItemList({ list }: { list: Category[] }) {
