@@ -1,7 +1,6 @@
 "use client";
 
 import Grid from "components/product/grid";
-import ProductGridItems from "components/product/product-grid-items";
 import {
   NoProductsMessage,
   SearchResultsMessage,
@@ -9,6 +8,7 @@ import {
 import { Product } from "lib/types";
 import { useSearchParams } from "next/navigation";
 import { useMemo } from "react";
+import ProductGrid from "./ProductGrid";
 
 export default function ClientProduct({ products }: { products: Product[] }) {
   const searchParams = useSearchParams();
@@ -33,7 +33,7 @@ export default function ClientProduct({ products }: { products: Product[] }) {
       {filteredProducts.length > 0 ? (
         <div data-testid="product-list" className="container mx-auto px-4">
           <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            <ProductGridItems products={filteredProducts} />
+            <ProductGrid products={filteredProducts} />
           </Grid>
         </div>
       ) : (
