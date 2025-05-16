@@ -3,9 +3,7 @@ import { SITE_NAME } from "../../config";
 export const metadata_site_title = `${SITE_NAME} - מקום לצמוח`;
 export const metadata_site_description =
   "צמחים ושתילים מרהיבים – הכל באהבה ובמבחר משתנה";
-export const metadata_category_title = `${SITE_NAME} | קטלוג מוצרים`;
-export const metadata_category_description =
-  "כל הצמחים והשתילים במקום אחד – מגוון רחב של מוצרים זמינים";
+
 export const metadata_keywords = [
   "עציצים",
   "צמחים",

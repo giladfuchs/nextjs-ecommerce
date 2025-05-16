@@ -32,10 +32,3 @@ export function NoProductsMessage() {
   );
 }
 
-export function H1SeoTitle() {
-  return (
-    <h1 className="sr-only">
-      <FormattedMessage id="category.title.seo" />
-    </h1>
-  );
-}
