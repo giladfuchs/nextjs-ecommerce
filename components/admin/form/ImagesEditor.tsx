@@ -17,16 +17,15 @@ import ImageIcon from "@mui/icons-material/Image";
 import { Image } from "lib/types";
 
 export default function ImagesEditor({
-  placeholder,
-  images,
-  onChange,
-}: {
+                                       placeholder,
+                                       images,
+                                       onChange,
+                                     }: {
   placeholder: string;
   images: Image[];
   onChange: (value: any) => void;
 }) {
   const intl = useIntl();
-
   const [imagesState, setImagesState] = React.useState<Image[]>(images);
 
   const handleChange = (index: number, field: keyof Image, value: string) => {
@@ -37,137 +36,139 @@ export default function ImagesEditor({
   };
 
   return (
-    <Box sx={{ mt: 2 }} data-testid="form-input-images">
-      <Typography
-        fontSize="1em"
-        color="text.secondary"
-        paragraph
-        maxWidth={300}
-      >
-        <FormattedMessage id="admin.image.instructions" />
-      </Typography>
-      <SimpleTreeView>
-        <TreeItem
-          itemId="images"
-          label={<span data-testid="form-toggle-images">{placeholder}</span>}
+      <Box sx={{ mt: 2 }} data-testid="form-input-images">
+        <Typography
+            fontSize="1em"
+            color="text.secondary"
+            paragraph
+            maxWidth={300}
         >
-          <Grid container direction="column" spacing={3}>
-            <Button
-              sx={{ mt: 2 }}
-              variant="outlined"
-              onClick={() => window.open("/admin/form/image", "_blank")}
-              startIcon={<ImageIcon />}
-            >
-              <FormattedMessage id="admin.image.add" />
-            </Button>
-
-            {Array.from({ length: 5 }, (_, index) => (
-              <Grid
-                item
-                xs={12}
-                key={index}
-                data-testid={`form-image-${index}`}
+          <FormattedMessage id="admin.image.instructions" />
+        </Typography>
+        <SimpleTreeView>
+          <TreeItem
+              itemId="images"
+              label={<span data-testid="form-toggle-images">{placeholder}</span>}
+          >
+            <Grid container direction="column" spacing={3}>
+              <Button
+                  sx={{ mt: 3 }}
+                  variant="outlined"
+                  onClick={() => window.open("/admin/form/image", "_blank")}
+                  startIcon={<ImageIcon />}
               >
-                <Typography fontWeight="bold">
-                  <FormattedMessage
-                    id="admin.image.label"
-                    values={{ index: index + 1 }}
-                  />
-                </Typography>
-                <Grid container direction="column" spacing={2}>
+                <FormattedMessage id="admin.image.add" />
+              </Button>
+
+              {Array.from({ length: 5 }, (_, index) => (
                   <Grid
-                    direction="column"
-                    display="flex"
-                    alignItems="center"
-                    gap={1}
-                    item
-                    xs={12}
+                      item
+                      xs={12}
+                      key={index}
+                      data-testid={`form-image-${index}`}
                   >
-                    <TextField
-                      fullWidth
-                      label={<FormattedMessage id="admin.image.url" />}
-                      value={imagesState[index]?.url || ""}
-                      onChange={(e) =>
-                        handleChange(index, "url", e.target.value)
-                      }
-                    />
+                    <Typography fontWeight="bold">
+                      <FormattedMessage
+                          id="admin.image.label"
+                          values={{ index: index + 1 }}
+                      />
+                    </Typography>
 
-                    <button
-                      type="button"
-                      title="📋"
-                      onClick={async () => {
-                        try {
-                          const text = await navigator.clipboard.readText();
-                          if (text && text.startsWith("http")) {
-                            handleChange(index, "url", text);
-                            toast.success(
-                              <FormattedMessage id="admin.image.clipboard.success" />,
-                              {
-                                description: text,
-                              },
-                            );
-                          } else {
-                            toast.error(
-                              <FormattedMessage id="admin.image.clipboard.invalid" />,
-                            );
+                    {/* ✅ Input + clipboard in 1 row */}
+                    <Grid container spacing={1} alignItems="center">
+                      <Grid item xs>
+                        <TextField
+                            fullWidth
+                            size="small"
+                            label={<FormattedMessage id="admin.image.url" />}
+                            value={imagesState[index]?.url || ""}
+                            onChange={(e) =>
+                                handleChange(index, "url", e.target.value)
+                            }
+                        />
+                      </Grid>
+                      <Grid item>
+                        <button
+                            type="button"
+                            title="📋"
+                            onClick={async () => {
+                              try {
+                                const text = await navigator.clipboard.readText();
+                                if (text && text.startsWith("http")) {
+                                  handleChange(index, "url", text);
+                                  toast.success(
+                                      <FormattedMessage id="admin.image.clipboard.success" />,
+                                      {
+                                        description: text,
+                                      },
+                                  );
+                                } else {
+                                  toast.error(
+                                      <FormattedMessage id="admin.image.clipboard.invalid" />,
+                                  );
+                                }
+                              } catch (err) {
+                                toast.error(
+                                    <FormattedMessage id="admin.image.clipboard.error" />,
+                                    {
+                                      description: (
+                                          <FormattedMessage id="admin.image.clipboard.retry" />
+                                      ),
+                                    },
+                                );
+                              }
+                            }}
+                            style={{
+                              display: "inline-flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              padding: 6,
+                              border: "1px solid #ccc",
+                              background: "#f9f9f9",
+                              borderRadius: 4,
+                              cursor: "pointer",
+                              height: 40,
+                              fontSize: 16,
+                            }}
+                        >
+                          📋
+                        </button>
+                      </Grid>
+                    </Grid>
+
+                    <Grid item xs={12} mt={1}>
+                      <TextField
+                          fullWidth
+                          size="small"
+                          label={<FormattedMessage id="admin.image.alt" />}
+                          value={imagesState[index]?.altText || ""}
+                          onChange={(e) =>
+                              handleChange(index, "altText", e.target.value)
                           }
-                        } catch (err) {
-                          toast.error(
-                            <FormattedMessage id="admin.image.clipboard.error" />,
-                            {
-                              description: (
-                                <FormattedMessage id="admin.image.clipboard.retry" />
-                              ),
-                            },
-                          );
-                        }
-                      }}
-                      style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: 6,
-                        border: "1px solid #ccc",
-                        background: "#f9f9f9",
-                        borderRadius: 4,
-                        cursor: "pointer",
-                        height: "56px",
-                      }}
-                    >
-                      📋
-                    </button>
-                  </Grid>
-                  <Grid item xs={12}>
-                    <TextField
-                      fullWidth
-                      label={<FormattedMessage id="admin.image.alt" />}
-                      value={imagesState[index]?.altText || ""}
-                      onChange={(e) =>
-                        handleChange(index, "altText", e.target.value)
-                      }
-                    />
-                  </Grid>
+                      />
+                    </Grid>
 
-                  {imagesState[index]?.url?.trim() && (
-                    <Box
-                      component="img"
-                      src={imagesState[index].url}
-                      alt={intl.formatMessage({ id: "image.preview.alt" })}
-                      sx={{
-                        maxWidth: "100%",
-                        maxHeight: 150,
-                        borderRadius: 2,
-                        border: "1px solid #ccc",
-                      }}
-                    />
-                  )}
-                </Grid>
-                <Divider sx={{ my: 3 }} />
-              </Grid>
-            ))}
-          </Grid>
-        </TreeItem>
-      </SimpleTreeView>
-    </Box>
+                    {imagesState[index]?.url?.trim() && (
+                        <Box
+                            component="img"
+                            src={imagesState[index].url}
+                            alt={intl.formatMessage({ id: "image.preview.alt" })}
+                            sx={{
+                              maxWidth: "100%",
+                              maxHeight: 150,
+                              borderRadius: 2,
+                              border: "1px solid #ccc",
+                              mt: 2,
+                            }}
+                        />
+                    )}
+
+                    <Divider sx={{ my: 3 }} />
+                  </Grid>
+              ))}
+            </Grid>
+          </TreeItem>
+        </SimpleTreeView>
+      </Box>
   );
 }

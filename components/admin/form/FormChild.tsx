@@ -53,7 +53,7 @@ export const FieldRenderer = ({ field, onChange }: FormFieldProps) => {
         <Autocomplete
           disablePortal
           options={options}
-          value={field.value}
+          value={field.value as string}
           onChange={(e, value) => onChange(value, field.key)}
           renderInput={(params) => (
             <TextField
