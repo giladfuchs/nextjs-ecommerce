@@ -14,7 +14,6 @@ import {
   getCategories,
   getOrders,
   getProducts,
-  setGlobalLoading,
 } from "lib/api";
 import { cache } from "lib/api/cache";
 import AGTable from "components/admin/table/AGTable";
@@ -42,25 +41,23 @@ export default function AdminPage({
       setRows(cached);
     }
 
-    const load = async () => {
-      setGlobalLoading(true);
+    const init = async () => {
       try {
         const data =
-          model === ModelType.product
-            ? await getProducts(true)
-            : model === ModelType.order
-              ? await getOrders()
-              : await getCategories(true);
+            model === ModelType.product
+                ? await getProducts(true)
+                : model === ModelType.order
+                    ? await getOrders()
+                    : await getCategories(true);
 
         cache.setByModel(model, data);
-
         setRows(data);
-      } finally {
-        setGlobalLoading(false);
+      } catch (err) {
+        console.error("❌ Failed to load model data", err);
       }
     };
 
-    load();
+    void init();
   }, [model]);
 
   const filteredRows = useMemo(() => {

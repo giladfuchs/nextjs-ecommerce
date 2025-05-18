@@ -1,13 +1,13 @@
-import Grid from "components/product/grid";
+import Link from "next/link";
+import {ProductItem} from "components/product/grid";
 import { GridTileImage } from "components/product/grid/tile";
 import { Product } from "lib/types";
-import Link from "next/link";
 
 export default function ProductItems({ products }: { products: Product[] }) {
   return (
     <>
       {products.map((product) => (
-        <Grid.Item
+        <ProductItem
           key={product.handle}
           className="animate-fadeIn w-full max-w-full overflow-hidden"
         >
@@ -21,14 +21,13 @@ export default function ProductItems({ products }: { products: Product[] }) {
               label={{
                 title: product.title,
                 amount: product.price,
-                currencyCode: "ILS",
               }}
               src={product.featuredImage.url}
               fill
               sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
             />
           </Link>
-        </Grid.Item>
+        </ProductItem>
       ))}
     </>
   );

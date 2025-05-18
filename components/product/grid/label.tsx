@@ -63,7 +63,7 @@ export default function Label({
             lineHeight: 1.3,
           }}
         >
-          <Price amount={amount} currencyCode="ILS" className="price-text" />
+          <Price amount={amount}  className="price-text" />
         </Box>
       </Box>
     </Box>

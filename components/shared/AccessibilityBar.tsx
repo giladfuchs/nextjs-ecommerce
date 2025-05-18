@@ -90,10 +90,8 @@ export default function AccessibilityBar() {
   useEffect(() => {
     if (!open) return;
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        panelRef.current &&
-        !panelRef.current.contains(event.target as Node)
-      ) {
+      const panel = panelRef.current;
+      if (panel && !panel.contains(event.target as Node)) {
         setOpen(false);
       }
     };

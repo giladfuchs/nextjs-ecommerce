@@ -12,7 +12,7 @@ function Grid(props: React.ComponentProps<"ul">) {
   );
 }
 
-function GridItem(props: React.ComponentProps<"li">) {
+export function ProductItem(props: React.ComponentProps<"li">) {
   return (
     <li
       {...props}
@@ -23,6 +23,5 @@ function GridItem(props: React.ComponentProps<"li">) {
   );
 }
 
-Grid.Item = GridItem;
 
 export default Grid;

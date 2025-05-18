@@ -1,4 +1,4 @@
-import Grid from "components/product/grid";
+import Grid, {ProductItem} from "components/product/grid";
 import { Box, Skeleton } from "@mui/material";
 import * as React from "react";
 
@@ -11,7 +11,7 @@ export function LoadingProductsList() {
           .fill(0)
           .map((_, index) => {
             return (
-              <Grid.Item
+              <ProductItem
                 key={index}
                 className="animate-pulse bg-neutral-100 dark:bg-neutral-800"
               />
