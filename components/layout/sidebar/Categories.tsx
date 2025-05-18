@@ -114,50 +114,49 @@ export default function Categories({ list }: { list: Category[] }) {
 
       {/* Mobile */}
       <div className="md:hidden p-2">
-
-          <Autocomplete<Category>
-              options={options}
-              getOptionLabel={(option) => option.title}
-              value={selectedItem}
-              onChange={(event, value) => {
-                  const selected = (value ?? all_option) as Category;
-                  setSelectedItem(selected);
-                  router.push(
-                      selected.handle === "all"
-                          ? "/"
-                          : `/${ModelType.category}/${selected.handle}`,
-                  );
-              }}
-              isOptionEqualToValue={(option, value) =>
-                  option.handle === value?.handle
-              }
-              disableClearable
-              renderInput={(params) => {
-                  return (
-                      <TextField
-                          {...params}
-                          label={intl.formatMessage({
-                              id: `${ModelType.category}.selectCategory`,
-                          })}
-                          InputProps={{
-                              ...params.InputProps,
-                              style: {
-                                  direction: "rtl",
-                                  fontSize: "1.1em",
-                                  textDecoration: "inherit",
-                              },
-                          }}
-                          InputLabelProps={{
-                              ...params.InputLabelProps,
-                              style: {
-                                  direction: "rtl",
-                                  textAlign: "right",
-                              },
-                          }}
-                      />
-                  );
-              }}
-          />
+        <Autocomplete<Category>
+          options={options}
+          getOptionLabel={(option) => option.title}
+          value={selectedItem}
+          onChange={(event, value) => {
+            const selected = (value ?? all_option) as Category;
+            setSelectedItem(selected);
+            router.push(
+              selected.handle === "all"
+                ? "/"
+                : `/${ModelType.category}/${selected.handle}`,
+            );
+          }}
+          isOptionEqualToValue={(option, value) =>
+            option.handle === value?.handle
+          }
+          disableClearable
+          renderInput={(params) => {
+            return (
+              <TextField
+                {...params}
+                label={intl.formatMessage({
+                  id: `${ModelType.category}.selectCategory`,
+                })}
+                InputProps={{
+                  ...params.InputProps,
+                  style: {
+                    direction: "rtl",
+                    fontSize: "1.1em",
+                    textDecoration: "inherit",
+                  },
+                }}
+                InputLabelProps={{
+                  ...params.InputLabelProps,
+                  style: {
+                    direction: "rtl",
+                    textAlign: "right",
+                  },
+                }}
+              />
+            );
+          }}
+        />
       </div>
     </nav>
   );

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {ProductItem} from "components/product/grid";
+import { ProductItem } from "components/product/grid";
 import { GridTileImage } from "components/product/grid/tile";
 import { Product } from "lib/types";
 

@@ -47,8 +47,8 @@ export default function FormPage({
 
       const model_objs = model === ModelType.product ? products : categories;
       const obj = is_add
-          ? {}
-          : array_obj_to_obj_with_key(model_objs, Number(id), "id") ?? {};
+        ? {}
+        : (array_obj_to_obj_with_key(model_objs, Number(id), "id") ?? {});
       const fields_to_set = create_form_fields(get_form_by_model(model), obj);
       setFields(fields_to_set);
     };

@@ -63,7 +63,7 @@ export default function AccessibilityBar() {
   const [grayscale, setGrayscale] = useState(false);
   const [underlineLinks, setUnderlineLinks] = useState(false);
   const [readableFont, setReadableFont] = useState(false);
-  const panelRef = useRef<HTMLDivElement|null>(null);
+  const panelRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const sizes = [

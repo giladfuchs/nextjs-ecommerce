@@ -10,11 +10,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { ColDef } from "ag-grid-community";
 
 import { AGTableModelType, get_columns_by_title, ModelType } from "lib/types";
-import {
-  getCategories,
-  getOrders,
-  getProducts,
-} from "lib/api";
+import { getCategories, getOrders, getProducts } from "lib/api";
 import { cache } from "lib/api/cache";
 import AGTable from "components/admin/table/AGTable";
 import { useLoading } from "lib/provider/LoadingProvider";
@@ -44,11 +40,11 @@ export default function AdminPage({
     const init = async () => {
       try {
         const data =
-            model === ModelType.product
-                ? await getProducts(true)
-                : model === ModelType.order
-                    ? await getOrders()
-                    : await getCategories(true);
+          model === ModelType.product
+            ? await getProducts(true)
+            : model === ModelType.order
+              ? await getOrders()
+              : await getCategories(true);
 
         cache.setByModel(model, data);
         setRows(data);

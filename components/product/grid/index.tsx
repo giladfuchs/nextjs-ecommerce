@@ -23,5 +23,4 @@ export function ProductItem(props: React.ComponentProps<"li">) {
   );
 }
 
-
 export default Grid;

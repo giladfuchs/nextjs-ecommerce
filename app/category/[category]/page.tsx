@@ -11,7 +11,6 @@ import {
 import { Product } from "lib/types";
 import { safeDecodeURIComponent } from "lib/helper";
 
-
 const ClientProduct = dynamic(
   () => import("components/product/ClientProduct"),
   {

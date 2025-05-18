@@ -1,4 +1,4 @@
-import { Fragment , ReactNode} from "react";
+import { Fragment, ReactNode } from "react";
 import { getCategories } from "../../../lib/api";
 import Categories from "./Categories";
 
