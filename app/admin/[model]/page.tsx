@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Box, Button, Container, Grid, TextField } from "@mui/material";
+import { Button, Container, Grid, TextField } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ImageIcon from "@mui/icons-material/Image";
 import { FormattedMessage, useIntl } from "react-intl";

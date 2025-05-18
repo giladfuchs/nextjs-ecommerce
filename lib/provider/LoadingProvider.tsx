@@ -13,8 +13,7 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = subscribeGlobalLoading(setLoading);
-    return unsubscribe;
+    return subscribeGlobalLoading(setLoading);
   }, []);
 
   return (

@@ -54,14 +54,13 @@ export async function serverFetch(
   if (isBrowser) setGlobalLoading(true);
 
   try {
-    const res = await fetch(`${API_URL}${input}`, {
+    return await fetch(`${API_URL}${input}`, {
       ...restInit,
       headers: finalHeaders,
       body: finalBody,
       credentials: "include",
       cache: initCache || "no-store",
     });
-    return res;
   } finally {
     if (isBrowser) setGlobalLoading(false);
   }

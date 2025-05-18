@@ -35,7 +35,7 @@ const ActionRender = ({ data }: ICellRendererParams) => {
         ? ModelType.order
         : null;
 
-  const id: string = data.id;
+  const id: number = data.id;
   const title: string = data.title;
 
   const handleDeleteClick = () => setOpen(true);
