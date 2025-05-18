@@ -67,3 +67,11 @@ export type Order = {
   createdAt: Date;
   items: OrderItem[];
 };
+
+export type NewOrderPayload = {
+  name: string;
+  email: string;
+  phone: string;
+  cart: Cart;
+  agreed?: boolean;
+};

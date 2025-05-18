@@ -2,7 +2,6 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistReducer } from "redux-persist";
 import cartReducer, { resetCartTransform } from "./cartSlice";
 
-// ✅ Safely load `storage` only in the browser
 const isBrowser = typeof window !== "undefined";
 
 const createNoopStorage = () => ({
@@ -12,8 +11,8 @@ const createNoopStorage = () => ({
 });
 
 const safeStorage = isBrowser
-  ? require("redux-persist/lib/storage").default
-  : createNoopStorage();
+    ? require("redux-persist/lib/storage").default
+    : createNoopStorage();
 
 const rootReducer = combineReducers({
   cart: cartReducer,
@@ -26,15 +25,17 @@ const persistConfig = {
   transforms: [resetCartTransform],
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer<
+    typeof rootReducer extends (...args: any) => infer R ? R : never
+>(persistConfig, rootReducer);
 
 export function makeStore() {
   return configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware({
-        serializableCheck: false,
-      }),
+        getDefaultMiddleware({
+          serializableCheck: false,
+        }),
   });
 }
 

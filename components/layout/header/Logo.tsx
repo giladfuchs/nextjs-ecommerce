@@ -13,7 +13,7 @@ export default function Logo({ size }: { size?: "sm" | undefined }) {
         },
       )}
     >
-      <Image src={ICON_IMAGE_URL} alt="logo" width={80} height={20} />
+      <Image src={ICON_IMAGE_URL as string} alt="logo" width={80} height={20} />
     </div>
   );
 }

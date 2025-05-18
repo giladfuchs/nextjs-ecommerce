@@ -1,4 +1,4 @@
-import { Order, OrderStatus, ModelType } from "../types";
+import {Order, OrderStatus, ModelType, AGTableModelType, NewOrderPayload} from "../types";
 import { API_URL } from "../config";
 import { cache } from "./cache";
 
@@ -118,25 +118,27 @@ export async function uploadImage(file: File): Promise<string> {
 }
 
 export async function submitModel(
-  model: ModelType,
-  idOrAdd: string,
-  body: any,
-): Promise<Response> {
+    model: ModelType,
+    idOrAdd: string,
+    body: any
+): Promise<AGTableModelType> {
   const res = await serverFetch(`/auth/${model}/${idOrAdd}`, {
     method: "POST",
     body,
   });
 
-  return await handleResponse(res, "submit model");
+  return await handleResponse<AGTableModelType>(res, "submit model");
 }
 
-export async function submitOrder(order: Order): Promise<Response> {
+
+
+export async function submitOrder(order: NewOrderPayload): Promise<Order> {
   const res = await serverFetch(`/checkout`, {
     method: "POST",
     body: order as any,
   });
 
-  return await handleResponse(res, "submit order"); // ✅ returns parsed Order
+  return handleResponse<Order>(res, "submit order");
 }
 
 export async function getOrders(): Promise<Order[]> {

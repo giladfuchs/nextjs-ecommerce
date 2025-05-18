@@ -11,7 +11,7 @@ export const metadata_keywords = [
   "קדרון",
   "מקום לצמוח",
   "שתילים",
-  SITE_NAME,
+  SITE_NAME ?? "המשתלה החברתית",
 ];
 
 export function getCategoryTitle(

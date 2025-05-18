@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors: true, // Consider setting to false for production
+    ignoreBuildErrors: false, // Consider setting to true for dev
   },
   devIndicators: {
     buildActivity: true,

@@ -15,7 +15,6 @@ export default function Header() {
         >
           <Logo />
         </Link>
-        {!API_URL.includes("server") && <h2 style={{ color: "red" }}>DEMO</h2>}
         <HeaderControls />
       </div>
     </nav>

@@ -17,7 +17,7 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../lib/store";
-import { Cart, Order } from "lib/types";
+import {Cart, NewOrderPayload, Order} from "lib/types";
 import { submitOrder } from "../../lib/api";
 import { clearCart } from "../../lib/store/cartSlice";
 import { toast } from "sonner";
@@ -107,7 +107,7 @@ export default function CheckoutInfo({
             phone: "0" + values.phone.trim().replace(/^0+/, ""),
           };
 
-          const order: Order = { ...trimmedValues, cart } as Order;
+          const order: NewOrderPayload = { ...trimmedValues, cart };
 
           try {
             const saved: Order = (await submitOrder(order)) as Order;

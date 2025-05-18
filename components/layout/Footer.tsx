@@ -15,7 +15,7 @@ import { FOOTER_DATA, WHATSAPP_MESSAGE } from "../../lib/config";
 
 export const [email, address, phone, instagram, facebook, website] =
   FOOTER_DATA.split(",");
-const whatsappNumber = phone.replace(/^0/, "972");
+const whatsappNumber = phone?.replace(/^0/, "972") ?? "";
 const whatsappMessage = encodeURIComponent(WHATSAPP_MESSAGE || "Hi");
 
 export default function Footer() {

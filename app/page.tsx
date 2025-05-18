@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: metadata_site_title,
     description: metadata_site_description,
-    images: [ICON_IMAGE_URL],
+    images: [ICON_IMAGE_URL as string],
     url: baseUrl,
     type: "website",
   },
