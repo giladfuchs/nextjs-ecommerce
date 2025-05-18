@@ -106,7 +106,7 @@ export default function FormPage({
         return;
       }
       const category = array_obj_to_obj_with_key(
-          list.categories ?? [],
+        list.categories ?? [],
         data.category,
         "title",
       );

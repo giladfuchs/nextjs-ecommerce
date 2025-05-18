@@ -17,7 +17,7 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../lib/store";
-import {Cart, NewOrderPayload, Order} from "lib/types";
+import { Cart, NewOrderPayload, Order } from "lib/types";
 import { submitOrder } from "../../lib/api";
 import { clearCart } from "../../lib/store/cartSlice";
 import { toast } from "sonner";

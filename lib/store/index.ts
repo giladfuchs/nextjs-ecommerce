@@ -11,8 +11,8 @@ const createNoopStorage = () => ({
 });
 
 const safeStorage = isBrowser
-    ? require("redux-persist/lib/storage").default
-    : createNoopStorage();
+  ? require("redux-persist/lib/storage").default
+  : createNoopStorage();
 
 const rootReducer = combineReducers({
   cart: cartReducer,
@@ -26,16 +26,16 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer<
-    typeof rootReducer extends (...args: any) => infer R ? R : never
+  typeof rootReducer extends (...args: any) => infer R ? R : never
 >(persistConfig, rootReducer);
 
 export function makeStore() {
   return configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-          serializableCheck: false,
-        }),
+      getDefaultMiddleware({
+        serializableCheck: false,
+      }),
   });
 }
 

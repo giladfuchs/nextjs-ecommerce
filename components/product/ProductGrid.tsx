@@ -21,14 +21,14 @@ export default function ProductGrid({ products }: { products: Product[] }) {
     observer.current?.disconnect();
 
     observer.current = new IntersectionObserver(
-        (entries) => {
-          const entry = entries[0];
-          if (entry?.isIntersecting && !loadingRef.current) {
-            loadingRef.current = true;
-            setPage((prev) => prev + 1);
-          }
-        },
-        { threshold: 0.1 },
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting && !loadingRef.current) {
+          loadingRef.current = true;
+          setPage((prev) => prev + 1);
+        }
+      },
+      { threshold: 0.1 },
     );
 
     const node: HTMLDivElement | null = sentinelRef.current;

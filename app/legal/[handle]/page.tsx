@@ -4,7 +4,7 @@ import { Box, Typography } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 import { notFound } from "next/navigation";
 import { email } from "components/layout/Footer";
-import {legalContent} from "../../../lib/assets/i18n/legalContent";
+import { legalContent } from "../../../lib/assets/i18n/legalContent";
 
 export default function LegalPage({ params }: { params: { handle: string } }) {
   const { handle } = params;
