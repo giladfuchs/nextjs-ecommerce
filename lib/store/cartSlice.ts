@@ -68,7 +68,7 @@ const cartSlice = createSlice({
     updateItem(
       state,
       action: PayloadAction<{
-        productId: string;
+        productId: number;
         updateType: "plus" | "minus" | "delete";
       }>,
     ) {

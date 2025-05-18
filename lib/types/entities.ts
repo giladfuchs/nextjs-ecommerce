@@ -27,7 +27,7 @@ export type Product = {
 };
 
 export type CartItem = {
-  productId: string;
+  productId: number;
   handle: string;
   title: string;
   imageUrl: string;

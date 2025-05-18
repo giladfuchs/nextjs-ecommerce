@@ -190,7 +190,7 @@ export default function CheckoutInfo({
                             data-testid={`checkout-error-${field.name}`}
                             sx={{ textAlign: "right", marginRight: 1 }}
                           >
-                            {errors[field.name as keyof typeof errors]}
+                            {String(errors[field.name as keyof typeof errors])}
                           </FormHelperText>
                         )}
                     </FormControl>
@@ -237,7 +237,7 @@ export default function CheckoutInfo({
                       data-testid="checkout-error-agreed"
                       sx={{ textAlign: "right" }}
                     >
-                      {errors.agreed}
+                      {String(errors.agreed)}
                     </FormHelperText>
                   )}
                 </FormControl>

@@ -1,5 +1,8 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
+import React, { useState, useEffect } from "react";
+import { useIntl, FormattedMessage } from "react-intl";
 import {
   Autocomplete,
   TextField,
@@ -7,11 +10,8 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { usePathname, useRouter } from "next/navigation";
-import React, { useState, useEffect } from "react";
-import { useIntl, FormattedMessage } from "react-intl";
-import { Category, ModelType } from "../../../lib/types";
 
+import { Category, ModelType } from "lib/types";
 import { safeDecodeURIComponent } from "lib/helper";
 
 // Desktop list
@@ -114,62 +114,50 @@ export default function Categories({ list }: { list: Category[] }) {
 
       {/* Mobile */}
       <div className="md:hidden p-2">
-        <Autocomplete
-          options={options}
-          getOptionLabel={(option) => option.title}
-          value={selectedItem}
-          onChange={(event, value) => {
-            const selected: Category = value ?? all_option;
-            setSelectedItem(selected);
-            router.push(
-              selected.handle === "all"
-                ? "/"
-                : `/${ModelType.category}/${selected.handle}`,
-            );
-          }}
-          isOptionEqualToValue={(option, value) =>
-            option.handle === value?.handle
-          }
-          disableClearable
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label={intl.formatMessage({
-                id: `${ModelType.category}.selectCategory`,
-              })}
-              InputProps={{
-                ...params.InputProps,
-                style: {
-                  direction: "rtl",
-                  fontSize: "1.1em",
-                  textDecoration: "inherit",
-                },
+
+          <Autocomplete<Category>
+              options={options}
+              getOptionLabel={(option) => option.title}
+              value={selectedItem}
+              onChange={(event, value) => {
+                  const selected = (value ?? all_option) as Category;
+                  setSelectedItem(selected);
+                  router.push(
+                      selected.handle === "all"
+                          ? "/"
+                          : `/${ModelType.category}/${selected.handle}`,
+                  );
               }}
-              InputLabelProps={{
-                ...params.InputLabelProps,
-                style: {
-                  direction: "rtl",
-                  textAlign: "right",
-                },
+              isOptionEqualToValue={(option, value) =>
+                  option.handle === value?.handle
+              }
+              disableClearable
+              renderInput={(params) => {
+                  return (
+                      <TextField
+                          {...params}
+                          label={intl.formatMessage({
+                              id: `${ModelType.category}.selectCategory`,
+                          })}
+                          InputProps={{
+                              ...params.InputProps,
+                              style: {
+                                  direction: "rtl",
+                                  fontSize: "1.1em",
+                                  textDecoration: "inherit",
+                              },
+                          }}
+                          InputLabelProps={{
+                              ...params.InputLabelProps,
+                              style: {
+                                  direction: "rtl",
+                                  textAlign: "right",
+                              },
+                          }}
+                      />
+                  );
               }}
-            />
-          )}
-          renderOption={(props, option) => {
-            const { key, ...rest } = props;
-            return (
-              <li key={option.handle} {...rest} dir="rtl">
-                <span
-                  style={{
-                    fontSize: "1.1em",
-                    textDecoration: "inherit",
-                  }}
-                >
-                  {option.title}
-                </span>
-              </li>
-            );
-          }}
-        />
+          />
       </div>
     </nav>
   );

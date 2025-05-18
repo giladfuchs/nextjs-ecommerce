@@ -1,11 +1,11 @@
-import { Fragment } from "react";
+import { Fragment , ReactNode} from "react";
 import { getCategories } from "../../../lib/api";
 import Categories from "./Categories";
 
 export default async function SidebarLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   const list = await getCategories();
   return (

@@ -69,7 +69,7 @@ export default function Cart() {
   };
 
   const optimisticUpdate = (
-    productId: string,
+    productId: number,
     updateType: "plus" | "minus" | "delete",
   ) => {
     dispatch(updateItem({ productId, updateType }));

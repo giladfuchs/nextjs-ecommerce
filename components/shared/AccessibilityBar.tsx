@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, ReactNode } from "react";
 import { Box, IconButton, Typography, Stack } from "@mui/material";
 import { FormattedMessage } from "react-intl";
 
@@ -20,7 +20,7 @@ const ActionItem = ({
   onClick,
   selected = false,
 }: {
-  icon: React.ReactNode;
+  icon: ReactNode;
   labelId: string;
   onClick: () => void;
   selected?: boolean;
