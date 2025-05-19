@@ -21,7 +21,6 @@ export const columns_product: ColDef<Product>[] = [
     field: "category",
     width: 150,
   },
-
 ] as ColDef<Product>[];
 export const columns_order: ColDef<Order>[] = [
   {
@@ -61,7 +60,6 @@ export const columns_order: ColDef<Order>[] = [
     width: 100,
     cellRenderer: "OrderStatusRender",
   },
-
 ] as ColDef<Order>[];
 
 export const columns_category: ColDef<Category>[] = [
@@ -78,8 +76,6 @@ export const columns_category: ColDef<Category>[] = [
     field: "position",
     width: 80,
   },
-
-
 ] as ColDef<Category>[];
 export const get_columns_by_title = (
   title: ModelType,

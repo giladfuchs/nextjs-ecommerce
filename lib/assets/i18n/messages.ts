@@ -68,9 +68,7 @@ export const messages = {
     "form.label.position": "מיקום בתצוגה",
     "form.label.available": "המוצר במלאי",
 
-
-
-        "table.headerName.title": "כותרת",
+    "table.headerName.title": "כותרת",
     "table.headerName.price": "מחיר",
     "table.headerName.category": "קטגוריה",
     "table.headerName.id": "צפה",
