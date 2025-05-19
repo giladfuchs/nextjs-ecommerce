@@ -10,7 +10,7 @@ export default function CheckoutPage() {
   const [orderError, setOrderError] = useState(false);
 
   return (
-    <Container maxWidth="lg" disableGutters sx={{ py: 4 ,px:2}}>
+    <Container maxWidth="lg" disableGutters sx={{ py: 4 ,px:2,    overflowX: "hidden"}}>
       {orderSuccess ? (
         <>
           <Typography

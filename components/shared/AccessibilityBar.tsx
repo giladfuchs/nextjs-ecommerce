@@ -123,7 +123,7 @@ export default function AccessibilityBar() {
 
   return (
     <div
-      className="fixed left-3 top-1/2 z-50 -translate-y-1/2"
+      className="fixed left-2 top-1/2 z-50 -translate-y-1/2"
       dir="rtl"
       style={{ display: "flex", alignItems: "center" }}
     >

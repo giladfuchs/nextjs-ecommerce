@@ -59,7 +59,6 @@ export default function ImagesEditor({
                 >
                     <FormattedMessage id="admin.product.image" />
                 </Button>
-
               {Array.from({ length: 5 }, (_, index) => (
                   <Grid
                       item
