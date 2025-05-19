@@ -14,7 +14,6 @@ export const messages = {
     "admin.search.placeholder": "חיפוש...",
     "admin.product.image": "הוסף תמונה",
 
-    "admin.image.add": "הוסף תמונה",
     "admin.image.label": "תמונה {index}",
     "admin.image.url": "קישור לתמונה",
     "admin.image.alt": "תיאור תמונה (alt)",

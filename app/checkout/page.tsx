@@ -10,7 +10,7 @@ export default function CheckoutPage() {
   const [orderError, setOrderError] = useState(false);
 
   return (
-    <Container maxWidth="lg" disableGutters sx={{ py: 4 }}>
+    <Container maxWidth="lg" disableGutters sx={{ py: 4 ,px:2}}>
       {orderSuccess ? (
         <>
           <Typography
@@ -52,14 +52,14 @@ export default function CheckoutPage() {
           </Typography>
         </>
       ) : (
-        <Grid
-          data-testid="checkout-form-grid"
-          container
-          spacing={4}
-          justifyContent="center"
-          alignItems="flex-start"
-          sx={{ minHeight: "100vh" }}
-        >
+          <Grid
+              data-testid="checkout-form-grid"
+              container
+              spacing={4}
+              justifyContent="center"
+              alignItems="flex-start"
+              sx={{ minHeight: "100vh", px: 2 }}
+          >
           <Grid item xs={12} md={7} sx={{ order: { xs: 1, md: 2 } }}>
             <CheckoutSummary />
           </Grid>

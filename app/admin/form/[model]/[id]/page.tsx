@@ -144,7 +144,7 @@ export default function FormPage({
   };
 
   return (
-    <Container maxWidth="lg" disableGutters sx={{ py: 4 }}>
+    <Container maxWidth="lg" disableGutters sx={{ py: 4, px:2 }}>
       {fields.length > 0 && (
         <>
           <FormChild title={title} fields={fields} onSubmit={handleSubmit} />

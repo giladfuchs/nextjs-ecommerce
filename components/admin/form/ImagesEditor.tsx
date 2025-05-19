@@ -51,14 +51,14 @@ export default function ImagesEditor({
               label={<span data-testid="form-toggle-images">{placeholder}</span>}
           >
             <Grid container direction="column" spacing={3}>
-              <Button
-                  sx={{ mt: 3 }}
-                  variant="outlined"
-                  onClick={() => window.open("/admin/form/image", "_blank")}
-                  startIcon={<ImageIcon />}
-              >
-                <FormattedMessage id="admin.image.add" />
-              </Button>
+                <Button
+                    sx={{ mt: 4, maxWidth: 300, alignSelf: "center" }}
+                    variant="outlined"
+                    onClick={() => window.open("/admin/form/image", "_blank")}
+                    startIcon={<ImageIcon />}
+                >
+                    <FormattedMessage id="admin.product.image" />
+                </Button>
 
               {Array.from({ length: 5 }, (_, index) => (
                   <Grid
