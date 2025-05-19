@@ -1,5 +1,3 @@
-/* eslint-disable max-classes-per-file */
-
 import { FormType, ModelType } from "./enums";
 import { Image } from "./entities";
 
@@ -103,4 +101,3 @@ export const create_form_fields = (
     );
   });
 };
-/* eslint-enable max-classes-per-file */
