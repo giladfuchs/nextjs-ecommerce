@@ -28,7 +28,6 @@ export async function serverFetch(
   init: RequestInit = {},
 ): Promise<Response> {
   const {
-    next,
     redirect,
     headers, // unused in your usage
     cache: initCache,
