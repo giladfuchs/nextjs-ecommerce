@@ -6,55 +6,51 @@ export type AGTableModelType = Product | Category | Order;
 export const columns_product: ColDef<Product>[] = [
   {
     field: "title",
-    headerName: "כותרת",
-    width: 130,
-  },
-  {
-    field: "price",
-    headerName: "מחיר",
-    width: 80,
-  },
-  {
-    field: "category",
-    headerName: "קטגוריה",
     width: 130,
   },
   {
     field: "id",
-    headerName: "צפה",
     cellRenderer: "ActionRender",
     width: 130,
   },
+  {
+    field: "price",
+    width: 80,
+  },
+  {
+    field: "category",
+    width: 150,
+  },
+
 ] as ColDef<Product>[];
 export const columns_order: ColDef<Order>[] = [
   {
     field: "name",
-    headerName: "שם",
     width: 122,
   },
   {
+    field: "id",
+    cellRenderer: "ActionRender",
+    width: 100,
+  },
+  {
     field: "email",
-    headerName: "אימייל",
     width: 222,
   },
   {
     field: "phone",
-    headerName: "טלפון",
     width: 120,
   },
   {
     field: "totalQuantity",
-    headerName: "כמות",
     width: 70,
   },
   {
     field: "cost",
-    headerName: "סה״כ",
     width: 80,
   },
   {
     field: "items",
-    headerName: "מוצרים",
     width: 220,
     autoHeight: true,
 
@@ -62,37 +58,28 @@ export const columns_order: ColDef<Order>[] = [
   },
   {
     field: "status",
-    headerName: "סטטוס",
     width: 100,
     cellRenderer: "OrderStatusRender",
   },
-  {
-    field: "id",
-    headerName: "צפה",
-    cellRenderer: "ActionRender",
-    width: 100,
-  },
+
 ] as ColDef<Order>[];
 
 export const columns_category: ColDef<Category>[] = [
   {
     field: "title",
-    headerName: "שם",
     width: 122,
   },
-
-  {
-    field: "position",
-    headerName: "מיקום",
-    width: 120,
-  },
-
   {
     field: "id",
-    headerName: "צפה",
     cellRenderer: "ActionRender",
     width: 100,
   },
+  {
+    field: "position",
+    width: 80,
+  },
+
+
 ] as ColDef<Category>[];
 export const get_columns_by_title = (
   title: ModelType,
