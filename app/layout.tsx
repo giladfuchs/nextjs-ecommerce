@@ -125,7 +125,7 @@ export default async function RootLayout({
                   </Box>
 
                   <Analytics />
-                  <Toaster richColors position="bottom-center" />
+                  <Toaster richColors closeButton position="bottom-center" />
                   <AccessibilityBar />
                 </div>
               </LoadingProvider>

@@ -88,7 +88,7 @@ export default function AdminPage({
           placeholder={formatMessage({ id: "admin.search.placeholder" })}
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
-          sx={{ minWidth: 200 }}
+          sx={{ minWidth: 200, mt:2 }}
         />
 
         {model !== "order" && (
