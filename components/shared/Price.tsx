@@ -1,20 +1,18 @@
 import React from "react";
+import { localeCache } from "../../lib/api";
 
 const Price = ({
   amount,
   className,
-  currencyCode = "ILS",
 }: {
   amount: number;
   className?: string;
-  currencyCode?: string;
   currencyCodeClassName?: string;
 } & React.ComponentProps<"p">) => {
   const locale = "he-IL";
-
   const formatOptions: Intl.NumberFormatOptions = {
     style: "currency",
-    currency: currencyCode ?? "ILS",
+    currency: localeCache.isRtl() ? "ILS" : "USD",
     currencyDisplay: "narrowSymbol",
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,

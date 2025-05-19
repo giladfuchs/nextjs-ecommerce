@@ -2,9 +2,10 @@
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { ReactNode } from "react";
+import { localeCache } from "../api";
 
 const theme = createTheme({
-  direction: "rtl",
+  direction: localeCache.dir(),
   palette: {
     primary: {
       main: "#24bfa7",

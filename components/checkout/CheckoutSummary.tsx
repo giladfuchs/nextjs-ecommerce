@@ -6,6 +6,7 @@ import { RootState } from "../../lib/store";
 import Price from "../shared/Price";
 import React from "react";
 import { FormattedMessage } from "react-intl";
+import { localeCache } from "../../lib/api";
 
 export default function CheckoutSummary() {
   const cart = useSelector((state: RootState) => state.cart);
@@ -38,7 +39,7 @@ export default function CheckoutSummary() {
               p: 2,
               gap: 2,
               boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
-              direction: "rtl",
+              direction: localeCache.dir(),
               color: "var(--color-text)",
 
               // 🔶 High-contrast overrides
@@ -125,7 +126,7 @@ export default function CheckoutSummary() {
           display: "flex",
           justifyContent: "center",
           gap: 1,
-          direction: "rtl",
+          direction: localeCache.dir(),
         }}
       >
         <Typography variant="h6" fontWeight="bold">

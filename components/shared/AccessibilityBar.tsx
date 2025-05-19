@@ -13,6 +13,7 @@ import LinkIcon from "@mui/icons-material/Link";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import BarcodeIcon from "@mui/icons-material/ViewColumn";
 import GavelIcon from "@mui/icons-material/Gavel";
+import { localeCache } from "../../lib/api";
 
 const ActionItem = ({
   icon,
@@ -124,7 +125,7 @@ export default function AccessibilityBar() {
   return (
     <div
       className="fixed left-2 top-1/2 z-50 -translate-y-1/2"
-      dir="rtl"
+      dir={localeCache.dir()}
       style={{ display: "flex", alignItems: "center" }}
     >
       <IconButton

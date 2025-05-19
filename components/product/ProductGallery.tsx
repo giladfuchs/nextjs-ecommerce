@@ -5,6 +5,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { GridTileImage } from "components/product/grid/tile";
 import Image from "next/image";
 import { useState } from "react";
+import { localeCache } from "../../lib/api";
 
 export function ProductGallery({
   images,
@@ -24,7 +25,7 @@ export function ProductGallery({
     <div>
       <div
         className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden"
-        dir="ltr"
+        dir={localeCache.dir()}
       >
         {images[imageIndex] && (
           <Image

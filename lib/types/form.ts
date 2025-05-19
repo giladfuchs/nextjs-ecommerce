@@ -3,9 +3,9 @@ import { Image } from "./entities";
 
 export class FieldInput {
   constructor(
-      public type: FormType,
-      public key: string,
-      public value: string | boolean = "",
+    public type: FormType,
+    public key: string,
+    public value: string | boolean = "",
   ) {}
 }
 
@@ -14,9 +14,9 @@ export class FieldAutoComplete {
   public value: string;
 
   constructor(
-      public key: string,
-      public options: string[],
-      value?: string,
+    public key: string,
+    public options: string[],
+    value?: string,
   ) {
     this.value = value ?? options[0] ?? "";
   }
@@ -26,8 +26,8 @@ export class FieldImages {
   readonly type: FormType = FormType.ImagesEditor;
 
   constructor(
-      public key: string,
-      public value: Image[] = [],
+    public key: string,
+    public value: Image[] = [],
   ) {}
 }
 
@@ -58,19 +58,19 @@ export const get_form_by_model = (type_form: ModelType): FormField[] => {
 };
 
 export const array_obj_to_obj_with_key = (
-    iterable: any[],
-    value: any,
-    key: string,
+  iterable: any[],
+  value: any,
+  key: string,
 ) => iterable.find((o: any) => o[key]?.toString() === value.toString());
 
 export const create_form_fields = (
-    source: FormField[],
-    target: any,
+  source: FormField[],
+  target: any,
 ): FormField[] => {
   if (
-      target == null ||
-      (Array.isArray(target) && target.length === 0) ||
-      (typeof target === "object" && Object.keys(target).length === 0)
+    target == null ||
+    (Array.isArray(target) && target.length === 0) ||
+    (typeof target === "object" && Object.keys(target).length === 0)
   ) {
     return source.map((field) => {
       if (field instanceof FieldImages) {
@@ -95,9 +95,9 @@ export const create_form_fields = (
     }
 
     return new FieldInput(
-        field.type,
-        field.key,
-        typeof updatedValue === "string" ? updatedValue.trim() : updatedValue,
+      field.type,
+      field.key,
+      typeof updatedValue === "string" ? updatedValue.trim() : updatedValue,
     );
   });
 };

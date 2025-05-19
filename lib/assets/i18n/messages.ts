@@ -1,6 +1,4 @@
-
 export const messages = {
-
   he: {
     "admin.product.title": "מוצרים",
     "admin.order.title": "הזמנות",
@@ -206,11 +204,12 @@ export const messages = {
     "admin.image.url": "Image URL",
     "admin.image.alt": "Image description (alt)",
     "admin.image.clipboard.success": "📋 URL copied successfully!",
-    "admin.image.clipboard.invalid": "❌ Clipboard does not contain a valid URL",
+    "admin.image.clipboard.invalid":
+      "❌ Clipboard does not contain a valid URL",
     "admin.image.clipboard.error": "⚠️ Error accessing clipboard",
     "admin.image.clipboard.retry": "Try again or allow clipboard access",
     "admin.image.instructions":
-        "Click the 'Add Image' button (inside Images) to open the image interface. After adding an image, copy its URL and use the icon to the left to paste it.",
+      "Click the 'Add Image' button (inside Images) to open the image interface. After adding an image, copy its URL and use the icon to the left to paste it.",
     "form.add.product": "Add Product",
     "form.add.category": "Add Category",
     "form.edit.product": "Edit Product",
@@ -229,7 +228,7 @@ export const messages = {
     "form.error.required.position": "Position is required",
     "form.error.required.images": "At least one image is required",
     "form.error.required.imageFields":
-        "Each image must have a URL and alt text.",
+      "Each image must have a URL and alt text.",
 
     "image.upload.title": "Upload Image",
     "image.upload.choose": "Choose Image",
@@ -291,7 +290,8 @@ export const messages = {
 
     "delete.title": "Delete {title}?",
     "delete.description": "This action is irreversible.",
-    "delete.cascadeWarning": "Deleting the category will also delete all related products",
+    "delete.cascadeWarning":
+      "Deleting the category will also delete all related products",
     "delete.success": "{title} deleted successfully",
     "delete.error": "Failed to delete {title}",
     "delete.cancel": "Cancel",
@@ -314,7 +314,7 @@ export const messages = {
     "checkout.orderId": "Order ID: {id}",
     "checkout.error": "An error occurred. Please try again.",
     "checkout.pickupNotice":
-        "We’ll contact you to coordinate a pickup time after the order is complete.",
+      "We’ll contact you to coordinate a pickup time after the order is complete.",
     "checkout.agreeToTerms": "I’ve read and agree to the {link}",
     "checkout.termsLinkText": "site terms",
 
@@ -367,22 +367,23 @@ export const messages = {
 
     "terms.accessibility.title": "Accessibility Statement",
     "terms.accessibility.intro":
-        "We are committed to providing an accessible website for all users, including those with disabilities. The site was built to meet accessibility standards and supports the following features:",
+      "We are committed to providing an accessible website for all users, including those with disabilities. The site was built to meet accessibility standards and supports the following features:",
 
     "terms.accessibility.contact":
-        "If you encounter any accessibility issues, please contact us at {email}",
+      "If you encounter any accessibility issues, please contact us at {email}",
     "terms.accessibility.pickupTitle": "Pickup Location Accessibility",
     "terms.accessibility.pickup":
-        "Our nursery pickup location is accessible. There is a step-free entrance and space for wheelchair access. If you need assistance upon arrival, please contact us in advance.",
+      "Our nursery pickup location is accessible. There is a step-free entrance and space for wheelchair access. If you need assistance upon arrival, please contact us in advance.",
     "terms.title": "Site Terms",
     "terms.intro":
-        "Use of this site is subject to the following terms. By using the site, you agree to them.",
+      "Use of this site is subject to the following terms. By using the site, you agree to them.",
     "terms.section.privacy": "Privacy",
-    "terms.privacy": "We are committed to protecting user privacy in accordance with applicable laws.",
+    "terms.privacy":
+      "We are committed to protecting user privacy in accordance with applicable laws.",
     "terms.section.contact": "Contact",
     "terms.contact": "For questions or clarification, contact us at: {email}",
     "terms.section.exchanges": "Order, Exchange & Cancellation Policy",
     "terms.exchanges":
-        "The site does not offer delivery. Orders must be picked up at the nursery by prior arrangement. Payment is made on site via cash or Bit. You may cancel the order before pickup. After pickup, orders cannot be canceled due to the nature of the products (plants). If there's a defect or issue, contact us within 24 hours. Replacements will be at our discretion and only for plants returned in original condition.",
+      "The site does not offer delivery. Orders must be picked up at the nursery by prior arrangement. Payment is made on site via cash or Bit. You may cancel the order before pickup. After pickup, orders cannot be canceled due to the nature of the products (plants). If there's a defect or issue, contact us within 24 hours. Replacements will be at our discretion and only for plants returned in original condition.",
   },
 };

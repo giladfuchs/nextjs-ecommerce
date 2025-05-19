@@ -32,6 +32,7 @@ import {
   metadata_site_description,
   metadata_site_title,
 } from "lib/assets/i18n/seo_heb";
+import { localeCache } from "../lib/api";
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
@@ -76,8 +77,13 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
+  console.log(localeCache.get());
   return (
-    <html lang="he" dir="rtl" className={GeistSans.variable}>
+    <html
+      lang={localeCache.get()}
+      dir={localeCache.dir()}
+      className={GeistSans.variable}
+    >
       <body>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS}`}

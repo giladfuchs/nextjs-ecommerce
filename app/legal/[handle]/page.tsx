@@ -5,6 +5,7 @@ import { FormattedMessage } from "react-intl";
 import { notFound } from "next/navigation";
 import { email } from "components/layout/Footer";
 import { legalContent } from "../../../lib/assets/i18n/legalContent";
+import { localeCache } from "../../../lib/api";
 
 export default function LegalPage({ params }: { params: { handle: string } }) {
   const { handle } = params;
@@ -25,7 +26,7 @@ export default function LegalPage({ params }: { params: { handle: string } }) {
         py: 4,
         color: "var(--color-text)",
         bgcolor: "var(--color-bg)",
-        direction: "rtl",
+        direction: localeCache.dir(),
         ".high-contrast &": {
           color: "yellow",
           bgcolor: "black",

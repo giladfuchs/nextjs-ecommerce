@@ -18,7 +18,7 @@ import { Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../lib/store";
 import { Cart, NewOrderPayload, Order } from "lib/types";
-import { submitOrder } from "../../lib/api";
+import { localeCache, submitOrder } from "../../lib/api";
 import { clearCart } from "../../lib/store/cartSlice";
 import { toast } from "sonner";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -137,7 +137,7 @@ export default function CheckoutInfo({
           touched,
           values,
         }) => (
-          <form noValidate onSubmit={handleSubmit} dir="rtl">
+          <form noValidate onSubmit={handleSubmit} dir={localeCache.dir()}>
             <Box sx={{ p: 2 }}>
               <Grid container direction="column" spacing={2}>
                 {fields.map((field) => (
@@ -172,14 +172,14 @@ export default function CheckoutInfo({
                         onBlur={handleBlur}
                         onChange={handleChange}
                         inputProps={{
-                          dir: "rtl",
+                          dir: localeCache.dir(),
                           autoComplete:
                             field.name === "phone" ? "tel" : field.name,
                           style: { fontSize: "inherit" },
                           "data-testid": `checkout-input-${field.name}`,
                         }}
                         sx={{
-                          direction: "rtl",
+                          direction: localeCache.dir(),
                           fontSize: "inherit",
                           "& input": { textAlign: "right" },
                         }}

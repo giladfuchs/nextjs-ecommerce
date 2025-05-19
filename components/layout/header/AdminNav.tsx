@@ -14,6 +14,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { FormattedMessage } from "react-intl";
 import { ModelType } from "../../../lib/types";
+import { localeCache } from "../../../lib/api";
 
 const adminRoutes: ModelType[] = [
   ModelType.order,
@@ -129,7 +130,11 @@ export function AdminNav() {
           },
         }}
       >
-        <Box sx={{ width: 120, overflowY: "auto" }} dir="rtl" textAlign="right">
+        <Box
+          sx={{ width: 120, overflowY: "auto" }}
+          dir={localeCache.dir()}
+          textAlign="right"
+        >
           {renderList}
         </Box>
       </Drawer>

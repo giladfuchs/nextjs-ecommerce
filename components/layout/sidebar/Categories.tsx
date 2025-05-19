@@ -13,6 +13,7 @@ import {
 
 import { Category, ModelType } from "lib/types";
 import { safeDecodeURIComponent } from "lib/helper";
+import { localeCache } from "../../../lib/api";
 
 // Desktop list
 function CategoriesItemList({ list }: { list: Category[] }) {
@@ -142,7 +143,7 @@ export default function Categories({ list }: { list: Category[] }) {
                 InputProps={{
                   ...params.InputProps,
                   style: {
-                    direction: "rtl",
+                    direction: localeCache.dir(),
                     fontSize: "1.1em",
                     textDecoration: "inherit",
                   },
@@ -150,7 +151,7 @@ export default function Categories({ list }: { list: Category[] }) {
                 InputLabelProps={{
                   ...params.InputLabelProps,
                   style: {
-                    direction: "rtl",
+                    direction: localeCache.dir(),
                     textAlign: "right",
                   },
                 }}

@@ -2,7 +2,11 @@
 
 import { notFound } from "next/navigation";
 import Price from "components/shared/Price";
-import { getOrderById, updateOrderStatus } from "../../../../lib/api";
+import {
+  getOrderById,
+  localeCache,
+  updateOrderStatus,
+} from "../../../../lib/api";
 import { green, red, blue, orange, purple, lime } from "@mui/material/colors";
 
 import {
@@ -62,7 +66,7 @@ export default function OrderViewPage({ params }: { params: { id: string } }) {
     order && (
       <Box
         data-testid="admin-order-detail"
-        sx={{ maxWidth: 800, mx: "auto", p: 3, direction: "rtl" }}
+        sx={{ maxWidth: 800, mx: "auto", p: 3, direction: localeCache.dir() }}
       >
         <Typography variant="h4" fontWeight="bold" textAlign="center" mb={3}>
           <FormattedMessage id="order.title" /> #{order.id}
@@ -182,7 +186,7 @@ export default function OrderViewPage({ params }: { params: { id: string } }) {
               p: 2,
               gap: 2,
               boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
-              direction: "rtl",
+              direction: localeCache.dir(),
               mb: 2,
             }}
           >

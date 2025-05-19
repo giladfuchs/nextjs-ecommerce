@@ -7,6 +7,7 @@ import ActionRender from "./ActionRender";
 import OrderItemsRender from "./OrderItemsRender";
 import OrderStatusRender from "./OrderStatusRender";
 import { AGTableModelType } from "../../../lib/types";
+import { localeCache } from "../../../lib/api";
 
 const defaultColDef: ColDef = {
   resizable: true,
@@ -38,7 +39,7 @@ const AGTable = ({
         rowData={rows}
         columnDefs={localizedCols}
         defaultColDef={defaultColDef}
-        enableRtl
+        enableRtl={localeCache.isRtl()}
         rowHeight={30}
         frameworkComponents={{
           ActionRender,
